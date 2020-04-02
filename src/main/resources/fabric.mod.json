@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "squidcraft",
+  "version": "0.0.1",
+
+  "name": "SquidCraft",
+  "description": "The mod is add more food with squid!",
+  "authors": [
+    "squid233"
+  ],
+  "contact": {
+    "homepage": "https://to.be.continued/",
+    "sources": "https://github.com/squid233/SquidCraft"
+  },
+
+  "license": "MIT License",
+  "icon": "assets/squidcraft/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "io.github.squidcraft.SquidCraft"
+    ]
+  },
+  "mixins": [
+    "squidcraft.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "fabric": "*",
+    "minecraft": "1.15.x"
+  },
+  "suggests": {
+    "flamingo": "*"
+  }
+}

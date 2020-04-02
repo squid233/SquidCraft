@@ -1,0 +1,10 @@
+{
+  "item.squidcraft.shredded_squid": "Shredded Squid",
+  "item.squidcraft.cooked_shredded_squid": "Cooked Shredded Squid",
+  "item.squidcraft.a_pile_cooked_shredded_squid": "A Pile Cooked Shredded Squid",
+  "item.squidcraft.squid_cookie": "Squid Cookie",
+
+  "itemGroup.squidcraft.squid_craft": "Squid Craft",
+
+  "block.squidcraft.squid_block": "Squid Block"
+}

@@ -1,0 +1,10 @@
+{
+  "item.squidcraft.shredded_squid": "鱿鱼丝",
+  "item.squidcraft.cooked_shredded_squid": "熟鱿鱼丝",
+  "item.squidcraft.a_pile_cooked_shredded_squid": "一堆鱿鱼丝",
+  "item.squidcraft.squid_cookie": "鱿鱼饼",
+
+  "itemGroup.squidcraft.squid_craft": "鱿鱼工艺",
+
+  "block.squidcraft.squid_block": "鱿鱼块"
+}
