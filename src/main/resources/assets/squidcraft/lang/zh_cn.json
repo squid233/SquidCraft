@@ -3,6 +3,15 @@
   "item.squidcraft.cooked_shredded_squid": "熟鱿鱼丝",
   "item.squidcraft.a_pile_cooked_shredded_squid": "一堆鱿鱼丝",
   "item.squidcraft.squid_cookie": "鱿鱼饼",
+  "item.squidcraft.squid_helmet": "鱿鱼头盔",
+  "item.squidcraft.squid_chestplate": "鱿鱼胸甲",
+  "item.squidcraft.squid_leggings": "鱿鱼护腿",
+  "item.squidcraft.squid_boots": "鱿鱼靴子",
+  "item.squidcraft.squid_axe": "鱿鱼斧",
+  "item.squidcraft.squid_hoe": "鱿鱼锄",
+  "item.squidcraft.squid_pickaxe": "鱿鱼镐",
+  "item.squidcraft.squid_shovel": "鱿鱼铲",
+  "item.squidcraft.squid_sword": "鱿鱼剑",
 
   "itemGroup.squidcraft.squid_craft": "鱿鱼工艺",
 

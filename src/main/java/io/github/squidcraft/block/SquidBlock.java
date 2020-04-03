@@ -6,6 +6,6 @@ import net.minecraft.block.Material;
 
 public class SquidBlock extends Block {
     public SquidBlock() {
-        super(FabricBlockSettings.of(Material.EARTH).build());
+        super(FabricBlockSettings.of(Material.EARTH).hardness(0.5f).build());
     }
 }
