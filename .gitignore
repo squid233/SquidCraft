@@ -1,7 +1,19 @@
 # gradle
 
-.gradle/
-build/
+.gradle/4.8.1/
+.gradle/5.5.1/
+.gradle/5.6.1/
+.gradle/6.0.1/
+.gradle/6.2.1/
+.gradle/buildOutputCleanup/
+.gradle/checksums/
+.gradle/vcs-1/
+.gradle/vcsWorkingDirs/
+build/classes/
+build/generated/
+build/loom-cache/
+build/resources/
+build/tmp/
 out/
 classes/
 
