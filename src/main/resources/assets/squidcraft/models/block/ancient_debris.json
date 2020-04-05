@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "squidcraft:block/ancient_debris_top",
+    "side": "squidcraft:block/ancient_debris_side"
+  }
+}

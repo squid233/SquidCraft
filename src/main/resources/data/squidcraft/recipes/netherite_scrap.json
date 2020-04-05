@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": [
+    {
+      "item": "squidcraft:ancient_debris"
+    }
+  ],
+  "result": "squidcraft:netherite_scrap",
+  "experience": 2,
+  "cookingtime": 200
+}

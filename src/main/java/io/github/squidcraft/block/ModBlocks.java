@@ -10,22 +10,15 @@ import net.minecraft.item.Item;
 
 public class ModBlocks {
     public static final Block SQUID_BLOCK = new SquidBlock();
+    public static final Block ANCIENT_DEBRIS = new AncientDebris();
 
     public ModBlocks() {
+        registerBlock("squid_block", SQUID_BLOCK, new BlockItem(SQUID_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT).food(new FoodComponent.Builder().hunger(1458).saturationModifier(2.43576819f).meat().alwaysEdible().build())));
+        registerBlock("ancient_debris", ANCIENT_DEBRIS, new BlockItem(ANCIENT_DEBRIS, new Item.Settings().group(ItemGroups.SQUID_CRAFT)));
 
-        registerBlock("squid_block",
-                "squid_block",
-                SQUID_BLOCK,
-                new BlockItem(SQUID_BLOCK,
-                        new Item.Settings()
-                                .group(ItemGroups.SQUID_CRAFT)
-                                .food(new FoodComponent.Builder()
-                                        .hunger(1458)
-                                        .saturationModifier(1.8287103012f)
-                                        .meat().build())));
     }
 
-    public static void registerBlock(String blockName, String blockItemName, Block block, BlockItem blockItem) {
-        BlocksRegister.registerBlock(SquidCraft.MODID, blockName, blockItemName, block, blockItem);
+    public static void registerBlock(String blockName, Block block, BlockItem blockItem) {
+        BlocksRegister.registerBlock(SquidCraft.MODID, blockName, blockName, block, blockItem);
     }
 }

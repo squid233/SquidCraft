@@ -13,7 +13,7 @@ import net.minecraft.util.Lazy;
 import java.util.function.Supplier;
 
 public enum SquidArmorMaterial implements ArmorMaterial {
-    SQUID("squid", 5, new int[]{1, 3, 2, 1}, 15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.5f, () -> {
+    SQUID("squid", 5, new int[]{5, 8, 7, 4}, 15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.5f, () -> {
         return Ingredient.ofItems(ModItems.SQUID_COOKIE);
     });
 

@@ -1,0 +1,54 @@
+{
+  "block.ancient_debris.break": {
+    "sounds": [
+      "block/ancient_debris/break1",
+      "block/ancient_debris/break2",
+      "block/ancient_debris/break3",
+      "block/ancient_debris/break4",
+      "block/ancient_debris/break5"
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.ancient_debris.fall": {
+    "sounds": [
+      "block/basalt/step1",
+      "block/basalt/step2",
+      "block/basalt/step3",
+      "block/basalt/step4",
+      "block/basalt/step5",
+      "block/basalt/step6"
+    ]
+  },
+  "block.ancient_debris.hit": {
+    "sounds": [
+      "block/basalt/step1",
+      "block/basalt/step2",
+      "block/basalt/step3",
+      "block/basalt/step4",
+      "block/basalt/step5",
+      "block/basalt/step6"
+    ],
+    "subtitle": "subtitles.block.generic.hit"
+  },
+  "block.ancient_debris.place": {
+    "sounds": [
+      "block/ancient_debris/break1",
+      "block/ancient_debris/break2",
+      "block/ancient_debris/break3",
+      "block/ancient_debris/break4",
+      "block/ancient_debris/break5"
+    ],
+    "subtitle": "subtitles.block.generic.place"
+  },
+  "block.ancient_debris.step": {
+    "sounds": [
+      "block/basalt/step1",
+      "block/basalt/step2",
+      "block/basalt/step3",
+      "block/basalt/step4",
+      "block/basalt/step5",
+      "block/basalt/step6"
+    ],
+    "subtitle": "subtitles.block.generic.footsteps"
+  }
+}

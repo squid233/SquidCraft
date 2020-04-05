@@ -7,14 +7,14 @@ import io.github.squidcraft.item.tools.squid.*;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 
 public class ModItems implements ItemsRegister {
     public static final Item SHREDDED_SQUID = new ShreddedSquid();
     public static final Item COOKED_SHREDDED_SQUID = new CookedShreddedSquid();
     public static final Item A_PILE_COOKED_SHREDDED_SQUID = new APileCSSquid();
     public static final Item SQUID_COOKIE = new SquidCookie();
+    public static final Item NETHERITE_SCRAP = new NetheriteScrap();
+    public static final Item NETHERITE_INGOT = new NetheriteIngot();
 
     public static final Item SQUID_HELMET = new ArmorItem(SquidArmorMaterial.SQUID, EquipmentSlot.HEAD, new Item.Settings().group(ItemGroups.SQUID_CRAFT));
     public static final Item SQUID_CHESTPLATE = new ArmorItem(SquidArmorMaterial.SQUID, EquipmentSlot.CHEST, new Item.Settings().group(ItemGroups.SQUID_CRAFT));
@@ -32,6 +32,8 @@ public class ModItems implements ItemsRegister {
         registerItem("cooked_shredded_squid", COOKED_SHREDDED_SQUID);
         registerItem("a_pile_cooked_shredded_squid", A_PILE_COOKED_SHREDDED_SQUID);
         registerItem("squid_cookie", SQUID_COOKIE);
+        registerItem("netherite_scrap", NETHERITE_SCRAP);
+        registerItem("netherite_ingot", NETHERITE_INGOT);
 
         registerItem("squid_helmet", SQUID_HELMET);
         registerItem("squid_chestplate", SQUID_CHESTPLATE);
@@ -45,7 +47,6 @@ public class ModItems implements ItemsRegister {
         registerItem("squid_sword", SQUID_SWORD);
 
     }
-
 
     private static void registerItem(String itemName, Item item) {
         ItemsRegister.registerItem(SquidCraft.MODID, itemName, item);

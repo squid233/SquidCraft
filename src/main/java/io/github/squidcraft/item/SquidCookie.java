@@ -8,7 +8,7 @@ public class SquidCookie extends Item {
     public SquidCookie() {
         super(new Settings()
                 .group(ItemGroups.SQUID_CRAFT)
-                .food(new FoodComponent.Builder().hunger(162).saturationModifier(0.99f).meat().build())
+                .food(new FoodComponent.Builder().hunger(162).saturationModifier(0.99f).meat().alwaysEdible().build())
         );
     }
 }

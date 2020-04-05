@@ -12,8 +12,15 @@
   "item.squidcraft.squid_pickaxe": "鱿鱼镐",
   "item.squidcraft.squid_shovel": "鱿鱼铲",
   "item.squidcraft.squid_sword": "鱿鱼剑",
+  "item.squidcraft.netherite_scrap": "下界合金碎片",
+  "item.squidcraft.netherite_ingot": "下界合金锭",
 
   "itemGroup.squidcraft.squid_craft": "鱿鱼工艺",
 
-  "block.squidcraft.squid_block": "鱿鱼块"
+  "block.squidcraft.squid_block": "鱿鱼块",
+  "block.squidcraft.ancient_debris": "远古残骸",
+
+  "biome.squidcraft.squid_biome": "鱿鱼群系",
+
+  "enchantment.squidcraft.frost": "霜冻"
 }

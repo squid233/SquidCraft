@@ -12,8 +12,15 @@
   "item.squidcraft.squid_pickaxe": "Squid Pickaxe",
   "item.squidcraft.squid_shovel": "Squid Shovel",
   "item.squidcraft.squid_sword": "Squid Sword",
+  "item.squidcraft.netherite_scrap": "Netherite Scrap",
+  "item.squidcraft.netherite_ingot": "Netherite Ingot",
 
   "itemGroup.squidcraft.squid_craft": "Squid Craft",
 
-  "block.squidcraft.squid_block": "Squid Block"
+  "block.squidcraft.squid_block": "Squid Block",
+  "block.squidcraft.ancient_debris": "Ancient Debris",
+
+  "biome.squidcraft.squid_biome": "Squid Biome",
+
+  "enchantment.squidcraft.frost": "Frost"
 }

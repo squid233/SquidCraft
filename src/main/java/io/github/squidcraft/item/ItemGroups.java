@@ -17,7 +17,19 @@ public class ItemGroups {
                 stacks.add(new ItemStack(ModItems.COOKED_SHREDDED_SQUID));
                 stacks.add(new ItemStack(ModItems.A_PILE_COOKED_SHREDDED_SQUID));
                 stacks.add(new ItemStack(ModItems.SQUID_COOKIE));
+
                 stacks.add(new ItemStack(ModBlocks.SQUID_BLOCK));
+
+                stacks.add(new ItemStack(ModItems.SQUID_HELMET));
+                stacks.add(new ItemStack(ModItems.SQUID_CHESTPLATE));
+                stacks.add(new ItemStack(ModItems.SQUID_LEGGINGS));
+                stacks.add(new ItemStack(ModItems.SQUID_BOOTS));
+
+                stacks.add(new ItemStack(ModItems.SQUID_AXE));
+                stacks.add(new ItemStack(ModItems.SQUID_HOE));
+                stacks.add(new ItemStack(ModItems.SQUID_PICKAXE));
+                stacks.add(new ItemStack(ModItems.SQUID_SHOVEL));
+                stacks.add(new ItemStack(ModItems.SQUID_SWORD));
 
             })
             .build();
