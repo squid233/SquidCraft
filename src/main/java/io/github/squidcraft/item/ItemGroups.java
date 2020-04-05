@@ -38,6 +38,11 @@ public class ItemGroups {
                 stacks.add(new ItemStack(NETHERITE_INGOT));
                 stacks.add(new ItemStack(NETHERITE_BLOCK));
 
+                stacks.add(new ItemStack(NETHERITE_HELMET));
+                stacks.add(new ItemStack(NETHERITE_CHESTPLATE));
+                stacks.add(new ItemStack(NETHERITE_LEGGINGS));
+                stacks.add(new ItemStack(NETHERITE_BOOTS));
+
             })
             .build();
 }

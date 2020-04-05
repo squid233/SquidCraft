@@ -23,5 +23,7 @@
 
   "biome.squidcraft.squid_biome": "Squid Biome",
 
-  "enchantment.squidcraft.frost": "Frost"
+  "enchantment.squidcraft.frost": "Frost",
+
+  "subtitles.item.armor.equip_netherite": "Netherite Armor:Equip"
 }
