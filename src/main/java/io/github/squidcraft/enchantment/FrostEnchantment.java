@@ -19,7 +19,7 @@ public class FrostEnchantment extends Enchantment {
     }
 
     @Override
-    public int getMaximumPower(int int_1) {
+    public int getMaximumLevel() {
         return 10;
     }
 
