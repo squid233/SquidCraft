@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "W  ",
+    "   ",
+    "   "
+  ],
+  "key": {
+    "W": {
+      "item": "squidcraft:netherite_block"
+    }
+  },
+  "result": {
+    "item": "squidcraft:netherite_ingot",
+    "count": 9
+  }
+}

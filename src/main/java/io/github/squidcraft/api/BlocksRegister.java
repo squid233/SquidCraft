@@ -6,6 +6,12 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public interface BlocksRegister {
+    /**
+     *
+     * @param modid Your mod's identifier
+     * @param blockName The block's name
+     * @param block A block
+     */
     static void registerBlock(String modid, String blockName, Block block) {
         Registry.register(Registry.BLOCK, new Identifier(modid, blockName), block);
     }

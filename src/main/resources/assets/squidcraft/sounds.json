@@ -1,11 +1,11 @@
 {
   "block.ancient_debris.break": {
     "sounds": [
-      "block/ancient_debris/break1",
-      "block/ancient_debris/break2",
-      "block/ancient_debris/break3",
-      "block/ancient_debris/break4",
-      "block/ancient_debris/break5"
+      "squidcraft:block/ancient_debris/break1",
+      "squidcraft:block/ancient_debris/break2",
+      "squidcraft:block/ancient_debris/break3",
+      "squidcraft:block/ancient_debris/break4",
+      "squidcraft:block/ancient_debris/break5"
     ],
     "subtitle": "subtitles.block.generic.break"
   },
@@ -32,11 +32,11 @@
   },
   "block.ancient_debris.place": {
     "sounds": [
-      "block/ancient_debris/break1",
-      "block/ancient_debris/break2",
-      "block/ancient_debris/break3",
-      "block/ancient_debris/break4",
-      "block/ancient_debris/break5"
+      "squidcraft:block/ancient_debris/break1",
+      "squidcraft:block/ancient_debris/break2",
+      "squidcraft:block/ancient_debris/break3",
+      "squidcraft:block/ancient_debris/break4",
+      "squidcraft:block/ancient_debris/break5"
     ],
     "subtitle": "subtitles.block.generic.place"
   },
