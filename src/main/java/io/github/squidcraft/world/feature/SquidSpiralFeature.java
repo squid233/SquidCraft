@@ -1,4 +1,4 @@
-package io.github.squidcraft.feature;
+package io.github.squidcraft.world.feature;
 
 import com.mojang.datafixers.Dynamic;
 import io.github.squidcraft.SquidCraft;

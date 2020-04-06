@@ -15,6 +15,16 @@
   "item.squidcraft.netherite_scrap": "Netherite Scrap",
   "item.squidcraft.netherite_ingot": "Netherite Ingot",
 
+  "item.squidcraft.netherite_helmet": "Netherite Helmet",
+  "item.squidcraft.netherite_chestplate": "Netherite Chestplate",
+  "item.squidcraft.netherite_leggings": "Netherite Leggings",
+  "item.squidcraft.netherite_boots": "Netherite Boots",
+  "item.squidcraft.netherite_axe": "Netherite Axe",
+  "item.squidcraft.netherite_hoe": "Netherite Hoe",
+  "item.squidcraft.netherite_pickaxe": "Netherite Pickaxe",
+  "item.squidcraft.netherite_shovel": "Netherite Shovel",
+  "item.squidcraft.netherite_sword": "Netherite Sword",
+
   "itemGroup.squidcraft.squid_craft": "Squid Craft",
 
   "block.squidcraft.squid_block": "Squid Block",

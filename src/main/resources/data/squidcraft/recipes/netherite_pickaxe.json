@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:diamond_pickaxe"
+    },
+    {
+      "item": "squidcraft:netherite_ingot"
+    }
+  ],
+  "result": {
+    "item": "squidcraft:netherite_pickaxe"
+  }
+}

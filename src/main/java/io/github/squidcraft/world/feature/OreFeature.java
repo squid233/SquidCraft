@@ -1,4 +1,4 @@
-package io.github.squidcraft.feature;
+package io.github.squidcraft.world.feature;
 
 import io.github.squidcraft.block.ModBlocks;
 import net.minecraft.world.biome.Biome;
@@ -31,7 +31,6 @@ public class OreFeature {
     }
 
     public static void spawnAncientDebris(Biome biome) {
-        Random random = new Random();
         if (biome.getCategory() == Biome.Category.NETHER) {
             biome.addFeature(
                     GenerationStep.Feature.UNDERGROUND_ORES,
@@ -39,7 +38,7 @@ public class OreFeature {
                             new OreFeatureConfig(
                                     OreFeatureConfig.Target.NETHERRACK,
                                     ModBlocks.ANCIENT_DEBRIS.getDefaultState(),
-                                    random.nextInt(4)
+                                    5
                             )).createDecoratedFeature(
                             Decorator.COUNT_RANGE.configure(new RangeDecoratorConfig(
                                     1,
@@ -47,22 +46,6 @@ public class OreFeature {
                                     8,
                                     22
                             ))));
-            biome.addFeature(
-                    GenerationStep.Feature.UNDERGROUND_ORES,
-                    Feature.ORE.configure(
-                            new OreFeatureConfig(
-                                    OreFeatureConfig.Target.NETHERRACK,
-                                    ModBlocks.ANCIENT_DEBRIS.getDefaultState(),
-                                    random.nextInt(3)
-                            )).createDecoratedFeature(
-                            Decorator.COUNT_RANGE.configure(new RangeDecoratorConfig(
-                                    1,
-                                    0,
-                                    8,
-                                    119
-                            ))
-                    )
-            );
         }
     }
 }

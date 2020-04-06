@@ -15,7 +15,7 @@ public class EnchantmentRegister {
                 Registry.ENCHANTMENT,
                 new Identifier(MODID, "frost"),
                 new FrostEnchantment(
-                        Enchantment.Weight.VERY_RARE,
+                        Enchantment.Weight.UNCOMMON,
                         EnchantmentTarget.WEAPON,
                         new EquipmentSlot[] {
                                 EquipmentSlot.MAINHAND

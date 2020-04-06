@@ -15,6 +15,16 @@
   "item.squidcraft.netherite_scrap": "下界合金碎片",
   "item.squidcraft.netherite_ingot": "下界合金锭",
 
+  "item.squidcraft.netherite_helmet": "下界合金头盔",
+  "item.squidcraft.netherite_chestplate": "下界合金胸甲",
+  "item.squidcraft.netherite_leggings": "下界合金护腿",
+  "item.squidcraft.netherite_boots": "下界合金靴子",
+  "item.squidcraft.netherite_axe": "下界合金斧",
+  "item.squidcraft.netherite_hoe": "下界合金锄",
+  "item.squidcraft.netherite_pickaxe": "下界合金镐",
+  "item.squidcraft.netherite_shovel": "下界合金铲",
+  "item.squidcraft.netherite_sword": "下界合金剑",
+
   "itemGroup.squidcraft.squid_craft": "鱿鱼工艺",
 
   "block.squidcraft.squid_block": "鱿鱼块",

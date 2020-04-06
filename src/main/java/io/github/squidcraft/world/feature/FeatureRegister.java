@@ -1,4 +1,4 @@
-package io.github.squidcraft.feature;
+package io.github.squidcraft.world.feature;
 
 import net.fabricmc.fabric.api.event.registry.RegistryEntryAddedCallback;
 import net.minecraft.util.registry.Registry;
