@@ -13,9 +13,9 @@ import net.minecraft.util.Lazy;
 import java.util.function.Supplier;
 
 public enum NetheriteArmorMaterial implements ArmorMaterial {
-    NETHERITE("netherite", 2, new int[]{6, 16, 12, 6}, 30, ModSounds.ITEM_ARMOR_EQUIP_NETHERITE, 6, () -> {return Ingredient.ofItems(ModItems.NETHERITE_INGOT);});
+    NETHERITE("netherite", 2, new int[]{6, 12, 16, 6}, 30, ModSounds.ITEM_ARMOR_EQUIP_NETHERITE, 6, () -> {return Ingredient.ofItems(ModItems.NETHERITE_INGOT);});
 
-    private static final int[] baseDurability = {407, 592, 555, 481} ;
+    private static final int[] baseDurability = {407, 555, 592, 481} ;
     private final String name;
     private final int durabilityMultiplier;
     private final int[] protectionAmounts;
@@ -31,7 +31,7 @@ public enum NetheriteArmorMaterial implements ArmorMaterial {
         this.enchantability = enchantability;
         this.equipSound = soundEvent;
         this.toughness = toughness;
-        this.repairIngredient = new Lazy(repairIngredient);
+        this.repairIngredient = new Lazy<>(repairIngredient);
     }
 
     @Override

@@ -14,7 +14,7 @@ public class ModBlocks {
     public static final Block NETHERITE_BLOCK = new NetheriteBlock();
 
     public ModBlocks() {
-        registerBlock("squid_block", SQUID_BLOCK, new BlockItem(SQUID_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT).food(new FoodComponent.Builder().hunger(1458).saturationModifier(2.43576819f).meat().alwaysEdible().build())));
+        registerBlock("squid_block", SQUID_BLOCK, new BlockItem(SQUID_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT).food(new FoodComponent.Builder().hunger(1458).saturationModifier(165.651f).meat().alwaysEdible().build())));
         registerBlock("ancient_debris", ANCIENT_DEBRIS, new BlockItem(ANCIENT_DEBRIS, new Item.Settings().group(ItemGroups.SQUID_CRAFT)));
         registerBlock("netherite_block", NETHERITE_BLOCK, new BlockItem(NETHERITE_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT)));
 
