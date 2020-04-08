@@ -19,12 +19,12 @@ public class OreFeature {
                             new OreFeatureConfig(
                                     OreFeatureConfig.Target.NATURAL_STONE,
                                     ModBlocks.SQUID_BLOCK.getDefaultState(),
-                                    2 // Vein size
+                                    3 // Vein size
                             )).createDecoratedFeature(
                             Decorator.COUNT_RANGE.configure(new RangeDecoratorConfig(
-                                    4, // Vein count of per chunk
+                                    8, // Vein count of per chunk
                                     0, // Bottom offset
-                                    32, // Minimum y level
+                                    16, // Minimum y level
                                     64 // Maximum y level
                             ))));
         }

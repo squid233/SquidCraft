@@ -12,7 +12,7 @@ public class FeatureRegister {
     public FeatureRegister() {
         Registry.BIOME.forEach(biome -> biome.addFeature(
                 GenerationStep.Feature.SURFACE_STRUCTURES,
-                Feature.BLUE_ICE.configure(
+                SquidSpiralFeature.SQUID_SPIRAL.configure(
                         new DefaultFeatureConfig()
                 ).createDecoratedFeature(
                         Decorator.CHANCE_HEIGHTMAP.configure(new ChanceDecoratorConfig(100))

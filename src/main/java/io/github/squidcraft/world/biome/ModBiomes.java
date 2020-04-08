@@ -1,14 +1,16 @@
 package io.github.squidcraft.world.biome;
 
+import io.github.squidcraft.SquidCraft;
 import net.fabricmc.fabric.api.biomes.v1.FabricBiomes;
 import net.fabricmc.fabric.api.biomes.v1.OverworldBiomes;
 import net.fabricmc.fabric.api.biomes.v1.OverworldClimate;
+import net.minecraft.util.Identifier;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.Biomes;
 import net.minecraft.util.registry.Registry;
 
 public class ModBiomes {
-    public static final Biome SQUID_BIOME = Registry.register(Registry.BIOME, "squid_biome", new SquidBiome());;
+    public static final Biome SQUID_BIOME = Registry.register(Registry.BIOME, new Identifier(SquidCraft.MODID, "squid_biome"), new SquidBiome());;
 
     public ModBiomes() {
 
