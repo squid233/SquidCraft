@@ -7,7 +7,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.*;
 import org.apache.logging.log4j.Logger;
 
-@Mod(modid = SquidCraft.MODID, name = SquidCraft.NAME, version = SquidCraft.VERSION, acceptedMinecraftVersions = "1.12.2", useMetadata = true, updateJSON = "https://github.com/squid233/SquidCraft/tree/1.12.x/blob/updateJson.json")
+@Mod(modid = SquidCraft.MODID, name = SquidCraft.NAME, version = SquidCraft.VERSION, acceptedMinecraftVersions = "1.12.2", useMetadata = true, updateJSON = "https://github.com/squid233/SquidCraft/blob/1.12.x/updateJSON.json")
 public class SquidCraft
 {
     public static final String MODID = "squidcraft";
