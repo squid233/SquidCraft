@@ -1,0 +1,8 @@
+item.squidcraft.shredded_squid.name=Shredded Squid
+item.squidcraft.cooked_shredded_squid.name=Cooked Shredded Squid
+item.squidcraft.a_pile_cooked_shredded_squid.name=A Pile Cooked Shredded Squid
+item.squidcraft.squid_cookie.name=Squid Cookie
+
+itemGroup.squid_craft=SquidCraft
+
+tile.squidcraft.squid_block.name=Squid Block

@@ -1,0 +1,16 @@
+[
+{
+  "modid": "squidcraft",
+  "name": "SquidCraft",
+  "description": "This is a Minecraft mod adds more item with squid!",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "https://github.com/squid233/SquidCraft/tree/1.12.x",
+  "updateUrl": "",
+  "authorList": ["squid233"],
+  "credits": "Thanks for squid233!",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

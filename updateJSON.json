@@ -1,0 +1,11 @@
+{
+  "homepage": "https://github.com/squid233/SquidCraft/tree/1.12.x",
+  "1.12.2": {
+    "0.0.1.0-alpha": "see updateinfo.md"
+
+  },
+  "promos": {
+    "1.12.2-latest": "0.0.1.0-alpha",
+    "1.12.2-recommended": "0.0.1.0-alpha"
+  }
+}

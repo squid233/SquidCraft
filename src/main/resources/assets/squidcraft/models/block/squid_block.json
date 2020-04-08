@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "particle": "squidcraft:blocks/squid_block",
+    "all": "squidcraft:blocks/squid_block"
+  }
+}
