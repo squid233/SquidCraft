@@ -14,7 +14,7 @@
   },
 
   "license": "MIT License",
-  "icon": "assets/squidcraft/icon.png",
+  "icon": "assets/squidcraft/squidcrafticon.png",
 
   "environment": "*",
   "entrypoints": {

@@ -17,7 +17,7 @@ public class SquidCraftMixin extends Screen {
 	@Inject(at = @At("HEAD"), method = "init()V")
 	private void init(CallbackInfo info) {
 		System.out.println("authorsGui");
-		this.addButton(new ButtonWidget(this.width / 2 - 100, this.height / 2  + 99, 200, 20, "SquidCraft", (action) -> {
+		this.addButton(new ButtonWidget(this.width / 2 - 60, this.height / 2  + 99, 74, 20, "SquidCraft", (action) -> {
 			MinecraftClient.getInstance().openScreen(new AuthorsGUI(this));
 			System.out.println("By Squid233");
 		}));
