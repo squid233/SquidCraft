@@ -11,12 +11,13 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
+// Mixin inject,Inserts afer the value specified by the code!
 @Mixin(TitleScreen.class)
 public class SquidCraftMixin extends Screen {
 	@Inject(at = @At("HEAD"), method = "init()V")
 	private void init(CallbackInfo info) {
-		System.out.println("This line is printed by an example mod mixin!");
-		this.addButton(new ButtonWidget(this.width / 2 - 100, this.height / 2  +100, 200, 20, "SquidCraft", (action) -> {
+		System.out.println("authorsGui");
+		this.addButton(new ButtonWidget(this.width / 2 - 100, this.height / 2  + 99, 200, 20, "SquidCraft", (action) -> {
 			MinecraftClient.getInstance().openScreen(new AuthorsGUI(this));
 			System.out.println("By Squid233");
 		}));

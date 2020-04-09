@@ -12,18 +12,20 @@ public class AuthorsGUI extends Screen {
         super(new LiteralText(""));
         this.screen = screen;
     }
-
     @Override
     public void render(int mouseX, int mouseY, float delta) {
         renderBackground();
-        renderTooltip("squid233", 150, 20);
+        renderTooltip("authors:", this.width / 100, this.height / 9);
+        renderTooltip("squid233", 21 * this.width / 100, this.height / 9);
+        renderTooltip("baka4n",  41 * this.width / 100, this.height / 9);
         super.render(mouseX, mouseY, delta);
     }
 
     @Override
     public void init() {
         super.init();
-        this.addButton(new ButtonWidget(20, 20, 100, 20, "Back", (action) -> {
+        this.addButton(new ButtonWidget(3 * this.width / 4, 8 * this.height / 9, 100, 20, "Back", (action) -> {
+            this.screen.onClose();
         }));
     }
 }
