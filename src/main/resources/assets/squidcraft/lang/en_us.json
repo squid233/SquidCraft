@@ -35,5 +35,12 @@
 
   "enchantment.squidcraft.frost": "Frost",
 
-  "subtitles.item.armor.equip_netherite": "Netherite Armor:Equip"
+  "subtitles.item.armor.equip_netherite": "Netherite Armor:Equip",
+
+  "advancements.squidcraft.squidcraft.title": "SquidCraft",
+  "advancements.squidcraft.squidcraft.desc": "Get started, Cooking it!",
+  "advancements.squidcraft.first_cooking.title": "First Cooking",
+  "advancements.squidcraft.first_cooking.desc": "Now, we can make \"A Pile Cooked Shredded Squid\"!",
+
+  "keybind.squidcraft.useless_key": "Useless Key"
 }

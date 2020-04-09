@@ -1,0 +1,36 @@
+{
+  "display": {
+    "icon": {
+      "item": "squidcraft:cooked_shredded_squid"
+    },
+    "title": {
+      "translate": "advancements.squidcraft.first_cooking.title"
+    },
+    "description": {
+      "translate": "advancements.squidcraft.first_cooking.desc"
+    }
+  },
+  "parent": "squidcraft:squidcraft",
+  "criteria": {
+    "first_cooking": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "squidcraft:cooked_shredded_squid"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "first_cooking"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "squidcraft:recipes/a_pile_cooked_shredded_squid.json"
+    ]
+  }
+}

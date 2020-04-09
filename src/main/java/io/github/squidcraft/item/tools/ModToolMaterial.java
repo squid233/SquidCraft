@@ -26,7 +26,7 @@ public enum ModToolMaterial implements ToolMaterial {
         this.attackDamage = attackDamage;
         this.miningLevel = miningLevel;
         this.enchantability = enchantability;
-        this.repairIngredient = new Lazy(repairIngredient);
+        this.repairIngredient = new Lazy<>(repairIngredient);
     }
 
     @Override

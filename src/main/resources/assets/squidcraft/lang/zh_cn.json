@@ -35,5 +35,12 @@
 
   "enchantment.squidcraft.frost": "霜冻",
 
-  "subtitles.item.armor.equip_netherite": "下界合金盔甲：碰擦"
+  "subtitles.item.armor.equip_netherite": "下界合金盔甲：碰擦",
+
+  "advancements.squidcraft.squidcraft.title": "鱿鱼工艺",
+  "advancements.squidcraft.squidcraft.desc": "要想开始，烤它！",
+  "advancements.squidcraft.first_cooking.title": "第一次烘烤",
+  "advancements.squidcraft.first_cooking.desc": "现在，我们可以制作\"一堆鱿鱼丝\"了！",
+
+  "keybind.squidcraft.useless_key": "没用的按键"
 }
