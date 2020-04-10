@@ -34,9 +34,9 @@
   ],
   "rewards": {
     "recipes": [
-      "squidcraft:recipes/cooked_shredded_squid.json",
-      "squidcraft:recipes/cooked_shredded_squid_1.json",
-      "squidcraft:recipes/cooked_shredded_squid_2.json"
+      "squidcraft:recipes/cooked_shredded_squid",
+      "squidcraft:recipes/cooked_shredded_squid_1",
+      "squidcraft:recipes/cooked_shredded_squid_2"
     ]
   }
 }

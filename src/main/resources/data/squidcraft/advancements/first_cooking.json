@@ -1,4 +1,5 @@
 {
+  "parent": "squidcraft:squidcraft",
   "display": {
     "icon": {
       "item": "squidcraft:cooked_shredded_squid"
@@ -10,7 +11,6 @@
       "translate": "advancements.squidcraft.first_cooking.desc"
     }
   },
-  "parent": "squidcraft:squidcraft",
   "criteria": {
     "first_cooking": {
       "trigger": "minecraft:inventory_changed",
