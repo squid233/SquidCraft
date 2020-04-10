@@ -42,5 +42,9 @@
   "advancements.squidcraft.first_cooking.title": "第一次烘烤",
   "advancements.squidcraft.first_cooking.desc": "现在，我们可以制作\"一堆鱿鱼丝\"了！",
 
-  "keybind.squidcraft.useless_key": "没用的按键"
+  "key.squidcraft.useless_key": "没用的按键",
+
+  "authors.back": "返回",
+  "squidcraft.SquidCraft": "墨鱼工艺",
+  "authors.info": "作者名单："
 }

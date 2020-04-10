@@ -42,5 +42,9 @@
   "advancements.squidcraft.first_cooking.title": "First Cooking",
   "advancements.squidcraft.first_cooking.desc": "Now, we can make \"A Pile Cooked Shredded Squid\"!",
 
-  "keybind.squidcraft.useless_key": "Useless Key"
+  "key.squidcraft.useless_key": "Useless Key",
+
+  "authors.back": "back",
+  "squidcraft.SquidCraft":"SquidCraft",
+  "authors.info": "authors:"
 }

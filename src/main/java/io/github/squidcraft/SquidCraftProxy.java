@@ -10,12 +10,19 @@ import io.github.squidcraft.util.ModSounds;
 
 public class SquidCraftProxy {
     public SquidCraftProxy() {
+        // items registry
         new ModItems();
+        // blocks registry
         new ModBlocks();
+        // sounds registry
         new ModSounds();
+        // enchanting registry
         new EnchantmentRegister();
+        // feature registry
         new FeatureRegister();
+        // biomes registry
         new ModBiomes();
+        // loot_table registry handler
         new LootTablesHandle();
     }
 }
