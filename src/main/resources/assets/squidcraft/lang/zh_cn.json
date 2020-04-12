@@ -44,5 +44,9 @@
   "advancements.squidcraft.a_pile.title": "一堆鱿鱼丝",
   "advancements.squidcraft.a_pile.desc": "如果你制作一块鱿鱼饼，你会发现更多惊喜的！ ",
 
-  "keybind.squidcraft.useless_key": "没用的按键"
+  "key.squidcraft.useless_key": "没用的按键",
+
+  "authors.back": "返回",
+  "squidcraft.SquidCraft": "鱿鱼工艺",
+  "authors.info": "作者名单："
 }
