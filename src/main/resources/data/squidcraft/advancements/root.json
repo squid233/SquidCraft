@@ -4,10 +4,10 @@
       "item": "squidcraft:shredded_squid"
     },
     "title": {
-      "translate": "advancements.squidcraft.squidcraft.title"
+      "translate": "advancements.squidcraft.root.title"
     },
     "description": {
-      "translate": "advancements.squidcraft.squidcraft.desc"
+      "translate": "advancements.squidcraft.root.desc"
     },
     "frame": "task",
     "show_toast": true,
@@ -34,9 +34,12 @@
   ],
   "rewards": {
     "recipes": [
-      "squidcraft:recipes/cooked_shredded_squid",
-      "squidcraft:recipes/cooked_shredded_squid_1",
-      "squidcraft:recipes/cooked_shredded_squid_2"
+      "squidcraft:cooked_shredded_squid",
+      "squidcraft:cooked_shredded_squid_1",
+      "squidcraft:cooked_shredded_squid_2"
+    ],
+    "loot": [
+      "minecraft:entities/squid"
     ]
   }
 }

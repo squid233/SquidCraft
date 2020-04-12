@@ -37,10 +37,12 @@
 
   "subtitles.item.armor.equip_netherite": "Netherite Armor:Equip",
 
-  "advancements.squidcraft.squidcraft.title": "SquidCraft",
-  "advancements.squidcraft.squidcraft.desc": "Get started, Cooking it!",
+  "advancements.squidcraft.root.title": "SquidCraft",
+  "advancements.squidcraft.root.desc": "Get started, Cooking it!",
   "advancements.squidcraft.first_cooking.title": "First Cooking",
   "advancements.squidcraft.first_cooking.desc": "Now, we can make \"A Pile Cooked Shredded Squid\"!",
+  "advancements.squidcraft.a_pile.title": "A Pile Cooked Shredded Squid",
+  "advancements.squidcraft.a_pile.desc": "If you make a squid cookie, you can find more surprise!",
 
   "keybind.squidcraft.useless_key": "Useless Key"
 }

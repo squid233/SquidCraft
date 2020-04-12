@@ -1,7 +1,7 @@
 {
   "item.squidcraft.shredded_squid": "鱿鱼丝",
   "item.squidcraft.cooked_shredded_squid": "熟鱿鱼丝",
-  "item.squidcraft.a_pile_cooked_shredded_squid": "一堆鱿鱼丝",
+  "item.squidcraft.a_pile_cooked_shredded_squid": "一堆熟鱿鱼丝",
   "item.squidcraft.squid_cookie": "鱿鱼饼",
   "item.squidcraft.squid_helmet": "鱿鱼头盔",
   "item.squidcraft.squid_chestplate": "鱿鱼胸甲",
@@ -37,10 +37,12 @@
 
   "subtitles.item.armor.equip_netherite": "下界合金盔甲：碰擦",
 
-  "advancements.squidcraft.squidcraft.title": "鱿鱼工艺",
-  "advancements.squidcraft.squidcraft.desc": "要想开始，烤它！",
+  "advancements.squidcraft.root.title": "鱿鱼工艺",
+  "advancements.squidcraft.root.desc": "要想开始，烤它！",
   "advancements.squidcraft.first_cooking.title": "第一次烘烤",
-  "advancements.squidcraft.first_cooking.desc": "现在，我们可以制作\"一堆鱿鱼丝\"了！",
+  "advancements.squidcraft.first_cooking.desc": "现在，我们可以制作\"一堆熟鱿鱼丝\"了！",
+  "advancements.squidcraft.a_pile.title": "一堆鱿鱼丝",
+  "advancements.squidcraft.a_pile.desc": "如果你制作一块鱿鱼饼，你会发现更多惊喜的！ ",
 
   "keybind.squidcraft.useless_key": "没用的按键"
 }

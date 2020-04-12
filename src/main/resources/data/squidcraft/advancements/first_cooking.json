@@ -1,5 +1,5 @@
 {
-  "parent": "squidcraft:squidcraft",
+  "parent": "squidcraft:root",
   "display": {
     "icon": {
       "item": "squidcraft:cooked_shredded_squid"
@@ -30,7 +30,7 @@
   ],
   "rewards": {
     "recipes": [
-      "squidcraft:recipes/a_pile_cooked_shredded_squid.json"
+      "squidcraft:a_pile_cooked_shredded_squid"
     ]
   }
 }
