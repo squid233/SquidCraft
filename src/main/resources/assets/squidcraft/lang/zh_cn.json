@@ -24,16 +24,20 @@
   "item.squidcraft.netherite_pickaxe": "下界合金镐",
   "item.squidcraft.netherite_shovel": "下界合金锹",
   "item.squidcraft.netherite_sword": "下界合金剑",
+  "item.squidcraft.samsung_galaxy_note_seven": "三星 Galaxy Note 7",
 
   "itemGroup.squidcraft.squid_craft": "鱿鱼工艺",
 
   "block.squidcraft.squid_block": "鱿鱼块",
+  "block.squidcraft.compress_squid_block": "压缩鱿鱼块",
   "block.squidcraft.ancient_debris": "远古残骸",
   "block.squidcraft.netherite_block": "下界合金块",
 
   "biome.squidcraft.squid_biome": "鱿鱼群系",
 
   "enchantment.squidcraft.frost": "霜冻",
+  "enchantment.squidcraft.fire_boom": "火焰爆炸",
+  "enchantment.squidcraft.insane": "疯狂附魔",
 
   "subtitles.item.armor.equip_netherite": "下界合金盔甲：碰擦",
 

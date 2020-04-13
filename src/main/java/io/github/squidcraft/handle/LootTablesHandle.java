@@ -1,12 +1,10 @@
 package io.github.squidcraft.handle;
 
-import io.github.squidcraft.item.ModItems;
+import io.github.squidcraft.util.ModItems;
 import net.fabricmc.fabric.api.loot.v1.FabricLootPoolBuilder;
 import net.fabricmc.fabric.api.loot.v1.event.LootTableLoadingCallback;
 import net.minecraft.loot.ConstantLootTableRange;
 import net.minecraft.loot.UniformLootTableRange;
-import net.minecraft.loot.condition.LootCondition;
-import net.minecraft.loot.context.LootContext;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.function.FurnaceSmeltLootFunction;
 import net.minecraft.loot.function.LootingEnchantLootFunction;

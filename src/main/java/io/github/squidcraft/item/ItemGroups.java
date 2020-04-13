@@ -6,8 +6,8 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 
-import static io.github.squidcraft.item.ModItems.*;
-import static io.github.squidcraft.block.ModBlocks.*;
+import static io.github.squidcraft.util.ModItems.*;
+import static io.github.squidcraft.util.ModBlocks.*;
 
 public class ItemGroups {
     public static final ItemGroup SQUID_CRAFT = FabricItemGroupBuilder.create(
@@ -21,6 +21,7 @@ public class ItemGroups {
                 stacks.add(new ItemStack(SQUID_COOKIE));
 
                 stacks.add(new ItemStack(SQUID_BLOCK));
+                stacks.add(new ItemStack(COMPRESS_SQUID_BLOCK));
 
                 stacks.add(new ItemStack(SQUID_HELMET));
                 stacks.add(new ItemStack(SQUID_CHESTPLATE));
@@ -48,6 +49,8 @@ public class ItemGroups {
                 stacks.add(new ItemStack(NETHERITE_PICKAXE));
                 stacks.add(new ItemStack(NETHERITE_SHOVEL));
                 stacks.add(new ItemStack(NETHERITE_HOE));
+
+                stacks.add(new ItemStack(SAMSUNG_GALAXY_NOTE_SEVEN));
 
             })
             .build();

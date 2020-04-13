@@ -24,16 +24,20 @@
   "item.squidcraft.netherite_pickaxe": "Netherite Pickaxe",
   "item.squidcraft.netherite_shovel": "Netherite Shovel",
   "item.squidcraft.netherite_sword": "Netherite Sword",
+  "item.squidcraft.samsung_galaxy_note_seven": "Samsung Galaxy Note 7",
 
   "itemGroup.squidcraft.squid_craft": "Squid Craft",
 
   "block.squidcraft.squid_block": "Squid Block",
+  "block.squidcraft.compress_squid_block": "Compress Squid Block",
   "block.squidcraft.ancient_debris": "Ancient Debris",
   "block.squidcraft.netherite_block": "Block of Netherite",
 
   "biome.squidcraft.squid_biome": "Squid Biome",
 
   "enchantment.squidcraft.frost": "Frost",
+  "enchantment.squidcraft.fire_boom": "Fire Boom",
+  "enchantment.squidcraft.insane": "Insane Enchantment",
 
   "subtitles.item.armor.equip_netherite": "Netherite Armor:Equip",
 

@@ -2,7 +2,6 @@ package io.github.squidcraft.item;
 
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 
 public class SquidCookie extends Item {
     public SquidCookie() {

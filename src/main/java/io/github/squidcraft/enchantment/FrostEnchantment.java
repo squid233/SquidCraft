@@ -15,7 +15,7 @@ public class FrostEnchantment extends Enchantment {
 
     @Override
     public int getMinimumPower(int int_1) {
-        return 1;
+        return 3;
     }
 
     @Override

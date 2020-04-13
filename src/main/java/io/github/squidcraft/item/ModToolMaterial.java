@@ -1,17 +1,19 @@
-package io.github.squidcraft.item.tools;
+package io.github.squidcraft.item;
 
-import io.github.squidcraft.item.ItemGroups;
-import io.github.squidcraft.item.ModItems;
-import net.minecraft.item.AxeItem;
-import net.minecraft.item.HoeItem;
-import net.minecraft.item.ToolMaterial;
+import io.github.squidcraft.util.ModItems;
+import net.minecraft.item.*;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.util.Lazy;
 
 import java.util.function.Supplier;
 
 public enum ModToolMaterial implements ToolMaterial {
-    NETHERITE(4062, 20.0f, 20.0f, 9, 44, () -> {return Ingredient.ofItems(ModItems.NETHERITE_INGOT);});
+    SQUID(250, 10, 7, 4, 15, () -> {
+        return Ingredient.ofItems(ModItems.SQUID_COOKIE);
+    }),
+    NETHERITE(4062, 20.0f, 20.0f, 9, 44, () -> {
+        return Ingredient.ofItems(ModItems.NETHERITE_INGOT);
+    });
 
     private final int durability;
     private final float miningSpeed;
@@ -59,6 +61,32 @@ public enum ModToolMaterial implements ToolMaterial {
         return this.repairIngredient.get();
     }
 
+    public static class SquidAxe extends AxeItem {
+        public SquidAxe() {
+            super(SQUID, -0, -2.2f, new Settings().group(ItemGroups.SQUID_CRAFT));
+        }
+    }
+    public static class SquidHoe extends HoeItem {
+        public SquidHoe() {
+            super(SQUID, -4, new Settings().group(ItemGroups.SQUID_CRAFT));
+        }
+    }
+    public static class SquidPickaxe extends PickaxeItem {
+        public SquidPickaxe() {
+            super(SQUID, -1, -1, new Settings().group(ItemGroups.SQUID_CRAFT));
+        }
+    }
+    public static class SquidShovel extends ShovelItem {
+        public SquidShovel() {
+            super(SQUID, -2, -2, new Settings().group(ItemGroups.SQUID_CRAFT));
+        }
+    }
+    public static class SquidSword extends SwordItem {
+        public SquidSword() {
+            super(SQUID, +1, -0, new Settings().group(ItemGroups.SQUID_CRAFT));
+        }
+    }
+
     public static class NetheriteAxe extends AxeItem {
         public NetheriteAxe() {
             super(NETHERITE, -0, -0, new Settings().group(ItemGroups.SQUID_CRAFT));
@@ -69,17 +97,17 @@ public enum ModToolMaterial implements ToolMaterial {
             super(NETHERITE, -0, new Settings().group(ItemGroups.SQUID_CRAFT));
         }
     }
-    public static class NetheritePickaxe extends AxeItem {
+    public static class NetheritePickaxe extends PickaxeItem {
         public NetheritePickaxe() {
             super(NETHERITE, -0, -0, new Settings().group(ItemGroups.SQUID_CRAFT));
         }
     }
-    public static class NetheriteShovel extends AxeItem {
+    public static class NetheriteShovel extends ShovelItem {
         public NetheriteShovel() {
             super(NETHERITE, -0, -0, new Settings().group(ItemGroups.SQUID_CRAFT));
         }
     }
-    public static class NetheriteSword extends AxeItem {
+    public static class NetheriteSword extends SwordItem {
         public NetheriteSword() {
             super(NETHERITE, -0, -0, new Settings().group(ItemGroups.SQUID_CRAFT));
         }

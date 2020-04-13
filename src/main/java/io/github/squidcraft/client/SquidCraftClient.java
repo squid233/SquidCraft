@@ -1,6 +1,6 @@
 package io.github.squidcraft.client;
 
-import io.github.squidcraft.item.ModItems;
+import io.github.squidcraft.util.ModItems;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.keybinding.KeyBindingRegistry;
 import net.fabricmc.fabric.api.event.client.ClientTickCallback;

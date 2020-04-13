@@ -1,14 +1,12 @@
 package io.github.squidcraft.world.feature;
 
-import io.github.squidcraft.block.ModBlocks;
+import io.github.squidcraft.util.ModBlocks;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.decorator.Decorator;
 import net.minecraft.world.gen.decorator.RangeDecoratorConfig;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
-
-import java.util.Random;
 
 public class OreFeature {
     public static void spawnSquidBlock(Biome biome) {

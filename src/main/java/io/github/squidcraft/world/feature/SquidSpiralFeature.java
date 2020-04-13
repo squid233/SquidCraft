@@ -2,7 +2,7 @@ package io.github.squidcraft.world.feature;
 
 import com.mojang.datafixers.Dynamic;
 import io.github.squidcraft.SquidCraft;
-import io.github.squidcraft.block.ModBlocks;
+import io.github.squidcraft.util.ModBlocks;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;

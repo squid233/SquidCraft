@@ -6,7 +6,6 @@ import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.decorator.ChanceDecoratorConfig;
 import net.minecraft.world.gen.decorator.Decorator;
 import net.minecraft.world.gen.feature.DefaultFeatureConfig;
-import net.minecraft.world.gen.feature.Feature;
 
 public class FeatureRegister {
     public FeatureRegister() {
@@ -20,8 +19,9 @@ public class FeatureRegister {
         ));
 
         Registry.BIOME.forEach(OreFeature::spawnSquidBlock);
-        Registry.BIOME.forEach(OreFeature::spawnAncientDebris);
-
         RegistryEntryAddedCallback.event(Registry.BIOME).register((i, identifier, biome) -> OreFeature.spawnSquidBlock(biome));
+
+        Registry.BIOME.forEach(OreFeature::spawnAncientDebris);
+        RegistryEntryAddedCallback.event(Registry.BIOME).register((i, identifier, biome) -> OreFeature.spawnAncientDebris(biome));
     }
 }

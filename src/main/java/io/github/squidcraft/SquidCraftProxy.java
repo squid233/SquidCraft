@@ -1,12 +1,11 @@
 package io.github.squidcraft;
 
-import io.github.squidcraft.world.biome.ModBiomes;
-import io.github.squidcraft.block.ModBlocks;
-import io.github.squidcraft.enchantment.EnchantmentRegister;
+import io.github.squidcraft.util.ModBiomes;
+import io.github.squidcraft.util.ModBlocks;
+import io.github.squidcraft.util.ModEnchantments;
 import io.github.squidcraft.world.feature.FeatureRegister;
 import io.github.squidcraft.handle.LootTablesHandle;
-import io.github.squidcraft.item.ModItems;
-import io.github.squidcraft.util.ModSounds;
+import io.github.squidcraft.util.*;
 
 public class SquidCraftProxy {
     public SquidCraftProxy() {
@@ -16,13 +15,13 @@ public class SquidCraftProxy {
         new ModBlocks();
         // sounds registry
         new ModSounds();
-        // enchanting registry
-        new EnchantmentRegister();
+        // enchantments registry
+        new ModEnchantments();
         // feature registry
         new FeatureRegister();
         // biomes registry
         new ModBiomes();
-        // loot_table registry handler
+        // loot table registry handler
         new LootTablesHandle();
     }
 }
