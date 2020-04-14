@@ -1,12 +1,13 @@
 package io.github.squidcraft.util;
 
+import io.github.squidcraft.GameObj;
 import io.github.squidcraft.SquidCraft;
-import io.github.squidcraft.api.ItemsRegister;
 import io.github.squidcraft.armor.*;
 import io.github.squidcraft.item.*;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
+import org.jetbrains.annotations.NotNull;
 
 import static io.github.squidcraft.item.ModToolMaterial.*;
 import static io.github.squidcraft.item.ItemGroups.*;
@@ -43,33 +44,16 @@ public class ModItems {
 
     public static final Item SAMSUNG_GALAXY_NOTE_SEVEN = new SamsungGalaxyNoteSeven();
 
-    public ModItems() {
-        registerItem("shredded_squid", SHREDDED_SQUID);
-        registerItem("cooked_shredded_squid", COOKED_SHREDDED_SQUID);
-        registerItem("a_pile_cooked_shredded_squid", A_PILE_COOKED_SHREDDED_SQUID);
-        registerItem("squid_cookie", SQUID_COOKIE);
-        registerItem("netherite_scrap", NETHERITE_SCRAP);
-        registerItem("netherite_ingot", NETHERITE_INGOT);
-        registerItem("samsung_galaxy_note_seven", SAMSUNG_GALAXY_NOTE_SEVEN);
-
-        registerArmor("squid", SQUID_HELMET, SQUID_CHESTPLATE, SQUID_LEGGINGS, SQUID_BOOTS);
-        registerArmor("netherite", NETHERITE_HELMET, NETHERITE_CHESTPLATE, NETHERITE_LEGGINGS, NETHERITE_BOOTS);
-
-        registerTool("squid", SQUID_AXE, SQUID_HOE, SQUID_PICKAXE, SQUID_SHOVEL, SQUID_SWORD);
-        registerTool("netherite", NETHERITE_AXE, NETHERITE_HOE, NETHERITE_PICKAXE, NETHERITE_SHOVEL, NETHERITE_SWORD);
-
+    public void registerItem(String itemName, Item item) {
+        GameObj.itemsRegister.registerItem(SquidCraft.MODID, itemName, item);
     }
 
-    private static void registerItem(String itemName, Item item) {
-        ItemsRegister.registerItem(SquidCraft.MODID, itemName, item);
+    public void registerArmor(String armorName, Item helmet, Item chestplate, Item leggings, Item boots) {
+        GameObj.itemsRegister.registerArmor(SquidCraft.MODID, armorName, helmet, chestplate, leggings, boots);
     }
 
-    private static void registerArmor(String armorName, Item helmet, Item chestplate, Item leggings, Item boots) {
-        ItemsRegister.registerArmor(SquidCraft.MODID, armorName, helmet, chestplate, leggings, boots);
-    }
-
-    private static void registerTool(String toolName, Item axe, Item hoe, Item pickaxe, Item shovel, Item sword) {
-        ItemsRegister.registerTool(SquidCraft.MODID, toolName, axe, hoe, pickaxe, shovel, sword);
+    public void registerTool(String toolName, Item axe, Item hoe, Item pickaxe, Item shovel, Item sword) {
+        GameObj.itemsRegister.registerTool(SquidCraft.MODID, toolName, axe, hoe, pickaxe, shovel, sword);
     }
 
 }

@@ -14,11 +14,11 @@ public class BlocksRegister {
      * @param block A block
      */
     @Deprecated
-    public static void registerBlock(String modid, String blockName, Block block) {
+    public void registerBlock(String modid, String blockName, Block block) {
         Registry.register(Registry.BLOCK, new Identifier(modid, blockName), block);
     }
 
-    public static void registerBlock(String modid, String blockName, Block block, Item.Settings settings) {
+    public void registerBlock(String modid, String blockName, Block block, Item.Settings settings) {
         Registry.register(Registry.BLOCK, new Identifier(modid, blockName), block);
         Registry.register(Registry.ITEM, new Identifier(modid, blockName), new BlockItem(block, settings));
     }

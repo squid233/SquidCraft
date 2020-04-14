@@ -4,8 +4,6 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 
-import static io.github.squidcraft.api.SoundsRegister.registerSound;
-
 public class ModSounds {
     public static final Identifier ANCIENT_DEBRIS_BREAK = new Identifier("squidcraft:block.ancient_debris.break");
     public static final Identifier ANCIENT_DEBRIS_FALL = new Identifier("squidcraft:block.ancient_debris.fall");
@@ -23,16 +21,6 @@ public class ModSounds {
 
     public static SoundEvent ITEM_ARMOR_EQUIP_NETHERITE = new SoundEvent(ITEM_ARMOR_EQUIP_NETHERITE_ID);
 
-    public static final BlockSoundGroup ANCIENT_DEBRIS = new BlockSoundGroup(1.0f, 1.5f, ANCIENT_DEBRIS_BREAK_EVENT, ANCIENT_DEBRIS_FALL_EVENT, ANCIENT_DEBRIS_PLACE_EVENT, ANCIENT_DEBRIS_HIT_EVENT, ANCIENT_DEBRIS_FALL_EVENT);
-
-    public ModSounds() {
-        registerSound(ANCIENT_DEBRIS_BREAK, ANCIENT_DEBRIS_BREAK_EVENT);
-        registerSound(ANCIENT_DEBRIS_FALL, ANCIENT_DEBRIS_FALL_EVENT);
-        registerSound(ANCIENT_DEBRIS_HIT, ANCIENT_DEBRIS_HIT_EVENT);
-        registerSound(ANCIENT_DEBRIS_PLACE, ANCIENT_DEBRIS_PLACE_EVENT);
-        registerSound(ANCIENT_DEBRIS_STEP, ANCIENT_DEBRIS_STEP_EVENT);
-
-        registerSound(ITEM_ARMOR_EQUIP_NETHERITE_ID, ITEM_ARMOR_EQUIP_NETHERITE);
-    }
+    public static final BlockSoundGroup ANCIENT_DEBRIS = new BlockSoundGroup(1.0f, 1.5f, ANCIENT_DEBRIS_BREAK_EVENT, ANCIENT_DEBRIS_STEP_EVENT, ANCIENT_DEBRIS_PLACE_EVENT, ANCIENT_DEBRIS_HIT_EVENT, ANCIENT_DEBRIS_FALL_EVENT);
 
 }

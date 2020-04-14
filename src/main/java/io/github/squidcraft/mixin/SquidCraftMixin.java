@@ -17,10 +17,9 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class SquidCraftMixin extends Screen {
 	@Inject(at = @At("HEAD"), method = "init()V")
 	private void init(CallbackInfo info) {
-		System.out.println("authorsGui");
 		this.addButton(new ButtonWidget(this.width / 2 - 60, this.height / 2  + 99, 74, 20, I18n.translate("squidcraft.SquidCraft"), (action) -> {
 			MinecraftClient.getInstance().openScreen(new AuthorsGUI(this));
-			System.out.println("By Squid233");
+			System.out.println("By Squid233 & baka4n");
 		}));
 	}
 	protected SquidCraftMixin(Text title) {

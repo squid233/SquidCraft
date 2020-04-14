@@ -14,7 +14,7 @@ public class SamsungGalaxyNoteSeven extends Item {
         super(new Settings().group(ItemGroups.SQUID_CRAFT));
     }
 
-    // TODO texture
+    // TODO texture and recipe
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
