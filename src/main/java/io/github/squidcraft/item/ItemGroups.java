@@ -50,7 +50,6 @@ public class ItemGroups {
                 stacks.add(new ItemStack(NETHERITE_SHOVEL));
                 stacks.add(new ItemStack(NETHERITE_HOE));
 
-                stacks.add(new ItemStack(SAMSUNG_GALAXY_NOTE_SEVEN));
 
             })
             .build();

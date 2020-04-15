@@ -6,7 +6,6 @@ import net.fabricmc.fabric.api.loot.v1.event.LootTableLoadingCallback;
 import net.minecraft.loot.ConstantLootTableRange;
 import net.minecraft.loot.UniformLootTableRange;
 import net.minecraft.loot.entry.ItemEntry;
-import net.minecraft.loot.function.FurnaceSmeltLootFunction;
 import net.minecraft.loot.function.LootingEnchantLootFunction;
 import net.minecraft.util.Identifier;
 
@@ -19,7 +18,6 @@ public class LootTablesHandle {
                 FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()
                         .withRolls(ConstantLootTableRange.create(8))
                         .withEntry(ItemEntry.builder(ModItems.SHREDDED_SQUID))
-                        .withFunction(FurnaceSmeltLootFunction.builder())
                         .withFunction(LootingEnchantLootFunction.builder(UniformLootTableRange.between(0.0f, 1.0f)));
                 supplier.withPool(poolBuilder);
             }

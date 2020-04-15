@@ -25,8 +25,6 @@ public class AuthorsGUI extends Screen {
     @Override
     public void init() {
         super.init();
-        this.addButton(new ButtonWidget(3 * this.width / 4, 8 * this.height / 9, 100, 20, I18n.translate("authors.back"), (action) -> {
-            this.screen.onClose();
-        }));
+        this.addButton(new ButtonWidget(3 * this.width / 4, 8 * this.height / 9, 100, 20, I18n.translate("authors.back"), (action) -> this.screen.onClose()));
     }
 }

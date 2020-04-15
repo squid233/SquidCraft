@@ -3,9 +3,20 @@ pluginManagement {
         jcenter()
         maven {
             name = 'Fabric'
-            //url = 'https://maven.fabricmc.net'
-            url = 'http://lss233.littleservice.cn/repositories/minecraft/'
+            url = 'https://maven.fabricmc.net'
         }
+		maven {
+		    name = 'Fabric'
+			url = 'http://lss233.littleservice.cn/repositories/minecraft'
+		}
+		maven {
+		    name = 'Fabric'
+			url = 'https://lss233.com/artifactory/minecraft'
+		}
+		maven {
+		    name = 'Fabric'
+			url = 'http://nossl.lss233.com/artifactory/minecraft'
+		}
         gradlePluginPortal()
     }
 }

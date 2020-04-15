@@ -3,7 +3,6 @@ package io.github.squidcraft.api;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
-import org.jetbrains.annotations.NotNull;
 
 public class ItemsRegister {
     /**
@@ -14,7 +13,7 @@ public class ItemsRegister {
      * @author squid233
      * @since 0.1.0
      */
-    public void registerItem(String modid, String itemName, Item item) {
+    public static void registerItem(String modid, String itemName, Item item) {
         Registry.register(Registry.ITEM, new Identifier(modid, itemName), item);
     }
 
@@ -31,7 +30,7 @@ public class ItemsRegister {
      * @since 0.5.0
      * <p>This method can register armor.</p>
      */
-    public void registerArmor(String modid, String armorName, Item helmet, Item chestplate, Item leggings, Item boots) {
+    public static void registerArmor(String modid, String armorName, Item helmet, Item chestplate, Item leggings, Item boots) {
         Registry.register(Registry.ITEM, new Identifier(modid, armorName+"_helmet"), helmet);
         Registry.register(Registry.ITEM, new Identifier(modid, armorName+"_chestplate"), chestplate);
         Registry.register(Registry.ITEM, new Identifier(modid, armorName+"_leggings"), leggings);
@@ -52,27 +51,11 @@ public class ItemsRegister {
      * @since 0.5.0
      * <p>This method can register axe, hoe, pickaxe, shovel and sword.</p>
      */
-    public void registerTool(String modid, String toolName, Item axe, Item hoe, Item pickaxe, Item shovel, Item sword) {
+    public static void registerTool(String modid, String toolName, Item axe, Item hoe, Item pickaxe, Item shovel, Item sword) {
         Registry.register(Registry.ITEM, new Identifier(modid, toolName+"_axe"), axe);
         Registry.register(Registry.ITEM, new Identifier(modid, toolName+"_hoe"), hoe);
         Registry.register(Registry.ITEM, new Identifier(modid, toolName+"_pickaxe"), pickaxe);
         Registry.register(Registry.ITEM, new Identifier(modid, toolName+"_shovel"), shovel);
         Registry.register(Registry.ITEM, new Identifier(modid, toolName+"_sword"), sword);
-    }
-
-    /**
-     *
-     * @param modid Mod identifier.
-     * @param itemNames Items name.
-     * @param items Items.
-     * @author squid233
-     * @since 0.5.0
-     */
-    public void registerAllItems(String modid, String[] itemNames, @NotNull Item... items) {
-        int var1 = 0;
-        for (Item item : items) {
-            Registry.register(Registry.ITEM, new Identifier(modid, itemNames[var1]), item);
-            var1++;
-        }
     }
 }
