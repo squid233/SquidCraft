@@ -39,7 +39,7 @@ public class SquidCraftMixin extends Screen {
 			MinecraftClient.getInstance().openScreen(new AuthorsGUI(this));
 			logger.info(I18n.translate("By Squid233 & baka4n"));
 		}));
-		this.addButton(new ButtonWidget(this.width / 2 + 10, y, 110, 20, I18n.translate("menu.singleplayer"), (buttonWidget) -> this.minecraft.openScreen(new SelectWorldScreen(this))));
+		this.addButton(new ButtonWidget(this.width / 2 - 110, y + spacingY, 110, 20, I18n.translate("menu.singleplayer"), (buttonWidget) -> this.minecraft.openScreen(new SelectWorldScreen(this))));
 		this.addButton(new ButtonWidget(this.width / 2 + 10, y + spacingY, 110, 20, I18n.translate("menu.multiplayer"), (buttonWidget) -> {
 			if (this.minecraft.options.skipMultiplayerWarning) {
 				this.minecraft.openScreen(new MultiplayerScreen(this));
