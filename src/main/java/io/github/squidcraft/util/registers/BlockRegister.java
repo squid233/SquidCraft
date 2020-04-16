@@ -1,10 +1,16 @@
 package io.github.squidcraft.util.registers;
 
 import io.github.squidcraft.item.ItemGroups;
+import io.github.squidcraft.tile.BiggerChestBlockEntity;
+import net.fabricmc.fabric.api.container.ContainerProviderRegistry;
+import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
+import net.minecraft.util.registry.Registry;
 
 import static io.github.squidcraft.util.ModBlocks.*;
+import static io.github.squidcraft.api.BlocksRegister.*;
 
 public class BlockRegister {
     public BlockRegister() {
@@ -13,6 +19,13 @@ public class BlockRegister {
 
         registerBlock("ancient_debris", ANCIENT_DEBRIS, new Item.Settings().group(ItemGroups.SQUID_CRAFT));
         registerBlock("netherite_block", NETHERITE_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT));
+
+        registerBlock(BIGGER_CHEST, BIGGER_CHEST_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT));
+        BIGGER_CHEST_ENTITY_TYPE = Registry.register(Registry.BLOCK_ENTITY_TYPE, BIGGER_CHEST, BlockEntityType.Builder.create(BiggerChestBlockEntity::new, BIGGER_CHEST_BLOCK).build(null));
+        ContainerProviderRegistry.INSTANCE.registerFactory(BIGGER_CHEST, ((syncId, identifier, player, buf) -> {
+            final BlockEntity blockEntity = player.world.getBlockEntity(buf.readBlockPos());
+            return ((BiggerChestBlockEntity) blockEntity).createContainer(syncId, player.inventory);
+        }));
 
     }
 }

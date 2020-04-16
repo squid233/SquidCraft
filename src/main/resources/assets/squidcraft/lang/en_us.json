@@ -32,6 +32,9 @@
   "block.squidcraft.compress_squid_block": "Compress Squid Block",
   "block.squidcraft.ancient_debris": "Ancient Debris",
   "block.squidcraft.netherite_block": "Block of Netherite",
+  "block.squidcraft.bigger_chest_block": "Bigger Chest",
+
+  "container.squidcraft.bigger_chest": "Bigger Chest",
 
   "biome.squidcraft.squid_biome": "Squid Biome",
 

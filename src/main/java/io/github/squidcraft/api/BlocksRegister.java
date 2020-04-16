@@ -22,4 +22,9 @@ public class BlocksRegister {
         Registry.register(Registry.BLOCK, new Identifier(modid, blockName), block);
         Registry.register(Registry.ITEM, new Identifier(modid, blockName), new BlockItem(block, settings));
     }
+
+    public static void registerBlock(Identifier id, Block block, Item.Settings settings) {
+        Registry.register(Registry.BLOCK, id, block);
+        Registry.register(Registry.ITEM, id, new BlockItem(block, settings));
+    }
 }

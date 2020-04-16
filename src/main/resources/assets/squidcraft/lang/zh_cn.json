@@ -32,6 +32,9 @@
   "block.squidcraft.compress_squid_block": "压缩鱿鱼块",
   "block.squidcraft.ancient_debris": "远古残骸",
   "block.squidcraft.netherite_block": "下界合金块",
+  "block.squidcraft.bigger_chest_block": "大箱子",
+
+  "container.squidcraft.bigger_chest": "大箱子",
 
   "biome.squidcraft.squid_biome": "鱿鱼群系",
 

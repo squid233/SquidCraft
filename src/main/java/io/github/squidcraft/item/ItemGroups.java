@@ -50,6 +50,7 @@ public class ItemGroups {
                 stacks.add(new ItemStack(NETHERITE_SHOVEL));
                 stacks.add(new ItemStack(NETHERITE_HOE));
 
+                stacks.add(new ItemStack(BIGGER_CHEST_BLOCK));
 
             })
             .build();
