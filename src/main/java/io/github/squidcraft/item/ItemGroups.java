@@ -52,6 +52,8 @@ public class ItemGroups {
 
                 stacks.add(new ItemStack(BIGGER_CHEST_BLOCK));
 
+                stacks.add(new ItemStack(LIGHT_PLANKS));
+
             })
             .build();
 }

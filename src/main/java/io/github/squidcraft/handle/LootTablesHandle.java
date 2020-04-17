@@ -1,6 +1,6 @@
 package io.github.squidcraft.handle;
 
-import io.github.squidcraft.util.ModItems;
+import io.github.squidcraft.util.*;
 import net.fabricmc.fabric.api.loot.v1.FabricLootPoolBuilder;
 import net.fabricmc.fabric.api.loot.v1.event.LootTableLoadingCallback;
 import net.minecraft.loot.ConstantLootTableRange;
@@ -11,6 +11,7 @@ import net.minecraft.util.Identifier;
 
 public class LootTablesHandle {
     private static final Identifier SQUID_LOOT_TABLE_ID = new Identifier("minecraft", "entities/squid");
+    private static final Identifier CHESTS_LOOT_TABLE_ID = new Identifier("minecraft", "chests/spawn_bonus_chest");
 
     public LootTablesHandle() {
         LootTableLoadingCallback.EVENT.register((resourceManager, manager, id, supplier, setter) -> {
@@ -22,5 +23,14 @@ public class LootTablesHandle {
                 supplier.withPool(poolBuilder);
             }
         });
+
+        LootTableLoadingCallback.EVENT.register(((resourceManager, manager, id, supplier, setter) -> {
+            if (CHESTS_LOOT_TABLE_ID.equals(id)) {
+                FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()
+                        .withRolls(ConstantLootTableRange.create(4))
+                        .withEntry(ItemEntry.builder(ModBlocks.LIGHT_PLANKS));
+                supplier.withPool(poolBuilder);
+            }
+        }));
     }
 }
