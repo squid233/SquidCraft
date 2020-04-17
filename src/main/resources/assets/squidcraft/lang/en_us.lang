@@ -2,6 +2,11 @@ item.squidcraft.shredded_squid.name=Shredded Squid
 item.squidcraft.cooked_shredded_squid.name=Cooked Shredded Squid
 item.squidcraft.a_pile_cooked_shredded_squid.name=A Pile Cooked Shredded Squid
 item.squidcraft.squid_cookie.name=Squid Cookie
+item.squidcraft.squid_axe.name=Squid Axe
+item.squidcraft.squid_hoe.name=Squid Hoe
+item.squidcraft.squid_pickaxe.name=Squid Pickaxe
+item.squidcraft.squid_shovel.name=Squid Shovel
+item.squidcraft.squid_sword.name=Squid Sword
 
 itemGroup.squid_craft=SquidCraft
 

@@ -2,6 +2,11 @@ item.squidcraft.shredded_squid.name=鱿鱼丝
 item.squidcraft.cooked_shredded_squid.name=熟鱿鱼丝
 item.squidcraft.a_pile_cooked_shredded_squid.name=一堆熟鱿鱼丝
 item.squidcraft.squid_cookie.name=鱿鱼饼
+item.squidcraft.squid_axe.name=鱿鱼斧
+item.squidcraft.squid_hoe.name=鱿鱼锄
+item.squidcraft.squid_pickaxe.name=鱿鱼镐
+item.squidcraft.squid_shovel.name=鱿鱼锹
+item.squidcraft.squid_sword.name=鱿鱼剑
 
 itemGroup.squid_craft=鱿鱼工艺
 

@@ -21,7 +21,7 @@ public class BlocksRegister {
     public static final Block SQUID_BLOCK = new BlockSquidBlock();
 
     // Here is mod's item blocks BEGIN.
-    private static final Item SQUID_BLOCK_ITEM = new ItemBlock(SQUID_BLOCK).setRegistryName(Objects.requireNonNull(SQUID_BLOCK.getRegistryName()));
+    public static final Item SQUID_BLOCK_ITEM = new ItemBlock(SQUID_BLOCK).setRegistryName(Objects.requireNonNull(SQUID_BLOCK.getRegistryName()));
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event) {
