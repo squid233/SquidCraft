@@ -1,9 +1,6 @@
 # gradle
 
-.gradle/4.8.1/
 .gradle/5.5.1/
-.gradle/5.6.1/
-.gradle/6.0.1/
 .gradle/6.2.1/
 .gradle/6.3/
 .gradle/buildOutputCleanup/
