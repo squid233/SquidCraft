@@ -4,6 +4,9 @@ import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class ItemsRegister {
     /**
      *
@@ -12,8 +15,11 @@ public class ItemsRegister {
      * @param item Item.
      * @author squid233
      * @since 0.1.0
+	 * @Nullable add info () - > message debug reigister logger. 
      */
     public static void registerItem(String modid, String itemName, Item item) {
+		Logger logger = LogManager.getLogger("items register");
+		logger.info("register " + itemName + " success!");
         Registry.register(Registry.ITEM, new Identifier(modid, itemName), item);
     }
 
