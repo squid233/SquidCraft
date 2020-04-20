@@ -22,6 +22,7 @@ public class ItemGroups {
 
                 stacks.add(new ItemStack(SQUID_BLOCK));
                 stacks.add(new ItemStack(COMPRESS_SQUID_BLOCK));
+                stacks.add(new ItemStack(LOW_SQUID_BLOCK));
 
                 stacks.add(new ItemStack(SQUID_HELMET));
                 stacks.add(new ItemStack(SQUID_CHESTPLATE));

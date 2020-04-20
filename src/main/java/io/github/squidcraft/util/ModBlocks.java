@@ -13,6 +13,8 @@ import net.minecraft.util.Util;
 public class ModBlocks {
     public static final Block SQUID_BLOCK = new SquidBlock();
     public static final Block COMPRESS_SQUID_BLOCK = new CompressSquidBlock();
+    public static final Block LOW_SQUID_BLOCK = new LowSquidBlock();
+
     public static final Block ANCIENT_DEBRIS = new AncientDebris();
     public static final Block NETHERITE_BLOCK = new NetheriteBlock();
     public static final Block LIGHT_PLANKS = new LightPlanks();

@@ -15,7 +15,6 @@ import net.minecraft.text.TranslatableText;
 import static io.github.squidcraft.util.KeyBindings.*;
 
 public class SquidCraftClient implements ClientModInitializer {
-    PlayerEntity player;
     @Override
     public void onInitializeClient() {
         KeyBindingRegistry.INSTANCE.addCategory("SquidCraft");
@@ -24,7 +23,6 @@ public class SquidCraftClient implements ClientModInitializer {
         ClientTickCallback.EVENT.register(e -> {
             if (keyBinding_0.isPressed()) {
                 System.out.println("was pressed!");
-                player.giveItemStack(new ItemStack(ModItems.SQUID_COOKIE));
             }
         });
 

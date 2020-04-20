@@ -23,7 +23,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 // Mixin inject,Inserts afer the value specified by the code!
 @Mixin(TitleScreen.class)
 public class SquidCraftMixin extends Screen {
-    public Logger logger = LogManager.getLogger("test");
+    public Logger logger = LogManager.getLogger("SquidCraft");
 
     @Inject(at = @At("HEAD"), method = "init()V")
     private void init(CallbackInfo info) {

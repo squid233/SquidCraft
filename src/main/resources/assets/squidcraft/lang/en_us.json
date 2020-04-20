@@ -27,14 +27,16 @@
 
   "itemGroup.squidcraft.squid_craft": "Squid Craft",
 
-  "block.squidcraft.squid_block": "Squid Block",
-  "block.squidcraft.compress_squid_block": "Compress Squid Block",
+  "block.squidcraft.squid_block": "Block of Squid",
+  "block.squidcraft.compress_squid_block": "Compress Block of Squid",
+  "block.squidcraft.low_squid_block": "Low Block of Squid ",
+
   "block.squidcraft.ancient_debris": "Ancient Debris",
   "block.squidcraft.netherite_block": "Block of Netherite",
   "block.squidcraft.bigger_chest_block": "Bigger Chest",
   "block.squidcraft.light_planks": "Light Planks",
 
-  "container.squidcraft.bigger_chest": "Bigger Chest",
+  "container.squidcraft.bigger_chest_block": "Bigger Chest",
 
   "biome.squidcraft.squid_biome": "Squid Biome",
 
