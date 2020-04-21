@@ -1,6 +1,6 @@
 package io.github.squidcraft.world.feature;
 
-import io.github.squidcraft.util.ModBlocks;
+import io.github.squidcraft.util.registers.BlockRegister;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.decorator.Decorator;
@@ -16,7 +16,7 @@ public class OreFeature {
                     Feature.ORE.configure(
                             new OreFeatureConfig(
                                     OreFeatureConfig.Target.NATURAL_STONE,
-                                    ModBlocks.SQUID_BLOCK.getDefaultState(),
+                                    BlockRegister.SQUID_BLOCK.getDefaultState(),
                                     3 // Vein size
                             )).createDecoratedFeature(
                             Decorator.COUNT_RANGE.configure(new RangeDecoratorConfig(
@@ -35,7 +35,7 @@ public class OreFeature {
                     Feature.ORE.configure(
                             new OreFeatureConfig(
                                     OreFeatureConfig.Target.NETHERRACK,
-                                    ModBlocks.ANCIENT_DEBRIS.getDefaultState(),
+                                    BlockRegister.ANCIENT_DEBRIS.getDefaultState(),
                                     5
                             )).createDecoratedFeature(
                             Decorator.COUNT_RANGE.configure(new RangeDecoratorConfig(

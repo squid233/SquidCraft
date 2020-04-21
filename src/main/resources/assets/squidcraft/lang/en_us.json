@@ -25,16 +25,17 @@
   "item.squidcraft.netherite_shovel": "Netherite Shovel",
   "item.squidcraft.netherite_sword": "Netherite Sword",
 
-  "itemGroup.squidcraft.squid_craft": "Squid Craft",
+  "itemGroup.squidcraft.squid_craft": "SquidCraft",
+  "itemGroup.squidcraft.sc_combat_and_tools": "SquidCraft Combat and Tools",
 
   "block.squidcraft.squid_block": "Block of Squid",
   "block.squidcraft.compress_squid_block": "Compress Block of Squid",
   "block.squidcraft.low_squid_block": "Low Block of Squid ",
+  "block.squidcraft.low_compress_squid_block": "Low Compress Block of Squid",
 
   "block.squidcraft.ancient_debris": "Ancient Debris",
   "block.squidcraft.netherite_block": "Block of Netherite",
   "block.squidcraft.bigger_chest_block": "Bigger Chest",
-  "block.squidcraft.light_planks": "Light Planks",
 
   "container.squidcraft.bigger_chest_block": "Bigger Chest",
 

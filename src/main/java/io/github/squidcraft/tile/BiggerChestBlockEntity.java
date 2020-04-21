@@ -1,6 +1,6 @@
 package io.github.squidcraft.tile;
 
-import io.github.squidcraft.util.ModBlocks;
+import io.github.squidcraft.util.registers.BlockRegister;
 import net.minecraft.block.entity.LootableContainerBlockEntity;
 import net.minecraft.container.Container;
 import net.minecraft.entity.player.PlayerInventory;
@@ -17,7 +17,7 @@ public class BiggerChestBlockEntity extends LootableContainerBlockEntity {
     private static final int INVENTORY_SIZE = 54; // 9 * 6 = 54
 
     public BiggerChestBlockEntity() {
-        super(ModBlocks.BIGGER_CHEST_ENTITY_TYPE);
+        super(BlockRegister.BIGGER_CHEST_ENTITY_TYPE);
         this.inventory = DefaultedList.ofSize(INVENTORY_SIZE, ItemStack.EMPTY);
     }
 

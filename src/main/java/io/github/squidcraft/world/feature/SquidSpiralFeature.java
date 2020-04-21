@@ -2,7 +2,7 @@ package io.github.squidcraft.world.feature;
 
 import com.mojang.datafixers.Dynamic;
 import io.github.squidcraft.SquidCraft;
-import io.github.squidcraft.util.ModBlocks;
+import io.github.squidcraft.util.registers.BlockRegister;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -29,7 +29,7 @@ public class SquidSpiralFeature extends Feature<DefaultFeatureConfig> {
 
         for (int y = 1; y < 16; y++) {
             offset = offset.rotateYClockwise();
-            world.setBlockState(topPos.up(y).offset(offset), ModBlocks.SQUID_BLOCK.getDefaultState(), 3);
+            world.setBlockState(topPos.up(y).offset(offset), BlockRegister.SQUID_BLOCK.getDefaultState(), 3);
         }
 
         return true;

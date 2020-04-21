@@ -20,6 +20,7 @@ public class BlocksRegister {
      * @param modid Your mod's identifier
      * @param blockName The block's name
      * @param block A block
+     * @deprecated
      */
     @Deprecated
     public static void registerBlock(String modid, String blockName, Block block) {
@@ -36,23 +37,11 @@ public class BlocksRegister {
         logger.info("register " + blockName + "block info item");
     }
 
-    public static void registerBlock(Identifier id, Block block, Item.Settings settings) {
-        Logger logger = LogManager.getLogger("register block settings");
+    public static void registerContainer(Identifier id, Block block, Item.Settings settings) {
+        Logger logger = LogManager.getLogger("register container");
         Registry.register(Registry.BLOCK, id, block);
         Registry.register(Registry.ITEM, id, new BlockItem(block, settings));
-        logger.info("register block settings");
-    }
-
-    /**
-     *
-     * @param modid Mod identifier.
-     * @param block Block.
-     * @param settings Item block settings.
-     * <p>This method only can applied to SquidCraft block.</p>
-     */
-    public static void registerBlock(String modid, io.github.squidcraft.api.Block block, Item.Settings settings) {
-        Registry.register(Registry.BLOCK, new Identifier(modid, block.getRegistryName()), block);
-        Registry.register(Registry.ITEM, new Identifier(modid, block.getRegistryName()), new BlockItem(block, settings));
+        logger.info("register container");
     }
 
 }
