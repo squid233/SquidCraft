@@ -65,17 +65,30 @@ public class ItemRegister {
     }
 
     public void registerArmor(String armorName, Item helmet, Item chestplate, Item leggings, Item boots) {
+        Logger logger = LogManager.getLogger("Armor register");
         Registry.register(Registry.ITEM, new Identifier(MODID, armorName+"_helmet"), helmet);
+        logger.info("register" + armorName + "_helmet" + " register");
         Registry.register(Registry.ITEM, new Identifier(MODID, armorName+"_chestplate"), chestplate);
+        logger.info("register" + armorName + "_chestplate" + " register");
         Registry.register(Registry.ITEM, new Identifier(MODID, armorName+"_leggings"), leggings);
+        logger.info("register" + armorName + "_leggings" + " register");
         Registry.register(Registry.ITEM, new Identifier(MODID, armorName+"_boots"), boots);
+        logger.info("register" + armorName + "_boots" + " register");
+
     }
 
     public void registerTool(String toolName, Item axe, Item hoe, Item pickaxe, Item shovel, Item sword) {
+        Logger logger = LogManager.getLogger("tool register");
         Registry.register(Registry.ITEM, new Identifier(MODID, toolName+"_axe"), axe);
+        logger.info("register " + toolName + "_axe" + " register");
         Registry.register(Registry.ITEM, new Identifier(MODID, toolName+"_hoe"), hoe);
+        logger.info("register " + toolName + "_hoe" + " register");
         Registry.register(Registry.ITEM, new Identifier(MODID, toolName+"_pickaxe"), pickaxe);
+        logger.info("register " + toolName + "_pickaxe" + " register");
         Registry.register(Registry.ITEM, new Identifier(MODID, toolName+"_shovel"), shovel);
+        logger.info("register " + toolName + "_shovel" + " register");
         Registry.register(Registry.ITEM, new Identifier(MODID, toolName+"_sword"), sword);
+        logger.info("register " + toolName + "_sword" + " register");
+
     }
 }

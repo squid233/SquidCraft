@@ -15,6 +15,8 @@ import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Util;
 import net.minecraft.util.registry.Registry;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class BlockRegister {
     public static final Block SQUID_BLOCK = new SquidBlock();
@@ -41,7 +43,7 @@ public class BlockRegister {
         registerBlock("ancient_debris", ANCIENT_DEBRIS, new Item.Settings().group(ItemGroups.SQUID_CRAFT));
         registerBlock("netherite_block", NETHERITE_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT));
 
-        registerBlock(BIGGER_CHEST, BIGGER_CHEST_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT));
+        registerContainer(BIGGER_CHEST, BIGGER_CHEST_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT));
         BIGGER_CHEST_ENTITY_TYPE = Registry.register(Registry.BLOCK_ENTITY_TYPE, BIGGER_CHEST, BlockEntityType.Builder.create(BiggerChestBlockEntity::new, BIGGER_CHEST_BLOCK).build(null));
         ContainerProviderRegistry.INSTANCE.registerFactory(BIGGER_CHEST, ((syncId, identifier, player, buf) -> {
             final BlockEntity blockEntity = player.world.getBlockEntity(buf.readBlockPos());
@@ -51,12 +53,17 @@ public class BlockRegister {
     }
 
     public void registerBlock(String blockName, Block block, Item.Settings settings) {
+        Logger logger = LogManager.getLogger("register block and block item");
         Registry.register(Registry.BLOCK, new Identifier(SquidCraft.MODID, blockName), block);
+        logger.info("register " + blockName + " block");
         Registry.register(Registry.ITEM, new Identifier(SquidCraft.MODID, blockName), new BlockItem(block, settings));
+        logger.info("register " + blockName + "block info item");
     }
 
-    public static void registerBlock(Identifier id, Block block, Item.Settings settings) {
+    public static void registerContainer(Identifier id, Block block, Item.Settings settings) {
+        Logger logger = LogManager.getLogger("register container");
         Registry.register(Registry.BLOCK, id, block);
         Registry.register(Registry.ITEM, id, new BlockItem(block, settings));
+        logger.info("register container");
     }
 }

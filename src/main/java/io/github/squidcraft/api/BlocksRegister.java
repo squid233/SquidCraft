@@ -20,6 +20,7 @@ public class BlocksRegister {
      * @param modid Your mod's identifier
      * @param blockName The block's name
      * @param block A block
+     * @deprecated
      */
     @Deprecated
     public static void registerBlock(String modid, String blockName, Block block) {
@@ -36,11 +37,11 @@ public class BlocksRegister {
         logger.info("register " + blockName + "block info item");
     }
 
-    public static void registerBlock(Identifier id, Block block, Item.Settings settings) {
-        Logger logger = LogManager.getLogger("register block settings");
+    public static void registerContainer(Identifier id, Block block, Item.Settings settings) {
+        Logger logger = LogManager.getLogger("register container");
         Registry.register(Registry.BLOCK, id, block);
         Registry.register(Registry.ITEM, id, new BlockItem(block, settings));
-        logger.info("register block settings");
+        logger.info("register container");
     }
 
 }

@@ -22,7 +22,6 @@ public class ItemsRegister {
      * @since 0.1.0
 	 * @Nullable add info () - > message debug reigister logger. 
      */
-    @Nullable
     public static void registerItem(String modid, String itemName, Item item) {
 		Logger logger = LogManager.getLogger("items register");
 		logger.info("register " + itemName + " success!");
@@ -43,7 +42,6 @@ public class ItemsRegister {
      * <p>This method can register armor.</p>
      * @Nullable add info() -> message debug register armor register
      */
-    @Nullable
     public static void registerArmor(String modid, String armorName, Item helmet, Item chestplate, Item leggings, Item boots) {
         Logger logger = LogManager.getLogger("Armor register");
         Registry.register(Registry.ITEM, new Identifier(modid, armorName + "_helmet"), helmet);
@@ -69,19 +67,18 @@ public class ItemsRegister {
      * @author squid233
      * @since 0.5.0
      * <p>This method can register axe, hoe, pickaxe, shovel and sword.</p>
-     * @Nullable add info() -> message debug register toll register
      */
-    @Nullable
     public static void registerTool(String modid, String toolName, Item axe, Item hoe, Item pickaxe, Item shovel, Item sword) {
         Logger logger = LogManager.getLogger("tool register");
         Registry.register(Registry.ITEM, new Identifier(modid, toolName+"_axe"), axe);
         logger.info("register " + toolName + "_axe" + " register");
         Registry.register(Registry.ITEM, new Identifier(modid, toolName+"_hoe"), hoe);
-        logger.info("register " + toolName + "_pickaxe" + " register");
+        logger.info("register " + toolName + "_hoe" + " register");
         Registry.register(Registry.ITEM, new Identifier(modid, toolName+"_pickaxe"), pickaxe);
-        logger.info("register " + toolName + "_shovel" + " register");
+        logger.info("register " + toolName + "_pickaxe" + " register");
         Registry.register(Registry.ITEM, new Identifier(modid, toolName+"_shovel"), shovel);
-        logger.info("register " + toolName + "_sword" + " register");
+        logger.info("register " + toolName + "_shovel" + " register");
         Registry.register(Registry.ITEM, new Identifier(modid, toolName+"_sword"), sword);
+        logger.info("register " + toolName + "_sword" + " register");
     }
 }
