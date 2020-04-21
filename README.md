@@ -6,5 +6,5 @@ See updateinfo.md!
 
 ## Credits
 
-Thanks for squid233.  
-感谢squid233。
+Thanks for squid233 and baka4n.  
+感谢squid233和baka4n。
