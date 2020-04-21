@@ -3,29 +3,32 @@ package io.github.squidcraft;
 import io.github.squidcraft.handle.LootTablesHandle;
 import io.github.squidcraft.util.registers.*;
 import net.fabricmc.api.ModInitializer;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.jetbrains.annotations.Nullable;
 
+/**
+ * @author squid233 and baka4n->(logger4j test)!
+ */
+@Nullable
 public class SquidCraft implements ModInitializer {
 	public static final String MODID = "squidcraft";
 
 	@Override
 	public void onInitialize() {
-		// This code runs as soon as Minecraft is in a mod-load-ready state.
-		// However, some things (like resources) may still be uninitialized.
-		// Proceed with mild caution.
-
-		//   items registry
+		Logger logger = LogManager.getLogger("register all");
 		new ItemRegister();
-		//   blocks registry
+		logger.info("item register success");
 		new BlockRegister();
-		//   sounds registry
+		logger.info("block register success");
 		new SoundRegister();
-		//   enchantments registry
+		logger.info("sound register success");
 		new EnchantmentRegister();
-		// world generate registry
+		logger.info("enchantment register success");
 		new WorldGenRegister();
-		// loot table registry handler
+		logger.info("worldgen register success");
 		new LootTablesHandle();
-
-		System.out.println("The mod is initialize!");
+		logger.info("loot table register success");
+		logger.info("load on initialize success");
 	}
 }
