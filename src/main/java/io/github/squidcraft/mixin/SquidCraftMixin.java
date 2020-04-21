@@ -26,7 +26,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
  * @Nullable Mixin inject,Inserts afer the value specified by the code!
  */
 @Mixin(TitleScreen.class)
-@Nullable
 public class SquidCraftMixin extends Screen {
     public Logger logger = LogManager.getLogger("SquidCraft");
 
@@ -65,7 +64,6 @@ public class SquidCraftMixin extends Screen {
      * @Nullable import minecraft switch To Realms to overwrite
      */
     @Overwrite
-    @Nullable
     private void switchToRealms() {
         RealmsBridge realmsBridge = new RealmsBridge();
         realmsBridge.switchToRealms(this);
@@ -76,7 +74,6 @@ public class SquidCraftMixin extends Screen {
      * @param title
      * @Nullable Mixin SquidCraftMixin to Title Screen!
      */
-    @Nullable
     protected SquidCraftMixin(Text title) {
         super(title);
     }
