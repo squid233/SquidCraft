@@ -1,7 +1,7 @@
 package io.github.squidcraft.block;
 
 import io.github.squidcraft.tile.BiggerChestBlockEntity;
-import io.github.squidcraft.util.ModBlocks;
+import io.github.squidcraft.util.registers.BlockRegister;
 import net.fabricmc.fabric.api.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.container.ContainerProviderRegistry;
 import net.minecraft.block.*;
@@ -49,7 +49,7 @@ public class BiggerChestBlock extends BlockWithEntity {
         if (!world.isClient) {
             BlockEntity blockEntity = world.getBlockEntity(pos);
             if (blockEntity instanceof BiggerChestBlockEntity) {
-                ContainerProviderRegistry.INSTANCE.openContainer(ModBlocks.BIGGER_CHEST, player, buf -> buf.writeBlockPos(pos));
+                ContainerProviderRegistry.INSTANCE.openContainer(BlockRegister.BIGGER_CHEST, player, buf -> buf.writeBlockPos(pos));
             }
         }
         return ActionResult.SUCCESS;

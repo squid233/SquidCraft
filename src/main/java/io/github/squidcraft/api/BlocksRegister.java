@@ -28,16 +28,4 @@ public class BlocksRegister {
         Registry.register(Registry.ITEM, id, new BlockItem(block, settings));
     }
 
-    /**
-     *
-     * @param modid Mod identifier.
-     * @param block Block.
-     * @param settings Item block settings.
-     * <p>This method only can applied to SquidCraft block.</p>
-     */
-    public static void registerBlock(String modid, io.github.squidcraft.api.Block block, Item.Settings settings) {
-        Registry.register(Registry.BLOCK, new Identifier(modid, block.getRegistryName()), block);
-        Registry.register(Registry.ITEM, new Identifier(modid, block.getRegistryName()), new BlockItem(block, settings));
-    }
-
 }

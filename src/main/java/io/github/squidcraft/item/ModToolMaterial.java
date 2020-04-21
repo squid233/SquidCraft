@@ -1,6 +1,6 @@
 package io.github.squidcraft.item;
 
-import io.github.squidcraft.util.ModItems;
+import io.github.squidcraft.util.registers.ItemRegister;
 import net.minecraft.item.*;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.util.Lazy;
@@ -9,10 +9,10 @@ import java.util.function.Supplier;
 
 public enum ModToolMaterial implements ToolMaterial {
     SQUID(250, 10, 7, 4, 15, () -> {
-        return Ingredient.ofItems(ModItems.SQUID_COOKIE);
+        return Ingredient.ofItems(ItemRegister.SQUID_COOKIE);
     }),
     NETHERITE(4062, 20.0f, 20.0f, 9, 44, () -> {
-        return Ingredient.ofItems(ModItems.NETHERITE_INGOT);
+        return Ingredient.ofItems(ItemRegister.NETHERITE_INGOT);
     });
 
     private final int durability;
@@ -63,53 +63,53 @@ public enum ModToolMaterial implements ToolMaterial {
 
     public static class SquidAxe extends AxeItem {
         public SquidAxe() {
-            super(SQUID, -0, -2.2f, new Settings().group(ItemGroups.SQUID_CRAFT));
+            super(SQUID, -0, -2.2f, new Settings().group(ItemGroups.SQUID_CRAFT_COMBAT_AND_TOOLS));
         }
     }
     public static class SquidHoe extends HoeItem {
         public SquidHoe() {
-            super(SQUID, -4, new Settings().group(ItemGroups.SQUID_CRAFT));
+            super(SQUID, -4, new Settings().group(ItemGroups.SQUID_CRAFT_COMBAT_AND_TOOLS));
         }
     }
     public static class SquidPickaxe extends PickaxeItem {
         public SquidPickaxe() {
-            super(SQUID, -1, -1, new Settings().group(ItemGroups.SQUID_CRAFT));
+            super(SQUID, -1, -1, new Settings().group(ItemGroups.SQUID_CRAFT_COMBAT_AND_TOOLS));
         }
     }
     public static class SquidShovel extends ShovelItem {
         public SquidShovel() {
-            super(SQUID, -2, -2, new Settings().group(ItemGroups.SQUID_CRAFT));
+            super(SQUID, -2, -2, new Settings().group(ItemGroups.SQUID_CRAFT_COMBAT_AND_TOOLS));
         }
     }
     public static class SquidSword extends SwordItem {
         public SquidSword() {
-            super(SQUID, +1, -0, new Settings().group(ItemGroups.SQUID_CRAFT));
+            super(SQUID, +1, -0, new Settings().group(ItemGroups.SQUID_CRAFT_COMBAT_AND_TOOLS));
         }
     }
 
     public static class NetheriteAxe extends AxeItem {
         public NetheriteAxe() {
-            super(NETHERITE, -0, -0, new Settings().group(ItemGroups.SQUID_CRAFT));
+            super(NETHERITE, -0, -0, new Settings().group(ItemGroups.SQUID_CRAFT_COMBAT_AND_TOOLS));
         }
     }
     public static class NetheriteHoe extends HoeItem {
         public NetheriteHoe() {
-            super(NETHERITE, -0, new Settings().group(ItemGroups.SQUID_CRAFT));
+            super(NETHERITE, -0, new Settings().group(ItemGroups.SQUID_CRAFT_COMBAT_AND_TOOLS));
         }
     }
     public static class NetheritePickaxe extends PickaxeItem {
         public NetheritePickaxe() {
-            super(NETHERITE, -0, -0, new Settings().group(ItemGroups.SQUID_CRAFT));
+            super(NETHERITE, -0, -0, new Settings().group(ItemGroups.SQUID_CRAFT_COMBAT_AND_TOOLS));
         }
     }
     public static class NetheriteShovel extends ShovelItem {
         public NetheriteShovel() {
-            super(NETHERITE, -0, -0, new Settings().group(ItemGroups.SQUID_CRAFT));
+            super(NETHERITE, -0, -0, new Settings().group(ItemGroups.SQUID_CRAFT_COMBAT_AND_TOOLS));
         }
     }
     public static class NetheriteSword extends SwordItem {
         public NetheriteSword() {
-            super(NETHERITE, -0, -0, new Settings().group(ItemGroups.SQUID_CRAFT));
+            super(NETHERITE, -0, -0, new Settings().group(ItemGroups.SQUID_CRAFT_COMBAT_AND_TOOLS));
         }
     }
 }

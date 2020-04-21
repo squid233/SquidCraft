@@ -1,7 +1,7 @@
 package io.github.squidcraft.armor;
 
-import io.github.squidcraft.util.ModItems;
 import io.github.squidcraft.util.ModSounds;
+import io.github.squidcraft.util.registers.ItemRegister;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.entity.EquipmentSlot;
@@ -23,13 +23,14 @@ import net.minecraft.world.World;
 import java.util.function.Supplier;
 
 import static io.github.squidcraft.item.ItemGroups.SQUID_CRAFT;
+import static io.github.squidcraft.item.ItemGroups.SQUID_CRAFT_COMBAT_AND_TOOLS;
 
 public enum ArmorMaterials implements ArmorMaterial {
     SQUID("squid", 5, new int[]{5, 8, 7, 4}, 15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.5f, () -> {
-        return Ingredient.ofItems(ModItems.SQUID_COOKIE);
+        return Ingredient.ofItems(ItemRegister.SQUID_COOKIE);
     }),
     NETHERITE("netherite", 100, new int[]{6, 12, 16, 6}, 30, ModSounds.ITEM_ARMOR_EQUIP_NETHERITE, 6, () -> {
-        return Ingredient.ofItems(ModItems.NETHERITE_INGOT);
+        return Ingredient.ofItems(ItemRegister.NETHERITE_INGOT);
     });
 
     private static final int[] baseDurability = {13, 15, 16, 11};
@@ -89,7 +90,7 @@ public enum ArmorMaterials implements ArmorMaterial {
 
     public static class SquidHelmet extends ArmorItem {
         public SquidHelmet() {
-            super(ArmorMaterials.SQUID, EquipmentSlot.HEAD, new Item.Settings().group(SQUID_CRAFT));
+            super(ArmorMaterials.SQUID, EquipmentSlot.HEAD, new Item.Settings().group(SQUID_CRAFT_COMBAT_AND_TOOLS));
         }
 
         @Override
@@ -100,7 +101,7 @@ public enum ArmorMaterials implements ArmorMaterial {
     }
     public static class NetheriteHelmet extends ArmorItem {
         public NetheriteHelmet() {
-            super(ArmorMaterials.NETHERITE, EquipmentSlot.HEAD, new Item.Settings().group(SQUID_CRAFT));
+            super(ArmorMaterials.NETHERITE, EquipmentSlot.HEAD, new Item.Settings().group(SQUID_CRAFT_COMBAT_AND_TOOLS));
         }
 
         @Override
