@@ -7,6 +7,6 @@ import net.minecraft.block.Material;
 
 public class NetheriteBlock extends Block {
     public NetheriteBlock() {
-        super(FabricBlockSettings.of(Material.METAL).strength(50, 1200).breakByTool(FabricToolTags.PICKAXES, 4).build());
+        super(FabricBlockSettings.of(Material.METAL).strength(50, 1200).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 4).build());
     }
 }

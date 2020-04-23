@@ -24,16 +24,14 @@ public class ItemGroups {
                 stacks.add(new ItemStack(COMPRESS_SQUID_BLOCK));
                 stacks.add(new ItemStack(LOW_SQUID_BLOCK));
                 stacks.add(new ItemStack(LOW_COMPRESS_SQUID_BLOCK));
-
-                stacks.add(new ItemStack(ANCIENT_DEBRIS));
-                stacks.add(new ItemStack(NETHERITE_SCRAP));
-                stacks.add(new ItemStack(NETHERITE_INGOT));
-                stacks.add(new ItemStack(NETHERITE_BLOCK));
+                stacks.add(new ItemStack(MEDIUM_SQUID_BLOCK));
 
                 stacks.add(new ItemStack(BIGGER_CHEST_BLOCK));
 
             })
             .build();
+
+
 
     public static final ItemGroup SQUID_CRAFT_COMBAT_AND_TOOLS = FabricItemGroupBuilder.create(
             new Identifier(SquidCraft.MODID, "sc_combat_and_tools"))
@@ -51,6 +49,20 @@ public class ItemGroups {
                 stacks.add(new ItemStack(SQUID_SHOVEL));
                 stacks.add(new ItemStack(SQUID_SWORD));
 
+            })
+            .build();
+
+
+
+    public static final ItemGroup NETHERITE_MOD = FabricItemGroupBuilder.create(
+            new Identifier(SquidCraft.MODID, "netherite_mod"))
+            .icon(() -> new ItemStack(NETHERITE_INGOT))
+            .appendItems(stacks -> {
+                stacks.add(new ItemStack(ANCIENT_DEBRIS));
+                stacks.add(new ItemStack(NETHERITE_SCRAP));
+                stacks.add(new ItemStack(NETHERITE_INGOT));
+                stacks.add(new ItemStack(NETHERITE_BLOCK));
+
                 stacks.add(new ItemStack(NETHERITE_HELMET));
                 stacks.add(new ItemStack(NETHERITE_CHESTPLATE));
                 stacks.add(new ItemStack(NETHERITE_LEGGINGS));
@@ -61,7 +73,7 @@ public class ItemGroups {
                 stacks.add(new ItemStack(NETHERITE_PICKAXE));
                 stacks.add(new ItemStack(NETHERITE_SHOVEL));
                 stacks.add(new ItemStack(NETHERITE_HOE));
-
             })
             .build();
+
 }

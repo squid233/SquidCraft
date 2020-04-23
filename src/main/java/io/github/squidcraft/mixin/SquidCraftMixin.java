@@ -1,6 +1,6 @@
 package io.github.squidcraft.mixin;
 
-import io.github.squidcraft.client.gui.*;
+import io.github.squidcraft.client.gui.AuthorsGUI;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.screen.TitleScreen;
@@ -23,12 +23,12 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 /**
  * @author baka4n and squid233
- * @Nullable Mixin inject,Inserts afer the value specified by the code!
+ * <p>Mixin inject,Inserts afer the value specified by the code!</p>
  */
 @Mixin(TitleScreen.class)
 @Nullable
 public class SquidCraftMixin extends Screen {
-    public Logger logger = LogManager.getLogger("SquidCraft");
+    public final Logger logger = LogManager.getLogger("SquidCraft");
 
     @Inject(at = @At("HEAD"), method = "init()V")
     private void init(CallbackInfo info) {
@@ -38,17 +38,17 @@ public class SquidCraftMixin extends Screen {
     /**
      * @author baka4n
      * @reason Add mod button
-     * @Nullable int y
-     * @Nullable int spacingY
+     * int y
+     * int spacingY
      */
     @Overwrite
-    private void initWidgetsNormal(@Nullable int y,@Nullable int spacingY) {
-        this.addButton(new ButtonWidget(this.width / 2 - 100, y, 200, 20, I18n.translate("squidcraft.SquidCraft"), (action) -> {
+    private void initWidgetsNormal(int y, int spacingY) {
+        this.addButton(new ButtonWidget(this.width / 2 - 100, y + spacingY, 200, 20, I18n.translate("squidcraft.button.text"), (action) -> {
             MinecraftClient.getInstance().openScreen(new AuthorsGUI(this));
-            logger.info(I18n.translate("By Squid233 & baka4n"));
+            logger.info("By Squid233 & baka4n");
         }));
-        this.addButton(new ButtonWidget(this.width / 2 - 100, y + spacingY, 100, 20, I18n.translate("menu.singleplayer"), (buttonWidget) -> this.minecraft.openScreen(new SelectWorldScreen(this))));
-        this.addButton(new ButtonWidget(this.width / 2, y + spacingY, 100, 20, I18n.translate("menu.multiplayer"), (buttonWidget) -> {
+        this.addButton(new ButtonWidget(this.width / 2 - 100, y, 100, 20, I18n.translate("menu.singleplayer"), (buttonWidget) -> this.minecraft.openScreen(new SelectWorldScreen(this))));
+        this.addButton(new ButtonWidget(this.width / 2, y, 100, 20, I18n.translate("menu.multiplayer"), (buttonWidget) -> {
             if (this.minecraft.options.skipMultiplayerWarning) {
                 this.minecraft.openScreen(new MultiplayerScreen(this));
             } else {
@@ -62,19 +62,18 @@ public class SquidCraftMixin extends Screen {
     /**
      * @author baka4n
      * @reason Add realms button
-     * @Nullable import minecraft switch To Realms to overwrite
+     * import minecraft switch To Realms to overwrite
      */
     @Overwrite
-    @Nullable
     private void switchToRealms() {
         RealmsBridge realmsBridge = new RealmsBridge();
         realmsBridge.switchToRealms(this);
     }
 
     /**
-     * @autor squid233 and baka4n
-     * @param title
-     * @Nullable Mixin SquidCraftMixin to Title Screen!
+     * @author squid233 and baka4n
+     * @param title The title
+     * <p>Mixin SquidCraftMixin to Title Screen!</p>
      */
     @Nullable
     protected SquidCraftMixin(Text title) {

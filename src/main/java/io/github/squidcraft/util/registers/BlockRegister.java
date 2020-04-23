@@ -9,20 +9,18 @@ import net.fabricmc.fabric.api.container.ContainerProviderRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
-import net.minecraft.item.BlockItem;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Util;
 import net.minecraft.util.registry.Registry;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 public class BlockRegister {
     public static final Block SQUID_BLOCK = new SquidBlock();
     public static final Block COMPRESS_SQUID_BLOCK = new CompressSquidBlock();
     public static final Block LOW_SQUID_BLOCK = new LowSquidBlock();
     public static final Block LOW_COMPRESS_SQUID_BLOCK = new LowCompressSquidBlock();
+    public static final Block MEDIUM_SQUID_BLOCK = new MediumSquidBlock();
 
     public static final Block ANCIENT_DEBRIS = new AncientDebris();
     public static final Block NETHERITE_BLOCK = new NetheriteBlock();
@@ -38,10 +36,10 @@ public class BlockRegister {
         registerBlock("compress_squid_block", COMPRESS_SQUID_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT).food(new FoodComponent.Builder().hunger(13122).saturationModifier(256.0f).meat().alwaysEdible().build()));
         registerBlock("low_squid_block", LOW_SQUID_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT).food(new FoodComponent.Builder().hunger(118098).saturationModifier(512.0f).meat().alwaysEdible().build()));
         registerBlock("low_compress_squid_block", LOW_COMPRESS_SQUID_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT).food(new FoodComponent.Builder().hunger(1062882).saturationModifier(1024.0f).meat().alwaysEdible().build()));
+        registerBlock("medium_squid_block", MEDIUM_SQUID_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT).food(new FoodComponent.Builder().hunger(1417176).saturationModifier(1365.3f).meat().alwaysEdible().build()));
 
-
-        registerBlock("ancient_debris", ANCIENT_DEBRIS, new Item.Settings().group(ItemGroups.SQUID_CRAFT));
-        registerBlock("netherite_block", NETHERITE_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT));
+        registerBlock("ancient_debris", ANCIENT_DEBRIS, new Item.Settings().group(ItemGroups.NETHERITE_MOD));
+        registerBlock("netherite_block", NETHERITE_BLOCK, new Item.Settings().group(ItemGroups.NETHERITE_MOD));
 
         registerContainer(BIGGER_CHEST, BIGGER_CHEST_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT));
         BIGGER_CHEST_ENTITY_TYPE = Registry.register(Registry.BLOCK_ENTITY_TYPE, BIGGER_CHEST, BlockEntityType.Builder.create(BiggerChestBlockEntity::new, BIGGER_CHEST_BLOCK).build(null));
@@ -52,18 +50,11 @@ public class BlockRegister {
 
     }
 
-    public void registerBlock(String blockName, Block block, Item.Settings settings) {
-        Logger logger = LogManager.getLogger("register block and block item");
-        Registry.register(Registry.BLOCK, new Identifier(SquidCraft.MODID, blockName), block);
-        logger.info("register " + blockName + " block");
-        Registry.register(Registry.ITEM, new Identifier(SquidCraft.MODID, blockName), new BlockItem(block, settings));
-        logger.info("register " + blockName + "block info item");
+    private void registerBlock(String blockName, Block block, Item.Settings settings) {
+        BlocksRegister.registerBlock(SquidCraft.MODID, blockName, block, settings);
     }
 
-    public static void registerContainer(Identifier id, Block block, Item.Settings settings) {
-        Logger logger = LogManager.getLogger("register container");
-        Registry.register(Registry.BLOCK, id, block);
-        Registry.register(Registry.ITEM, id, new BlockItem(block, settings));
-        logger.info("register container");
+    private static void registerContainer(Identifier id, Block block, Item.Settings settings) {
+        BlocksRegister.registerContainer(id, block, settings);
     }
 }

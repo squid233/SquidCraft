@@ -11,24 +11,10 @@ import org.jetbrains.annotations.Nullable;
 
 /**
  * @author squid233
- * @Nullable register blocks api
+ * <p>register blocks api</p>
  */
 @Nullable
 public class BlocksRegister {
-    /**
-     *
-     * @param modid Your mod's identifier
-     * @param blockName The block's name
-     * @param block A block
-     * @deprecated
-     */
-    @Deprecated
-    public static void registerBlock(String modid, String blockName, Block block) {
-        Logger logger = LogManager.getLogger("register block");
-        Registry.register(Registry.BLOCK, new Identifier(modid, blockName), block);
-        logger.info("register " + blockName + " block");
-    }
-
     public static void registerBlock(String modid, String blockName, Block block, Item.Settings settings) {
         Logger logger = LogManager.getLogger("register block and block item");
         Registry.register(Registry.BLOCK, new Identifier(modid, blockName), block);

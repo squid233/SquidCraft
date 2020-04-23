@@ -4,6 +4,6 @@ import net.minecraft.item.Item;
 
 public class NetheriteScrap extends Item {
     public NetheriteScrap() {
-        super(new Settings().group(ItemGroups.SQUID_CRAFT));
+        super(new Settings().group(ItemGroups.NETHERITE_MOD));
     }
 }

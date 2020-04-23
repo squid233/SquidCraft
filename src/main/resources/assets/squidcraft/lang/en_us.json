@@ -27,11 +27,13 @@
 
   "itemGroup.squidcraft.squid_craft": "SquidCraft",
   "itemGroup.squidcraft.sc_combat_and_tools": "SquidCraft Combat and Tools",
+  "itemGroup.squidcraft.netherite_mod": "SquidCraft Addons of Netherite Mod",
 
   "block.squidcraft.squid_block": "Block of Squid",
   "block.squidcraft.compress_squid_block": "Compress Block of Squid",
   "block.squidcraft.low_squid_block": "Low Block of Squid ",
   "block.squidcraft.low_compress_squid_block": "Low Compress Block of Squid",
+  "block.squidcraft.medium_squid_block": "Medium Block of Squid",
 
   "block.squidcraft.ancient_debris": "Ancient Debris",
   "block.squidcraft.netherite_block": "Block of Netherite",
@@ -56,7 +58,7 @@
 
   "key.squidcraft.useless_key": "Useless Key",
 
-  "authors.back": "back",
-  "squidcraft.SquidCraft":"SquidCraft",
-  "authors.info": "authors:"
+  "authors.squidcraft.back": "back",
+  "squidcraft.button.text":"SquidCraft",
+  "authors.squidcraft.info": "authors:"
 }

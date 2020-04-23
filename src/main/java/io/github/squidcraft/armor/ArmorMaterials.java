@@ -5,25 +5,13 @@ import io.github.squidcraft.util.registers.ItemRegister;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.util.Hand;
 import net.minecraft.util.Lazy;
-import net.minecraft.util.TypedActionResult;
-import net.minecraft.world.World;
 
 import java.util.function.Supplier;
-
-import static io.github.squidcraft.item.ItemGroups.SQUID_CRAFT;
-import static io.github.squidcraft.item.ItemGroups.SQUID_CRAFT_COMBAT_AND_TOOLS;
 
 public enum ArmorMaterials implements ArmorMaterial {
     SQUID("squid", 5, new int[]{5, 8, 7, 4}, 15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.5f, () -> {
@@ -86,28 +74,5 @@ public enum ArmorMaterials implements ArmorMaterial {
     @Override
     public float getToughness() {
         return this.toughness;
-    }
-
-    public static class SquidHelmet extends ArmorItem {
-        public SquidHelmet() {
-            super(ArmorMaterials.SQUID, EquipmentSlot.HEAD, new Item.Settings().group(SQUID_CRAFT_COMBAT_AND_TOOLS));
-        }
-
-        @Override
-        public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
-            user.addStatusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 999999));
-            return TypedActionResult.success(new ItemStack(this));
-        }
-    }
-    public static class NetheriteHelmet extends ArmorItem {
-        public NetheriteHelmet() {
-            super(ArmorMaterials.NETHERITE, EquipmentSlot.HEAD, new Item.Settings().group(SQUID_CRAFT_COMBAT_AND_TOOLS));
-        }
-
-        @Override
-        public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
-            user.addStatusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 1000000));
-            return TypedActionResult.success(new ItemStack(this));
-        }
     }
 }

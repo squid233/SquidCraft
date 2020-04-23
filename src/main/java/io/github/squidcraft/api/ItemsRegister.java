@@ -14,13 +14,12 @@ import org.jetbrains.annotations.Nullable;
 @Nullable
 public class ItemsRegister {
     /**
-     *
+     * <p>add info () - > message debug register logger.</p>
      * @param modid Mod identifier.
      * @param itemName Item name.
      * @param item Item.
      * @author squid233
      * @since 0.1.0
-	 * @Nullable add info () - > message debug reigister logger. 
      */
     public static void registerItem(String modid, String itemName, Item item) {
 		Logger logger = LogManager.getLogger("items register");
@@ -29,7 +28,7 @@ public class ItemsRegister {
     }
 
     /**
-     *
+     * <p>This method can register armor.</p>
      * @param modid Mod identifier.
      * @param armorName Armor's prefix. e.g. squid, they will be auto add "_helmet", "_chestplate", "_leggings" and "_boots",
      *                  then your armor item name are "squid_helmet", "squid_chestplate", "squid_leggings" and "squid_boots".
@@ -39,8 +38,7 @@ public class ItemsRegister {
      * @param boots Boots item.
      * @author squid233
      * @since 0.5.0
-     * <p>This method can register armor.</p>
-     * @Nullable add info() -> message debug register armor register
+     * <p>add info() -> message debug register armor register</p>
      */
     public static void registerArmor(String modid, String armorName, Item helmet, Item chestplate, Item leggings, Item boots) {
         Logger logger = LogManager.getLogger("Armor register");
@@ -55,7 +53,7 @@ public class ItemsRegister {
     }
 
     /**
-     *
+     * <p>This method can register axe, hoe, pickaxe, shovel and sword.</p>
      * @param modid Mod identifier.
      * @param toolName Tool's prefix. e.g. squid, they will be auto add "_axe", "_hoe", "_pickaxe", "_shovel" and "_sword",
      *                 then your tool item name are "squid_axe", "squid_hoe", "squid_pickaxe", "squid_shovel" and "squid_sword".
@@ -66,7 +64,6 @@ public class ItemsRegister {
      * @param sword Sword item.
      * @author squid233
      * @since 0.5.0
-     * <p>This method can register axe, hoe, pickaxe, shovel and sword.</p>
      */
     public static void registerTool(String modid, String toolName, Item axe, Item hoe, Item pickaxe, Item shovel, Item sword) {
         Logger logger = LogManager.getLogger("tool register");

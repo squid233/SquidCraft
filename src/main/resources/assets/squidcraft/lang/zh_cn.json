@@ -27,11 +27,13 @@
 
   "itemGroup.squidcraft.squid_craft": "鱿鱼工艺",
   "itemGroup.squidcraft.sc_combat_and_tools": "鱿鱼工艺 战斗用品与工具",
+  "itemGroup.squidcraft.netherite_mod": "鱿鱼工艺附属下界合金Mod",
 
   "block.squidcraft.squid_block": "鱿鱼块",
   "block.squidcraft.compress_squid_block": "压缩鱿鱼块",
   "block.squidcraft.low_squid_block": "低级鱿鱼块",
   "block.squidcraft.low_compress_squid_block": "低级压缩鱿鱼块",
+  "block.squidcraft.medium_squid_block": "中级鱿鱼块",
 
   "block.squidcraft.ancient_debris": "远古残骸",
   "block.squidcraft.netherite_block": "下界合金块",
@@ -56,7 +58,7 @@
 
   "key.squidcraft.useless_key": "没用的按键",
 
-  "authors.back": "返回",
-  "squidcraft.SquidCraft": "鱿鱼工艺",
-  "authors.info": "作者名单："
+  "authors.squidcraft.back": "返回",
+  "squidcraft.button.text": "鱿鱼工艺",
+  "authors.squidcraft.info": "作者名单："
 }

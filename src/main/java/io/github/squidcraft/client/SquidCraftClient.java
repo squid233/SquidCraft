@@ -2,7 +2,6 @@ package io.github.squidcraft.client;
 
 import io.github.squidcraft.client.gui.BiggerChestScreen;
 import io.github.squidcraft.tile.BiggerChestContainer;
-import io.github.squidcraft.util.*;
 import io.github.squidcraft.util.registers.BlockRegister;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.keybinding.KeyBindingRegistry;
