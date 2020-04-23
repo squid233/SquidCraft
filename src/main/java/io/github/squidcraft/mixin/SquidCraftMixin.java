@@ -26,7 +26,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
  * <p>Mixin inject,Inserts afer the value specified by the code!</p>
  */
 @Mixin(TitleScreen.class)
-@Nullable
 public class SquidCraftMixin extends Screen {
     public final Logger logger = LogManager.getLogger("SquidCraft");
 
@@ -75,7 +74,6 @@ public class SquidCraftMixin extends Screen {
      * @param title The title
      * <p>Mixin SquidCraftMixin to Title Screen!</p>
      */
-    @Nullable
     protected SquidCraftMixin(Text title) {
         super(title);
     }
