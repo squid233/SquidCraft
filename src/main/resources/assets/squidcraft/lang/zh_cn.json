@@ -34,6 +34,13 @@
   "block.squidcraft.low_squid_block": "低级鱿鱼块",
   "block.squidcraft.low_compress_squid_block": "低级压缩鱿鱼块",
   "block.squidcraft.medium_squid_block": "中级鱿鱼块",
+  "block.squidcraft.medium_compress_squid_block": "中级压缩鱿鱼块",
+  "block.squidcraft.higher_squid_block": "高级鱿鱼块",
+  "block.squidcraft.higher_compress_squid_block": "高级压缩鱿鱼块",
+  "block.squidcraft.super_squid_block": "超级鱿鱼块",
+  "block.squidcraft.super_compress_squid_block": "超级压缩鱿鱼块",
+  "block.squidcraft.ultimate_squid_block": "终极鱿鱼块",
+  "block.squidcraft.ultimate_compress_squid_block": "终极压缩鱿鱼块",
 
   "block.squidcraft.ancient_debris": "远古残骸",
   "block.squidcraft.netherite_block": "下界合金块",

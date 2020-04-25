@@ -15,12 +15,27 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.Util;
 import net.minecraft.util.registry.Registry;
 
+/**
+ * You always register block, add {@link ItemGroups}, add lang, add blockstates, add models, add textures, add loot tables and add recipes.
+ */
 public class BlockRegister {
+    // TODO Always register block, add item group, add lang, add blockstates, add models, add textures, add loot tables and add recipes.
+    // TODO
+
+    // Squid blocks begin
     public static final Block SQUID_BLOCK = new SquidBlock();
-    public static final Block COMPRESS_SQUID_BLOCK = new CompressSquidBlock();
-    public static final Block LOW_SQUID_BLOCK = new LowSquidBlock();
-    public static final Block LOW_COMPRESS_SQUID_BLOCK = new LowCompressSquidBlock();
-    public static final Block MEDIUM_SQUID_BLOCK = new MediumSquidBlock();
+    public static final Block COMPRESS_SQUID_BLOCK = new SquidBlock().compressed();
+    public static final Block LOW_SQUID_BLOCK = new SquidBlock().low();
+    public static final Block LOW_COMPRESS_SQUID_BLOCK = new SquidBlock().lowCompress();
+    public static final Block MEDIUM_SQUID_BLOCK = new SquidBlock().medium();
+    public static final Block MEDIUM_COMPRESS_SQUID_BLOCK = new SquidBlock().mediumCompress();
+    public static final Block HIGHER_SQUID_BLOCK = new SquidBlock().higher();
+    public static final Block HIGHER_COMPRESS_SQUID_BLOCK = new SquidBlock().higherCompress();
+    public static final Block SUPER_SQUID_BLOCK = new SquidBlock().supered();
+    public static final Block SUPER_COMPRESS_SQUID_BLOCK = new SquidBlock().superCompress();
+    public static final Block ULTIMATE_SQUID_BLOCK = new SquidBlock().ultimate();
+    public static final Block ULTIMATE_COMPRESS_SQUID_BLOCK = new SquidBlock().ultimateCompress();
+    // Squid blocks end
 
     public static final Block ANCIENT_DEBRIS = new AncientDebris();
     public static final Block NETHERITE_BLOCK = new NetheriteBlock();
@@ -32,11 +47,20 @@ public class BlockRegister {
     public static BlockEntityType<BiggerChestBlockEntity> BIGGER_CHEST_ENTITY_TYPE;
 
     public BlockRegister() {
+        // Register squid blocks begin
         registerBlock("squid_block", SQUID_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT).food(new FoodComponent.Builder().hunger(1458).saturationModifier(165.651f).meat().alwaysEdible().build()));
         registerBlock("compress_squid_block", COMPRESS_SQUID_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT).food(new FoodComponent.Builder().hunger(13122).saturationModifier(256.0f).meat().alwaysEdible().build()));
         registerBlock("low_squid_block", LOW_SQUID_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT).food(new FoodComponent.Builder().hunger(118098).saturationModifier(512.0f).meat().alwaysEdible().build()));
         registerBlock("low_compress_squid_block", LOW_COMPRESS_SQUID_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT).food(new FoodComponent.Builder().hunger(1062882).saturationModifier(1024.0f).meat().alwaysEdible().build()));
         registerBlock("medium_squid_block", MEDIUM_SQUID_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT).food(new FoodComponent.Builder().hunger(1417176).saturationModifier(1365.3f).meat().alwaysEdible().build()));
+        registerBlock("medium_compress_squid_block", MEDIUM_COMPRESS_SQUID_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT).food(new FoodComponent.Builder().hunger(1889568).saturationModifier(1820.4f).meat().alwaysEdible().build()));
+        registerBlock("higher_squid_block", HIGHER_SQUID_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT).food(new FoodComponent.Builder().hunger(2519424).saturationModifier(2427.2f).meat().alwaysEdible().build()));
+        registerBlock("higher_compress_squid_block", HIGHER_COMPRESS_SQUID_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT).food(new FoodComponent.Builder().hunger(3359232).saturationModifier(3236.2666666666666666666666666667f).meat().alwaysEdible().build()));
+        registerBlock("super_squid_block", SUPER_SQUID_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT).food(new FoodComponent.Builder().hunger(4478976).saturationModifier(4315.0222222222222222222222222223f).meat().alwaysEdible().build()));
+        registerBlock("super_compress_squid_block", SUPER_COMPRESS_SQUID_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT).food(new FoodComponent.Builder().hunger(5971968).saturationModifier(5753.3629629629629629629629629631f).meat().alwaysEdible().build()));
+        registerBlock("ultimate_squid_block", ULTIMATE_SQUID_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT).food(new FoodComponent.Builder().hunger(7962624).saturationModifier(7671.1506172839506172839506172841f).meat().alwaysEdible().build()));
+        registerBlock("ultimate_compress_block", ULTIMATE_COMPRESS_SQUID_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT).food(new FoodComponent.Builder().hunger(10616832).saturationModifier(10228.200823045267489711934156379f).meat().alwaysEdible().build()));
+        // Register squid blocks end
 
         registerBlock("ancient_debris", ANCIENT_DEBRIS, new Item.Settings().group(ItemGroups.NETHERITE_MOD));
         registerBlock("netherite_block", NETHERITE_BLOCK, new Item.Settings().group(ItemGroups.NETHERITE_MOD));

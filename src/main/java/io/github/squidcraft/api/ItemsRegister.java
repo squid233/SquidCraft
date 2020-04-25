@@ -3,13 +3,12 @@ package io.github.squidcraft.api;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.Nullable;
 
 /**
- * @Nullable items reggister api -> (item. tool armor) register
+ * items register api -> (item, tool and armor) register
  */
 @Nullable
 public class ItemsRegister {
@@ -67,15 +66,15 @@ public class ItemsRegister {
      */
     public static void registerTool(String modid, String toolName, Item axe, Item hoe, Item pickaxe, Item shovel, Item sword) {
         Logger logger = LogManager.getLogger("tool register");
-        Registry.register(Registry.ITEM, new Identifier(modid, toolName+"_axe"), axe);
+        Registry.register(Registry.ITEM, new Identifier(modid, toolName + "_axe"), axe);
         logger.info("register " + toolName + "_axe" + " register");
-        Registry.register(Registry.ITEM, new Identifier(modid, toolName+"_hoe"), hoe);
+        Registry.register(Registry.ITEM, new Identifier(modid, toolName + "_hoe"), hoe);
         logger.info("register " + toolName + "_hoe" + " register");
-        Registry.register(Registry.ITEM, new Identifier(modid, toolName+"_pickaxe"), pickaxe);
+        Registry.register(Registry.ITEM, new Identifier(modid, toolName + "_pickaxe"), pickaxe);
         logger.info("register " + toolName + "_pickaxe" + " register");
-        Registry.register(Registry.ITEM, new Identifier(modid, toolName+"_shovel"), shovel);
+        Registry.register(Registry.ITEM, new Identifier(modid, toolName + "_shovel"), shovel);
         logger.info("register " + toolName + "_shovel" + " register");
-        Registry.register(Registry.ITEM, new Identifier(modid, toolName+"_sword"), sword);
+        Registry.register(Registry.ITEM, new Identifier(modid, toolName + "_sword"), sword);
         logger.info("register " + toolName + "_sword" + " register");
     }
 }

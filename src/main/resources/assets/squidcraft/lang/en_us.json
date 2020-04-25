@@ -31,9 +31,16 @@
 
   "block.squidcraft.squid_block": "Block of Squid",
   "block.squidcraft.compress_squid_block": "Compress Block of Squid",
-  "block.squidcraft.low_squid_block": "Low Block of Squid ",
+  "block.squidcraft.low_squid_block": "Low Block of Squid",
   "block.squidcraft.low_compress_squid_block": "Low Compress Block of Squid",
   "block.squidcraft.medium_squid_block": "Medium Block of Squid",
+  "block.squidcraft.medium_compress_squid_block": "Medium Compress Block of Squid",
+  "block.squidcraft.higher_squid_block": "Higher Block of Squid",
+  "block.squidcraft.higher_compress_squid_block": "Higher Compress Block of Squid",
+  "block.squidcraft.super_squid_block": "Super Block of Squid",
+  "block.squidcraft.super_compress_squid_block": "Super Compress Block of Squid",
+  "block.squidcraft.ultimate_squid_block": "Ultimate Block of Squid",
+  "block.squidcraft.ultimate_compress_squid_block": "Ultimate Compress Block of Squid",
 
   "block.squidcraft.ancient_debris": "Ancient Debris",
   "block.squidcraft.netherite_block": "Block of Netherite",

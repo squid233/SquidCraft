@@ -1,6 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "squidcraft:block/low_compress_squid_block"
-  }
-}

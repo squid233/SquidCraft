@@ -20,11 +20,12 @@ public class ItemGroups {
                 stacks.add(new ItemStack(A_PILE_COOKED_SHREDDED_SQUID));
                 stacks.add(new ItemStack(SQUID_COOKIE));
 
-                stacks.add(new ItemStack(SQUID_BLOCK));
-                stacks.add(new ItemStack(COMPRESS_SQUID_BLOCK));
-                stacks.add(new ItemStack(LOW_SQUID_BLOCK));
-                stacks.add(new ItemStack(LOW_COMPRESS_SQUID_BLOCK));
-                stacks.add(new ItemStack(MEDIUM_SQUID_BLOCK));
+                stacks.add(new ItemStack(SQUID_BLOCK));         /*/*/stacks.add(new ItemStack(COMPRESS_SQUID_BLOCK));
+                stacks.add(new ItemStack(LOW_SQUID_BLOCK));     /*/*/stacks.add(new ItemStack(LOW_COMPRESS_SQUID_BLOCK));
+                stacks.add(new ItemStack(MEDIUM_SQUID_BLOCK));  /*/*/stacks.add(new ItemStack(MEDIUM_COMPRESS_SQUID_BLOCK));
+                stacks.add(new ItemStack(HIGHER_SQUID_BLOCK));  /*/*/stacks.add(new ItemStack(HIGHER_COMPRESS_SQUID_BLOCK));
+                stacks.add(new ItemStack(SUPER_SQUID_BLOCK));   /*/*/stacks.add(new ItemStack(SUPER_COMPRESS_SQUID_BLOCK));
+                stacks.add(new ItemStack(ULTIMATE_SQUID_BLOCK));/*/*/stacks.add(new ItemStack(ULTIMATE_COMPRESS_SQUID_BLOCK));
 
                 stacks.add(new ItemStack(BIGGER_CHEST_BLOCK));
 
@@ -68,11 +69,11 @@ public class ItemGroups {
                 stacks.add(new ItemStack(NETHERITE_LEGGINGS));
                 stacks.add(new ItemStack(NETHERITE_BOOTS));
 
-                stacks.add(new ItemStack(NETHERITE_SWORD));
                 stacks.add(new ItemStack(NETHERITE_AXE));
+                stacks.add(new ItemStack(NETHERITE_HOE));
                 stacks.add(new ItemStack(NETHERITE_PICKAXE));
                 stacks.add(new ItemStack(NETHERITE_SHOVEL));
-                stacks.add(new ItemStack(NETHERITE_HOE));
+                stacks.add(new ItemStack(NETHERITE_SWORD));
             })
             .build();
 

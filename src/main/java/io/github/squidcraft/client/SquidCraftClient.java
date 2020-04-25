@@ -12,7 +12,7 @@ import net.minecraft.text.TranslatableText;
 
 import static io.github.squidcraft.util.KeyBindings.*;
 
-public class SquidCraftClient implements ClientModInitializer {
+public final class SquidCraftClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         KeyBindingRegistry.INSTANCE.addCategory("SquidCraft");

@@ -5,16 +5,19 @@ import io.github.squidcraft.armor.ArmorMaterials;
 import io.github.squidcraft.armor.NetheriteHelmet;
 import io.github.squidcraft.armor.SquidHelmet;
 import io.github.squidcraft.item.*;
-import io.github.squidcraft.item.tools.squid.*;
 import io.github.squidcraft.item.tools.netherite.*;
+import io.github.squidcraft.item.tools.squid.*;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
 
 import static io.github.squidcraft.SquidCraft.MODID;
-import static io.github.squidcraft.item.ItemGroups.*;
+import static io.github.squidcraft.item.ItemGroups.NETHERITE_MOD;
+import static io.github.squidcraft.item.ItemGroups.SQUID_CRAFT_COMBAT_AND_TOOLS;
 
 public class ItemRegister {
+    // TODO Always register item, add item group, add models, add textures and add recipes.
+
     public static final Item SHREDDED_SQUID = new ShreddedSquid();
     public static final Item COOKED_SHREDDED_SQUID = new CookedShreddedSquid();
     public static final Item A_PILE_COOKED_SHREDDED_SQUID = new APileCSSquid();
@@ -34,9 +37,9 @@ public class ItemRegister {
     public static final Item SQUID_SWORD = new SquidSword();
 
     public static final Item NETHERITE_HELMET = new NetheriteHelmet();
-    public static final Item NETHERITE_CHESTPLATE = new ArmorItem(ArmorMaterials.NETHERITE, EquipmentSlot.CHEST, new Item.Settings().group(SQUID_CRAFT_COMBAT_AND_TOOLS));
-    public static final Item NETHERITE_LEGGINGS = new ArmorItem(ArmorMaterials.NETHERITE, EquipmentSlot.LEGS, new Item.Settings().group(SQUID_CRAFT_COMBAT_AND_TOOLS));
-    public static final Item NETHERITE_BOOTS = new ArmorItem(ArmorMaterials.NETHERITE, EquipmentSlot.FEET, new Item.Settings().group(SQUID_CRAFT_COMBAT_AND_TOOLS));
+    public static final Item NETHERITE_CHESTPLATE = new ArmorItem(ArmorMaterials.NETHERITE, EquipmentSlot.CHEST, new Item.Settings().group(NETHERITE_MOD));
+    public static final Item NETHERITE_LEGGINGS = new ArmorItem(ArmorMaterials.NETHERITE, EquipmentSlot.LEGS, new Item.Settings().group(NETHERITE_MOD));
+    public static final Item NETHERITE_BOOTS = new ArmorItem(ArmorMaterials.NETHERITE, EquipmentSlot.FEET, new Item.Settings().group(NETHERITE_MOD));
 
     public static final Item NETHERITE_AXE = new NetheriteAxe();
     public static final Item NETHERITE_HOE = new NetheriteHoe();
@@ -57,6 +60,7 @@ public class ItemRegister {
 
         registerTool("squid", SQUID_AXE, SQUID_HOE, SQUID_PICKAXE, SQUID_SHOVEL, SQUID_SWORD);
         registerTool("netherite", NETHERITE_AXE, NETHERITE_HOE, NETHERITE_PICKAXE, NETHERITE_SHOVEL, NETHERITE_SWORD);
+
     }
 
     private void registerItem(String itemName, Item item) {
@@ -65,11 +69,9 @@ public class ItemRegister {
 
     private void registerArmor(String armorName, Item helmet, Item chestplate, Item leggings, Item boots) {
         ItemsRegister.registerArmor(MODID, armorName, helmet, chestplate, leggings, boots);
-
     }
 
     private void registerTool(String toolName, Item axe, Item hoe, Item pickaxe, Item shovel, Item sword) {
         ItemsRegister.registerTool(MODID, toolName, axe, hoe, pickaxe, shovel, sword);
-
     }
 }

@@ -11,12 +11,12 @@ import org.jetbrains.annotations.Nullable;
  * @author squid233 and baka4n->(logger4j test)!
  */
 @Nullable
-public class SquidCraft implements ModInitializer {
+public final class SquidCraft implements ModInitializer {
 	public static final String MODID = "squidcraft";
 
 	@Override
 	public void onInitialize() {
-		Logger logger = LogManager.getLogger("register all");
+		Logger logger = LogManager.getLogger("SquidCraft register all");
 		new ItemRegister();
 		logger.info("item register success");
 		new BlockRegister();
@@ -26,7 +26,7 @@ public class SquidCraft implements ModInitializer {
 		new EnchantmentRegister();
 		logger.info("enchantment register success");
 		new WorldGenRegister();
-		logger.info("worldgen register success");
+		logger.info("world generator register success");
 		new LootTablesHandle();
 		logger.info("loot table register success");
 		logger.info("load on initialize success");

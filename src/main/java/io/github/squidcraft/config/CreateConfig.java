@@ -1,18 +1,19 @@
 package io.github.squidcraft.config;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
+import java.nio.charset.StandardCharsets;
 
 public class CreateConfig {
-    private File getFile(String filePath) {
+    // TODO WIP
+    private File getFile(String filePath) throws IOException {
         File file = new File(filePath);
-        if(!file.exists()) {
-            try {
-                file.createNewFile();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
+
+        OutputStream f = new FileOutputStream(file);
+
+        OutputStreamWriter writer = new OutputStreamWriter(f, StandardCharsets.UTF_8);
+
+        writer.append("");
+
         return file;
     }
 }

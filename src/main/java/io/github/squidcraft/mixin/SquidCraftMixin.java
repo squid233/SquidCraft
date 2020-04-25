@@ -13,7 +13,6 @@ import net.minecraft.realms.RealmsBridge;
 import net.minecraft.text.Text;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.injection.At;
@@ -26,7 +25,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
  * <p>Mixin inject,Inserts afer the value specified by the code!</p>
  */
 @Mixin(TitleScreen.class)
-public class SquidCraftMixin extends Screen {
+public final class SquidCraftMixin extends Screen {
     public final Logger logger = LogManager.getLogger("SquidCraft");
 
     @Inject(at = @At("HEAD"), method = "init()V")
