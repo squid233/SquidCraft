@@ -30,5 +30,10 @@ public final class SquidCraft implements ModInitializer {
 		new LootTablesHandle();
 		logger.info("loot table register success");
 		logger.info("load on initialize success");
+		try {
+			new CreateConfig();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 }

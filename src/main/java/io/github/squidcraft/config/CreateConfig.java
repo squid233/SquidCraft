@@ -1,19 +1,13 @@
 package io.github.squidcraft.config;
 
 import java.io.*;
-import java.nio.charset.StandardCharsets;
+import java.util.Properties;
 
 public class CreateConfig {
     // TODO WIP
-    private File getFile(String filePath) throws IOException {
-        File file = new File(filePath);
-
-        OutputStream f = new FileOutputStream(file);
-
-        OutputStreamWriter writer = new OutputStreamWriter(f, StandardCharsets.UTF_8);
-
-        writer.append("");
-
-        return file;
-    }
+    public CreateConfig() {
+		Properties properties = new Properties();
+		properties.put("test","test1");
+		properties.store(new BufferedOutputStream(new FileOutputStream("test.json")), "Save Config File.");
+	}
 }
