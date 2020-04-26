@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "squidcraft:two_squid_block"
+    },
+    {
+      "item": "squidcraft:two_squid_block"
+    }
+  ],
+  "result": {
+    "item": "squidcraft:four_squid_block"
+  }
+}

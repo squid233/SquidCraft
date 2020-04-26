@@ -27,6 +27,11 @@ public class ItemGroups {
                 stacks.add(new ItemStack(SUPER_SQUID_BLOCK));   /*/*/stacks.add(new ItemStack(SUPER_COMPRESS_SQUID_BLOCK));
                 stacks.add(new ItemStack(ULTIMATE_SQUID_BLOCK));/*/*/stacks.add(new ItemStack(ULTIMATE_COMPRESS_SQUID_BLOCK));
 
+                stacks.add(new ItemStack(ONE_SQUID_BLOCK));
+                stacks.add(new ItemStack(TWO_SQUID_BLOCK));
+                stacks.add(new ItemStack(FOUR_SQUID_BLOCK));
+                stacks.add(new ItemStack(EIGHT_SQUID_BLOCK));
+
                 stacks.add(new ItemStack(BIGGER_CHEST_BLOCK));
 
             })

@@ -37,6 +37,13 @@ public class BlockRegister {
     public static final Block ULTIMATE_COMPRESS_SQUID_BLOCK = new SquidBlock().ultimateCompress();
     // Squid blocks end
 
+    // Multi squid blocks begin
+    public static final Block ONE_SQUID_BLOCK = new MultiSquidBlock().one();
+    public static final Block TWO_SQUID_BLOCK = new MultiSquidBlock().two();
+    public static final Block FOUR_SQUID_BLOCK = new MultiSquidBlock().four();
+    public static final Block EIGHT_SQUID_BLOCK = new MultiSquidBlock().eight();
+    // Multi squid blocks end
+
     public static final Block ANCIENT_DEBRIS = new AncientDebris();
     public static final Block NETHERITE_BLOCK = new NetheriteBlock();
 
@@ -61,6 +68,13 @@ public class BlockRegister {
         registerBlock("ultimate_squid_block", ULTIMATE_SQUID_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT).food(new FoodComponent.Builder().hunger(7962624).saturationModifier(7671.1506172839506172839506172841f).meat().alwaysEdible().build()));
         registerBlock("ultimate_compress_block", ULTIMATE_COMPRESS_SQUID_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT).food(new FoodComponent.Builder().hunger(10616832).saturationModifier(10228.200823045267489711934156379f).meat().alwaysEdible().build()));
         // Register squid blocks end
+
+        // Register multi squid blocks begin
+        registerBlock("one_squid_block", ONE_SQUID_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT).food(new FoodComponent.Builder().hunger(14155776).saturationModifier(13637.601097393689986282578875172f).meat().alwaysEdible().build()));
+        registerBlock("two_squid_block", TWO_SQUID_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT).food(new FoodComponent.Builder().hunger(18874368).saturationModifier(18183.468129858253315043438500229f).meat().alwaysEdible().build()));
+        registerBlock("four_squid_block", FOUR_SQUID_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT).food(new FoodComponent.Builder().hunger(25165824).saturationModifier(24244.624173144337753391251333639f).meat().alwaysEdible().build()));
+        registerBlock("eight_squid_block", EIGHT_SQUID_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT).food(new FoodComponent.Builder().hunger(33554432).saturationModifier(32326.165564192450337855001778185f).meat().alwaysEdible().build()));
+        // Register multi squid blocks end
 
         registerBlock("ancient_debris", ANCIENT_DEBRIS, new Item.Settings().group(ItemGroups.NETHERITE_MOD));
         registerBlock("netherite_block", NETHERITE_BLOCK, new Item.Settings().group(ItemGroups.NETHERITE_MOD));

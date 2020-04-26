@@ -42,6 +42,11 @@
   "block.squidcraft.ultimate_squid_block": "Ultimate Block of Squid",
   "block.squidcraft.ultimate_compress_squid_block": "Ultimate Compress Block of Squid",
 
+  "block.squidcraft.one_squid_block": "One Block of Squid",
+  "block.squidcraft.two_squid_block": "Two Block of Squid",
+  "block.squidcraft.four_squid_block": "Four Block of Squid",
+  "block.squidcraft.eight_squid_block": "Eight Block of Squid",
+
   "block.squidcraft.ancient_debris": "Ancient Debris",
   "block.squidcraft.netherite_block": "Block of Netherite",
   "block.squidcraft.bigger_chest_block": "Bigger Chest",

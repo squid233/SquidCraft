@@ -42,6 +42,11 @@
   "block.squidcraft.ultimate_squid_block": "终极鱿鱼块",
   "block.squidcraft.ultimate_compress_squid_block": "终极压缩鱿鱼块",
 
+  "block.squidcraft.one_squid_block": "一个鱿鱼块",
+  "block.squidcraft.two_squid_block": "两个鱿鱼块",
+  "block.squidcraft.four_squid_block": "四个鱿鱼块",
+  "block.squidcraft.eight_squid_block": "八个鱿鱼块",
+
   "block.squidcraft.ancient_debris": "远古残骸",
   "block.squidcraft.netherite_block": "下界合金块",
   "block.squidcraft.bigger_chest_block": "大箱子",
