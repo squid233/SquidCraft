@@ -24,6 +24,5 @@ public class CreateConfig {
             i.printStackTrace();
         }
     }
-    }
 
 }
