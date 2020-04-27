@@ -89,6 +89,7 @@ public class BlockRegister {
         BIGGER_CHEST_ENTITY_TYPE = Registry.register(Registry.BLOCK_ENTITY_TYPE, BIGGER_CHEST, BlockEntityType.Builder.create(BiggerChestBlockEntity::new, BIGGER_CHEST_BLOCK).build(null));
         ContainerProviderRegistry.INSTANCE.registerFactory(BIGGER_CHEST, ((syncId, identifier, player, buf) -> {
             final BlockEntity blockEntity = player.world.getBlockEntity(buf.readBlockPos());
+            assert blockEntity != null;
             return ((BiggerChestBlockEntity) blockEntity).createContainer(syncId, player.inventory);
         }));
 

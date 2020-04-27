@@ -26,6 +26,7 @@ public class BiggerChestScreen extends ContainerScreen<BiggerChestContainer> {
     @Override
     protected void drawBackground(float delta, int mouseX, int mouseY) {
         RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
+        assert this.minecraft != null;
         this.minecraft.getTextureManager().bindTexture(TEXTURE);
         int i = (this.width - this.containerWidth) / 2;
         int j = (this.height - this.containerHeight) / 2;

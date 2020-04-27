@@ -5,12 +5,10 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.jetbrains.annotations.Nullable;
 
 /**
  * items register api -> (item, tool and armor) register
  */
-@Nullable
 public class ItemsRegister {
     /**
      * <p>add info () - > message debug register logger.</p>

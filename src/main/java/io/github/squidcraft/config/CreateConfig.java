@@ -8,7 +8,7 @@ public class CreateConfig {
 	 *@author baka4n
 	 */
 	public static final Properties properties = new Properties();
-    public CreateConfig() {
+    public static void main(String... args) {
         try {
             properties.load(new BufferedInputStream(new FileInputStream("config.sc")));
         } catch (FileNotFoundException e) {
