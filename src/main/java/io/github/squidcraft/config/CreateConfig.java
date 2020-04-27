@@ -4,12 +4,11 @@ import java.io.*;
 import java.util.Properties;
 
 public class CreateConfig {
-    // TODO WIP update to 2020/4/26
-    public static final Properties properties = new Properties();
-    /**
-     *@author baka4n
-     */
-    public CreateConfig() {
+	/**
+	 *@author baka4n
+	 */
+	public static final Properties properties = new Properties();
+    public static void main(String... args) {
         try {
             properties.load(new BufferedInputStream(new FileInputStream("config.sc")));
         } catch (FileNotFoundException e) {

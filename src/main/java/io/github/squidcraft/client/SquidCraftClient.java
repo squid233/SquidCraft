@@ -24,7 +24,10 @@ public final class SquidCraftClient implements ClientModInitializer {
             }
         });
 
-        ScreenProviderRegistry.INSTANCE.<BiggerChestContainer>registerFactory(BlockRegister.BIGGER_CHEST, (container -> new BiggerChestScreen(container, MinecraftClient.getInstance().player.inventory, new TranslatableText(BlockRegister.BIGGER_CHEST_TRANSLATION_KEY))));
+        ScreenProviderRegistry.INSTANCE.<BiggerChestContainer>registerFactory(BlockRegister.BIGGER_CHEST, (container -> {
+            assert MinecraftClient.getInstance().player != null;
+            return new BiggerChestScreen(container, MinecraftClient.getInstance().player.inventory, new TranslatableText(BlockRegister.BIGGER_CHEST_TRANSLATION_KEY));
+        }));
     }
 
 }

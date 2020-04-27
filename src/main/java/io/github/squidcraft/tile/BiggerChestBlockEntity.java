@@ -28,7 +28,7 @@ public class BiggerChestBlockEntity extends LootableContainerBlockEntity {
 
     @Override
     public Container createContainer(int syncId, PlayerInventory playerInventory) {
-        return new BiggerChestContainer(syncId, playerInventory, (Inventory) this);
+        return new BiggerChestContainer(syncId, playerInventory, this);
     }
 
     @Override

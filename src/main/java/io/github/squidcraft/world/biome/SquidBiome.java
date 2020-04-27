@@ -14,7 +14,7 @@ import net.minecraft.world.gen.surfacebuilder.TernarySurfaceConfig;
 
 public class SquidBiome extends Biome {
     public SquidBiome() {
-        super(new Settings().configureSurfaceBuilder(SurfaceBuilder.SWAMP, new TernarySurfaceConfig(Blocks.WATER.getDefaultState(), Blocks.WATER.getDefaultState(), Blocks.WATER.getDefaultState())).precipitation(Precipitation.RAIN).category(Category.OCEAN).depth(0.24f).scale(0.2f).temperature(0.6f).downfall(0.5f).waterColor(4159204).waterFogColor(329011).parent((String)null));
+        super(new Settings().configureSurfaceBuilder(SurfaceBuilder.SWAMP, new TernarySurfaceConfig(Blocks.WATER.getDefaultState(), Blocks.WATER.getDefaultState(), Blocks.WATER.getDefaultState())).precipitation(Precipitation.RAIN).category(Category.OCEAN).depth(0.24f).scale(0.2f).temperature(0.6f).downfall(0.5f).waterColor(4159204).waterFogColor(329011).parent(null));
 
         this.addStructureFeature(Feature.MINESHAFT.configure(new MineshaftFeatureConfig(0.004D, MineshaftFeature.Type.NORMAL)));
         this.addStructureFeature(Feature.SHIPWRECK.configure(new ShipwreckFeatureConfig(false)));
