@@ -34,6 +34,11 @@ public class ItemGroups {
 
                 stacks.add(new ItemStack(BIGGER_CHEST_BLOCK));
 
+                stacks.add(new ItemStack(COPPER_ORE));
+                stacks.add(new ItemStack(COPPER_NUGGET));
+                stacks.add(new ItemStack(COPPER_INGOT));
+                stacks.add(new ItemStack(COPPER_BLOCK));
+
             })
             .build();
 

@@ -4,6 +4,8 @@
   "package": "io.github.squidcraft.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "OceanBiomeMixin",
+    "PlainsBiomeMixin"
   ],
   "client": [
     "SquidCraftMixin"

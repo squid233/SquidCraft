@@ -41,12 +41,12 @@ public final class SquidCraftMixin extends Screen {
      */
     @Overwrite
     private void initWidgetsNormal(int y, int spacingY) {
-        this.addButton(new ButtonWidget(this.width / 2 - 100, y + spacingY, 200, 20, I18n.translate("squidcraft.button.text"), (action) -> {
+        this.addButton(new ButtonWidget(this.width / 2 - 100, y, 200, 20, I18n.translate("squidcraft.button.text"), (action) -> {
             MinecraftClient.getInstance().openScreen(new AuthorsGUI(this));
             logger.info("By Squid233 & baka4n");
         }));
-        this.addButton(new ButtonWidget(this.width / 2 - 100, y, 100, 20, I18n.translate("menu.singleplayer"), (buttonWidget) -> this.minecraft.openScreen(new SelectWorldScreen(this))));
-        this.addButton(new ButtonWidget(this.width / 2, y, 100, 20, I18n.translate("menu.multiplayer"), (buttonWidget) -> {
+        this.addButton(new ButtonWidget(this.width / 2 - 100, y + spacingY, 100, 20, I18n.translate("menu.singleplayer"), (buttonWidget) -> this.minecraft.openScreen(new SelectWorldScreen(this))));
+        this.addButton(new ButtonWidget(this.width / 2, y + spacingY, 100, 20, I18n.translate("menu.multiplayer"), (buttonWidget) -> {
             if (this.minecraft.options.skipMultiplayerWarning) {
                 this.minecraft.openScreen(new MultiplayerScreen(this));
             } else {

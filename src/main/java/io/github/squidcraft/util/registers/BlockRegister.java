@@ -22,6 +22,9 @@ public class BlockRegister {
     // TODO Always register block, add item group, add lang, add blockstates, add models, add textures, add loot tables and add recipes.
     // TODO
 
+    public static final Block COPPER_ORE = new CopperOre();
+    public static final Block COPPER_BLOCK = new CopperOre().block();
+
     // Squid blocks begin
     public static final Block SQUID_BLOCK = new SquidBlock();
     public static final Block COMPRESS_SQUID_BLOCK = new SquidBlock().compressed();
@@ -54,6 +57,9 @@ public class BlockRegister {
     public static BlockEntityType<BiggerChestBlockEntity> BIGGER_CHEST_ENTITY_TYPE;
 
     public BlockRegister() {
+        registerBlock("copper_ore", COPPER_ORE, new Item.Settings().group(ItemGroups.SQUID_CRAFT));
+        registerBlock("copper_block", COPPER_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT));
+
         // Register squid blocks begin
         registerBlock("squid_block", SQUID_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT).food(new FoodComponent.Builder().hunger(1458).saturationModifier(165.651f).meat().alwaysEdible().build()));
         registerBlock("compress_squid_block", COMPRESS_SQUID_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT).food(new FoodComponent.Builder().hunger(13122).saturationModifier(256.0f).meat().alwaysEdible().build()));

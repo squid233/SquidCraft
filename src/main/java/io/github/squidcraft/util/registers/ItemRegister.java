@@ -47,13 +47,20 @@ public class ItemRegister {
     public static final Item NETHERITE_SHOVEL = new NetheriteShovel();
     public static final Item NETHERITE_SWORD = new NetheriteSword();
 
+    public static final Item COPPER_NUGGET = new CopperNugget();
+    public static final Item COPPER_INGOT = new CopperIngot();
+
     public ItemRegister() {
         registerItem("shredded_squid", SHREDDED_SQUID);
         registerItem("cooked_shredded_squid", COOKED_SHREDDED_SQUID);
         registerItem("a_pile_cooked_shredded_squid", A_PILE_COOKED_SHREDDED_SQUID);
         registerItem("squid_cookie", SQUID_COOKIE);
+
         registerItem("netherite_scrap", NETHERITE_SCRAP);
         registerItem("netherite_ingot", NETHERITE_INGOT);
+
+        registerItem("copper_nugget", COPPER_NUGGET);
+        registerItem("copper_ingot", COPPER_INGOT);
 
         registerArmor("squid", SQUID_HELMET, SQUID_CHESTPLATE, SQUID_LEGGINGS, SQUID_BOOTS);
         registerArmor("netherite", NETHERITE_HELMET, NETHERITE_CHESTPLATE, NETHERITE_LEGGINGS, NETHERITE_BOOTS);

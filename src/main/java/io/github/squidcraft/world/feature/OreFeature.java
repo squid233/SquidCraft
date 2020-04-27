@@ -46,4 +46,27 @@ public class OreFeature {
                             ))));
         }
     }
+
+    public static void spawnCopperOre(Biome biome) {
+        if (biome.getCategory() != Biome.Category.NETHER && biome.getCategory() != Biome.Category.THEEND) {
+            biome.addFeature(
+                    GenerationStep.Feature.UNDERGROUND_ORES,
+                    Feature.ORE.configure(
+                            new OreFeatureConfig(
+                                    OreFeatureConfig.Target.NATURAL_STONE,
+                                    BlockRegister.COPPER_ORE.getDefaultState(),
+                                    8
+                            )).createDecoratedFeature(
+                            Decorator.COUNT_RANGE.configure(
+                                    new RangeDecoratorConfig(
+                                            2,
+                                            0,
+                                            0,
+                                            64
+                                    )
+                            )
+                    )
+            );
+        }
+    }
 }
