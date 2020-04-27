@@ -40,13 +40,13 @@ public class ItemsRegister {
     public static void registerArmor(String modid, String armorName, Item helmet, Item chestplate, Item leggings, Item boots) {
         Logger logger = LogManager.getLogger("Armor register");
         Registry.register(Registry.ITEM, new Identifier(modid, armorName + "_helmet"), helmet);
-        logger.info("register" + armorName + "_helmet" + " register");
+        logger.info("register " + armorName + "_helmet" + " register");
         Registry.register(Registry.ITEM, new Identifier(modid, armorName + "_chestplate"), chestplate);
-        logger.info("register" + armorName + "_chestplate" + " register");
+        logger.info("register " + armorName + "_chestplate" + " register");
         Registry.register(Registry.ITEM, new Identifier(modid, armorName + "_leggings"), leggings);
-        logger.info("register" + armorName + "_leggings" + " register");
+        logger.info("register " + armorName + "_leggings" + " register");
         Registry.register(Registry.ITEM, new Identifier(modid, armorName + "_boots"), boots);
-        logger.info("register" + armorName + "_boots" + " register");
+        logger.info("register " + armorName + "_boots" + " register");
     }
 
     /**

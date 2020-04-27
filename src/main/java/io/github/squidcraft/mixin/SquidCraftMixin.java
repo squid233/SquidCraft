@@ -1,6 +1,7 @@
 package io.github.squidcraft.mixin;
 
 import io.github.squidcraft.client.gui.AuthorsGUI;
+import io.github.squidcraft.config.CreateConfig;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.screen.TitleScreen;
@@ -22,15 +23,15 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 /**
  * @author baka4n and squid233
- * <p>Mixin inject,Inserts afer the value specified by the code!</p>
+ * <p>Mixin inject, Inserts atfer the value specified by the code!</p>
  */
 @Mixin(TitleScreen.class)
 public final class SquidCraftMixin extends Screen {
-    public final Logger logger = LogManager.getLogger("SquidCraft");
+    private final Logger logger = LogManager.getLogger("SquidCraft");
 
     @Inject(at = @At("HEAD"), method = "init()V")
     private void init(CallbackInfo info) {
-
+        logger.info("This line is print by SquidCraft mod!");
     }
 
     /**
@@ -41,10 +42,12 @@ public final class SquidCraftMixin extends Screen {
      */
     @Overwrite
     private void initWidgetsNormal(int y, int spacingY) {
-        this.addButton(new ButtonWidget(this.width / 2 - 100, y, 200, 20, I18n.translate("squidcraft.button.text"), (action) -> {
-            MinecraftClient.getInstance().openScreen(new AuthorsGUI(this));
-            logger.info("By Squid233 & baka4n");
-        }));
+        if (CreateConfig.properties.getProperty("hideMainScreenButton").equals("false")) {
+            this.addButton(new ButtonWidget(this.width / 2 - 100, y, 200, 20, I18n.translate("squidcraft.button.text"), (action) -> {
+                MinecraftClient.getInstance().openScreen(new AuthorsGUI(this));
+                logger.info("By Squid233 & baka4n");
+            }));
+        }
         this.addButton(new ButtonWidget(this.width / 2 - 100, y + spacingY, 100, 20, I18n.translate("menu.singleplayer"), (buttonWidget) -> {
             assert this.minecraft != null;
             this.minecraft.openScreen(new SelectWorldScreen(this));
@@ -73,9 +76,9 @@ public final class SquidCraftMixin extends Screen {
     }
 
     /**
+     * <p>Mixin SquidCraftMixin to Title Screen!</p>
      * @author squid233 and baka4n
      * @param title The title
-     * <p>Mixin SquidCraftMixin to Title Screen!</p>
      */
     protected SquidCraftMixin(Text title) {
         super(title);

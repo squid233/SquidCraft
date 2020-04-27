@@ -11,14 +11,10 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 import static io.github.squidcraft.SquidCraft.MODID;
+import static io.github.squidcraft.util.ModEnchantments.*;
 
 public class EnchantmentRegister {
-    public static Enchantment FROST;
-    public static Enchantment FIRE_BOOM;
-    public static Enchantment INSANE;
-    public static Enchantment ElectricPower;
-
-    static {
+    public EnchantmentRegister() {
         FROST = Registry.register(
                 Registry.ENCHANTMENT,
                 new Identifier(MODID, "frost"),

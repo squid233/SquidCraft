@@ -24,6 +24,7 @@ public final class SquidCraft implements ModInitializer {
 		logger.info("block register success");
 		new SoundRegister();
 		logger.info("sound register success");
+		new EnchantmentRegister();
 		logger.info("enchantment register success");
 		new WorldGenRegister();
 		logger.info("world generator register success");
