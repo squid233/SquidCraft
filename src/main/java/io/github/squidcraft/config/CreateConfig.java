@@ -5,7 +5,6 @@ import java.util.Properties;
 
 public class CreateConfig {
     // TODO WIP update to 2020/4/26
-
     public static final Properties properties = new Properties();
     /**
      *@author baka4n
@@ -15,6 +14,7 @@ public class CreateConfig {
             properties.load(new BufferedInputStream(new FileInputStream("config.sc")));
         } catch (FileNotFoundException e) {
             properties.put("test", "test1");
+
             try {
                 properties.store(new BufferedOutputStream(new FileOutputStream("config.sc")), "save Config File.");
             } catch (IOException f) {
@@ -22,8 +22,8 @@ public class CreateConfig {
             }
         } catch (IOException i) {
             i.printStackTrace();
-        } finally {
-            String config = properties.getProperty("config");
         }
     }
+    }
+
 }
