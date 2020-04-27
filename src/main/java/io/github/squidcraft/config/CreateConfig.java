@@ -8,19 +8,18 @@ public class CreateConfig {
 	/**
 	 *@author baka4n
 	 */
+	public static final Properties properties = new Properties();
     public CreateConfig() {
-		Properties properties = new Properties();
+
 		try {
 			properties.load(new BufferedInputStream(new FileInputStream("config.sc")));
-		} catch (FileNotFoundException e( {
-			properties.put("test", test1");
+		} catch (FileNotFoundException e) {
+			properties.put("test", "test1");
 			
 			try {
 				properties.store(new BufferedOutputStream(new FileOutputStream("config.sc")), "save Config File.");
-			} catch (FileNotFoundException f) {
+			} catch (IOException f) {
 				f.printStackTrace();
-			} catch (IOException i) {
-				i.printStackTrace();
 			}
 		} catch (IOException i) {
 			i.printStackTrace();
