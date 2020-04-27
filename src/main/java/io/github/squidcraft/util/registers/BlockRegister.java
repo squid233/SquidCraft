@@ -5,12 +5,16 @@ import io.github.squidcraft.api.BlocksRegister;
 import io.github.squidcraft.block.*;
 import io.github.squidcraft.item.ItemGroups;
 import io.github.squidcraft.tile.BiggerChestBlockEntity;
+import net.fabricmc.fabric.api.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.container.ContainerProviderRegistry;
+import net.fabricmc.fabric.api.tools.FabricToolTags;
 import net.minecraft.block.Block;
+import net.minecraft.block.Material;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Util;
 import net.minecraft.util.registry.Registry;
@@ -20,24 +24,24 @@ import net.minecraft.util.registry.Registry;
  */
 public class BlockRegister {
     // TODO Always register block, add item group, add lang, add blockstates, add models, add textures, add loot tables and add recipes.
-    // TODO
+    // TODO Squid blocks
 
-    public static final Block COPPER_ORE = new CopperOre();
-    public static final Block COPPER_BLOCK = new CopperOre().block();
+    public static final Block COPPER_ORE = new CopperOre(FabricBlockSettings.of(Material.STONE).strength(3.0f, 3.0f).breakByTool(FabricToolTags.PICKAXES, 3).build());
+    public static final Block COPPER_BLOCK = new CopperBlock(FabricBlockSettings.of(Material.METAL).strength(5.0f, 6.0f).breakByTool(FabricToolTags.PICKAXES, 3).sounds(BlockSoundGroup.METAL).build());
 
     // Squid blocks begin
-    public static final Block SQUID_BLOCK = new SquidBlock();
-    public static final Block COMPRESS_SQUID_BLOCK = new SquidBlock().compressed();
-    public static final Block LOW_SQUID_BLOCK = new SquidBlock().low();
-    public static final Block LOW_COMPRESS_SQUID_BLOCK = new SquidBlock().lowCompress();
-    public static final Block MEDIUM_SQUID_BLOCK = new SquidBlock().medium();
-    public static final Block MEDIUM_COMPRESS_SQUID_BLOCK = new SquidBlock().mediumCompress();
-    public static final Block HIGHER_SQUID_BLOCK = new SquidBlock().higher();
-    public static final Block HIGHER_COMPRESS_SQUID_BLOCK = new SquidBlock().higherCompress();
-    public static final Block SUPER_SQUID_BLOCK = new SquidBlock().supered();
-    public static final Block SUPER_COMPRESS_SQUID_BLOCK = new SquidBlock().superCompress();
-    public static final Block ULTIMATE_SQUID_BLOCK = new SquidBlock().ultimate();
-    public static final Block ULTIMATE_COMPRESS_SQUID_BLOCK = new SquidBlock().ultimateCompress();
+    public static final Block SQUID_BLOCK = new SquidBlock(FabricBlockSettings.of(Material.EARTH).hardness(0.5f).build());
+    public static final Block COMPRESS_SQUID_BLOCK = new CompressSquidBlock(FabricBlockSettings.of(Material.EARTH).hardness(0.525f).build());
+    public static final Block LOW_SQUID_BLOCK = new LowSquidBlock(FabricBlockSettings.of(Material.EARTH).strength(0.55f, 0.1f).build());
+    public static final Block LOW_COMPRESS_SQUID_BLOCK = new LowCompressSquidBlock(FabricBlockSettings.of(Material.EARTH).strength(0.6f, 0.15f).build());
+    public static final Block MEDIUM_SQUID_BLOCK = new MediumSquidBlock(FabricBlockSettings.of(Material.EARTH).strength(0.65f, 0.2f).build());
+    public static final Block MEDIUM_COMPRESS_SQUID_BLOCK = new MediumCompressSquidBlock(FabricBlockSettings.of(Material.EARTH).strength(0.7f, 0.25f).build());
+    public static final Block HIGHER_SQUID_BLOCK = new HigherSquidBlock(FabricBlockSettings.of(Material.EARTH).strength(0.75f, 0.3f).build());
+    public static final Block HIGHER_COMPRESS_SQUID_BLOCK = new HigherCompressSquidBlock(FabricBlockSettings.of(Material.EARTH).strength(0.8f, 0.35f).build());
+    public static final Block SUPER_SQUID_BLOCK = new SuperSquidBlock(FabricBlockSettings.of(Material.EARTH).strength(0.85f, 0.4f).build());
+    public static final Block SUPER_COMPRESS_SQUID_BLOCK = new SuperCompressSquidBlock(FabricBlockSettings.of(Material.EARTH).strength(0.9f, 0.45f).build());
+    public static final Block ULTIMATE_SQUID_BLOCK = new UltimateSquidBlock(FabricBlockSettings.of(Material.EARTH).strength(0.95f, 0.5f).build());
+    public static final Block ULTIMATE_COMPRESS_SQUID_BLOCK = new UltimateCompressSquidBlock(FabricBlockSettings.of(Material.EARTH).strength(1.0f, 0.55f).build());
     // Squid blocks end
 
     // Multi squid blocks begin
@@ -89,6 +93,7 @@ public class BlockRegister {
         BIGGER_CHEST_ENTITY_TYPE = Registry.register(Registry.BLOCK_ENTITY_TYPE, BIGGER_CHEST, BlockEntityType.Builder.create(BiggerChestBlockEntity::new, BIGGER_CHEST_BLOCK).build(null));
         ContainerProviderRegistry.INSTANCE.registerFactory(BIGGER_CHEST, ((syncId, identifier, player, buf) -> {
             final BlockEntity blockEntity = player.world.getBlockEntity(buf.readBlockPos());
+            assert blockEntity != null;
             return ((BiggerChestBlockEntity) blockEntity).createContainer(syncId, player.inventory);
         }));
 
