@@ -25,9 +25,17 @@
   "item.squidcraft.netherite_shovel": "Netherite Shovel",
   "item.squidcraft.netherite_sword": "Netherite Sword",
 
+  "item.squidcraft.copper_nugget": "Copper Nugget",
+  "item.squidcraft.copper_ingot": "Copper Ingot",
+
+  "item.squidcraft.squid_cookie.tooltip": "Craft a squid block!",
+
   "itemGroup.squidcraft.squid_craft": "SquidCraft",
   "itemGroup.squidcraft.sc_combat_and_tools": "SquidCraft Combat and Tools",
   "itemGroup.squidcraft.netherite_mod": "SquidCraft Addons of Netherite Mod",
+
+  "block.squidcraft.copper_ore": "Copper Ore",
+  "block.squidcraft.copper_block": "Copper Block",
 
   "block.squidcraft.squid_block": "Block of Squid",
   "block.squidcraft.compress_squid_block": "Compress Block of Squid",
@@ -58,6 +66,7 @@
   "enchantment.squidcraft.frost": "Frost",
   "enchantment.squidcraft.fire_boom": "Fire Boom",
   "enchantment.squidcraft.insane": "Insane Enchantment",
+  "enchantment.squidcraft.electric_power": "Electric Power",
 
   "subtitles.item.armor.equip_netherite": "Netherite Armor:Equip",
 

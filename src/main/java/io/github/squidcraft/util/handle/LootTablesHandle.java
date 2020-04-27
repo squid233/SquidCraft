@@ -1,4 +1,4 @@
-package io.github.squidcraft.handle;
+package io.github.squidcraft.util.handle;
 
 import io.github.squidcraft.util.registers.ItemRegister;
 import net.fabricmc.fabric.api.loot.v1.FabricLootPoolBuilder;
