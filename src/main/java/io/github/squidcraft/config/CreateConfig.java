@@ -15,7 +15,7 @@ public class CreateConfig {
 			properties.load(new BufferedInputStream(new FileInputStream("config.sc")));
 		} catch (FileNotFoundException e) {
 			properties.put("test", "test1");
-			
+
 			try {
 				properties.store(new BufferedOutputStream(new FileOutputStream("config.sc")), "save Config File.");
 			} catch (IOException f) {
@@ -23,8 +23,6 @@ public class CreateConfig {
 			}
 		} catch (IOException i) {
 			i.printStackTrace();
-		} finally {
-			String config = properties.getProperty("config");
 		}
 	}
 }
