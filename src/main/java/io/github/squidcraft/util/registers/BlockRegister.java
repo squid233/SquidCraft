@@ -3,6 +3,7 @@ package io.github.squidcraft.util.registers;
 import io.github.squidcraft.SquidCraft;
 import io.github.squidcraft.api.BlocksRegister;
 import io.github.squidcraft.block.*;
+import io.github.squidcraft.block.blockItem.SquidBlockItem;
 import io.github.squidcraft.item.ItemGroups;
 import io.github.squidcraft.tile.BiggerChestBlockEntity;
 import net.fabricmc.fabric.api.block.FabricBlockSettings;
@@ -12,6 +13,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.Material;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.sound.BlockSoundGroup;
@@ -65,7 +67,7 @@ public class BlockRegister {
         registerBlock("copper_block", COPPER_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT));
 
         // Register squid blocks begin
-        registerBlock("squid_block", SQUID_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT).food(new FoodComponent.Builder().hunger(1458).saturationModifier(165.651f).meat().alwaysEdible().build()));
+        registerBlock("squid_block", SQUID_BLOCK, new SquidBlockItem(SQUID_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT).food(new FoodComponent.Builder().hunger(1458).saturationModifier(165.651f).meat().alwaysEdible().build())));
         registerBlock("compress_squid_block", COMPRESS_SQUID_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT).food(new FoodComponent.Builder().hunger(13122).saturationModifier(256.0f).meat().alwaysEdible().build()));
         registerBlock("low_squid_block", LOW_SQUID_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT).food(new FoodComponent.Builder().hunger(118098).saturationModifier(512.0f).meat().alwaysEdible().build()));
         registerBlock("low_compress_squid_block", LOW_COMPRESS_SQUID_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT).food(new FoodComponent.Builder().hunger(1062882).saturationModifier(1024.0f).meat().alwaysEdible().build()));
@@ -97,6 +99,10 @@ public class BlockRegister {
             return ((BiggerChestBlockEntity) blockEntity).createContainer(syncId, player.inventory);
         }));
 
+    }
+
+    private void registerBlock(String blockName, Block block, BlockItem blockItem) {
+        BlocksRegister.registerBlock(SquidCraft.MODID, blockName, block, blockItem);
     }
 
     private void registerBlock(String blockName, Block block, Item.Settings settings) {

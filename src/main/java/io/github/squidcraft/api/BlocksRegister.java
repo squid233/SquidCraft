@@ -10,11 +10,27 @@ import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.Nullable;
 
 /**
- * @author squid233
  * <p>register blocks api</p>
+ * @author squid233
  */
 @Nullable
 public class BlocksRegister {
+    public static void registerBlock(String modid, String blockName, Block block, BlockItem blockItem) {
+        Logger logger = LogManager.getLogger("register block and block item");
+        Registry.register(Registry.BLOCK, new Identifier(modid, blockName), block);
+        logger.info("register " + blockName + " block");
+        Registry.register(Registry.ITEM, new Identifier(modid, blockName), blockItem);
+        logger.info("register " + blockName + "block info item");
+    }
+
+    /*
+    *@Override
+    public void onCraft(ItemStack stack, World world, PlayerEntity player) {
+        if (player != null) {
+            player.giveItemStack(new ItemStack(BlockRegister.ANCIENT_DEBRIS, 2));
+        }
+    }
+     */
     public static void registerBlock(String modid, String blockName, Block block, Item.Settings settings) {
         Logger logger = LogManager.getLogger("register block and block item");
         Registry.register(Registry.BLOCK, new Identifier(modid, blockName), block);

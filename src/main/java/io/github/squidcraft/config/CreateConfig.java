@@ -2,38 +2,30 @@ package io.github.squidcraft.config;
 
 import java.io.*;
 import java.util.Properties;
-
+/**
+ *@author baka4n
+ */
 public class CreateConfig {
-	/**
-	 *@author baka4n
-	 */
 	public static final Properties properties = new Properties();
-    public static void main(String... args) throws IOException {
-
-        FileInputStream fis = new FileInputStream("config/squidcraft/config.properties");
-        BufferedInputStream bis = new BufferedInputStream(fis);
-
-        FileOutputStream fos = new FileOutputStream("config/squidcraft/config.properties");
-        BufferedOutputStream bos = new BufferedOutputStream(fos);
-
+    public static void main(String... args) {
         try {
-            properties.load(bis);
+            properties.load(new BufferedInputStream(new FileInputStream("config/squidcraft/config.properties")));
         } catch (FileNotFoundException e) {
-            properties.put("hideMainScreenButton", "false");
+            properties.put("hideMainScreenButton", false);
+            properties.put("squidBlockSpawnSize", 3);
+            properties.put("squidBlockPerChunkSpawnCount", 8);
+            properties.put("squidBlockSpawnMinYLevel", 16);
+            properties.put("squidBlockSpawnMaxYLevel", 64);
+            properties.put("electricPowerMaxLevel", 5);
 
             try {
-                properties.store(bos, "save Config File.");
+                properties.store(new BufferedOutputStream(new FileOutputStream("config/squidcraft/config.properties")), "save Config File.");
             } catch (IOException f) {
                 f.printStackTrace();
             }
         } catch (IOException i) {
             i.printStackTrace();
         }
-
-        fis.close();
-        bis.close();
-        fos.close();
-        bos.close();
 
     }
 

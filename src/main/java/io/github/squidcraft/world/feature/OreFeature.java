@@ -1,5 +1,6 @@
 package io.github.squidcraft.world.feature;
 
+import io.github.squidcraft.config.CreateConfig;
 import io.github.squidcraft.util.registers.BlockRegister;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStep;
@@ -17,13 +18,13 @@ public class OreFeature {
                             new OreFeatureConfig(
                                     OreFeatureConfig.Target.NATURAL_STONE,
                                     BlockRegister.SQUID_BLOCK.getDefaultState(),
-                                    3 // Vein size
+                                    Integer.parseInt(CreateConfig.properties.getProperty("squidBlockSpawnSize")) // Vein size
                             )).createDecoratedFeature(
                             Decorator.COUNT_RANGE.configure(new RangeDecoratorConfig(
-                                    8, // Vein count of per chunk
+                                    Integer.parseInt(CreateConfig.properties.getProperty("squidBlockPerChunkSpawnCount")), // Vein count of per chunk
                                     0, // Bottom offset
-                                    16, // Minimum y level
-                                    64 // Maximum y level
+                                    Integer.parseInt(CreateConfig.properties.getProperty("squidBlockSpawnMinYLevel")), // Minimum y level
+                                    Integer.parseInt(CreateConfig.properties.getProperty("squidBlockSpawnMaxYLevel")) // Maximum y level
                             ))));
         }
     }

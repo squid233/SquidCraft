@@ -51,6 +51,8 @@ public class ItemRegister {
     public static final Item COPPER_INGOT = new CopperIngot();
 
     public ItemRegister() {
+
+
         registerItem("shredded_squid", SHREDDED_SQUID);
         registerItem("cooked_shredded_squid", COOKED_SHREDDED_SQUID);
         registerItem("a_pile_cooked_shredded_squid", A_PILE_COOKED_SHREDDED_SQUID);

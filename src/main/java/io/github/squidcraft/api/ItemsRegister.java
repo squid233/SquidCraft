@@ -10,6 +10,14 @@ import org.apache.logging.log4j.Logger;
  * items register api -> (item, tool and armor) register
  */
 public class ItemsRegister {
+
+    /**
+     * Let it cannot constructing
+     */
+    private ItemsRegister() {
+
+    }
+
     /**
      * <p>add info () - > message debug register logger.</p>
      * @param modid Mod identifier.
