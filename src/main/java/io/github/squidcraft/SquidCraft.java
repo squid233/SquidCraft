@@ -17,6 +17,7 @@ public final class SquidCraft implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		CreateConfig.config();
 		Logger logger = LogManager.getLogger("SquidCraft register all");
 		new ItemRegister();
 		logger.info("item register success");
@@ -31,7 +32,6 @@ public final class SquidCraft implements ModInitializer {
 		new LootTablesHandle();
 		logger.info("loot table register success");
 		logger.info("load on initialize success");
-		CreateConfig.main();
 
 	}
 }
