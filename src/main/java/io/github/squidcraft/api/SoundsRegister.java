@@ -10,6 +10,6 @@ public interface SoundsRegister {
     static void registerSound(Identifier soundID, SoundEvent sound) {
         Logger logger = LogManager.getLogger("register sounds");
         Registry.register(Registry.SOUND_EVENT, soundID, sound);
-        logger.info("register " + soundID + "success");
+        logger.info("register " + soundID + " success");
     }
 }
