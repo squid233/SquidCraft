@@ -3,7 +3,7 @@ pluginManagement {
         jcenter()
         maven {
             name = 'Fabric'
-            url = 'https://maven.modmuss50.me'
+            url = 'https://maven.fabricmc.net/'
         }
 		// maven {
 		//     name = 'Minecraft'
@@ -17,6 +17,7 @@ pluginManagement {
 		//     name = 'Fabric'
 		// 	url = 'http://nossl.lss233.com/artifactory/minecraft'
 		// }
+        // https://maven.modmuss50.me
         // gradlePluginPortal()
     }
 }
