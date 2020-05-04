@@ -1,23 +1,18 @@
 package io.github.squidcraft.util.registers;
 
 import io.github.squidcraft.api.ItemsRegister;
+import io.github.squidcraft.armor.*;
 import io.github.squidcraft.armor.ArmorMaterials;
-import io.github.squidcraft.armor.NetheriteHelmet;
-import io.github.squidcraft.armor.SquidHelmet;
 import io.github.squidcraft.item.*;
 import io.github.squidcraft.item.tools.netherite.*;
 import io.github.squidcraft.item.tools.squid.*;
 import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.Item;
-
+import net.minecraft.item.*;
 import static io.github.squidcraft.SquidCraft.MODID;
-import static io.github.squidcraft.item.ItemGroups.NETHERITE_MOD;
-import static io.github.squidcraft.item.ItemGroups.SQUID_CRAFT_COMBAT_AND_TOOLS;
+import static io.github.squidcraft.item.ItemGroups.*;
 
 public class ItemRegister {
     // TODO Always register item, add item group, add models, add textures and add recipes.
-
     public static final Item SHREDDED_SQUID = new ShreddedSquid();
     public static final Item COOKED_SHREDDED_SQUID = new CookedShreddedSquid();
     public static final Item A_PILE_COOKED_SHREDDED_SQUID = new APileCSSquid();

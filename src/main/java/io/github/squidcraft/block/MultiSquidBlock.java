@@ -1,8 +1,7 @@
 package io.github.squidcraft.block;
 
 import net.fabricmc.fabric.api.block.FabricBlockSettings;
-import net.minecraft.block.Block;
-import net.minecraft.block.Material;
+import net.minecraft.block.*;
 
 public class MultiSquidBlock {
     public One one() {

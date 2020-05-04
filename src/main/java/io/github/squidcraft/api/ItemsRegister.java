@@ -3,8 +3,8 @@ package io.github.squidcraft.api;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+
+import static io.github.squidcraft.SquidCraft.log;
 
 /**
  * items register api -> (item, tool and armor) register
@@ -27,9 +27,9 @@ public class ItemsRegister {
      * @since 0.1.0
      */
     public static void registerItem(String modid, String itemName, Item item) {
-		Logger logger = LogManager.getLogger("items register");
-		logger.info("register " + itemName + " success!");
+        String s = "items register";
         Registry.register(Registry.ITEM, new Identifier(modid, itemName), item);
+        log(s, "register " + itemName + " success!");
     }
 
     /**
@@ -46,15 +46,15 @@ public class ItemsRegister {
      * <p>add info() -> message debug register armor register</p>
      */
     public static void registerArmor(String modid, String armorName, Item helmet, Item chestplate, Item leggings, Item boots) {
-        Logger logger = LogManager.getLogger("Armor register");
+        String s = "Armor register";
         Registry.register(Registry.ITEM, new Identifier(modid, armorName + "_helmet"), helmet);
-        logger.info("register " + armorName + "_helmet" + " register");
+        log(s, "register " + armorName + "_helmet" + " register");
         Registry.register(Registry.ITEM, new Identifier(modid, armorName + "_chestplate"), chestplate);
-        logger.info("register " + armorName + "_chestplate" + " register");
+        log(s, "register " + armorName + "_chestplate" + " register");
         Registry.register(Registry.ITEM, new Identifier(modid, armorName + "_leggings"), leggings);
-        logger.info("register " + armorName + "_leggings" + " register");
+        log(s, "register " + armorName + "_leggings" + " register");
         Registry.register(Registry.ITEM, new Identifier(modid, armorName + "_boots"), boots);
-        logger.info("register " + armorName + "_boots" + " register");
+        log(s, "register " + armorName + "_boots" + " register");
     }
 
     /**
@@ -71,16 +71,16 @@ public class ItemsRegister {
      * @since 0.5.0
      */
     public static void registerTool(String modid, String toolName, Item axe, Item hoe, Item pickaxe, Item shovel, Item sword) {
-        Logger logger = LogManager.getLogger("tool register");
+        String s = "tool register";
         Registry.register(Registry.ITEM, new Identifier(modid, toolName + "_axe"), axe);
-        logger.info("register " + toolName + "_axe" + " register");
+        log(s, "register " + toolName + "_axe" + " register");
         Registry.register(Registry.ITEM, new Identifier(modid, toolName + "_hoe"), hoe);
-        logger.info("register " + toolName + "_hoe" + " register");
+        log(s, "register " + toolName + "_hoe" + " register");
         Registry.register(Registry.ITEM, new Identifier(modid, toolName + "_pickaxe"), pickaxe);
-        logger.info("register " + toolName + "_pickaxe" + " register");
+        log(s, "register " + toolName + "_pickaxe" + " register");
         Registry.register(Registry.ITEM, new Identifier(modid, toolName + "_shovel"), shovel);
-        logger.info("register " + toolName + "_shovel" + " register");
+        log(s, "register " + toolName + "_shovel" + " register");
         Registry.register(Registry.ITEM, new Identifier(modid, toolName + "_sword"), sword);
-        logger.info("register " + toolName + "_sword" + " register");
+        log(s, "register " + toolName + "_sword" + " register");
     }
 }

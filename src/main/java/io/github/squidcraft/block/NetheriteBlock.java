@@ -3,7 +3,7 @@ package io.github.squidcraft.block;
 import net.fabricmc.fabric.api.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.tools.FabricToolTags;
 import net.minecraft.block.Block;
-import net.minecraft.block.Material;
+import net.minecraft.block.*;
 
 public class NetheriteBlock extends Block {
     public NetheriteBlock() {

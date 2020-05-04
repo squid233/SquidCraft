@@ -3,8 +3,7 @@ package io.github.squidcraft.block;
 import io.github.squidcraft.util.ModSounds;
 import net.fabricmc.fabric.api.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.tools.FabricToolTags;
-import net.minecraft.block.Material;
-import net.minecraft.block.OreBlock;
+import net.minecraft.block.*;
 
 public class AncientDebris extends OreBlock {
     public AncientDebris() {
