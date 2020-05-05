@@ -15,15 +15,16 @@ public class AuthorsGUI extends Screen {
     @Override
     public void render(int mouseX, int mouseY, float delta) {
         renderBackground();
-        renderTooltip(I18n.translate("authors.squidcraft.info"), this.width / 100, this.height / 9);
-        renderTooltip("squid233", 21 * this.width / 100, this.height / 9);
-        renderTooltip("baka4n",  41 * this.width / 100, this.height / 9);
+        tooltip("authors.squidcraft.info", this.width / 100, this.height / 9);
+        tooltip("squid233", 21 * this.width / 100, this.height / 9);
+        tooltip("baka4n",  41 * this.width / 100, this.height / 9);
         super.render(mouseX, mouseY, delta);
     }
-
     @Override
     public void init() {
         super.init();
-        this.addButton(new ButtonWidget(3 * this.width / 4, 8 * this.height / 9, 100, 20, I18n.translate("authors.squidcraft.back"), (action) -> this.screen.onClose()));
+        MyButton(3 * this.width / 4, 8 * this.height / 9, 100, 20, "authors.squidcraft.back", (buttonWidget) -> this.screen.onClose());
     }
+    private void MyButton(int x, int y, int width, int height, String s, ButtonWidget.PressAction button) { this.addButton(new ButtonWidget(x, y, width, height, I18n.translate(s), button)); }
+    private void tooltip(String s, int x, int y) { renderTooltip(I18n.translate(s), x, y); }
 }

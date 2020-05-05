@@ -4,34 +4,33 @@ import io.github.squidcraft.config.CreateConfig;
 import io.github.squidcraft.util.handle.LootTablesHandle;
 import io.github.squidcraft.util.registers.*;
 import net.fabricmc.api.ModInitializer;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.jetbrains.annotations.Nullable;
+import org.apache.logging.log4j.*;
 
 /**
  * @author squid233 and baka4n->(logger4j test)!
  */
-@Nullable
 public final class SquidCraft implements ModInitializer {
 	public static final String MODID = "squidcraft";
-
 	@Override
 	public void onInitialize() {
+		String s = "SquidCraft register all";
 		CreateConfig.config();
 		Logger logger = LogManager.getLogger("SquidCraft register all");
 		new ItemRegister();
-		logger.info("item register success");
+		log(s, "item register success");
 		new BlockRegister();
-		logger.info("block register success");
+		log(s, "block register success");
 		new SoundRegister();
-		logger.info("sound register success");
+		log(s, "sound register success");
 		new EnchantmentRegister();
-		logger.info("enchantment register success");
+		log(s, "enchantment register success");
 		new WorldGenRegister();
-		logger.info("world generator register success");
+		log(s, "world generator register success");
 		new LootTablesHandle();
-		logger.info("loot table register success");
-		logger.info("load on initialize success");
-
+		log(s, "loot table register success");
+		log(s, "load on initialize success");
+	}
+	public static void log(String s1, String s2) {
+		Logger logger = LogManager.getLogger(s1);logger.info(s2);
 	}
 }
