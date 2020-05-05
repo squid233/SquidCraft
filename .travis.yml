@@ -1,4 +1,6 @@
 language: java
 sudo: false
+before_install:
+  - chmod +x mvnw
 jdk:
   - openjdk8
