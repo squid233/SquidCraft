@@ -1,22 +1,19 @@
 pluginManagement {
     repositories {
-        jcenter()
+        jcenter ()
         maven {
             name = 'Fabric'
+            /*artifactUrls = [
+                    //'https://maven.fabricmc.net',
+                    'https://maven.modmuss50.me',
+                    'https://maven.modmuss50.me/fabric-loom',
+                    'http://lss233.littleservice.cn/repositories/minecraft/fabric',
+                    'https://lss233.com/artifactory/minecraft',
+                    'http://nossl.lss233.com/artifactory/minecraft'
+            ]*/
             url = 'https://maven.modmuss50.me'
+            // url
         }
-		// maven {
-		//     name = 'Minecraft'
-		// 	url = 'http://lss233.littleservice.cn/repositories/minecraft'
-		// }
-		// maven {
-		//     name = 'Fabric'
-		// 	url = 'https://lss233.com/artifactory/minecraft'
-		// }
-		// maven {
-		//     name = 'Fabric'
-		// 	url = 'http://nossl.lss233.com/artifactory/minecraft'
-		// }
-        // gradlePluginPortal()
+        gradlePluginPortal()
     }
 }

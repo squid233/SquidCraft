@@ -28,8 +28,8 @@ public class ItemsRegister {
      */
     public static void registerItem(String modid, String itemName, Item item) {
 		Logger logger = LogManager.getLogger("items register");
-		logger.info("register " + itemName + " success!");
         Registry.register(Registry.ITEM, new Identifier(modid, itemName), item);
+        logger.info("register " + itemName + " success!");
     }
 
     /**
@@ -82,5 +82,11 @@ public class ItemsRegister {
         logger.info("register " + toolName + "_shovel" + " register");
         Registry.register(Registry.ITEM, new Identifier(modid, toolName + "_sword"), sword);
         logger.info("register " + toolName + "_sword" + " register");
+    }
+
+    public static void registerAll(String modid, String[] itemNames, Item[] items) {
+        for (int i = 0; i < itemNames.length; i++) {
+            registerItem(modid, itemNames[i], items[i]);
+        }
     }
 }

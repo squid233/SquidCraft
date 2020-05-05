@@ -51,10 +51,23 @@ public class ItemRegister {
     public static final Item COPPER_INGOT = new CopperIngot();
 
     public ItemRegister() {
-        registerItem("shredded_squid", SHREDDED_SQUID);
+
+        registerAll(
+                new String[]{"shredded_squid",
+                        "cooked_shredded_squid",
+                        "a_pile_cooked_squid",
+                        "squid_cookie"
+                },
+                new Item[]{SHREDDED_SQUID,
+                        COOKED_SHREDDED_SQUID,
+                        A_PILE_COOKED_SHREDDED_SQUID,
+                        SQUID_COOKIE
+                });
+
+        /*registerItem("shredded_squid", SHREDDED_SQUID);
         registerItem("cooked_shredded_squid", COOKED_SHREDDED_SQUID);
         registerItem("a_pile_cooked_shredded_squid", A_PILE_COOKED_SHREDDED_SQUID);
-        registerItem("squid_cookie", SQUID_COOKIE);
+        registerItem("squid_cookie", SQUID_COOKIE);*/
 
         registerItem("netherite_scrap", NETHERITE_SCRAP);
         registerItem("netherite_ingot", NETHERITE_INGOT);
@@ -80,5 +93,9 @@ public class ItemRegister {
 
     private void registerTool(String toolName, Item axe, Item hoe, Item pickaxe, Item shovel, Item sword) {
         ItemsRegister.registerTool(MODID, toolName, axe, hoe, pickaxe, shovel, sword);
+    }
+
+    private void registerAll(String[] itemNames, Item[] items) {
+        ItemsRegister.registerAll(MODID, itemNames, items);
     }
 }

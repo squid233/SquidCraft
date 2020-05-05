@@ -1,6 +1,7 @@
 package io.github.squidcraft.item;
 
-import net.minecraft.item.*;
+import net.minecraft.item.FoodComponent;
+import net.minecraft.item.Item;
 
 public class ShreddedSquid extends Item {
     public ShreddedSquid() {
