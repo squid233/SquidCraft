@@ -31,6 +31,7 @@ public final class SquidCraft implements ModInitializer {
 		log(s, "load on initialize success");
 	}
 	public static void log(String s1, String s2) {
-		Logger logger = LogManager.getLogger(s1);logger.info(s2);
+		Logger logger = LogManager.getLogger(s1);
+		logger.info(s2);
 	}
 }
