@@ -1,6 +1,6 @@
 # SquidCraft
 
-![https://travis-ci.org/squid233/SquidCraft.svg?branch=1.15.2](https://travis-ci.org/github/squid233/SquidCraft)
+![https://travis-ci.org/squid233/SquidCraft.svg?branch=1.15.2](https://travis-ci.org/squid233/SquidCraft)
 
 This is a Minecraft mod adds more item with squid!  
 这是一个Minecraft mod，它添加了许多与鱿鱼有关的东西！  
