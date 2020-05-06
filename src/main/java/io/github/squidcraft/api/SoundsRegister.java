@@ -8,6 +8,6 @@ import static io.github.squidcraft.SquidCraft.log;
 public class SoundsRegister {
     public static void registerSound(Identifier soundID, SoundEvent sound) {
         Registry.register(Registry.SOUND_EVENT, soundID, sound);
-        log("register sounds", "register " + soundID + "success");
+        log("register sounds", "register " + soundID + " success");
     }
 }

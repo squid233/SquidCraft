@@ -50,7 +50,7 @@ public class ItemRegister {
         registerAll(
                 new String[]{"shredded_squid",
                         "cooked_shredded_squid",
-                        "a_pile_cooked_squid",
+                        "a_pile_cooked_shredded_squid",
                         "squid_cookie"
                 },
                 new Item[]{SHREDDED_SQUID,

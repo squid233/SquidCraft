@@ -1,7 +1,8 @@
 package io.github.squidcraft.block;
 
-import net.fabricmc.fabric.api.block.FabricBlockSettings;
-import net.minecraft.block.*;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.minecraft.block.Block;
+import net.minecraft.block.Material;
 
 public class MultiSquidBlock {
     public One one() {
@@ -24,24 +25,24 @@ public class MultiSquidBlock {
 
 class One extends Block {
     public One() {
-        super(FabricBlockSettings.of(Material.EARTH).strength(1.5f, 0.6f).build());
+        super(FabricBlockSettings.of(Material.EARTH).strength(1.5f, 0.6f));
     }
 }
 
 class Two extends Block {
     public Two() {
-        super(FabricBlockSettings.of(Material.EARTH).strength(2.0f, 0.65f).build());
+        super(FabricBlockSettings.of(Material.EARTH).strength(2.0f, 0.65f));
     }
 }
 
 class Four extends Block {
     public Four() {
-        super(FabricBlockSettings.of(Material.EARTH).strength(2.5f, 0.7f).build());
+        super(FabricBlockSettings.of(Material.EARTH).strength(2.5f, 0.7f));
     }
 }
 
 class Eight extends Block {
     public Eight() {
-        super(FabricBlockSettings.of(Material.EARTH).strength(3.0f, 0.75f).build());
+        super(FabricBlockSettings.of(Material.EARTH).strength(3.0f, 0.75f));
     }
 }

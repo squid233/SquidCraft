@@ -1,0 +1,8 @@
+{
+  "parent": "squidcraft:block/squid_side_block",
+  "textures": {
+    "bottom": "block/squid_block",
+    "top": "block/squid_block",
+    "side": "block/squid_block"
+  }
+}

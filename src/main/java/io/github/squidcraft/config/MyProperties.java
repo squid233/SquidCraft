@@ -1,6 +1,8 @@
 package io.github.squidcraft.config;
 
 import java.io.*;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 /**
@@ -8,7 +10,7 @@ import java.util.*;
  */
 public class MyProperties extends Properties {
     private static final long serialVersionUID = 1L;
-    private List<Object> keyList = new ArrayList<Object>();
+    private final List<Object> keyList = new ArrayList<>();
 
     /**
      * 默认构造方法类
@@ -29,8 +31,8 @@ public class MyProperties extends Properties {
 
     /**
      * 重写put方法类
-     * @param key
-     * @param value
+     * @param key Property key
+     * @param value Property value
      * @return KEY VALUE
      */
     @Override
@@ -42,7 +44,7 @@ public class MyProperties extends Properties {
 
     /**
      * 重写移除方法类
-     * @param key
+     * @param key Property key
      * @return key
      */
     @Override
@@ -53,7 +55,7 @@ public class MyProperties extends Properties {
 
     /**
      * 检索指定key并删除
-     * @param key
+     * @param key Property key
      */
     private void removeKeyIfExists(Object key) {
         keyList.remove(key);
@@ -69,26 +71,24 @@ public class MyProperties extends Properties {
 
     /**
      * 路径保存
-     * @param path
+     * @param path File path
      */
     public void store(String path) {
-        this.store(path, "UTF-8");
+        this.store(path, StandardCharsets.UTF_8);
     }
 
     /**
      * 保存到指定文件夹
-     * @param path
-     * @param charset
+     * @param path File path
+     * @param charset File charset(for example: UTF-8)
      */
-    public void store(String path, String charset) {
+    public void store(String path, Charset charset) {
         if (path != null && !"".equals(path)) {
             try {
                 OutputStream os = new FileOutputStream(path);
                 BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(os, charset));
                 this.store(bw, null);
                 bw.close();
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -99,18 +99,18 @@ public class MyProperties extends Properties {
 
     /**
      * 重写keys法
-     * @return
+     * @return {@link EnumerationAdapter}
      */
     @Override
     public synchronized Enumeration<Object> keys() {
-        return new EnumerationAdapter<Object>(keyList);
+        return new EnumerationAdapter<>(keyList);
     }
 
     /**
      * 适配器
      * @param <T>
      */
-    private class EnumerationAdapter<T> implements Enumeration<T> {
+    private static class EnumerationAdapter<T> implements Enumeration<T> {
         private int index = 0;
         private final List<T> list;
         private final boolean isEmpty;

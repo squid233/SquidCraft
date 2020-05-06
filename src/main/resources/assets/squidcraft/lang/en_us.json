@@ -55,6 +55,8 @@
   "block.squidcraft.four_squid_block": "Four Block of Squid",
   "block.squidcraft.eight_squid_block": "Eight Block of Squid",
 
+  "block.squidcraft.squid_side_block": "Block of Squid Side Slab",
+
   "block.squidcraft.ancient_debris": "Ancient Debris",
   "block.squidcraft.netherite_block": "Block of Netherite",
   "block.squidcraft.bigger_chest_block": "Bigger Chest",
@@ -76,6 +78,9 @@
   "advancements.squidcraft.first_cooking.desc": "Now, we can make \"A Pile Cooked Shredded Squid\"!",
   "advancements.squidcraft.a_pile.title": "A Pile Cooked Shredded Squid",
   "advancements.squidcraft.a_pile.desc": "If you make a squid cookie, you can find more surprise!",
+
+  "fluid.squidcraft.milk": "Milk",
+  "fluid.squidcraft.flowing_milk": "Flowing Milk",
 
   "key.squidcraft.useless_key": "Useless Key",
 

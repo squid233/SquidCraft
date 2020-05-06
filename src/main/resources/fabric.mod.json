@@ -24,7 +24,8 @@
       "io.github.squidcraft.SquidCraft"
     ],
     "client": [
-      "io.github.squidcraft.client.SquidCraftClient"
+      "io.github.squidcraft.client.SquidCraftClient",
+      "io.github.squidcraft.client.SquidCraftFluidRenderingClient"
     ]
   },
   "mixins": [

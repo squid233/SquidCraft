@@ -9,7 +9,14 @@ import net.minecraft.util.Identifier;
 import static io.github.squidcraft.util.registers.ItemRegister.*;
 import static io.github.squidcraft.util.registers.BlockRegister.*;
 
-public class ItemGroups {
+public abstract class ItemGroups {
+    /**
+     * Let it cannot constructing
+     */
+    private ItemGroups() {
+
+    }
+
     public static final ItemGroup SQUID_CRAFT = FabricItemGroupBuilder.create(
             new Identifier(SquidCraft.MODID, "squid_craft"))
             .icon(() -> new ItemStack(SQUID_BLOCK))
@@ -31,6 +38,8 @@ public class ItemGroups {
                 stacks.add(new ItemStack(TWO_SQUID_BLOCK));
                 stacks.add(new ItemStack(FOUR_SQUID_BLOCK));
                 stacks.add(new ItemStack(EIGHT_SQUID_BLOCK));
+
+                stacks.add(new ItemStack(SQUID_SIDE_BLOCK));
 
                 stacks.add(new ItemStack(BIGGER_CHEST_BLOCK));
 
