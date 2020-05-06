@@ -28,6 +28,8 @@
   "item.squidcraft.copper_nugget": "Copper Nugget",
   "item.squidcraft.copper_ingot": "Copper Ingot",
 
+  "item.squidcraft.cookie_creeper_spawn_egg":"Spawn Cookie Creeper",
+
   "item.squidcraft.squid_cookie.tooltip": "Craft a squid block!",
 
   "itemGroup.squidcraft.squid_craft": "SquidCraft",
@@ -64,6 +66,8 @@
   "container.squidcraft.bigger_chest_block": "Bigger Chest",
 
   "biome.squidcraft.squid_biome": "Squid Biome",
+
+  "entity_type.squidcraft.cookie_creeper": "Cookie Creeper",
 
   "enchantment.squidcraft.frost": "Frost",
   "enchantment.squidcraft.fire_boom": "Fire Boom",

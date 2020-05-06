@@ -48,6 +48,8 @@ public abstract class ItemGroups {
                 stacks.add(new ItemStack(COPPER_INGOT));
                 stacks.add(new ItemStack(COPPER_BLOCK));
 
+                stacks.add(new ItemStack(COOKIE_CREEPER_SPAWN_EGG));
+
             })
             .build();
 
