@@ -8,7 +8,7 @@ import java.util.*;
  */
 public class MyProperties extends Properties {
     private static final long serialVersionUID = 1L;
-    private List<Object> keyList = new ArrayList<Object>();
+    private List<Object> keyList = new ArrayList<>();
 
     /**
      * 默认构造方法类
