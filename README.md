@@ -8,7 +8,7 @@
 ![libraries status](https://img.shields.io/librariesio/github/FabricMC/Fabric)
 ![downloads](https://img.shields.io/github/downloads/squid233/SquidCraft/total)
 ![version](https://img.shields.io/github/v/release/squid233/SquidCraft)
-![java](https://img.shields.io/badge/language-java-red)
+![java](https://img.shields.io/badge/language-java-darkred)
 
 This is a Minecraft mod adds more item with squid!  
 这是一个Minecraft mod，它添加了许多与鱿鱼有关的东西！  
