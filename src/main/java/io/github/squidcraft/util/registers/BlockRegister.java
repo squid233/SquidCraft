@@ -64,7 +64,7 @@ public class BlockRegister {
 
     public static BlockEntityType<BiggerChestBlockEntity> BIGGER_CHEST_ENTITY_TYPE;
 
-    public BlockRegister() {
+    public void register1() {
         registerBlock("copper_ore", COPPER_ORE, new Item.Settings().group(ItemGroups.SQUID_CRAFT));
         registerBlock("copper_block", COPPER_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT));
 
@@ -82,14 +82,18 @@ public class BlockRegister {
         registerBlock("ultimate_squid_block", ULTIMATE_SQUID_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT).food(new FoodComponent.Builder().hunger(7962624).saturationModifier(7671.1506172839506172839506172841f).meat().alwaysEdible().build()));
         registerBlock("ultimate_compress_squid_block", ULTIMATE_COMPRESS_SQUID_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT).food(new FoodComponent.Builder().hunger(10616832).saturationModifier(10228.200823045267489711934156379f).meat().alwaysEdible().build()));
         // Register squid blocks end
+    }
 
+    public void register2() {
         // Register multi squid blocks begin
         registerBlock("one_squid_block", ONE_SQUID_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT).food(new FoodComponent.Builder().hunger(14155776).saturationModifier(13637.601097393689986282578875172f).meat().alwaysEdible().build()));
         registerBlock("two_squid_block", TWO_SQUID_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT).food(new FoodComponent.Builder().hunger(18874368).saturationModifier(18183.468129858253315043438500229f).meat().alwaysEdible().build()));
         registerBlock("four_squid_block", FOUR_SQUID_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT).food(new FoodComponent.Builder().hunger(25165824).saturationModifier(24244.624173144337753391251333639f).meat().alwaysEdible().build()));
         registerBlock("eight_squid_block", EIGHT_SQUID_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT).food(new FoodComponent.Builder().hunger(33554432).saturationModifier(32326.165564192450337855001778185f).meat().alwaysEdible().build()));
         // Register multi squid blocks end
+    }
 
+    public void register3() {
         registerBlock("squid_side_block", SQUID_SIDE_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT).food(new FoodComponent.Builder().hunger(729).saturationModifier(82.8255f).meat().alwaysEdible().build()));
 
         registerBlock("ancient_debris", ANCIENT_DEBRIS, new Item.Settings().group(ItemGroups.NETHERITE_MOD));
@@ -113,7 +117,8 @@ public class BlockRegister {
         BlocksRegister.registerBlock(SquidCraft.MODID, blockName, block, settings);
     }
 
-    private static void registerContainer(Identifier id, Block block, Item.Settings settings) {
+    private void registerContainer(Identifier id, Block block, Item.Settings settings) {
         BlocksRegister.registerContainer(id, block, settings);
     }
+
 }

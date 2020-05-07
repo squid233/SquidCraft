@@ -14,10 +14,13 @@ public final class SquidCraft implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		String s = "SquidCraft register all";
+		BlockRegister br = new BlockRegister();
 		CreateConfig.config();
 		new ItemRegister();
 		log(s, "item register success");
-		new BlockRegister();
+		br.register1();
+		br.register2();
+		br.register3();
 		log(s, "block register success");
 		new FluidRegister();
 		log(s, "fluid register success");

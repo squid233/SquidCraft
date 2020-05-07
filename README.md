@@ -22,6 +22,7 @@ squid233: ![followers](https://img.shields.io/github/followers/squid233?label=Fo
 ![stars](https://img.shields.io/github/stars/squid233/SquidCraft?style=social)
 ![watchers](https://img.shields.io/github/watchers/squid233/SquidCraft?label=watch&style=social)
 ![commit](https://img.shields.io/github/commit-activity/y/squid233/SquidCraft)
+[![codebeat badge](https://codebeat.co/badges/2080a55d-c058-41a6-9441-6fa6dcccd183)](https://codebeat.co/projects/github-com-squid233-squidcraft-1-15-x)
 
 This is a Minecraft mod adds more item with squid!  
 这是一个Minecraft mod，它添加了许多与鱿鱼有关的东西！  

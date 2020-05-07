@@ -83,8 +83,10 @@ public class ItemRegister {
         registerArmor("squid", SQUID_HELMET, SQUID_CHESTPLATE, SQUID_LEGGINGS, SQUID_BOOTS);
         registerArmor("netherite", NETHERITE_HELMET, NETHERITE_CHESTPLATE, NETHERITE_LEGGINGS, NETHERITE_BOOTS);
 
-        registerTool("squid", SQUID_AXE, SQUID_HOE, SQUID_PICKAXE, SQUID_SHOVEL, SQUID_SWORD);
-        registerTool("netherite", NETHERITE_AXE, NETHERITE_HOE, NETHERITE_PICKAXE, NETHERITE_SHOVEL, NETHERITE_SWORD);
+        registerTool("squid", SQUID_AXE, SQUID_HOE);
+        registerTool("squid", SQUID_PICKAXE, SQUID_SHOVEL, SQUID_SWORD);
+        registerTool("netherite", NETHERITE_AXE, NETHERITE_HOE);
+        registerTool("netherite", NETHERITE_PICKAXE, NETHERITE_SHOVEL, NETHERITE_SWORD);
 
     }
 
@@ -96,8 +98,12 @@ public class ItemRegister {
         ItemsRegister.registerArmor(MODID, armorName, helmet, chestplate, leggings, boots);
     }
 
-    private void registerTool(String toolName, Item axe, Item hoe, Item pickaxe, Item shovel, Item sword) {
-        ItemsRegister.registerTool(MODID, toolName, axe, hoe, pickaxe, shovel, sword);
+    private void registerTool(String toolName, Item axe, Item hoe) {
+        ItemsRegister.registerTool(MODID, toolName, axe, hoe);
+    }
+
+    private void registerTool(String toolName, Item pickaxe, Item shovel, Item sword) {
+        ItemsRegister.registerTool(MODID, toolName, pickaxe, shovel, sword);
     }
 
     private void registerAll(String[] itemNames, Item[] items) {
