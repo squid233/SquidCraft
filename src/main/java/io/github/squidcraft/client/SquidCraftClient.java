@@ -1,14 +1,18 @@
 package io.github.squidcraft.client;
 
 import io.github.squidcraft.client.gui.BiggerChestScreen;
+import io.github.squidcraft.entity.CookieCreeperRenderer;
 import io.github.squidcraft.tile.BiggerChestContainer;
+import io.github.squidcraft.util.ModEntities;
 import io.github.squidcraft.util.registers.BlockRegister;
 import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.fabric.api.client.rendereregistry.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.client.screen.ScreenProviderRegistry;
 import net.fabricmc.fabric.api.event.client.ClientTickCallback;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.text.TranslatableText;
-import static io.github.squidcraft.util.KeyBindings.*;
+
+import static io.github.squidcraft.util.KeyBindings.keyBinding_0;
 import static net.fabricmc.fabric.api.client.keybinding.KeyBindingRegistry.INSTANCE;
 
 public final class SquidCraftClient implements ClientModInitializer {
@@ -23,5 +27,7 @@ public final class SquidCraftClient implements ClientModInitializer {
             assert MinecraftClient.getInstance().player != null;
             return new BiggerChestScreen(container, MinecraftClient.getInstance().player.inventory, new TranslatableText(BlockRegister.BIGGER_CHEST_TRANSLATION_KEY));
         }));
+
+        EntityRendererRegistry.INSTANCE.register(ModEntities.COOKIE_CREEPER, (entityRenderDispatcher, context) -> new CookieCreeperRenderer(entityRenderDispatcher));
     }
 }

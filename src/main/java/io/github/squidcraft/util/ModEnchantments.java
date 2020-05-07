@@ -6,5 +6,5 @@ public class ModEnchantments {
     public static Enchantment FROST;
     public static Enchantment FIRE_BOOM;
     public static Enchantment INSANE;
-    public static Enchantment ElectricPower;
+    public static Enchantment ELECTRIC_POWER;
 }

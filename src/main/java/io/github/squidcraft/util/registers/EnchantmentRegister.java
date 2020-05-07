@@ -46,7 +46,7 @@ public class EnchantmentRegister {
                         }
                 )
         );
-        ElectricPower = Registry.register(
+        ELECTRIC_POWER = Registry.register(
                 Registry.ENCHANTMENT,
                 new Identifier(MODID, "electric_power"),
                 new ElectricPowerEnchantment(

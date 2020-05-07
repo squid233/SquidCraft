@@ -14,12 +14,16 @@ public final class SquidCraft implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		String s = "SquidCraft register all";
+		BlockRegister br = new BlockRegister();
 		CreateConfig.config();
-		Logger logger = LogManager.getLogger("SquidCraft register all");
 		new ItemRegister();
 		log(s, "item register success");
-		new BlockRegister();
+		br.register1();
+		br.register2();
+		br.register3();
 		log(s, "block register success");
+		new FluidRegister();
+		log(s, "fluid register success");
 		new SoundRegister();
 		log(s, "sound register success");
 		new EnchantmentRegister();
@@ -30,6 +34,11 @@ public final class SquidCraft implements ModInitializer {
 		log(s, "loot table register success");
 		log(s, "load on initialize success");
 	}
+
+	/**
+	 * @param s1 logger name
+	 * @param s2 logger info
+	 */
 	public static void log(String s1, String s2) {
 		Logger logger = LogManager.getLogger(s1);
 		logger.info(s2);

@@ -58,30 +58,37 @@ public class ItemsRegister {
     }
 
     /**
-     * <p>This method can register axe, hoe, pickaxe, shovel and sword.</p>
+     * <p>This method can register axe and hoe.</p>
      * @param modid Mod identifier.
-     * @param toolName Tool's prefix. e.g. squid, they will be auto add "_axe", "_hoe", "_pickaxe", "_shovel" and "_sword",
-     *                 then your tool item name are "squid_axe", "squid_hoe", "squid_pickaxe", "squid_shovel" and "squid_sword".
+     * @param toolName Tool's prefix. e.g. squid, they will be auto add "_axe" and "_hoe",
+     *                 then your tool item name are "squid_axe" and "squid_hoe".
      * @param axe Axe item.
      * @param hoe Hoe item.
+     * @author squid233
+     * @since 0.5.0
+     */
+    public static void registerTool(String modid, String toolName, Item axe, Item hoe) {
+        String s = "tool register";
+        registerItem(modid, toolName + "_axe", axe);log(s, "register " + toolName + "_axe" + " register");
+        registerItem(modid, toolName + "_hoe", hoe);log(s, "register " + toolName + "_hoe" + " register");
+    }
+
+    /**
+     * <p>This method can register axe, hoe, pickaxe, shovel and sword.</p>
+     * @param modid Mod identifier.
+     * @param toolName Tool's prefix. e.g. squid, they will be auto add "_pickaxe", "_shovel" and "_sword",
+     *                 then your tool item name are "squid_pickaxe", "squid_shovel" and "squid_sword".
      * @param pickaxe Pickaxe item.
      * @param shovel Shovel item.
      * @param sword Sword item.
      * @author squid233
      * @since 0.5.0
      */
-    public static void registerTool(String modid, String toolName, Item axe, Item hoe, Item pickaxe, Item shovel, Item sword) {
+    public static void registerTool(String modid, String toolName, Item pickaxe, Item shovel, Item sword) {
         String s = "tool register";
-        Registry.register(Registry.ITEM, new Identifier(modid, toolName + "_axe"), axe);
-        log(s, "register " + toolName + "_axe" + " register");
-        Registry.register(Registry.ITEM, new Identifier(modid, toolName + "_hoe"), hoe);
-        log(s, "register " + toolName + "_hoe" + " register");
-        Registry.register(Registry.ITEM, new Identifier(modid, toolName + "_pickaxe"), pickaxe);
-        log(s, "register " + toolName + "_pickaxe" + " register");
-        Registry.register(Registry.ITEM, new Identifier(modid, toolName + "_shovel"), shovel);
-        log(s, "register " + toolName + "_shovel" + " register");
-        Registry.register(Registry.ITEM, new Identifier(modid, toolName + "_sword"), sword);
-        log(s, "register " + toolName + "_sword" + " register");
+        registerItem(modid, toolName + "_pickaxe", pickaxe);log(s, "register " + toolName + "_pickaxe" + " register");
+        registerItem(modid, toolName + "_shovel", shovel);log(s, "register " + toolName + "_shovel" + " register");
+        registerItem(modid, toolName + "_sword", sword);log(s, "register " + toolName + "_sword" + " register");
     }
 
     public static void registerAll(String modid, String[] itemNames, Item[] items) {

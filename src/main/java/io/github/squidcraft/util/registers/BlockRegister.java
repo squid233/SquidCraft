@@ -6,14 +6,19 @@ import io.github.squidcraft.block.*;
 import io.github.squidcraft.block.blockItem.SquidBlockItem;
 import io.github.squidcraft.item.ItemGroups;
 import io.github.squidcraft.tile.BiggerChestBlockEntity;
-import net.fabricmc.fabric.api.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.container.ContainerProviderRegistry;
-import net.fabricmc.fabric.api.tools.FabricToolTags;
-import net.minecraft.block.*;
-import net.minecraft.block.entity.*;
-import net.minecraft.item.*;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
+import net.minecraft.block.Block;
+import net.minecraft.block.Material;
+import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.block.entity.BlockEntityType;
+import net.minecraft.item.BlockItem;
+import net.minecraft.item.FoodComponent;
+import net.minecraft.item.Item;
 import net.minecraft.sound.BlockSoundGroup;
-import net.minecraft.util.*;
+import net.minecraft.util.Identifier;
+import net.minecraft.util.Util;
 import net.minecraft.util.registry.Registry;
 
 /**
@@ -23,22 +28,22 @@ public class BlockRegister {
     // TODO Always register block, add item group, add lang, add blockstates, add models, add textures, add loot tables and add recipes.
     // TODO Squid blocks
 
-    public static final Block COPPER_ORE = new CopperOre(FabricBlockSettings.of(Material.STONE).strength(3.0f, 3.0f).breakByTool(FabricToolTags.PICKAXES, 3).build());
-    public static final Block COPPER_BLOCK = new CopperBlock(FabricBlockSettings.of(Material.METAL).strength(5.0f, 6.0f).breakByTool(FabricToolTags.PICKAXES, 3).sounds(BlockSoundGroup.METAL).build());
+    public static final Block COPPER_ORE = new CopperOre(FabricBlockSettings.of(Material.STONE).strength(3.0f, 3.0f).breakByTool(FabricToolTags.PICKAXES, 3));
+    public static final Block COPPER_BLOCK = new CopperBlock(FabricBlockSettings.of(Material.METAL).strength(5.0f, 6.0f).breakByTool(FabricToolTags.PICKAXES, 3).sounds(BlockSoundGroup.METAL));
 
     // Squid blocks begin
-    public static final Block SQUID_BLOCK = new SquidBlock(FabricBlockSettings.of(Material.EARTH).hardness(0.5f).build());
-    public static final Block COMPRESS_SQUID_BLOCK = new CompressSquidBlock(FabricBlockSettings.of(Material.EARTH).hardness(0.525f).build());
-    public static final Block LOW_SQUID_BLOCK = new LowSquidBlock(FabricBlockSettings.of(Material.EARTH).strength(0.55f, 0.1f).build());
-    public static final Block LOW_COMPRESS_SQUID_BLOCK = new LowCompressSquidBlock(FabricBlockSettings.of(Material.EARTH).strength(0.6f, 0.15f).build());
-    public static final Block MEDIUM_SQUID_BLOCK = new MediumSquidBlock(FabricBlockSettings.of(Material.EARTH).strength(0.65f, 0.2f).build());
-    public static final Block MEDIUM_COMPRESS_SQUID_BLOCK = new MediumCompressSquidBlock(FabricBlockSettings.of(Material.EARTH).strength(0.7f, 0.25f).build());
-    public static final Block HIGHER_SQUID_BLOCK = new HigherSquidBlock(FabricBlockSettings.of(Material.EARTH).strength(0.75f, 0.3f).build());
-    public static final Block HIGHER_COMPRESS_SQUID_BLOCK = new HigherCompressSquidBlock(FabricBlockSettings.of(Material.EARTH).strength(0.8f, 0.35f).build());
-    public static final Block SUPER_SQUID_BLOCK = new SuperSquidBlock(FabricBlockSettings.of(Material.EARTH).strength(0.85f, 0.4f).build());
-    public static final Block SUPER_COMPRESS_SQUID_BLOCK = new SuperCompressSquidBlock(FabricBlockSettings.of(Material.EARTH).strength(0.9f, 0.45f).build());
-    public static final Block ULTIMATE_SQUID_BLOCK = new UltimateSquidBlock(FabricBlockSettings.of(Material.EARTH).strength(0.95f, 0.5f).build());
-    public static final Block ULTIMATE_COMPRESS_SQUID_BLOCK = new UltimateCompressSquidBlock(FabricBlockSettings.of(Material.EARTH).strength(1.0f, 0.55f).build());
+    public static final Block SQUID_BLOCK = new SquidBlock(FabricBlockSettings.of(Material.EARTH).hardness(0.5f));
+    public static final Block COMPRESS_SQUID_BLOCK = new CompressSquidBlock(FabricBlockSettings.of(Material.EARTH).hardness(0.525f));
+    public static final Block LOW_SQUID_BLOCK = new LowSquidBlock(FabricBlockSettings.of(Material.EARTH).strength(0.55f, 0.1f));
+    public static final Block LOW_COMPRESS_SQUID_BLOCK = new LowCompressSquidBlock(FabricBlockSettings.of(Material.EARTH).strength(0.6f, 0.15f));
+    public static final Block MEDIUM_SQUID_BLOCK = new MediumSquidBlock(FabricBlockSettings.of(Material.EARTH).strength(0.65f, 0.2f));
+    public static final Block MEDIUM_COMPRESS_SQUID_BLOCK = new MediumCompressSquidBlock(FabricBlockSettings.of(Material.EARTH).strength(0.7f, 0.25f));
+    public static final Block HIGHER_SQUID_BLOCK = new HigherSquidBlock(FabricBlockSettings.of(Material.EARTH).strength(0.75f, 0.3f));
+    public static final Block HIGHER_COMPRESS_SQUID_BLOCK = new HigherCompressSquidBlock(FabricBlockSettings.of(Material.EARTH).strength(0.8f, 0.35f));
+    public static final Block SUPER_SQUID_BLOCK = new SuperSquidBlock(FabricBlockSettings.of(Material.EARTH).strength(0.85f, 0.4f));
+    public static final Block SUPER_COMPRESS_SQUID_BLOCK = new SuperCompressSquidBlock(FabricBlockSettings.of(Material.EARTH).strength(0.9f, 0.45f));
+    public static final Block ULTIMATE_SQUID_BLOCK = new UltimateSquidBlock(FabricBlockSettings.of(Material.EARTH).strength(0.95f, 0.5f));
+    public static final Block ULTIMATE_COMPRESS_SQUID_BLOCK = new UltimateCompressSquidBlock(FabricBlockSettings.of(Material.EARTH).strength(1.0f, 0.55f));
     // Squid blocks end
 
     // Multi squid blocks begin
@@ -47,6 +52,8 @@ public class BlockRegister {
     public static final Block FOUR_SQUID_BLOCK = new MultiSquidBlock().four();
     public static final Block EIGHT_SQUID_BLOCK = new MultiSquidBlock().eight();
     // Multi squid blocks end
+
+    public static final Block SQUID_SIDE_BLOCK = new SquidSideBlock(FabricBlockSettings.of(Material.EARTH).hardness(1.5f));
 
     public static final Block ANCIENT_DEBRIS = new AncientDebris();
     public static final Block NETHERITE_BLOCK = new NetheriteBlock();
@@ -57,7 +64,7 @@ public class BlockRegister {
 
     public static BlockEntityType<BiggerChestBlockEntity> BIGGER_CHEST_ENTITY_TYPE;
 
-    public BlockRegister() {
+    public void register1() {
         registerBlock("copper_ore", COPPER_ORE, new Item.Settings().group(ItemGroups.SQUID_CRAFT));
         registerBlock("copper_block", COPPER_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT));
 
@@ -75,13 +82,19 @@ public class BlockRegister {
         registerBlock("ultimate_squid_block", ULTIMATE_SQUID_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT).food(new FoodComponent.Builder().hunger(7962624).saturationModifier(7671.1506172839506172839506172841f).meat().alwaysEdible().build()));
         registerBlock("ultimate_compress_squid_block", ULTIMATE_COMPRESS_SQUID_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT).food(new FoodComponent.Builder().hunger(10616832).saturationModifier(10228.200823045267489711934156379f).meat().alwaysEdible().build()));
         // Register squid blocks end
+    }
 
+    public void register2() {
         // Register multi squid blocks begin
         registerBlock("one_squid_block", ONE_SQUID_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT).food(new FoodComponent.Builder().hunger(14155776).saturationModifier(13637.601097393689986282578875172f).meat().alwaysEdible().build()));
         registerBlock("two_squid_block", TWO_SQUID_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT).food(new FoodComponent.Builder().hunger(18874368).saturationModifier(18183.468129858253315043438500229f).meat().alwaysEdible().build()));
         registerBlock("four_squid_block", FOUR_SQUID_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT).food(new FoodComponent.Builder().hunger(25165824).saturationModifier(24244.624173144337753391251333639f).meat().alwaysEdible().build()));
         registerBlock("eight_squid_block", EIGHT_SQUID_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT).food(new FoodComponent.Builder().hunger(33554432).saturationModifier(32326.165564192450337855001778185f).meat().alwaysEdible().build()));
         // Register multi squid blocks end
+    }
+
+    public void register3() {
+        registerBlock("squid_side_block", SQUID_SIDE_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT).food(new FoodComponent.Builder().hunger(729).saturationModifier(82.8255f).meat().alwaysEdible().build()));
 
         registerBlock("ancient_debris", ANCIENT_DEBRIS, new Item.Settings().group(ItemGroups.NETHERITE_MOD));
         registerBlock("netherite_block", NETHERITE_BLOCK, new Item.Settings().group(ItemGroups.NETHERITE_MOD));
@@ -104,7 +117,8 @@ public class BlockRegister {
         BlocksRegister.registerBlock(SquidCraft.MODID, blockName, block, settings);
     }
 
-    private static void registerContainer(Identifier id, Block block, Item.Settings settings) {
+    private void registerContainer(Identifier id, Block block, Item.Settings settings) {
         BlocksRegister.registerContainer(id, block, settings);
     }
+
 }

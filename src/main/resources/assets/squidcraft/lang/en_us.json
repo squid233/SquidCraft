@@ -28,6 +28,8 @@
   "item.squidcraft.copper_nugget": "Copper Nugget",
   "item.squidcraft.copper_ingot": "Copper Ingot",
 
+  "item.squidcraft.cookie_creeper_spawn_egg":"Spawn Cookie Creeper",
+
   "item.squidcraft.squid_cookie.tooltip": "Craft a squid block!",
 
   "itemGroup.squidcraft.squid_craft": "SquidCraft",
@@ -55,6 +57,8 @@
   "block.squidcraft.four_squid_block": "Four Block of Squid",
   "block.squidcraft.eight_squid_block": "Eight Block of Squid",
 
+  "block.squidcraft.squid_side_block": "Block of Squid Side Slab",
+
   "block.squidcraft.ancient_debris": "Ancient Debris",
   "block.squidcraft.netherite_block": "Block of Netherite",
   "block.squidcraft.bigger_chest_block": "Bigger Chest",
@@ -62,6 +66,8 @@
   "container.squidcraft.bigger_chest_block": "Bigger Chest",
 
   "biome.squidcraft.squid_biome": "Squid Biome",
+
+  "entity_type.squidcraft.cookie_creeper": "Cookie Creeper",
 
   "enchantment.squidcraft.frost": "Frost",
   "enchantment.squidcraft.fire_boom": "Fire Boom",
@@ -76,6 +82,9 @@
   "advancements.squidcraft.first_cooking.desc": "Now, we can make \"A Pile Cooked Shredded Squid\"!",
   "advancements.squidcraft.a_pile.title": "A Pile Cooked Shredded Squid",
   "advancements.squidcraft.a_pile.desc": "If you make a squid cookie, you can find more surprise!",
+
+  "fluid.squidcraft.milk": "Milk",
+  "fluid.squidcraft.flowing_milk": "Flowing Milk",
 
   "key.squidcraft.useless_key": "Useless Key",
 

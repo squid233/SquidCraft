@@ -1,15 +1,21 @@
 package io.github.squidcraft.util.registers;
 
 import io.github.squidcraft.api.ItemsRegister;
-import io.github.squidcraft.armor.*;
 import io.github.squidcraft.armor.ArmorMaterials;
+import io.github.squidcraft.armor.NetheriteHelmet;
+import io.github.squidcraft.armor.SquidHelmet;
 import io.github.squidcraft.item.*;
 import io.github.squidcraft.item.tools.netherite.*;
 import io.github.squidcraft.item.tools.squid.*;
+import io.github.squidcraft.util.ModEntities;
 import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.item.*;
+import net.minecraft.item.ArmorItem;
+import net.minecraft.item.Item;
+import net.minecraft.item.SpawnEggItem;
+
 import static io.github.squidcraft.SquidCraft.MODID;
-import static io.github.squidcraft.item.ItemGroups.*;
+import static io.github.squidcraft.item.ItemGroups.NETHERITE_MOD;
+import static io.github.squidcraft.item.ItemGroups.SQUID_CRAFT_COMBAT_AND_TOOLS;
 
 public class ItemRegister {
     // TODO Always register item, add item group, add models, add textures and add recipes.
@@ -45,12 +51,14 @@ public class ItemRegister {
     public static final Item COPPER_NUGGET = new CopperNugget();
     public static final Item COPPER_INGOT = new CopperIngot();
 
+    public static final Item COOKIE_CREEPER_SPAWN_EGG = new SpawnEggItem(ModEntities.COOKIE_CREEPER, 0x0DA70B, 0x73420E, new Item.Settings().group(ItemGroups.SQUID_CRAFT));
+
     public ItemRegister() {
 
         registerAll(
                 new String[]{"shredded_squid",
                         "cooked_shredded_squid",
-                        "a_pile_cooked_squid",
+                        "a_pile_cooked_shredded_squid",
                         "squid_cookie"
                 },
                 new Item[]{SHREDDED_SQUID,
@@ -70,11 +78,15 @@ public class ItemRegister {
         registerItem("copper_nugget", COPPER_NUGGET);
         registerItem("copper_ingot", COPPER_INGOT);
 
+        registerItem("cookie_creeper_spawn_egg", COOKIE_CREEPER_SPAWN_EGG);
+
         registerArmor("squid", SQUID_HELMET, SQUID_CHESTPLATE, SQUID_LEGGINGS, SQUID_BOOTS);
         registerArmor("netherite", NETHERITE_HELMET, NETHERITE_CHESTPLATE, NETHERITE_LEGGINGS, NETHERITE_BOOTS);
 
-        registerTool("squid", SQUID_AXE, SQUID_HOE, SQUID_PICKAXE, SQUID_SHOVEL, SQUID_SWORD);
-        registerTool("netherite", NETHERITE_AXE, NETHERITE_HOE, NETHERITE_PICKAXE, NETHERITE_SHOVEL, NETHERITE_SWORD);
+        registerTool("squid", SQUID_AXE, SQUID_HOE);
+        registerTool("squid", SQUID_PICKAXE, SQUID_SHOVEL, SQUID_SWORD);
+        registerTool("netherite", NETHERITE_AXE, NETHERITE_HOE);
+        registerTool("netherite", NETHERITE_PICKAXE, NETHERITE_SHOVEL, NETHERITE_SWORD);
 
     }
 
@@ -86,8 +98,12 @@ public class ItemRegister {
         ItemsRegister.registerArmor(MODID, armorName, helmet, chestplate, leggings, boots);
     }
 
-    private void registerTool(String toolName, Item axe, Item hoe, Item pickaxe, Item shovel, Item sword) {
-        ItemsRegister.registerTool(MODID, toolName, axe, hoe, pickaxe, shovel, sword);
+    private void registerTool(String toolName, Item axe, Item hoe) {
+        ItemsRegister.registerTool(MODID, toolName, axe, hoe);
+    }
+
+    private void registerTool(String toolName, Item pickaxe, Item shovel, Item sword) {
+        ItemsRegister.registerTool(MODID, toolName, pickaxe, shovel, sword);
     }
 
     private void registerAll(String[] itemNames, Item[] items) {
