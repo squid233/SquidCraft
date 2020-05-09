@@ -47,7 +47,8 @@ fix config create and priority config create. ———— baka4n.
 - QQ Group: Binary: 0100 0000 0100 1100 0101 1000 1011 0101
 - Discord: [Discord](https://discord.gg/yDrFqRU)
 - GitHub: squid233 or stepheninchina
-- CurseForge: https://www.curseforge.com/minecraft/mc-mods/squidcraft  
+- CurseForge: https://www.curseforge.com/minecraft/mc-mods/squidcraft 
+- MCMOD:  https://www.mcmod.cn/class/2507.html
 ---
 
 ###### We recommend use the Chinese or English.
