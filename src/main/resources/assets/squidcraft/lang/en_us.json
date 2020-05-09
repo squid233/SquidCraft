@@ -90,5 +90,9 @@
 
   "authors.squidcraft.back": "back",
   "squidcraft.button.text":"SquidCraft",
-  "authors.squidcraft.info": "authors:"
+  "authors.squidcraft.info": "authors:",
+
+
+  "itemGroup.squidcraft.yummyfood": "YummyFood",
+  "item.squidcraft.pineapple": "Pineapple"
 }

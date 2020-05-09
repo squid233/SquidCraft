@@ -7,8 +7,10 @@ import net.minecraft.util.registry.Registry;
 import static io.github.squid233.squidcraft.SquidCraft.log;
 
 /**
- * items register api -> (item, tool and armor) register
+ * items register api -> (item, tool and armor) register.
+ * @deprecated Please use {@link io.github.squid233.yummyfood.api.Registers}
  */
+@Deprecated
 public class ItemsRegister {
 
     /**
@@ -17,7 +19,7 @@ public class ItemsRegister {
     private ItemsRegister() {
 
     }
-
+    
     /**
      * <p>add info () - > message debug register logger.</p>
      * @param modid Mod identifier.
@@ -25,6 +27,7 @@ public class ItemsRegister {
      * @param item Item.
      * @author squid233
      * @since 0.1.0
+     * @deprecated Please use {@link io.github.squid233.yummyfood.api.Registers#registerItem(String, Item)}
      */
     public static void registerItem(String modid, String itemName, Item item) {
         String s = "items register";

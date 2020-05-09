@@ -21,7 +21,8 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "io.github.squid233.squidcraft.SquidCraft"
+      "io.github.squid233.squidcraft.SquidCraft",
+      "io.github.squid233.yummyfood.YummyFood"
     ],
     "client": [
       "io.github.squid233.squidcraft.client.SquidCraftClient",
