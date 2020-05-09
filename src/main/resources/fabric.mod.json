@@ -21,11 +21,11 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "io.github.squidcraft.SquidCraft"
+      "io.github.squid233.squidcraft.SquidCraft"
     ],
     "client": [
-      "io.github.squidcraft.client.SquidCraftClient",
-      "io.github.squidcraft.client.SquidCraftFluidRenderingClient"
+      "io.github.squid233.squidcraft.client.SquidCraftClient",
+      "io.github.squid233.squidcraft.client.SquidCraftFluidRenderingClient"
     ]
   },
   "mixins": [
