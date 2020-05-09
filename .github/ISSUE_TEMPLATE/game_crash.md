@@ -2,7 +2,7 @@
 name: 游戏崩溃
 about: 游戏崩溃请到这里
 title: 游戏崩溃
-labels: bug
+labels: bug,Influence degree : Fatal
 assignees: squid233
 
 ---
