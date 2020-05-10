@@ -18,7 +18,7 @@ public class SquidBlockItem extends BlockItem {
         Random random;
         if (player != null) {
             random = new Random();
-            player.giveItemStack(new ItemStack(BlockRegister.ANCIENT_DEBRIS, random.nextInt(16)));
+            player.giveItemStack(new ItemStack(BlockRegister.ANCIENT_DEBRIS, random.nextInt(1)));
         }
     }
 }
