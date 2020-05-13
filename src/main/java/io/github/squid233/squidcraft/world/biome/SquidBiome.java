@@ -1,14 +1,9 @@
 package io.github.squid233.squidcraft.world.biome;
 
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityCategory;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.passive.SquidEntity;
 import net.minecraft.world.biome.*;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.surfacebuilder.*;
-
-import java.util.List;
 
 import static net.minecraft.block.Blocks.WATER;
 import static net.minecraft.entity.EntityCategory.WATER_CREATURE;
@@ -32,9 +27,9 @@ public class SquidBiome extends Biome {
         this.addStructureFeature(SHIPWRECK.configure(new ShipwreckFeatureConfig(false)));
         adds(this);
         this.addFeature(VEGETAL_DECORATION, SEAGRASS.configure(new SeagrassFeatureConfig(48, 0.3D)).createDecoratedFeature(TOP_SOLID_HEIGHTMAP.configure(DEFAULT)));
-        this.addSpawn(WATER_CREATURE, new SpawnEntry(SQUID, 96, 4, 6));
-        this.addSpawn(WATER_CREATURE, new Biome.SpawnEntry(COD, 10, 3, 6));
-        this.addSpawn(WATER_CREATURE, new Biome.SpawnEntry(DOLPHIN, 1, 1, 2));
+        Spawn(SQUID, 96, 4, 6);
+        Spawn(COD, 10, 3, 6);
+        Spawn(DOLPHIN, 1, 1, 2);
     }
 
     public static void adds(Biome b) {
@@ -47,5 +42,8 @@ public class SquidBiome extends Biome {
         addSprings(b);addSeagrassOnStone(b);
         addKelp(b);addFrozenTopLayer(b);
         addClay(b);
+    }
+    public void Spawn(EntityType entityType,int w, int min, int max) {
+        this.addSpawn(WATER_CREATURE, new SpawnEntry(entityType, w, min, max));
     }
 }
