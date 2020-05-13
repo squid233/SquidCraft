@@ -1,39 +1,51 @@
 package io.github.squid233.squidcraft.world.biome;
 
-import net.minecraft.block.Blocks;
-import net.minecraft.entity.*;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityCategory;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.passive.SquidEntity;
 import net.minecraft.world.biome.*;
-import net.minecraft.world.gen.GenerationStep;
-import net.minecraft.world.gen.decorator.*;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.surfacebuilder.*;
 
-public class SquidBiome extends Biome {
-    public SquidBiome() {
-        super(new Settings().configureSurfaceBuilder(SurfaceBuilder.SWAMP, new TernarySurfaceConfig(Blocks.WATER.getDefaultState(), Blocks.WATER.getDefaultState(), Blocks.WATER.getDefaultState())).precipitation(Precipitation.RAIN).category(Category.OCEAN).depth(0.24f).scale(0.2f).temperature(0.6f).downfall(0.5f).waterColor(4159204).waterFogColor(329011).parent(null));
+import java.util.List;
 
-        this.addStructureFeature(Feature.MINESHAFT.configure(new MineshaftFeatureConfig(0.004D, MineshaftFeature.Type.NORMAL)));
-        this.addStructureFeature(Feature.SHIPWRECK.configure(new ShipwreckFeatureConfig(false)));
-        DefaultBiomeFeatures.addOceanCarvers(this);
-        DefaultBiomeFeatures.addDefaultStructures(this);
-        DefaultBiomeFeatures.addDefaultLakes(this);
-        DefaultBiomeFeatures.addDungeons(this);
-        DefaultBiomeFeatures.addDefaultOres(this);
-        DefaultBiomeFeatures.addDefaultDisks(this);
-        DefaultBiomeFeatures.addMineables(this);
-        DefaultBiomeFeatures.addWaterBiomeOakTrees(this);
-        DefaultBiomeFeatures.addDefaultFlowers(this);
-        DefaultBiomeFeatures.addDefaultGrass(this);
-        DefaultBiomeFeatures.addDefaultMushrooms(this);
-        DefaultBiomeFeatures.addDefaultVegetation(this);
-        DefaultBiomeFeatures.addSprings(this);
-        this.addFeature(GenerationStep.Feature.VEGETAL_DECORATION, Feature.SEAGRASS.configure(new SeagrassFeatureConfig(48, 0.3D)).createDecoratedFeature(Decorator.TOP_SOLID_HEIGHTMAP.configure(DecoratorConfig.DEFAULT)));
-        DefaultBiomeFeatures.addSeagrassOnStone(this);
-        DefaultBiomeFeatures.addKelp(this);
-        DefaultBiomeFeatures.addFrozenTopLayer(this);
-        DefaultBiomeFeatures.addClay(this);
-        this.addSpawn(EntityCategory.WATER_CREATURE, new SpawnEntry(EntityType.SQUID, 96, 4, 6));
-        this.addSpawn(EntityCategory.WATER_CREATURE, new Biome.SpawnEntry(EntityType.COD, 10, 3, 6));
-        this.addSpawn(EntityCategory.WATER_CREATURE, new Biome.SpawnEntry(EntityType.DOLPHIN, 1, 1, 2));
+import static net.minecraft.block.Blocks.WATER;
+import static net.minecraft.entity.EntityCategory.WATER_CREATURE;
+import static net.minecraft.entity.EntityType.*;
+import static net.minecraft.world.biome.Biome.Category.OCEAN;
+import static net.minecraft.world.biome.Biome.Precipitation.RAIN;
+import static net.minecraft.world.biome.DefaultBiomeFeatures.*;
+import static net.minecraft.world.gen.GenerationStep.Feature.VEGETAL_DECORATION;
+import static net.minecraft.world.gen.decorator.Decorator.TOP_SOLID_HEIGHTMAP;
+import static net.minecraft.world.gen.decorator.DecoratorConfig.DEFAULT;
+import static net.minecraft.world.gen.feature.Feature.*;
+import static net.minecraft.world.gen.feature.MineshaftFeature.Type.NORMAL;
+import static net.minecraft.world.gen.surfacebuilder.SurfaceBuilder.SWAMP;
+
+public class SquidBiome extends Biome {
+
+    public SquidBiome() {
+        super(new Settings().configureSurfaceBuilder(SWAMP, new TernarySurfaceConfig(WATER.getDefaultState(), WATER.getDefaultState(), WATER.getDefaultState())).precipitation(RAIN).category(OCEAN).depth(0.24f).scale(0.2f).temperature(0.6f).downfall(0.5f).waterColor(4159204).waterFogColor(329011).parent(null));
+
+        this.addStructureFeature(MINESHAFT.configure(new MineshaftFeatureConfig(0.004D, NORMAL)));
+        this.addStructureFeature(SHIPWRECK.configure(new ShipwreckFeatureConfig(false)));
+        adds(this);
+        this.addFeature(VEGETAL_DECORATION, SEAGRASS.configure(new SeagrassFeatureConfig(48, 0.3D)).createDecoratedFeature(TOP_SOLID_HEIGHTMAP.configure(DEFAULT)));
+        this.addSpawn(WATER_CREATURE, new SpawnEntry(SQUID, 96, 4, 6));
+        this.addSpawn(WATER_CREATURE, new Biome.SpawnEntry(COD, 10, 3, 6));
+        this.addSpawn(WATER_CREATURE, new Biome.SpawnEntry(DOLPHIN, 1, 1, 2));
+    }
+
+    public static void adds(Biome b) {
+        addOceanCarvers(b);addDefaultStructures(b);
+        addDefaultLakes(b);addDungeons(b);
+        addDefaultOres(b);addDefaultDisks(b);
+        addMineables(b);addWaterBiomeOakTrees(b);
+        addDefaultFlowers(b);addDefaultGrass(b);
+        addDefaultMushrooms(b);addDefaultVegetation(b);
+        addSprings(b);addSeagrassOnStone(b);
+        addKelp(b);addFrozenTopLayer(b);
+        addClay(b);
     }
 }
