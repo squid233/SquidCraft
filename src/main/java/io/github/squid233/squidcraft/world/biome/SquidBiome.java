@@ -32,7 +32,7 @@ public class SquidBiome extends Biome {
         Spawn(DOLPHIN, 1, 1, 2);
     }
 
-    public static void adds(Biome b) {
+    private static void adds(Biome b) {
         addOceanCarvers(b);addDefaultStructures(b);
         addDefaultLakes(b);addDungeons(b);
         addDefaultOres(b);addDefaultDisks(b);
