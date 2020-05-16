@@ -81,7 +81,9 @@
   "advancements.squidcraft.first_cooking.title": "第一次烘烤",
   "advancements.squidcraft.first_cooking.desc": "现在，我们可以制作\"一堆熟鱿鱼丝\"了！",
   "advancements.squidcraft.a_pile.title": "一堆鱿鱼丝",
-  "advancements.squidcraft.a_pile.desc": "如果你制作一块鱿鱼饼，你会发现更多惊喜的！ ",
+  "advancements.squidcraft.a_pile.desc": "如果你制作一块鱿鱼饼，你会发现更多惊喜的！",
+  "advancements.squidcraft.cookie.title": "鱿鱼饼",
+  "advancements.squidcraft.cookie.desc": "真香！你可以制作一个方块，用于吃甚至是建筑！",
 
   "fluid.squidcraft.milk": "牛奶",
   "fluid.squidcraft.flowing_milk": "流动的牛奶",
