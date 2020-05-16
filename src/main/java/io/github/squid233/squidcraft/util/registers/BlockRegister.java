@@ -102,7 +102,10 @@ public class BlockRegister {
         NETHERITE_BLOCK = register("netherite_block", new NetheriteBlock(), new Item.Settings().group(ItemGroups.NETHERITE_MOD));
 
         BIGGER_CHEST_BLOCK = register("bigger_chest_block", new BiggerChestBlock());
+    }
 
+    public BlockRegister()
+    {
         registerContainer(BIGGER_CHEST, BIGGER_CHEST_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT));
         BIGGER_CHEST_ENTITY_TYPE = Registry.register(Registry.BLOCK_ENTITY_TYPE, BIGGER_CHEST, BlockEntityType.Builder.create(BiggerChestBlockEntity::new, BIGGER_CHEST_BLOCK).build(null));
         ContainerProviderRegistry.INSTANCE.registerFactory(BIGGER_CHEST, ((syncId, identifier, player, buf) -> {
