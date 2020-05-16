@@ -51,20 +51,20 @@ public class BlockRegister {
     // TODO Always register block, add item group, add lang, add blockstates, add models, add textures, add loot tables and add recipes.
     // TODO Squid blocks
 
-    public static final Block COPPER_ORE, COPPER_BLOCK;
-
     public static final Block
+            COPPER_ORE, COPPER_BLOCK,
+
             SQUID_BLOCK, COMPRESS_SQUID_BLOCK, LOW_SQUID_BLOCK, LOW_COMPRESS_SQUID_BLOCK,
             MEDIUM_SQUID_BLOCK, MEDIUM_COMPRESS_SQUID_BLOCK, HIGHER_SQUID_BLOCK, HIGHER_COMPRESS_SQUID_BLOCK,
-            SUPER_SQUID_BLOCK, SUPER_COMPRESS_SQUID_BLOCK, ULTIMATE_SQUID_BLOCK, ULTIMATE_COMPRESS_SQUID_BLOCK;
+            SUPER_SQUID_BLOCK, SUPER_COMPRESS_SQUID_BLOCK, ULTIMATE_SQUID_BLOCK, ULTIMATE_COMPRESS_SQUID_BLOCK,
 
-    public static final Block
-            ONE_SQUID_BLOCK, TWO_SQUID_BLOCK, FOUR_SQUID_BLOCK, EIGHT_SQUID_BLOCK;
+            ONE_SQUID_BLOCK, TWO_SQUID_BLOCK, FOUR_SQUID_BLOCK, EIGHT_SQUID_BLOCK,
 
-    public static final Block SQUID_SIDE_BLOCK, ANCIENT_DEBRIS, NETHERITE_BLOCK;
+            SQUID_SIDE_BLOCK, ANCIENT_DEBRIS, NETHERITE_BLOCK,
+
+            BIGGER_CHEST_BLOCK;
 
     public static final Identifier BIGGER_CHEST = new Identifier(SquidCraft.MODID, "bigger_chest_block");
-    public static final Block BIGGER_CHEST_BLOCK;
     public static final String BIGGER_CHEST_TRANSLATION_KEY = Util.createTranslationKey("container", BIGGER_CHEST);
 
     public static BlockEntityType<BiggerChestBlockEntity> BIGGER_CHEST_ENTITY_TYPE;
