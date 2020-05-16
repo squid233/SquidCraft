@@ -7,7 +7,7 @@ import net.fabricmc.api.ModInitializer;
 import org.apache.logging.log4j.*;
 
 /**
- * @author squid233 and baka4n->(logger4j test)!
+ * @author squid233 and baka4n → (logger4j test)!
  */
 public final class SquidCraft implements ModInitializer {
 	public static final String MODID = "squidcraft";

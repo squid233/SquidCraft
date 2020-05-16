@@ -4,7 +4,7 @@ import java.io.*;
 /**
  *@author baka4n
  * <p> 对 properties 进行有序排列</p>
- * <p> windows about ss -> \\, s -> \  linux about ss -> // s -> / , you can to linux server to running it. </p>
+ * <p> windows about ss → \\, s → \  linux about ss → // s → / , you can to linux server to running it. </p>
  */
 public class CreateConfig {
     public static final String s = File.separator;
@@ -26,5 +26,10 @@ public class CreateConfig {
             } catch (IOException f) { f.printStackTrace(); }
         } catch (IOException i) { i.printStackTrace(); }
     }
-    public static void putin(String s1, String s2, String s3, String s4) { properties.put(s1, s2); if (!s3.equals("null")) properties.put(s3, s4); }
+    public static void putin(String s1, String s2, String s3, String s4)
+    {
+        properties.put(s1, s2);
+        if (!s3.equals("null"))
+            properties.put(s3, s4);
+    }
 }

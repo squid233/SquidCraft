@@ -7,7 +7,7 @@ import net.minecraft.util.registry.Registry;
 import static io.github.squid233.squidcraft.SquidCraft.log;
 
 /**
- * items register api -> (item, tool and armor) register.
+ * items register api → (item, tool and armor) register.
  * @deprecated Please use {@link Registers}
  */
 @Deprecated
@@ -21,7 +21,7 @@ public class ItemsRegister {
     }
 
     /**
-     * <p>add info () - > message debug register logger.</p>
+     * <p>add info () → message debug register logger.</p>
      * @param modid Mod identifier.
      * @param itemName Item name.
      * @param item Item.
@@ -37,6 +37,8 @@ public class ItemsRegister {
 
     /**
      * <p>This method can register armor.</p>
+     * <p>add info() → message debug register armor register</p>
+     * <p><b>NOTE:</b> This method its parameter is too many!</p>
      * @param modid Mod identifier.
      * @param armorName Armor's prefix. e.g. squid, they will be auto add "_helmet", "_chestplate", "_leggings" and "_boots",
      *                  then your armor item name are "squid_helmet", "squid_chestplate", "squid_leggings" and "squid_boots".
@@ -46,7 +48,6 @@ public class ItemsRegister {
      * @param boots Boots item.
      * @author squid233
      * @since 0.5.0
-     * <p>add info() -> message debug register armor register</p>
      */
     public static void registerArmor(String modid, String armorName, Item helmet, Item chestplate, Item leggings, Item boots) {
         String s = "Armor register";

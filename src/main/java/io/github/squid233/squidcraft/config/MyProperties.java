@@ -3,7 +3,10 @@ package io.github.squid233.squidcraft.config;
 import java.io.*;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Enumeration;
+import java.util.List;
+import java.util.Properties;
 
 /**
  * @author baka4n

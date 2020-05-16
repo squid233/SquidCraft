@@ -11,7 +11,9 @@ import static io.github.squid233.squidcraft.SquidCraft.log;
 /**
  * <p>register blocks api</p>
  * @author squid233
+ * @deprecated Please use {@link Registers}
  */
+@Deprecated
 public class BlocksRegister {
     public static void registerBlock(String modid, String blockName, Block block, Item.Settings settings) {
         String s = "register block and block item";
