@@ -48,10 +48,12 @@ public class Registers
      * @param settings Block item settings.
      * @return Registry block.
      */
-    public static Block register(String modid, String name, Block block, Item.Settings settings) {
+    public static Block register(String modid, String name, Block block, Item.Settings settings)
+    {
         String s = "register block and block item";
         register(modid, name, new BlockItem(block, settings));
         log(s, "register " + modid + ":" + name + " block success!");
         return Registry.register(Registry.BLOCK, new Identifier(modid, name), block);
     }
+
 }

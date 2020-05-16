@@ -1,4 +1,4 @@
-package io.github.squid233.squidcraft.tile;
+package io.github.squid233.squidcraft.block.tile;
 
 import net.minecraft.container.*;
 import net.minecraft.entity.player.*;

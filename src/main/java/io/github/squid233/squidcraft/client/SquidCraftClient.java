@@ -2,7 +2,7 @@ package io.github.squid233.squidcraft.client;
 
 import io.github.squid233.squidcraft.client.gui.BiggerChestScreen;
 import io.github.squid233.squidcraft.entity.CookieCreeperRenderer;
-import io.github.squid233.squidcraft.tile.BiggerChestContainer;
+import io.github.squid233.squidcraft.block.tile.BiggerChestContainer;
 import io.github.squid233.squidcraft.util.ModEntities;
 import io.github.squid233.squidcraft.util.registers.BlockRegister;
 import net.fabricmc.api.ClientModInitializer;

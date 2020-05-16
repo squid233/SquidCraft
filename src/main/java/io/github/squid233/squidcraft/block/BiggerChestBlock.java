@@ -1,6 +1,6 @@
 package io.github.squid233.squidcraft.block;
 
-import io.github.squid233.squidcraft.tile.BiggerChestBlockEntity;
+import io.github.squid233.squidcraft.block.tile.BiggerChestBlockEntity;
 import io.github.squid233.squidcraft.util.registers.BlockRegister;
 import net.fabricmc.fabric.api.container.ContainerProviderRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;

@@ -4,7 +4,8 @@ import io.github.squid233.squidcraft.config.CreateConfig;
 import io.github.squid233.squidcraft.util.handle.LootTablesHandle;
 import io.github.squid233.squidcraft.util.registers.*;
 import net.fabricmc.api.ModInitializer;
-import org.apache.logging.log4j.*;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * @author squid233 and baka4n → (logger4j test)!
@@ -14,13 +15,10 @@ public final class SquidCraft implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		String s = "SquidCraft register all";
-		BlockRegister br = new BlockRegister();
 		CreateConfig.config();
 		new ItemRegister();
 		log(s, "item register success");
-		br.register1();
-		br.register2();
-		br.register3();
+		new BlockRegister();
 		log(s, "block register success");
 		new FluidRegister();
 		log(s, "fluid register success");

@@ -1,7 +1,7 @@
 package io.github.squid233.squidcraft.client.gui;
 
 import com.mojang.blaze3d.systems.RenderSystem;
-import io.github.squid233.squidcraft.tile.BiggerChestContainer;
+import io.github.squid233.squidcraft.block.tile.BiggerChestContainer;
 import net.minecraft.client.gui.screen.ingame.ContainerScreen;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.text.Text;

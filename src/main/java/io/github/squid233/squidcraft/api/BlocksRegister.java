@@ -10,6 +10,7 @@ import static io.github.squid233.squidcraft.SquidCraft.log;
 
 /**
  * <p>register blocks api</p>
+ * <p>We will delete this class in next version</p>
  * @author squid233
  * @deprecated Please use {@link Registers}
  */

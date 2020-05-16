@@ -1,4 +1,4 @@
-package io.github.squid233.squidcraft.tile;
+package io.github.squid233.squidcraft.block.tile;
 
 import io.github.squid233.squidcraft.util.registers.BlockRegister;
 import net.minecraft.block.entity.LootableContainerBlockEntity;
