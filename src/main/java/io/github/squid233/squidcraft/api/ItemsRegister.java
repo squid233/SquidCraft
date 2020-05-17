@@ -8,9 +8,8 @@ import static io.github.squid233.squidcraft.SquidCraft.log;
 
 /**
  * items register api → (item, tool and armor) register.
- * @deprecated Please use {@link Registers}
+ * Please use {@link Registers}
  */
-@Deprecated
 public class ItemsRegister {
 
     /**
@@ -27,7 +26,7 @@ public class ItemsRegister {
      * @param item Item.
      * @author squid233
      * @since 0.1.0
-     * @deprecated Please use {@link Registers#register(String, String, Item)}
+     * Please use {@link Registers#register(String, String, Item)}
      */
     public static void registerItem(String modid, String itemName, Item item) {
         String s = "items register";

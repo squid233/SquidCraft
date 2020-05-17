@@ -1,7 +1,6 @@
 package io.github.squid233.squidcraft.util.registers;
 
 import io.github.squid233.squidcraft.SquidCraft;
-import io.github.squid233.squidcraft.api.BlocksRegister;
 import io.github.squid233.squidcraft.api.Registers;
 import io.github.squid233.squidcraft.block.*;
 import io.github.squid233.squidcraft.block.blockItem.SquidBlockItem;
@@ -101,7 +100,7 @@ public class BlockRegister {
         ANCIENT_DEBRIS = register("ancient_debris", new AncientDebris(), new Item.Settings().group(ItemGroups.NETHERITE_MOD));
         NETHERITE_BLOCK = register("netherite_block", new NetheriteBlock(), new Item.Settings().group(ItemGroups.NETHERITE_MOD));
 
-        BIGGER_CHEST_BLOCK = register("bigger_chest_block", new BiggerChestBlock());
+        BIGGER_CHEST_BLOCK = new BiggerChestBlock();
     }
 
     public BlockRegister()
@@ -115,8 +114,11 @@ public class BlockRegister {
         }));
     }
 
-    private static void registerContainer(Identifier id, Block block, Item.Settings settings) {
-        BlocksRegister.registerContainer(id, block, settings);
+    private void registerContainer(Identifier id, Block block, Item.Settings settings) {
+        String s = "register container";
+        Registry.register(Registry.BLOCK, id, block);
+        Registry.register(Registry.ITEM, id, new BlockItem(block, settings));
+        log(s, "register container");
     }
 
 }
