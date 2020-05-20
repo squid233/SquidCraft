@@ -9,9 +9,9 @@ import net.minecraft.block.FluidBlock;
 import net.minecraft.fluid.BaseFluid;
 
 public class FluidRegister {
-    public static BaseFluid STILL_MILK = new MilkFluid.Still();
-    public static BaseFluid FLOWING_MILK = new MilkFluid.Flowing();
-    public static Block MILK = new FluidBlock(STILL_MILK, FabricBlockSettings.copy(Blocks.WATER)){};
+    public static final BaseFluid STILL_MILK = new MilkFluid.Still();
+    public static final BaseFluid FLOWING_MILK = new MilkFluid.Flowing();
+    public static final Block MILK = new FluidBlock(STILL_MILK, FabricBlockSettings.copy(Blocks.WATER)){};
 
     public FluidRegister() {
         registerFluid("milk", STILL_MILK, FLOWING_MILK, MILK);

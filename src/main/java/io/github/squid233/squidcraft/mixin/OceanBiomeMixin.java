@@ -51,7 +51,7 @@ public final class OceanBiomeMixin extends Biome {
         addSprings(b);addSeagrassOnStone(b);
         addKelp(b);addFrozenTopLayer(b);
     }
-    public void Spawn(EntityCategory e,EntityType et,int w, int min, int max) {
+    public void Spawn(EntityCategory e, EntityType<? extends Entity> et, int w, int min, int max) {
         this.addSpawn(e, new SpawnEntry(et, w, min, max));
     }
 }

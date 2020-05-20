@@ -1,15 +1,15 @@
 package io.github.squid233.squidcraft.util.registers;
 
 import io.github.squid233.squidcraft.SquidCraft;
-import io.github.squid233.squidcraft.api.Registers;
+import io.github.squid233.squidcraft.api.BlockRegisters;
 import io.github.squid233.squidcraft.block.*;
 import io.github.squid233.squidcraft.block.blockItem.SquidBlockItem;
 import io.github.squid233.squidcraft.block.msb.Eight;
 import io.github.squid233.squidcraft.block.msb.Four;
 import io.github.squid233.squidcraft.block.msb.One;
 import io.github.squid233.squidcraft.block.msb.Two;
-import io.github.squid233.squidcraft.item.ItemGroups;
 import io.github.squid233.squidcraft.block.tile.BiggerChestBlockEntity;
+import io.github.squid233.squidcraft.item.ItemGroups;
 import net.fabricmc.fabric.api.container.ContainerProviderRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
@@ -32,23 +32,15 @@ import static io.github.squid233.squidcraft.SquidCraft.log;
  */
 public class BlockRegister {
 
-    private static Block register(String name, Block block, BlockItem item)
-    {
+    private static Block register(String name, Block block, BlockItem item) {
         String s = "register block and block item";
         Registers.register(SquidCraft.MODID, name, item);
         log(s, "register " + SquidCraft.MODID + ":" + name + " block success!");
         return Registry.register(Registry.BLOCK, new Identifier(SquidCraft.MODID, name), block);
     }
-    private static Block register(String name, Block block, Item.Settings settings)
-    {
-        return Registers.register(SquidCraft.MODID, name, block, settings);
+    private static Block register(String name, Block block, Item.Settings settings) {
+        return BlockRegisters.register(SquidCraft.MODID, name, block, settings);
     }
-    private static Block register(String name, Block block) {
-        return Registry.register(Registry.BLOCK, new Identifier(SquidCraft.MODID, name), block);
-    }
-
-    // TODO Always register block, add item group, add lang, add blockstates, add models, add textures, add loot tables and add recipes.
-    // TODO Squid blocks
 
     public static final Block
             COPPER_ORE, COPPER_BLOCK,

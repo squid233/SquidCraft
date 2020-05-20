@@ -1,6 +1,6 @@
 package io.github.squid233.squidcraft.util.registers;
 
-import io.github.squid233.squidcraft.api.ItemsRegister;
+import io.github.squid233.squidcraft.api.ItemRegisters;
 import io.github.squid233.squidcraft.armor.ArmorMaterials;
 import io.github.squid233.squidcraft.armor.NetheriteHelmet;
 import io.github.squid233.squidcraft.armor.SquidHelmet;
@@ -19,94 +19,101 @@ import static io.github.squid233.squidcraft.item.ItemGroups.SQUID_CRAFT_COMBAT_A
 
 public class ItemRegister {
     // TODO Always register item, add item group, add models, add textures and add recipes.
-    public static final Item SHREDDED_SQUID = new ShreddedSquid();
-    public static final Item COOKED_SHREDDED_SQUID = new CookedShreddedSquid();
-    public static final Item A_PILE_COOKED_SHREDDED_SQUID = new APileCSSquid();
-    public static final Item SQUID_COOKIE = new SquidCookie();
-    public static final Item NETHERITE_SCRAP = new NetheriteScrap();
-    public static final Item NETHERITE_INGOT = new NetheriteIngot();
+    public static final Item
+            SHREDDED_SQUID, COOKED_SHREDDED_SQUID, A_PILE_COOKED_SHREDDED_SQUID, SQUID_COOKIE,
+            NETHERITE_SCRAP,NETHERITE_INGOT,
+            SQUID_HELMET, SQUID_CHESTPLATE, SQUID_LEGGINGS, SQUID_BOOTS,
+            SQUID_AXE, SQUID_HOE, SQUID_PICKAXE, SQUID_SHOVEL, SQUID_SWORD,
+            NETHERITE_HELMET, NETHERITE_CHESTPLATE, NETHERITE_LEGGINGS, NETHERITE_BOOTS,
+            NETHERITE_AXE, NETHERITE_HOE, NETHERITE_PICKAXE, NETHERITE_SHOVEL, NETHERITE_SWORD,
+            COPPER_NUGGET, COPPER_INGOT,
+            COOKIE_CREEPER_SPAWN_EGG;
 
-    public static final Item SQUID_HELMET = new SquidHelmet();
-    public static final Item SQUID_CHESTPLATE = new ArmorItem(ArmorMaterials.SQUID, EquipmentSlot.CHEST, new Item.Settings().group(SQUID_CRAFT_COMBAT_AND_TOOLS));
-    public static final Item SQUID_LEGGINGS = new ArmorItem(ArmorMaterials.SQUID, EquipmentSlot.LEGS, new Item.Settings().group(SQUID_CRAFT_COMBAT_AND_TOOLS));
-    public static final Item SQUID_BOOTS = new ArmorItem(ArmorMaterials.SQUID, EquipmentSlot.FEET, new Item.Settings().group(SQUID_CRAFT_COMBAT_AND_TOOLS));
+    public static final io.github.squid233.squidcraft.api.item.Item
+            YOUR_ITEM = new YourItem(),
+            YOUR_ITEM_2 = new YourItem2();
 
-    public static final Item SQUID_AXE = new SquidAxe();
-    public static final Item SQUID_HOE = new SquidHoe();
-    public static final Item SQUID_PICKAXE = new SquidPickaxe();
-    public static final Item SQUID_SHOVEL = new SquidShovel();
-    public static final Item SQUID_SWORD = new SquidSword();
+    static {
+        SHREDDED_SQUID = register("shredded_squid", new ShreddedSquid());
+        COOKED_SHREDDED_SQUID = register("cooked_shredded_squid", new CookedShreddedSquid());
+        A_PILE_COOKED_SHREDDED_SQUID = register("a_pile_cooked_shredded_squid", new APileCSSquid());
+        SQUID_COOKIE = register("squid_cookie", new SquidCookie());
 
-    public static final Item NETHERITE_HELMET = new NetheriteHelmet();
-    public static final Item NETHERITE_CHESTPLATE = new ArmorItem(ArmorMaterials.NETHERITE, EquipmentSlot.CHEST, new Item.Settings().group(NETHERITE_MOD));
-    public static final Item NETHERITE_LEGGINGS = new ArmorItem(ArmorMaterials.NETHERITE, EquipmentSlot.LEGS, new Item.Settings().group(NETHERITE_MOD));
-    public static final Item NETHERITE_BOOTS = new ArmorItem(ArmorMaterials.NETHERITE, EquipmentSlot.FEET, new Item.Settings().group(NETHERITE_MOD));
+        NETHERITE_SCRAP = register("netherite_scrap", new NetheriteScrap());
+        NETHERITE_INGOT = register("netherite_ingot", new NetheriteIngot());
 
-    public static final Item NETHERITE_AXE = new NetheriteAxe();
-    public static final Item NETHERITE_HOE = new NetheriteHoe();
-    public static final Item NETHERITE_PICKAXE = new NetheritePickaxe();
-    public static final Item NETHERITE_SHOVEL = new NetheriteShovel();
-    public static final Item NETHERITE_SWORD = new NetheriteSword();
+        SQUID_HELMET = registerHelmet("squid", new SquidHelmet());
+        SQUID_CHESTPLATE = registerChestplate("squid", new ArmorItem(ArmorMaterials.SQUID, EquipmentSlot.CHEST, new Item.Settings().group(SQUID_CRAFT_COMBAT_AND_TOOLS)));
+        SQUID_LEGGINGS = registerLeggings("squid", new ArmorItem(ArmorMaterials.SQUID, EquipmentSlot.LEGS, new Item.Settings().group(SQUID_CRAFT_COMBAT_AND_TOOLS)));
+        SQUID_BOOTS = registerBoots("squid", new ArmorItem(ArmorMaterials.SQUID, EquipmentSlot.FEET, new Item.Settings().group(SQUID_CRAFT_COMBAT_AND_TOOLS)));
 
-    public static final Item COPPER_NUGGET = new CopperNugget();
-    public static final Item COPPER_INGOT = new CopperIngot();
+        NETHERITE_HELMET = registerHelmet("netherite", new NetheriteHelmet());
+        NETHERITE_CHESTPLATE = registerChestplate("netherite", new ArmorItem(ArmorMaterials.NETHERITE, EquipmentSlot.CHEST, new Item.Settings().group(NETHERITE_MOD)));
+        NETHERITE_LEGGINGS = registerLeggings("netherite", new ArmorItem(ArmorMaterials.NETHERITE, EquipmentSlot.LEGS, new Item.Settings().group(NETHERITE_MOD)));
+        NETHERITE_BOOTS = registerBoots("netherite", new ArmorItem(ArmorMaterials.NETHERITE, EquipmentSlot.FEET, new Item.Settings().group(NETHERITE_MOD)));
 
-    public static final Item COOKIE_CREEPER_SPAWN_EGG = new SpawnEggItem(ModEntities.COOKIE_CREEPER, 0x0DA70B, 0x73420E, new Item.Settings().group(ItemGroups.SQUID_CRAFT));
+        SQUID_AXE = registerAxe("squid", new SquidAxe());
+        SQUID_HOE = registerHoe("squid", new SquidHoe());
+        SQUID_PICKAXE = registerPickaxe("squid", new SquidPickaxe());
+        SQUID_SHOVEL = registerShovel("squid", new SquidShovel());
+        SQUID_SWORD = registerSword("squid", new SquidSword());
+
+        NETHERITE_AXE = registerAxe("netherite", new NetheriteAxe());
+        NETHERITE_HOE = registerHoe("netherite", new NetheriteHoe());
+        NETHERITE_PICKAXE = registerPickaxe("netherite", new NetheritePickaxe());
+        NETHERITE_SHOVEL = registerShovel("netherite", new NetheriteShovel());
+        NETHERITE_SWORD = registerSword("netherite", new NetheriteSword());
+
+        COPPER_NUGGET = register("copper_nugget", new CopperNugget());
+        COPPER_INGOT = register("copper_ingot", new CopperIngot());
+        COOKIE_CREEPER_SPAWN_EGG = register("cookie_creeper_spawn_egg", new SpawnEggItem(ModEntities.COOKIE_CREEPER, 0x0DA70B, 0x73420E, new Item.Settings().group(ItemGroups.SQUID_CRAFT)));
+    }
 
     public ItemRegister() {
-
-        registerAll(
-                new String[]{"shredded_squid",
-                        "cooked_shredded_squid",
-                        "a_pile_cooked_shredded_squid",
-                        "squid_cookie"
-                },
-                new Item[]{SHREDDED_SQUID,
-                        COOKED_SHREDDED_SQUID,
-                        A_PILE_COOKED_SHREDDED_SQUID,
-                        SQUID_COOKIE
-                });
-
-        /*registerItem("shredded_squid", SHREDDED_SQUID);
-        registerItem("cooked_shredded_squid", COOKED_SHREDDED_SQUID);
-        registerItem("a_pile_cooked_shredded_squid", A_PILE_COOKED_SHREDDED_SQUID);
-        registerItem("squid_cookie", SQUID_COOKIE);*/
-
-        registerItem("netherite_scrap", NETHERITE_SCRAP);
-        registerItem("netherite_ingot", NETHERITE_INGOT);
-
-        registerItem("copper_nugget", COPPER_NUGGET);
-        registerItem("copper_ingot", COPPER_INGOT);
-
-        registerItem("cookie_creeper_spawn_egg", COOKIE_CREEPER_SPAWN_EGG);
-
-        registerArmor("squid", SQUID_HELMET, SQUID_CHESTPLATE, SQUID_LEGGINGS, SQUID_BOOTS);
-        registerArmor("netherite", NETHERITE_HELMET, NETHERITE_CHESTPLATE, NETHERITE_LEGGINGS, NETHERITE_BOOTS);
-
-        registerTool("squid", SQUID_AXE, SQUID_HOE);
-        registerTool("squid", SQUID_PICKAXE, SQUID_SHOVEL, SQUID_SWORD);
-        registerTool("netherite", NETHERITE_AXE, NETHERITE_HOE);
-        registerTool("netherite", NETHERITE_PICKAXE, NETHERITE_SHOVEL, NETHERITE_SWORD);
-
+        registerAll(YOUR_ITEM, YOUR_ITEM_2);
     }
 
-    private void registerItem(String itemName, Item item) {
-        ItemsRegister.registerItem(MODID, itemName, item);
+    private static Item register(String itemName, Item item) {
+        return ItemRegisters.register(MODID, itemName, item);
     }
 
-    private void registerArmor(String armorName, Item helmet, Item chestplate, Item leggings, Item boots) {
-        ItemsRegister.registerArmor(MODID, armorName, helmet, chestplate, leggings, boots);
+    public static Item registerHelmet(String name, Item item) {
+        return ItemRegisters.registerHelmet(MODID, name, item);
     }
 
-    private void registerTool(String toolName, Item axe, Item hoe) {
-        ItemsRegister.registerTool(MODID, toolName, axe, hoe);
+    public static Item registerChestplate(String name, Item item) {
+        return ItemRegisters.registerChestplate(MODID, name, item);
     }
 
-    private void registerTool(String toolName, Item pickaxe, Item shovel, Item sword) {
-        ItemsRegister.registerTool(MODID, toolName, pickaxe, shovel, sword);
+    public static Item registerLeggings(String name, Item item) {
+        return ItemRegisters.registerLeggings(MODID, name, item);
     }
 
-    private void registerAll(String[] itemNames, Item[] items) {
-        ItemsRegister.registerAll(MODID, itemNames, items);
+    public static Item registerBoots(String name, Item item) {
+        return ItemRegisters.registerBoots(MODID, name, item);
+    }
+
+    public static Item registerAxe(String name, Item item) {
+        return ItemRegisters.registerAxe(MODID, name, item);
+    }
+
+    public static Item registerHoe(String name, Item item) {
+        return ItemRegisters.registerHoe(MODID, name, item);
+    }
+
+    public static Item registerPickaxe(String name, Item item) {
+        return ItemRegisters.registerPickaxe(MODID, name, item);
+    }
+
+    public static Item registerShovel(String name, Item item) {
+        return ItemRegisters.registerShovel(MODID, name, item);
+    }
+
+    public static Item registerSword(String name, Item item) {
+        return ItemRegisters.registerSword(MODID, name, item);
+    }
+
+    private static void registerAll(io.github.squid233.squidcraft.api.item.Item... items) {
+        ItemRegisters.registerAll(MODID, items);
     }
 }

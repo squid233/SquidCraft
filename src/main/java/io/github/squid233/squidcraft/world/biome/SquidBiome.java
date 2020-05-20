@@ -1,5 +1,8 @@
 package io.github.squid233.squidcraft.world.biome;
 
+import io.github.squid233.squidcraft.util.ModEntities;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityCategory;
 import net.minecraft.entity.EntityType;
 import net.minecraft.world.biome.*;
 import net.minecraft.world.gen.feature.*;
@@ -29,7 +32,9 @@ public class SquidBiome extends Biome {
         this.addFeature(VEGETAL_DECORATION, SEAGRASS.configure(new SeagrassFeatureConfig(48, 0.3D)).createDecoratedFeature(TOP_SOLID_HEIGHTMAP.configure(DEFAULT)));
         Spawn(SQUID, 96, 4, 6);
         Spawn(COD, 10, 3, 6);
-        Spawn(DOLPHIN, 1, 1, 2);
+        Spawn(DOLPHIN, 2, 1, 2);
+        this.addSpawn(EntityCategory.CREATURE, new SpawnEntry(ModEntities.COOKIE_CREEPER, 1, 1, 2));
+
     }
 
     private static void adds(Biome b) {
@@ -43,7 +48,7 @@ public class SquidBiome extends Biome {
         addKelp(b);addFrozenTopLayer(b);
         addClay(b);
     }
-    public void Spawn(EntityType entityType,int w, int min, int max) {
+    public void Spawn(EntityType<? extends Entity> entityType, int w, int min, int max) {
         this.addSpawn(WATER_CREATURE, new SpawnEntry(entityType, w, min, max));
     }
 }

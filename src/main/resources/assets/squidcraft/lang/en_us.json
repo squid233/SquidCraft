@@ -30,6 +30,9 @@
 
   "item.squidcraft.cookie_creeper_spawn_egg":"Spawn Cookie Creeper",
 
+  "item.squidcraft.your_item": "Your Item",
+  "item.squidcraft.your_item_2": "Your Item 2",
+
   "item.squidcraft.squid_cookie.tooltip": "Craft a squid block!",
 
   "itemGroup.squidcraft.squid_craft": "SquidCraft",
