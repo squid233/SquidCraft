@@ -45,10 +45,10 @@ fix config create and priority config create. ———— baka4n.
 - E-Mail: diamondsblocks@foxmail.com
 - MCBBS: squid233 or baka-4n (config file, a pile cooked shredded squid 128×128 HD texture)
 - QQ Group: Binary: 0100 0000 0100 1100 0101 1000 1011 0101
-- Discord: [Discord](https://discord.gg/yDrFqRU)
+- [Discord](https://discord.gg/yDrFqRU)
 - GitHub: squid233 or stepheninchina
-- CurseForge: https://www.curseforge.com/minecraft/mc-mods/squidcraft 
-- MCMOD:  https://www.mcmod.cn/class/2507.html
+- [CurseForge](https://www.curseforge.com/minecraft/mc-mods/squidcraft)
+- [MCMOD](https://www.mcmod.cn/class/2507.html)
 ---
 
 ###### We recommend use the Chinese or English.
