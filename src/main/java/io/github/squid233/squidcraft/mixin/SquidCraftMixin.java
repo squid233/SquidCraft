@@ -12,6 +12,7 @@ import net.minecraft.client.gui.widget.ButtonWidget;
 import net.minecraft.client.resource.language.I18n;
 import net.minecraft.realms.RealmsBridge;
 import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.spongepowered.asm.mixin.Mixin;
@@ -43,25 +44,26 @@ public final class SquidCraftMixin extends Screen {
     @Overwrite
     private void initWidgetsNormal(int y, int spacingY) {
         if (CreateConfig.properties.getProperty("hideMainScreenButton").equals("false")) {
-            this.addButton(new ButtonWidget(this.width / 2 - 100, y, 200, 20, I18n.translate("squidcraft.button.text"), (action) -> {
+            this.addButton(new ButtonWidget(this.width / 2 - 100, y, 200, 20, new TranslatableText("squidcraft.button.text"), (action) -> {
                 MinecraftClient.getInstance().openScreen(new AuthorsGUI(this));
                 logger.info("By Squid233 & baka4n");
             }));
         }
-        this.addButton(new ButtonWidget(this.width / 2 - 100, y + spacingY, 100, 20, I18n.translate("menu.singleplayer"), (buttonWidget) -> {
-            assert this.minecraft != null;
-            this.minecraft.openScreen(new SelectWorldScreen(this));
+        this.addButton(new ButtonWidget(this.width / 2 - 100, y + spacingY, 100, 20, new TranslatableText("menu.singleplayer"), (buttonWidget) -> {
+
+            assert this.client != null;
+            this.client.openScreen(new SelectWorldScreen(this));
         }));
-        this.addButton(new ButtonWidget(this.width / 2, y + spacingY, 100, 20, I18n.translate("menu.multiplayer"), (buttonWidget) -> {
-            assert this.minecraft != null;
-            if (this.minecraft.options.skipMultiplayerWarning) {
-                this.minecraft.openScreen(new MultiplayerScreen(this));
+        this.addButton(new ButtonWidget(this.width / 2, y + spacingY, 100, 20, new TranslatableText("menu.multiplayer"), (buttonWidget) -> {
+            assert this.client != null;
+            if (this.client.options.skipMultiplayerWarning) {
+                this.client.openScreen(new MultiplayerScreen(this));
             } else {
-                this.minecraft.openScreen(new MultiplayerWarningScreen(this));
+                this.client.openScreen(new MultiplayerWarningScreen(this));
             }
 
         }));
-        this.addButton(new ButtonWidget(this.width / 2 - 100, y + spacingY * 2, 200, 20, I18n.translate("menu.online"), (buttonWidget) -> this.switchToRealms()));
+        this.addButton(new ButtonWidget(this.width / 2 - 100, y + spacingY * 2, 200, 20, new TranslatableText("menu.online"), (buttonWidget) -> this.switchToRealms()));
     }
 
     /**

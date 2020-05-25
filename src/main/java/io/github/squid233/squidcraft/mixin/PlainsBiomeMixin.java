@@ -6,24 +6,24 @@ import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.surfacebuilder.SurfaceBuilder;
 import org.spongepowered.asm.mixin.Mixin;
 
-import static net.minecraft.entity.EntityCategory.*;
 import static net.minecraft.entity.EntityType.*;
+import static net.minecraft.entity.SpawnGroup.*;
 import static net.minecraft.world.biome.Biome.Category.PLAINS;
 import static net.minecraft.world.biome.Biome.Precipitation.RAIN;
 import static net.minecraft.world.biome.DefaultBiomeFeatures.*;
-import static net.minecraft.world.gen.feature.Feature.*;
 import static net.minecraft.world.gen.feature.FeatureConfig.DEFAULT;
+import static net.minecraft.world.gen.feature.StructureFeature.*;
 import static net.minecraft.world.gen.surfacebuilder.SurfaceBuilder.GRASS_CONFIG;
 
 @Mixin(PlainsBiome.class)
 public final class PlainsBiomeMixin extends Biome {
     protected PlainsBiomeMixin() {
         super((new Biome.Settings()).configureSurfaceBuilder(SurfaceBuilder.DEFAULT, GRASS_CONFIG).precipitation(RAIN).category(PLAINS).depth(0.125F).scale(0.05F).temperature(0.8F).downfall(0.4F).waterColor(4159204).waterFogColor(329011).parent(null));
-        this.addStructureFeature(VILLAGE.configure(new VillageFeatureConfig("village/plains/town_centers", 6)));
-        this.addStructureFeature(PILLAGER_OUTPOST.configure(DEFAULT));
-        this.addStructureFeature(MINESHAFT.configure(new MineshaftFeatureConfig(0.004D, MineshaftFeature.Type.NORMAL)));
-        this.addStructureFeature(STRONGHOLD.configure(DEFAULT));
-        this.addStructureFeature(END_CITY.configure(DEFAULT));
+        this.addStructureFeature(VILLAGE.method_28659(new VillageFeature("village/plains/town_centers")));
+        this.addStructureFeature(PILLAGER_OUTPOST.method_28659(DEFAULT));
+        this.addStructureFeature(MINESHAFT.method_28659(new MineshaftFeatureConfig(0.004D, MineshaftFeature.Type.NORMAL)));
+        this.addStructureFeature(STRONGHOLD.method_28659(DEFAULT));
+        this.addStructureFeature(END_CITY.method_28659(DEFAULT));
         adds(this);
         Spawn(CREATURE, SHEEP, 12, 4, 4);
         Spawn(CREATURE, SHEEP, 12, 4, 4);
@@ -44,7 +44,7 @@ public final class PlainsBiomeMixin extends Biome {
     }
 
     private void adds(Biome b) {
-        addLandCarvers(b);addDefaultStructures(b);
+        addLandCarvers(b);
         addDefaultLakes(b);addDungeons(b);
         addPlainsTallGrass(b);addMineables(b);
         addDefaultOres(b);addDefaultDisks(b);
@@ -53,7 +53,7 @@ public final class PlainsBiomeMixin extends Biome {
         addFrozenTopLayer(b);
     }
 
-    public  void Spawn(EntityCategory e, EntityType<? extends Entity> et, int w, int min, int max) {
-        this.addSpawn(e, new SpawnEntry(et, w, min, max));
+    public  void Spawn(SpawnGroup g, EntityType<? extends Entity> et, int w, int min, int max) {
+        this.addSpawn(g, new SpawnEntry(et, w, min, max));
     }
 }
