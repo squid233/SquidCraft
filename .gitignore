@@ -1,8 +1,19 @@
 # gradle
 
-.gradle/
-build/
+.gradle/6.3/
+.gradle/buildOutputCleanup/
+.gradle/checksums/
+.gradle/loom-cache/launch.cfg
+.gradle/loom-cache/log4j.xml
+.gradle/vcs-1/
+.gradle/vcsWorkingDirs/
+build/classes/
+build/generated/
+build/loom-cache/
+build/resources/
+build/tmp/
 out/
+run/
 classes/
 
 # eclipse

@@ -1,0 +1,45 @@
+{
+  "display": {
+    "icon": {
+      "item": "squidcraft:shredded_squid"
+    },
+    "title": {
+      "translate": "advancements.squidcraft.root.title"
+    },
+    "description": {
+      "translate": "advancements.squidcraft.root.desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "background": "squidcraft:textures/gui/advancements/backgrounds/squid_block.png"
+  },
+  "criteria": {
+    "shredded_squid": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "squidcraft:shredded_squid"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "shredded_squid"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "squidcraft:cooked_shredded_squid",
+      "squidcraft:cooked_shredded_squid_1",
+      "squidcraft:cooked_shredded_squid_2"
+    ],
+    "loot": [
+      "minecraft:entities/squid"
+    ]
+  }
+}

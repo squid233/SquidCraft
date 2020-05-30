@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "W  ",
+    "   ",
+    "   "
+  ],
+  "key": {
+    "W": {
+      "item": "squidcraft:eight_squid_block"
+    }
+  },
+  "result": {
+    "item": "squidcraft:four_squid_block",
+    "count": 2
+  }
+}

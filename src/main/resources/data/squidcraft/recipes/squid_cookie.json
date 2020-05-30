@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WWW",
+    "WWW",
+    "WWW"
+  ],
+  "key": {
+    "W": {
+      "item": "squidcraft:a_pile_cooked_shredded_squid"
+    }
+  },
+  "result": {
+    "item": "squidcraft:squid_cookie"
+  }
+}

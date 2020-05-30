@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WWW",
+    "WWW",
+    "WWW"
+  ],
+  "key": {
+    "W": {
+      "item": "squidcraft:ultimate_squid_block"
+    }
+  },
+  "result": {
+    "item": "squidcraft:ultimate_compress_squid_block"
+  }
+}

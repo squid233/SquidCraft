@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": [
+    {
+      "item": "minecraft:coal"
+    }
+  ],
+  "result": "minecraft:diamond",
+  "experience": 5,
+  "cookingtime": 1200
+}

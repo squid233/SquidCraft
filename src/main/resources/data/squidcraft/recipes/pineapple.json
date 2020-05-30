@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " W ",
+    "YSY",
+    "YYY"
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:grass"
+    },
+    "Y": {
+      "item": "minecraft:yellow_wool"
+    },
+    "S": {
+      "item": "squidcraft:squid_cookie"
+    }
+  },
+  "result": {
+    "item": "squidcraft:pineapple"
+  }
+}

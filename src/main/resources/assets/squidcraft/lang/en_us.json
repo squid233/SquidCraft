@@ -1,0 +1,103 @@
+{
+  "item.squidcraft.shredded_squid": "Shredded Squid",
+  "item.squidcraft.cooked_shredded_squid": "Cooked Shredded Squid",
+  "item.squidcraft.a_pile_cooked_shredded_squid": "A Pile Cooked Shredded Squid",
+  "item.squidcraft.squid_cookie": "Squid Cookie",
+  "item.squidcraft.squid_helmet": "Squid Helmet",
+  "item.squidcraft.squid_chestplate": "Squid Chestplate",
+  "item.squidcraft.squid_leggings": "Squid Leggings",
+  "item.squidcraft.squid_boots": "Squid Boots",
+  "item.squidcraft.squid_axe": "Squid Axe",
+  "item.squidcraft.squid_hoe": "Squid Hoe",
+  "item.squidcraft.squid_pickaxe": "Squid Pickaxe",
+  "item.squidcraft.squid_shovel": "Squid Shovel",
+  "item.squidcraft.squid_sword": "Squid Sword",
+  "item.squidcraft.netherite_scrap": "Netherite Scrap",
+  "item.squidcraft.netherite_ingot": "Netherite Ingot",
+
+  "item.squidcraft.netherite_helmet": "Netherite Helmet",
+  "item.squidcraft.netherite_chestplate": "Netherite Chestplate",
+  "item.squidcraft.netherite_leggings": "Netherite Leggings",
+  "item.squidcraft.netherite_boots": "Netherite Boots",
+  "item.squidcraft.netherite_axe": "Netherite Axe",
+  "item.squidcraft.netherite_hoe": "Netherite Hoe",
+  "item.squidcraft.netherite_pickaxe": "Netherite Pickaxe",
+  "item.squidcraft.netherite_shovel": "Netherite Shovel",
+  "item.squidcraft.netherite_sword": "Netherite Sword",
+
+  "item.squidcraft.copper_nugget": "Copper Nugget",
+  "item.squidcraft.copper_ingot": "Copper Ingot",
+
+  "item.squidcraft.cookie_creeper_spawn_egg":"Spawn Cookie Creeper",
+
+  "item.squidcraft.your_item": "Your Item",
+  "item.squidcraft.your_item_2": "Your Item 2",
+
+  "item.squidcraft.squid_cookie.tooltip": "Craft a squid block!",
+
+  "itemGroup.squidcraft.squid_craft": "SquidCraft",
+  "itemGroup.squidcraft.sc_combat_and_tools": "SquidCraft Combat and Tools",
+  "itemGroup.squidcraft.netherite_mod": "SquidCraft Addons of Netherite Mod",
+
+  "block.squidcraft.copper_ore": "Copper Ore",
+  "block.squidcraft.copper_block": "Copper Block",
+
+  "block.squidcraft.squid_block": "Block of Squid",
+  "block.squidcraft.compress_squid_block": "Compress Block of Squid",
+  "block.squidcraft.low_squid_block": "Low Block of Squid",
+  "block.squidcraft.low_compress_squid_block": "Low Compress Block of Squid",
+  "block.squidcraft.medium_squid_block": "Medium Block of Squid",
+  "block.squidcraft.medium_compress_squid_block": "Medium Compress Block of Squid",
+  "block.squidcraft.higher_squid_block": "Higher Block of Squid",
+  "block.squidcraft.higher_compress_squid_block": "Higher Compress Block of Squid",
+  "block.squidcraft.super_squid_block": "Super Block of Squid",
+  "block.squidcraft.super_compress_squid_block": "Super Compress Block of Squid",
+  "block.squidcraft.ultimate_squid_block": "Ultimate Block of Squid",
+  "block.squidcraft.ultimate_compress_squid_block": "Ultimate Compress Block of Squid",
+
+  "block.squidcraft.one_squid_block": "One Block of Squid",
+  "block.squidcraft.two_squid_block": "Two Block of Squid",
+  "block.squidcraft.four_squid_block": "Four Block of Squid",
+  "block.squidcraft.eight_squid_block": "Eight Block of Squid",
+
+  "block.squidcraft.squid_side_block": "Block of Squid Side Slab",
+
+  "block.squidcraft.ancient_debris": "Ancient Debris",
+  "block.squidcraft.netherite_block": "Block of Netherite",
+  "block.squidcraft.bigger_chest_block": "Bigger Chest",
+
+  "container.squidcraft.bigger_chest_block": "Bigger Chest",
+
+  "biome.squidcraft.squid_biome": "Squid Biome",
+
+  "entity_type.squidcraft.cookie_creeper": "Cookie Creeper",
+
+  "enchantment.squidcraft.frost": "Frost",
+  "enchantment.squidcraft.fire_boom": "Fire Boom",
+  "enchantment.squidcraft.insane": "Insane Enchantment",
+  "enchantment.squidcraft.electric_power": "Electric Power",
+
+  "subtitles.item.armor.equip_netherite": "Netherite Armor:Equip",
+
+  "advancements.squidcraft.root.title": "SquidCraft",
+  "advancements.squidcraft.root.desc": "Get started, Cooking it!",
+  "advancements.squidcraft.first_cooking.title": "First Cooking",
+  "advancements.squidcraft.first_cooking.desc": "Now, we can make \"A Pile Cooked Shredded Squid\"!",
+  "advancements.squidcraft.a_pile.title": "A Pile Cooked Shredded Squid",
+  "advancements.squidcraft.a_pile.desc": "If you make a squid cookie, you can find more surprise!",
+  "advancements.squidcraft.cookie.title": "Squid Cookie",
+  "advancements.squidcraft.cookie.desc": "Oh, yum! You can make a block to eat or build!",
+
+  "fluid.squidcraft.milk": "Milk",
+  "fluid.squidcraft.flowing_milk": "Flowing Milk",
+
+  "key.squidcraft.useless_key": "Useless Key",
+
+  "authors.squidcraft.back": "back",
+  "squidcraft.button.text":"SquidCraft",
+  "authors.squidcraft.info": "authors:",
+
+
+  "itemGroup.squidcraft.yummyfood": "YummyFood",
+  "item.squidcraft.pineapple": "Pineapple"
+}

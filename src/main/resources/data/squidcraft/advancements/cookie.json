@@ -1,0 +1,31 @@
+{
+  "parent": "squidcraft:a_pile",
+  "display": {
+    "icon": {
+      "item": "squidcraft:squid_cookie"
+    },
+    "title": {
+      "translate": "advancements.squidcraft.cookie.title"
+    },
+    "description": {
+      "translate": "advancements.squidcraft.cookie.desc"
+    }
+  },
+  "criteria": {
+    "a_pile": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "squidcraft:squid_cookie"
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "recipes": [
+      "squidcraft:squid_block"
+    ]
+  }
+}

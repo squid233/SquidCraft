@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "squidcraft:block/squid_block" }
+  }
+}
