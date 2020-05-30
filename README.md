@@ -1,7 +1,7 @@
 # SquidCraft
 
 ![https://travis-ci.org/squid233/SquidCraft.svg?branch=1.15.2](https://travis-ci.org/squid233/SquidCraft.svg) 
-![available for 1.15.2](https://img.shields.io/badge/available%20for-1.15.2%2020w21a-brightgreen) 
+![available for 1.16](https://img.shields.io/badge/available%20for-1.15.2%201.16-brightgreen) 
 ![available for fabric API](https://img.shields.io/badge/available%20for-fabric%20API-brightgreen)
 ![MIT License](https://img.shields.io/github/license/squid233/SquidCraft) 
 ![State:Alpha](https://img.shields.io/badge/state-Alpha-brightgreen)
