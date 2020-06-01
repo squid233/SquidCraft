@@ -13,7 +13,6 @@ public class InsaneEnchantment extends Enchantment {
         super(rarity, type, slotTypes);
     }
 
-    @Override
     public int getMinimumPower(int level) {
         return 29;
     }

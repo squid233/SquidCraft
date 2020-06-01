@@ -13,12 +13,10 @@ public class FrostEnchantment extends Enchantment {
         super(rarity, target, slots);
     }
 
-    @Override
     public int getMinimumPower(int int_1) {
         return 3;
     }
 
-    @Override
     public int getMaximumLevel() {
         return 10;
     }

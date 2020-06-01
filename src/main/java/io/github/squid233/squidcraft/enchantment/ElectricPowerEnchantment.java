@@ -14,12 +14,10 @@ public class ElectricPowerEnchantment extends Enchantment {
         super(rarity, type, slotTypes);
     }
 
-    @Override
     public int getMinimumPower(int level) {
         return 5;
     }
 
-    @Override
     public int getMaximumLevel() {
         return Integer.parseInt(CreateConfig.properties.getProperty("electricPowerMaxLevel"));
     }

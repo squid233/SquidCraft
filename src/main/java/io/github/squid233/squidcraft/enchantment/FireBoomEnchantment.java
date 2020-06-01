@@ -14,12 +14,10 @@ public class FireBoomEnchantment extends Enchantment {
         super(rarity, type, slotTypes);
     }
 
-    @Override
     public int getMinimumPower(int level) {
         return 2;
     }
 
-    @Override
     public int getMaximumLevel() {
         return 5;
     }
