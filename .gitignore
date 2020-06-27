@@ -1,6 +1,6 @@
 # gradle
 
-.gradle/6.3/
+.gradle/6.5/
 .gradle/buildOutputCleanup/
 .gradle/checksums/
 .gradle/loom-cache/launch.cfg
@@ -13,7 +13,6 @@ build/loom-cache/
 build/resources/
 build/tmp/
 out/
-run/
 classes/
 
 # eclipse

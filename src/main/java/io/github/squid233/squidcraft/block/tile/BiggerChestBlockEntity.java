@@ -28,7 +28,7 @@ public class BiggerChestBlockEntity extends LootableContainerBlockEntity {
 
     @Override
     public ScreenHandler createScreenHandler(int syncId, PlayerInventory playerInventory) {
-        return new BiggerChestScreenHandler(syncId, playerInventory, this);
+        return BlockRegister.BIGGER_CHEST_SCREEN_HANDLER_TYPE.create(syncId, playerInventory);
     }
 
     @Override

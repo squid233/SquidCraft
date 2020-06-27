@@ -1,32 +1,32 @@
 package io.github.squid233.squidcraft.world.biome;
 
+import com.google.common.collect.ImmutableList;
 import io.github.squid233.squidcraft.util.ModEntities;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
-import net.minecraft.world.biome.*;
-import net.minecraft.world.gen.feature.*;
-import net.minecraft.world.gen.surfacebuilder.*;
+import net.minecraft.sound.BiomeMoodSound;
+import net.minecraft.world.biome.Biome;
+import net.minecraft.world.biome.BiomeEffects;
+import net.minecraft.world.gen.feature.MineshaftFeatureConfig;
+import net.minecraft.world.gen.feature.SeagrassFeatureConfig;
+import net.minecraft.world.gen.feature.ShipwreckFeatureConfig;
+import net.minecraft.world.gen.surfacebuilder.SurfaceBuilder;
 
-import static net.minecraft.block.Blocks.WATER;
-import static net.minecraft.entity.SpawnGroup.WATER_CREATURE;
 import static net.minecraft.entity.EntityType.*;
-import static net.minecraft.world.biome.Biome.Category.OCEAN;
-import static net.minecraft.world.biome.Biome.Precipitation.RAIN;
+import static net.minecraft.entity.SpawnGroup.WATER_CREATURE;
 import static net.minecraft.world.gen.GenerationStep.Feature.VEGETAL_DECORATION;
 import static net.minecraft.world.gen.decorator.Decorator.TOP_SOLID_HEIGHTMAP;
 import static net.minecraft.world.gen.decorator.DecoratorConfig.DEFAULT;
 import static net.minecraft.world.gen.feature.DefaultBiomeFeatures.*;
-import static net.minecraft.world.gen.feature.Feature.*;
+import static net.minecraft.world.gen.feature.Feature.SEAGRASS;
 import static net.minecraft.world.gen.feature.MineshaftFeature.Type.NORMAL;
 import static net.minecraft.world.gen.feature.StructureFeature.MINESHAFT;
 import static net.minecraft.world.gen.feature.StructureFeature.SHIPWRECK;
 
 public class SquidBiome extends Biome {
-
     public SquidBiome() {
-        super(new Settings().configureSurfaceBuilder(SurfaceBuilder.DEFAULT, new TernarySurfaceConfig(WATER.getDefaultState(), WATER.getDefaultState(), WATER.getDefaultState())).precipitation(RAIN).category(OCEAN).depth(0.24f).scale(0.2f).temperature(0.6f).downfall(0.5f).effects(new BiomeEffects.Builder().waterColor(4159204).waterFogColor(329011).fogColor(0).build()).parent(null));
-
+        super((new Biome.Settings()).configureSurfaceBuilder(SurfaceBuilder.DEFAULT, SurfaceBuilder.GRASS_CONFIG).precipitation(Biome.Precipitation.RAIN).category(Category.OCEAN).depth(0.125F).scale(0.05F).temperature(0.8F).downfall(0.4F).effects((new BiomeEffects.Builder()).waterColor(4159204).waterFogColor(329011).fogColor(12638463).moodSound(BiomeMoodSound.CAVE).build()).parent(null).noises(ImmutableList.of(new Biome.MixedNoisePoint(0.0F, 0.0F, 0.0F, 0.0F, 1.0F))));
         this.addStructureFeature(MINESHAFT.configure(new MineshaftFeatureConfig(0.004D, NORMAL)));
         this.addStructureFeature(SHIPWRECK.configure(new ShipwreckFeatureConfig(false)));
         adds(this);
@@ -38,7 +38,7 @@ public class SquidBiome extends Biome {
 
     }
 
-    private void adds(Biome b) {
+    protected void adds(Biome b) {
         addOceanCarvers(b);addDefaultLakes(b);
         addDungeons(b);addDefaultOres(b);
         addDefaultDisks(b);addMineables(b);
@@ -47,8 +47,9 @@ public class SquidBiome extends Biome {
         addDefaultVegetation(b);addSprings(b);
         addSeagrassOnStone(b);addKelp(b);
         addFrozenTopLayer(b);addClay(b);
+        addDefaultUndergroundStructures(b);
     }
-    public void spawn(EntityType<? extends Entity> entityType, int w, int min, int max) {
+    protected void spawn(EntityType<? extends Entity> entityType, int w, int min, int max) {
         this.addSpawn(WATER_CREATURE, new SpawnEntry(entityType, w, min, max));
     }
 }

@@ -2,58 +2,64 @@ package io.github.squid233.squidcraft.util.registers;
 
 import io.github.squid233.squidcraft.SquidCraft;
 import io.github.squid233.squidcraft.api.BlockRegisters;
-import io.github.squid233.squidcraft.api.ItemRegisters;
 import io.github.squid233.squidcraft.block.*;
 import io.github.squid233.squidcraft.block.msb.Eight;
 import io.github.squid233.squidcraft.block.msb.Four;
 import io.github.squid233.squidcraft.block.msb.One;
 import io.github.squid233.squidcraft.block.msb.Two;
 import io.github.squid233.squidcraft.block.tile.BiggerChestBlockEntity;
+import io.github.squid233.squidcraft.block.tile.BiggerChestScreenHandler;
 import io.github.squid233.squidcraft.item.ItemGroups;
-import net.fabricmc.fabric.api.container.ContainerProviderRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.Block;
-import net.minecraft.block.Material;
-import net.minecraft.block.entity.BlockEntity;
+import net.fabricmc.fabric.api.screenhandler.v1.ScreenHandlerRegistry;
+import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.Util;
 import net.minecraft.util.registry.Registry;
 
-import static io.github.squid233.squidcraft.SquidCraft.log;
+import static io.github.squid233.api.util.Loggers.log;
 
 /**
  * You always register block, add {@link ItemGroups}, add lang, add blockstates, add models, add textures, add loot tables and add recipes.
  */
 public class BlockRegister {
 
-    private static Block register(String name, Block block, BlockItem item) {
-        String s = "register block and block item";
-        ItemRegisters.register(SquidCraft.MODID, name, item);
-        log(s, "register " + SquidCraft.MODID + ":" + name + " block success!");
-        return Registry.register(Registry.BLOCK, new Identifier(SquidCraft.MODID, name), block);
-    }
     private static Block register(String name, Block block, Item.Settings settings) {
         return BlockRegisters.register(SquidCraft.MODID, name, block, settings);
     }
 
-    public static final Block
+    private static Block register(String name, Block block, ItemGroup group) {
+        return register(name, block, new Item.Settings().group(group));
+    }
 
-            SQUID_BLOCK, COMPRESS_SQUID_BLOCK, LOW_SQUID_BLOCK, LOW_COMPRESS_SQUID_BLOCK,
-            MEDIUM_SQUID_BLOCK, MEDIUM_COMPRESS_SQUID_BLOCK, HIGHER_SQUID_BLOCK, HIGHER_COMPRESS_SQUID_BLOCK,
-            SUPER_SQUID_BLOCK, SUPER_COMPRESS_SQUID_BLOCK, ULTIMATE_SQUID_BLOCK, ULTIMATE_COMPRESS_SQUID_BLOCK,
-
-            ONE_SQUID_BLOCK, TWO_SQUID_BLOCK, FOUR_SQUID_BLOCK, EIGHT_SQUID_BLOCK,
-
-            SQUID_SIDE_BLOCK,
-
-            BIGGER_CHEST_BLOCK;
+    public static final Block SQUID_BLOCK;
+    public static final Block COMPRESS_SQUID_BLOCK;
+    public static final Block LOW_SQUID_BLOCK;
+    public static final Block LOW_COMPRESS_SQUID_BLOCK;
+    public static final Block MEDIUM_SQUID_BLOCK;
+    public static final Block MEDIUM_COMPRESS_SQUID_BLOCK;
+    public static final Block HIGHER_SQUID_BLOCK;
+    public static final Block HIGHER_COMPRESS_SQUID_BLOCK;
+    public static final Block SUPER_SQUID_BLOCK;
+    public static final Block SUPER_COMPRESS_SQUID_BLOCK;
+    public static final Block ULTIMATE_SQUID_BLOCK;
+    public static final Block ULTIMATE_COMPRESS_SQUID_BLOCK;
+    public static final Block ONE_SQUID_BLOCK;
+    public static final Block TWO_SQUID_BLOCK;
+    public static final Block FOUR_SQUID_BLOCK;
+    public static final Block EIGHT_SQUID_BLOCK;
+    public static final Block SQUID_SIDE_BLOCK;
+    public static final Block BIGGER_CHEST_BLOCK;
+    public static final Block SOUL_JACK_O_LANTERN;
 
     public static final Identifier BIGGER_CHEST = new Identifier(SquidCraft.MODID, "bigger_chest_block");
-    public static final String BIGGER_CHEST_TRANSLATION_KEY = Util.createTranslationKey("container", BIGGER_CHEST);
+    //public static final String BIGGER_CHEST_TRANSLATION_KEY = Util.createTranslationKey("container", BIGGER_CHEST);
+    public static final ScreenHandlerType<BiggerChestScreenHandler> BIGGER_CHEST_SCREEN_HANDLER_TYPE = ScreenHandlerRegistry.registerSimple(BIGGER_CHEST, BiggerChestScreenHandler::new);
 
     public static BlockEntityType<BiggerChestBlockEntity> BIGGER_CHEST_ENTITY_TYPE;
 
@@ -84,17 +90,19 @@ public class BlockRegister {
         SQUID_SIDE_BLOCK = register("squid_side_block", new SquidSideBlock(FabricBlockSettings.of(Material.SOIL).hardness(1.5f)), new Item.Settings().group(ItemGroups.SQUID_CRAFT).food(new FoodComponent.Builder().hunger(729).saturationModifier(82.8255f).meat().alwaysEdible().build()));
 
         BIGGER_CHEST_BLOCK = new BiggerChestBlock();
+
+        SOUL_JACK_O_LANTERN = register("soul_jack_o_lantern", new SoulJackOLantern(AbstractBlock.Settings.copy(Blocks.JACK_O_LANTERN)), ItemGroup.DECORATIONS);
     }
 
-    public BlockRegister()
-    {
+    public BlockRegister() {
         registerContainer(BIGGER_CHEST, BIGGER_CHEST_BLOCK, new Item.Settings().group(ItemGroups.SQUID_CRAFT));
         BIGGER_CHEST_ENTITY_TYPE = Registry.register(Registry.BLOCK_ENTITY_TYPE, BIGGER_CHEST, BlockEntityType.Builder.create(BiggerChestBlockEntity::new, BIGGER_CHEST_BLOCK).build(null));
-        ContainerProviderRegistry.INSTANCE.registerFactory(BIGGER_CHEST, ((syncId, identifier, player, buf) -> {
+        /*ContainerProviderRegistry.INSTANCE.registerFactory(BIGGER_CHEST, ((syncId, identifier, player, buf) -> {
             final BlockEntity blockEntity = player.world.getBlockEntity(buf.readBlockPos());
             assert blockEntity != null;
             return ((BiggerChestBlockEntity) blockEntity).createScreenHandler(syncId, player.inventory);
-        }));
+        }));*/
+
     }
 
     private void registerContainer(Identifier id, Block block, Item.Settings settings) {

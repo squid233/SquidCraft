@@ -1,5 +1,6 @@
 package io.github.squid233.squidcraft.block.tile;
 
+import io.github.squid233.squidcraft.util.registers.BlockRegister;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventory;
@@ -11,9 +12,9 @@ public class BiggerChestScreenHandler extends ScreenHandler {
     private final Inventory inventory; // Chest inventory
     private static final int INVENTORY_SIZE = 54; // 6 rows * 9 cols
 
-    protected BiggerChestScreenHandler(int syncId, PlayerInventory playerInventory, Inventory inventory) {
-        super(null, syncId); // Since we didn't create a ContainerType, we will place null here.
-        this.inventory = inventory;
+    public BiggerChestScreenHandler(int syncId, PlayerInventory playerInventory) {
+        super(BlockRegister.BIGGER_CHEST_SCREEN_HANDLER_TYPE, syncId); // Since we didn't create a ContainerType, we will place null here.
+        this.inventory = playerInventory;
         checkSize(inventory, INVENTORY_SIZE);
         inventory.onOpen(playerInventory.player);
 

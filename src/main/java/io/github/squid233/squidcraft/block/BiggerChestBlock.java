@@ -1,8 +1,6 @@
 package io.github.squid233.squidcraft.block;
 
 import io.github.squid233.squidcraft.block.tile.BiggerChestBlockEntity;
-import io.github.squid233.squidcraft.util.registers.BlockRegister;
-import net.fabricmc.fabric.api.container.ContainerProviderRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.BlockRenderType;
 import net.minecraft.block.BlockState;
@@ -13,6 +11,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.item.ItemStack;
+import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
@@ -53,7 +52,8 @@ public class BiggerChestBlock extends BlockWithEntity {
         if (!world.isClient) {
             BlockEntity blockEntity = world.getBlockEntity(pos);
             if (blockEntity instanceof BiggerChestBlockEntity) {
-                ContainerProviderRegistry.INSTANCE.openContainer(BlockRegister.BIGGER_CHEST, player, buf -> buf.writeBlockPos(pos));
+                NamedScreenHandlerFactory factory = new BiggerChestBlockEntity();
+                player.openHandledScreen(factory);
             }
         }
         return ActionResult.SUCCESS;

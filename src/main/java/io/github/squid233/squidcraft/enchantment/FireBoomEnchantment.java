@@ -26,7 +26,7 @@ public class FireBoomEnchantment extends Enchantment {
     public void onTargetDamaged(LivingEntity user, Entity target, int level) {
         if(target instanceof LivingEntity) {
             World world = user.world;
-            boolean bl = world.getGameRules().getBoolean(GameRules.MOB_GRIEFING);
+            boolean bl = world.getGameRules().getBoolean(GameRules.DO_MOB_GRIEFING);
             world.createExplosion(target, target.prevX, target.prevY, target.prevZ, level, bl, bl ? Explosion.DestructionType.DESTROY : Explosion.DestructionType.NONE);
             world.spawnEntity(target);
         }

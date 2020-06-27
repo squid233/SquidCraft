@@ -13,8 +13,8 @@ public class BiggerChestScreen extends HandledScreen<BiggerChestScreenHandler> {
     // a path to gui texture, you may replace it with new Identifier(YourMod.MOD_ID, "textures/gui/container/your_container.png");
     private static final Identifier TEXTURE = new Identifier(SquidCraft.MODID, "textures/gui/container/bigger_chest.png");
 
-    public BiggerChestScreen(BiggerChestScreenHandler container, PlayerInventory playerInventory, Text title) {
-        super(container, playerInventory, title);
+    public BiggerChestScreen(BiggerChestScreenHandler handler, PlayerInventory playerInventory, Text title) {
+        super(handler, playerInventory, title);
         this.backgroundHeight = 114 + 6 * 18;
     }
     @Override

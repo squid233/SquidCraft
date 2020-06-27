@@ -27,5 +27,5 @@ public class AuthorsGUI extends Screen {
         MyButton(3 * this.width / 4, 8 * this.height / 9, "authors.squidcraft.back", (buttonWidget) -> this.screen.onClose());
     }
     private void MyButton(int x, int y, String translationKey, ButtonWidget.PressAction button) { this.addButton(new ButtonWidget(x, y, 100, 20, new TranslatableText(translationKey), button)); }
-    private void tooltip(String translationKey, int x, int y) { MatrixStack matrixStack = new MatrixStack(); renderTooltip(matrixStack, new TranslatableText(translationKey), x, y); }
+    private void tooltip(String translationKey, int x, int y) { renderTooltip(new MatrixStack(), new TranslatableText(translationKey), x, y); }
 }

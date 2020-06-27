@@ -2,14 +2,20 @@ package io.github.squid233.squidcraft.util.registers;
 
 import io.github.squid233.squidcraft.api.ItemRegisters;
 import io.github.squid233.squidcraft.armor.ArmorMaterials;
-import io.github.squid233.squidcraft.armor.SquidHelmet;
 import io.github.squid233.squidcraft.item.*;
 import io.github.squid233.squidcraft.item.tools.squid.*;
 import io.github.squid233.squidcraft.util.ModEntities;
 import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.SpawnEggItem;
+import net.minecraft.util.Hand;
+import net.minecraft.util.TypedActionResult;
+import net.minecraft.world.World;
 
 import static io.github.squid233.squidcraft.SquidCraft.MODID;
 import static io.github.squid233.squidcraft.item.ItemGroups.SQUID_CRAFT_COMBAT_AND_TOOLS;
@@ -32,7 +38,12 @@ public class ItemRegister {
         A_PILE_COOKED_SHREDDED_SQUID = register("a_pile_cooked_shredded_squid", new APileCSSquid());
         SQUID_COOKIE = register("squid_cookie", new SquidCookie());
 
-        SQUID_HELMET = registerHelmet("squid", new SquidHelmet());
+        SQUID_HELMET = registerHelmet("squid", new ArmorItem(ArmorMaterials.SQUID, EquipmentSlot.HEAD, new Item.Settings().group(ItemGroups.SQUID_CRAFT)) {
+            @Override
+            public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
+                user.addStatusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 999999));
+                return TypedActionResult.success(new ItemStack(this));
+            }});
         SQUID_CHESTPLATE = registerChestplate("squid", new ArmorItem(ArmorMaterials.SQUID, EquipmentSlot.CHEST, new Item.Settings().group(SQUID_CRAFT_COMBAT_AND_TOOLS)));
         SQUID_LEGGINGS = registerLeggings("squid", new ArmorItem(ArmorMaterials.SQUID, EquipmentSlot.LEGS, new Item.Settings().group(SQUID_CRAFT_COMBAT_AND_TOOLS)));
         SQUID_BOOTS = registerBoots("squid", new ArmorItem(ArmorMaterials.SQUID, EquipmentSlot.FEET, new Item.Settings().group(SQUID_CRAFT_COMBAT_AND_TOOLS)));
@@ -48,15 +59,6 @@ public class ItemRegister {
 
     public ItemRegister() {
         registerAll(YOUR_ITEM, YOUR_ITEM_2);
-    }
-
-
-    /**
-     * This method only suppress warning.
-     */
-    @SuppressWarnings("unused")
-    private void IRegister() {
-
     }
 
     private static Item register(String itemName, Item item) {

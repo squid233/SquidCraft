@@ -4,7 +4,7 @@ import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
-import static io.github.squid233.squidcraft.SquidCraft.log;
+import static io.github.squid233.api.util.Loggers.log;
 
 /**
  * items register api → (item, tool and armor) register.
@@ -116,6 +116,11 @@ public class ItemRegisters {
         return register(modid, name + "_sword", item);
     }
 
+    /**
+     * <p>This method can collect {@linkplain io.github.squid233.api.item.Item items} and register.</p>
+     * @param modid Mod identifier.
+     * @param items The items.
+     */
     public static void registerAll(String modid, io.github.squid233.api.item.Item... items) {
         for (io.github.squid233.api.item.Item item : items) {
             register(modid, item.getRegistryName(), item);
