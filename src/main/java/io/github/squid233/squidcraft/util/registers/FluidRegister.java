@@ -17,7 +17,7 @@ public class FluidRegister {
         registerFluid("milk", STILL_MILK, FLOWING_MILK, MILK);
     }
 
-    public void registerFluid(String fluidID, FlowableFluid stillFluid, FlowableFluid flowingFluid, Block fluidBlock) {
-        io.github.squid233.squidcraft.api.FluidRegister.registerFluid(SquidCraft.MODID, fluidID, stillFluid, flowingFluid, fluidBlock);
+    public void registerFluid(String fluidName, FlowableFluid stillFluid, FlowableFluid flowingFluid, Block fluidBlock) {
+        io.github.squid233.squidcraft.api.FluidRegister.registerFluid(SquidCraft.MODID, fluidName, stillFluid, flowingFluid, fluidBlock);
     }
 }

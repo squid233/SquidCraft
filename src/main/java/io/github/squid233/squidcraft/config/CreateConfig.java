@@ -5,32 +5,44 @@ import java.io.*;
 /**
  *@author baka4n
  * <p> 对 properties 进行有序排列</p>
- * <p> windows about s → \\ , linux about s → // , you can to linux server to running it. </p>
+ * <p> windows about SEPARATOR → \\ , linux about SEPARATOR → // , you can to linux server to running it. </p>
  */
 public class CreateConfig {
-    public static final String s = File.separator + File.separator;
-	public static final MyProperties properties = new MyProperties();
-    public static void config() {
+    public static final String SEPARATOR = File.separator + File.separator;
+	public static final MyProperties PROPERTIES = new MyProperties();
+    public static void create() {
         File configs = new File("config");
-        File squidcraft = new File("config" + s + "squidcraft");
-        if (!configs.exists() && !configs.isDirectory()) configs.mkdir();
-        if (!squidcraft.exists() && !squidcraft.isDirectory()) squidcraft.mkdir();
+        File squidcraft = new File("config" + SEPARATOR + "squidcraft");
+        if (!configs.exists() && !configs.isDirectory()) {
+            configs.mkdir();
+        }
+        if (!squidcraft.exists() && !squidcraft.isDirectory()) {
+            squidcraft.mkdir();
+        }
         try {
-            properties.load(new BufferedInputStream(new FileInputStream("config" + s + "squidcraft" + s + "config.properties")));
+            PROPERTIES.load(new BufferedInputStream(new FileInputStream("config" + SEPARATOR + "squidcraft" + SEPARATOR + "config.properties")));
         } catch (FileNotFoundException e) {
-            putin("hideMainScreenButton", "false", "squidBlockSpawnSize", "3");
-            putin("squidBlockPerChunkSpawnCount", "8", "squidBlockSpawnMinYLevel", "16");
-            putin("squidBlockSpawnMaxYLevel", "64", "electricPowerMaxLevel", "5");
-            putin("yourItemMaxCount", "64", "yourItemTwoMaxCount", "64");
+            putIn2("hideMainScreenButton", "false", "squidBlockSpawnSize", "3");
+            putIn2("squidBlockPerChunkSpawnCount", "8", "squidBlockSpawnMinYLevel", "16");
+            putIn2("squidBlockSpawnMaxYLevel", "64", "electricPowerMaxLevel", "5");
+            putIn2("yourItemMaxCount", "64", "yourItemTwoMaxCount", "64");
+            putIn("enableRegisterLog", "false");
             try {
-                properties.store(new BufferedOutputStream(new FileOutputStream("config" + s + "squidcraft" + s + "config.properties")), "save Config File.");
-            } catch (IOException f) { f.printStackTrace(); }
-        } catch (IOException i) { i.printStackTrace(); }
+                PROPERTIES.store(new BufferedOutputStream(new FileOutputStream("config" + SEPARATOR + "squidcraft" + SEPARATOR + "config.properties")), "save Config File.");
+            } catch (IOException f) {
+                f.printStackTrace();
+            }
+        } catch (IOException i) {
+            i.printStackTrace();
+        }
     }
-    public static void putin(String s1, String s2, String s3, String s4)
-    {
-        properties.put(s1, s2);
-        if (!s3.equals("null"))
-            properties.put(s3, s4);
+
+    public static void putIn(String s1, String s2) {
+        PROPERTIES.put(s1, s2);
+    }
+
+    public static void putIn2(String s1, String s2, String s3, String s4) {
+        putIn(s1, s2);
+        PROPERTIES.put(s3, s4);
     }
 }

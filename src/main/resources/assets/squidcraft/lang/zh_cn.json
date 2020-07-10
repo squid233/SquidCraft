@@ -12,35 +12,18 @@
   "item.squidcraft.squid_pickaxe": "鱿鱼镐",
   "item.squidcraft.squid_shovel": "鱿鱼铲",
   "item.squidcraft.squid_sword": "鱿鱼剑",
-  "item.squidcraft.netherite_scrap": "下界合金碎片",
-  "item.squidcraft.netherite_ingot": "下界合金锭",
-
-  "item.squidcraft.netherite_helmet": "下界合金头盔",
-  "item.squidcraft.netherite_chestplate": "下界合金胸甲",
-  "item.squidcraft.netherite_leggings": "下界合金护腿",
-  "item.squidcraft.netherite_boots": "下界合金靴子",
-  "item.squidcraft.netherite_axe": "下界合金斧",
-  "item.squidcraft.netherite_hoe": "下界合金锄",
-  "item.squidcraft.netherite_pickaxe": "下界合金镐",
-  "item.squidcraft.netherite_shovel": "下界合金锹",
-  "item.squidcraft.netherite_sword": "下界合金剑",
-
-  "item.squidcraft.copper_nugget": "铜粒",
-  "item.squidcraft.copper_ingot": "铜锭",
 
   "item.squidcraft.cookie_creeper_spawn_egg":"生成曲奇苦力怕",
 
   "item.squidcraft.your_item": "你的物品",
   "item.squidcraft.your_item_2": "你的物品2",
 
+  "item.squidcraft.milk_bucket": "牛奶桶",
+
   "item.squidcraft.squid_cookie.tooltip": "合成一个鱿鱼块！",
 
   "itemGroup.squidcraft.squid_craft": "鱿鱼工艺",
   "itemGroup.squidcraft.sc_combat_and_tools": "鱿鱼工艺 战斗用品与工具",
-  "itemGroup.squidcraft.netherite_mod": "鱿鱼工艺附属下界合金Mod",
-
-  "block.squidcraft.copper_ore": "铜矿石",
-  "block.squidcraft.copper_block": "铜块",
 
   "block.squidcraft.squid_block": "鱿鱼块",
   "block.squidcraft.compress_squid_block": "压缩鱿鱼块",
@@ -62,15 +45,16 @@
 
   "block.squidcraft.squid_side_block": "鱿鱼块台阶",
 
-  "block.squidcraft.ancient_debris": "远古残骸",
-  "block.squidcraft.netherite_block": "下界合金块",
   "block.squidcraft.bigger_chest_block": "大箱子",
 
   "block.squidcraft.soul_jack_o_lantern": "灵魂南瓜灯",
 
+  "block.squidcraft.shredded_squid_crop": "鱿鱼丝作物",
+
   "container.squidcraft.bigger_chest_block": "大箱子",
 
   "biome.squidcraft.squid_biome": "鱿鱼群系",
+  "biome.squidcraft.chaos_squid_biome": "混乱鱿鱼群系",
 
   "entity_type.squidcraft.cookie_creeper": "曲奇苦力怕",
 
@@ -78,8 +62,6 @@
   "enchantment.squidcraft.fire_boom": "火焰爆炸",
   "enchantment.squidcraft.insane": "疯狂附魔",
   "enchantment.squidcraft.electric_power": "电力能源",
-
-  "subtitles.item.armor.equip_netherite": "下界合金盔甲：碰擦",
 
   "advancements.squidcraft.root.title": "鱿鱼工艺",
   "advancements.squidcraft.root.desc": "要想开始，烤它！",
@@ -100,5 +82,7 @@
   "authors.squidcraft.info": "作者名单：",
 
   "itemGroup.squidcraft.yummyfood": "美味的食物",
-  "item.squidcraft.pineapple": "菠萝"
+  "item.squidcraft.pineapple": "菠萝",
+  "item.squidcraft.tomato": "番茄",
+  "item.squidcraft.tomato.tooltip": "当前日期：%n世纪%n年%n月%n日"
 }

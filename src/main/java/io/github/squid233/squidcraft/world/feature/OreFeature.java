@@ -17,13 +17,13 @@ public class OreFeature {
                             new OreFeatureConfig(
                                     OreFeatureConfig.Target.NATURAL_STONE,
                                     BlockRegister.SQUID_BLOCK.getDefaultState(),
-                                    parseInt(CreateConfig.properties.getProperty("squidBlockSpawnSize")) // Vein size
+                                    parseInt(CreateConfig.PROPERTIES.getProperty("squidBlockSpawnSize")) // Vein size
                             )).createDecoratedFeature(
                             Decorator.COUNT_RANGE.configure(new RangeDecoratorConfig(
-                                    parseInt(CreateConfig.properties.getProperty("squidBlockPerChunkSpawnCount")), // Vein count of per chunk
+                                    parseInt(CreateConfig.PROPERTIES.getProperty("squidBlockPerChunkSpawnCount")), // Vein count of per chunk
                                     0, // Bottom offset
-                                    parseInt(CreateConfig.properties.getProperty("squidBlockSpawnMinYLevel")), // Minimum y level
-                                    parseInt(CreateConfig.properties.getProperty("squidBlockSpawnMaxYLevel")) // Maximum y level
+                                    parseInt(CreateConfig.PROPERTIES.getProperty("squidBlockSpawnMinYLevel")), // Minimum y level
+                                    parseInt(CreateConfig.PROPERTIES.getProperty("squidBlockSpawnMaxYLevel")) // Maximum y level
                             ))));
         }
     }

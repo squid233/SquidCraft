@@ -1,3 +1,10 @@
 {
-
+  "versions": {
+    "minecraft": "1.16.1",
+    "fabric": {
+      "yarn": "1.16.1+build.20",
+      "loader": "0.8.9+build.203",
+      "api": "0.14.1+build.372-1.16"
+    }
+  }
 }

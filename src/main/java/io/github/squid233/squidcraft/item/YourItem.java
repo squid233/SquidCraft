@@ -7,7 +7,7 @@ import static java.lang.Integer.parseInt;
 
 public class YourItem extends Item {
     public YourItem() {
-        super(new Settings().group(ItemGroups.SQUID_CRAFT).maxCount(parseInt(CreateConfig.properties.getProperty("yourItemMaxCount"))));
+        super(new Settings().group(ItemGroups.SQUID_CRAFT).maxCount(parseInt(CreateConfig.PROPERTIES.getProperty("yourItemMaxCount"))));
     }
 
     @Override

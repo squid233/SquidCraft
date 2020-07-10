@@ -34,6 +34,10 @@ public abstract class Item extends net.minecraft.item.Item {
         super(settings);
     }
 
+    /**
+     * The registers will use the registry name.
+     * @return a string.
+     */
     public abstract String getRegistryName();
 
 }

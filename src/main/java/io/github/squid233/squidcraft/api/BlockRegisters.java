@@ -1,5 +1,6 @@
 package io.github.squid233.squidcraft.api;
 
+import io.github.squid233.api.util.Loggers;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -25,7 +26,17 @@ public class BlockRegisters {
     public static Block register(String modid, String name, Block block, Item.Settings settings) {
         String s = "register block and block item";
         ItemRegisters.register(modid, name, new BlockItem(block, settings));
-        log(s, "register " + modid + ":" + name + " block success!");
+        if (Loggers.enableRegisterLog) {
+            log(s, "register " + modid + ":" + name + " block success!");
+        }
+        return Registry.register(Registry.BLOCK, new Identifier(modid, name), block);
+    }
+
+    public static Block register(String modid, String name, Block block) {
+        String s = "register block";
+        if (Loggers.enableRegisterLog) {
+            log(s, "register " + modid + ":" + name + " block success!");
+        }
         return Registry.register(Registry.BLOCK, new Identifier(modid, name), block);
     }
 }

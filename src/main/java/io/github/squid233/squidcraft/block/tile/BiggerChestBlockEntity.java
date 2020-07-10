@@ -14,7 +14,8 @@ import net.minecraft.util.collection.DefaultedList;
 
 public class BiggerChestBlockEntity extends LootableContainerBlockEntity {
     private DefaultedList<ItemStack> inventory;
-    private static final int INVENTORY_SIZE = 54; // 9 * 6 = 54
+    // 9 * 6 = 54
+    private static final int INVENTORY_SIZE = 54;
 
     public BiggerChestBlockEntity() {
         super(BlockRegister.BIGGER_CHEST_ENTITY_TYPE);

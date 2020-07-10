@@ -1,5 +1,6 @@
 package io.github.squid233.squidcraft.api;
 
+import io.github.squid233.api.util.Loggers;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -22,7 +23,9 @@ public class ItemRegisters {
      * @return Register item.
      */
     public static Item register(String modid, String name, Item item) {
-        log("Items Register", "register " + modid + ":" + name + " success!");
+        if (Loggers.enableRegisterLog) {
+            log("Items Register", "register " + modid + ":" + name + " success!");
+        }
         return Registry.register(Registry.ITEM, new Identifier(modid, name), item);
     }
 

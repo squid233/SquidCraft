@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "W"
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:milk_bucket"
+    }
+  },
+  "result": {
+    "item": "squidcraft:milk_bucket"
+  }
+}

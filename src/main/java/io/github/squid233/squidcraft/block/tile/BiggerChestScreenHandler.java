@@ -13,7 +13,7 @@ public class BiggerChestScreenHandler extends ScreenHandler {
     private static final int INVENTORY_SIZE = 54; // 6 rows * 9 cols
 
     public BiggerChestScreenHandler(int syncId, PlayerInventory playerInventory) {
-        super(BlockRegister.BIGGER_CHEST_SCREEN_HANDLER_TYPE, syncId); // Since we didn't create a ContainerType, we will place null here.
+        super(BlockRegister.BIGGER_CHEST_SCREEN_HANDLER_TYPE, syncId);
         this.inventory = playerInventory;
         checkSize(inventory, INVENTORY_SIZE);
         inventory.onOpen(playerInventory.player);
@@ -48,7 +48,7 @@ public class BiggerChestScreenHandler extends ScreenHandler {
         return this.inventory.canPlayerUse(player);
     }
 
-    // Shift + Player Inv Slot
+    /** Shift + Player Inv Slot */
     @Override
     public ItemStack transferSlot(PlayerEntity player, int invSlot) {
         ItemStack newStack = ItemStack.EMPTY;

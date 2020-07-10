@@ -16,7 +16,8 @@ public final class SquidCraft implements ModInitializer, MinecraftMod {
 	@Override
 	public void onInitialize() {
 		String s = "SquidCraft register all";
-		CreateConfig.config();
+		CreateConfig.create();
+		//noinspection InstantiationOfUtilityClass
 		new ItemRegister();
 		log(s, "item register success");
 		new BlockRegister();

@@ -1,0 +1,5 @@
+2020-7-7 ~ 7-8 1.16-0.2.0
+
+1. delete 18 useless texture
+2. fix shredded squid crop texture
+3. delete some useless i18n

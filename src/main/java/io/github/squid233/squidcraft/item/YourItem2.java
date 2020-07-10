@@ -5,7 +5,7 @@ import io.github.squid233.squidcraft.config.CreateConfig;
 
 public class YourItem2 extends Item {
     public YourItem2() {
-        super(new Settings().group(ItemGroups.SQUID_CRAFT).maxCount(Integer.parseInt(CreateConfig.properties.getProperty("yourItemTwoMaxCount"))));
+        super(new Settings().group(ItemGroups.SQUID_CRAFT).maxCount(Integer.parseInt(CreateConfig.PROPERTIES.getProperty("yourItemTwoMaxCount"))));
     }
 
     @Override

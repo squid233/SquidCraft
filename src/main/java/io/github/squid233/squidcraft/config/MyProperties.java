@@ -123,10 +123,12 @@ public class MyProperties extends Properties {
             this.isEmpty = list.isEmpty();
         }
 
+        @Override
         public boolean hasMoreElements() {
             return !isEmpty && index < list.size();
         }
 
+        @Override
         public T nextElement() {
             if (this.hasMoreElements()) {
                 return list.get(index++);

@@ -17,7 +17,7 @@ public enum ArmorMaterials implements ArmorMaterial {
         return Ingredient.ofItems(ItemRegister.SQUID_COOKIE);
     });
 
-    private static final int[] baseDurability = {13, 15, 16, 11};
+    private static final int[] BASE_DURABILITY = {13, 15, 16, 11};
     private final String name;
     private final int durabilityMultiplier;
     private final int[] protectionAmounts;
@@ -40,7 +40,7 @@ public enum ArmorMaterials implements ArmorMaterial {
 
     @Override
     public int getDurability(EquipmentSlot slot) {
-        return baseDurability[slot.getEntitySlotId()] * this.durabilityMultiplier;
+        return BASE_DURABILITY[slot.getEntitySlotId()] * this.durabilityMultiplier;
     }
 
     @Override
