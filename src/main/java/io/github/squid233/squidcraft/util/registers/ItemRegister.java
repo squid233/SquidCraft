@@ -37,7 +37,7 @@ public class ItemRegister {
     public static final Item COOKIE_CREEPER_SPAWN_EGG;
     public static final Item MILK_BUCKET;
 
-    public static final io.github.squid233.api.item.Item
+    public static final io.github.squid233.squidcraft.api.item.Item
             YOUR_ITEM = new YourItem(),
             YOUR_ITEM_2 = new YourItem2();
 
@@ -114,7 +114,7 @@ public class ItemRegister {
         return ItemRegisters.registerSword(MODID, name, item);
     }
 
-    private static void registerAll(io.github.squid233.api.item.Item... items) {
+    private static void registerAll(io.github.squid233.squidcraft.api.item.Item... items) {
         ItemRegisters.registerAll(MODID, items);
     }
 }

@@ -1,11 +1,11 @@
 package io.github.squid233.squidcraft.api;
 
-import io.github.squid233.api.util.Loggers;
+import io.github.squid233.squidcraft.api.util.Loggers;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
-import static io.github.squid233.api.util.Loggers.log;
+import static io.github.squid233.squidcraft.api.util.Loggers.log;
 
 /**
  * items register api → (item, tool and armor) register.
@@ -120,12 +120,12 @@ public class ItemRegisters {
     }
 
     /**
-     * <p>This method can collect {@linkplain io.github.squid233.api.item.Item items} and register.</p>
+     * <p>This method can collect {@linkplain io.github.squid233.squidcraft.api.item.Item items} and register.</p>
      * @param modid Mod identifier.
      * @param items The items.
      */
-    public static void registerAll(String modid, io.github.squid233.api.item.Item... items) {
-        for (io.github.squid233.api.item.Item item : items) {
+    public static void registerAll(String modid, io.github.squid233.squidcraft.api.item.Item... items) {
+        for (io.github.squid233.squidcraft.api.item.Item item : items) {
             register(modid, item.getRegistryName(), item);
         }
     }

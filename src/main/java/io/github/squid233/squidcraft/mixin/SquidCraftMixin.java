@@ -1,6 +1,6 @@
 package io.github.squid233.squidcraft.mixin;
 
-import io.github.squid233.api.util.Loggers;
+import io.github.squid233.squidcraft.api.util.Loggers;
 import io.github.squid233.squidcraft.client.gui.AuthorsGui;
 import io.github.squid233.squidcraft.config.CreateConfig;
 import net.minecraft.client.MinecraftClient;

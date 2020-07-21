@@ -1,7 +1,7 @@
 # SquidCraft
 
 ![https://travis-ci.org/squid233/SquidCraft.svg?branch=1.15.2](https://travis-ci.org/squid233/SquidCraft.svg) 
-![available for 1.16](https://img.shields.io/badge/available%20for-1.15.2%201.16-brightgreen) 
+![available for 1.16](https://img.shields.io/badge/available%20for-1.15.2%201.16.1-brightgreen) 
 ![available for fabric API](https://img.shields.io/badge/available%20for-fabric%20API-brightgreen)
 ![MIT License](https://img.shields.io/github/license/squid233/SquidCraft) 
 ![State:Alpha](https://img.shields.io/badge/state-Alpha-brightgreen)
@@ -27,7 +27,7 @@ squid233: ![followers](https://img.shields.io/github/followers/squid233?label=Fo
 
 This is a Minecraft mod adds more item with squid!  
 这是一个Minecraft mod，它添加了许多与鱿鱼有关的东西！  
-See updateinfo.md!
+See changelog.txt!
 
 ## Credits
 
@@ -50,5 +50,8 @@ fix config create and priority config create. ———— baka4n.
 - CurseForge: https://www.curseforge.com/minecraft/mc-mods/squidcraft 
 - MCMOD:  https://www.mcmod.cn/class/2507.html
 ---
+
+## API Use Guide
+Please go to [here](https://scope-tech.github.io/squidcraft/api-use-guide)
 
 ###### We recommend use the Chinese or English.

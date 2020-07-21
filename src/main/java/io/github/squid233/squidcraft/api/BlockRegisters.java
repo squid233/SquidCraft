@@ -1,13 +1,13 @@
 package io.github.squid233.squidcraft.api;
 
-import io.github.squid233.api.util.Loggers;
+import io.github.squid233.squidcraft.api.util.Loggers;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
-import static io.github.squid233.api.util.Loggers.log;
+import static io.github.squid233.squidcraft.api.util.Loggers.log;
 
 public class BlockRegisters {
     /**

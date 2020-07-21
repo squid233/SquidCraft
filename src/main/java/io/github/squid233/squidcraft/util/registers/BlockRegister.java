@@ -16,7 +16,7 @@ import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
-import static io.github.squid233.api.util.Loggers.log;
+import static io.github.squid233.squidcraft.api.util.Loggers.log;
 
 /**
  * You always register block, add {@link ItemGroups}, add lang, add blockstates, add models, add textures, add loot tables and add recipes.

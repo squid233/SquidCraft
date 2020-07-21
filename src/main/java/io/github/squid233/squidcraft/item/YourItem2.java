@@ -1,6 +1,6 @@
 package io.github.squid233.squidcraft.item;
 
-import io.github.squid233.api.item.Item;
+import io.github.squid233.squidcraft.api.item.Item;
 import io.github.squid233.squidcraft.config.CreateConfig;
 
 public class YourItem2 extends Item {

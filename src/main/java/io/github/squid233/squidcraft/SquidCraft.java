@@ -1,12 +1,12 @@
 package io.github.squid233.squidcraft;
 
-import io.github.squid233.api.util.MinecraftMod;
+import io.github.squid233.squidcraft.api.util.MinecraftMod;
 import io.github.squid233.squidcraft.config.CreateConfig;
 import io.github.squid233.squidcraft.util.handle.LootTablesHandle;
 import io.github.squid233.squidcraft.util.registers.*;
 import net.fabricmc.api.ModInitializer;
 
-import static io.github.squid233.api.util.Loggers.log;
+import static io.github.squid233.squidcraft.api.util.Loggers.log;
 
 /**
  * @author squid233 and baka4n → (logger4j test)!
