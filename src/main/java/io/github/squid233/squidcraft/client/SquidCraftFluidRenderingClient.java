@@ -3,6 +3,8 @@ package io.github.squid233.squidcraft.client;
 import io.github.squid233.squidcraft.SquidCraft;
 import io.github.squid233.squidcraft.util.registers.FluidRegister;
 import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandler;
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
@@ -25,6 +27,7 @@ import net.minecraft.world.BlockRenderView;
 import java.util.function.Function;
 
 @SuppressWarnings("unused")
+@Environment(EnvType.CLIENT)
 public final class SquidCraftFluidRenderingClient implements ClientModInitializer {
 
     @Override

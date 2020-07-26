@@ -1,5 +1,7 @@
 package io.github.squid233.squidcraft.block.tile;
 
+import io.github.squid233.squidcraft.SquidCraft;
+import io.github.squid233.squidcraft.client.gui.BiggerChestScreenHandler;
 import io.github.squid233.squidcraft.util.registers.BlockRegister;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.LootableContainerBlockEntity;
@@ -14,8 +16,7 @@ import net.minecraft.util.collection.DefaultedList;
 
 public class BiggerChestBlockEntity extends LootableContainerBlockEntity {
     private DefaultedList<ItemStack> inventory;
-    // 9 * 6 = 54
-    private static final int INVENTORY_SIZE = 54;
+    private static final int INVENTORY_SIZE = 54; // 9 * 6 = 54
 
     public BiggerChestBlockEntity() {
         super(BlockRegister.BIGGER_CHEST_ENTITY_TYPE);
@@ -24,12 +25,12 @@ public class BiggerChestBlockEntity extends LootableContainerBlockEntity {
 
     @Override
     protected Text getContainerName() {
-        return new TranslatableText("container.chest");
+        return new TranslatableText("container." + SquidCraft.MODID + ".bigger_chest");
     }
 
     @Override
-    public ScreenHandler createScreenHandler(int syncId, PlayerInventory playerInventory) {
-        return BlockRegister.BIGGER_CHEST_SCREEN_HANDLER_TYPE.create(syncId, playerInventory);
+    protected ScreenHandler createScreenHandler(int syncId, PlayerInventory playerInventory) {
+        return new BiggerChestScreenHandler(syncId, playerInventory, this);
     }
 
     @Override

@@ -2,7 +2,8 @@ package io.github.squid233.squidcraft.api.util;
 
 import io.github.squid233.squidcraft.config.CreateConfig;
 import org.apache.logging.log4j.LogManager;
-import org.jetbrains.annotations.NotNull;
+
+import java.util.Arrays;
 
 public class Loggers {
     /** Default false */
@@ -10,14 +11,19 @@ public class Loggers {
 
     /**
      * @param senderName logger name
-     * @param message logger info
+     * @param info logger info
      */
-    public static void log(String senderName, String message) {
-        LogManager.getLogger(senderName).info(message);
+    public static void logInfo(String senderName, String info) {
+        LogManager.getLogger(senderName).info(info);
     }
 
-    public static void log(@NotNull MinecraftMod mod, String message) {
-        log(mod.getModName(), message);
-    }
+    @SuppressWarnings("rawtypes")
+    public static void logInfo(Class minecraftMod, String info) {
+        Arrays.asList(minecraftMod.getDeclaredAnnotationsByType(MinecraftMod.class)).forEach(annotation -> {
+            if (annotation instanceof MinecraftMod) {
+                logInfo(((MinecraftMod) annotation).modid(), info);
+            }
+        });
 
+    }
 }

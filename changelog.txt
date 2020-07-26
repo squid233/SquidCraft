@@ -1,5 +1,16 @@
-2020-7-7 ~ 7-8 1.16-0.2.0
+2020-7-7 ~ 7-26 1.16-0.2.0
 
-1. delete 18 useless texture
+1. delete 20 useless texture
 2. fix shredded squid crop texture
-3. delete some useless i18n
+3. delete some useless translation
+4. move "io.github.squid233.api" to "io.github.squid233.squidcraft.api"
+5. delete "io.github.squid233.squidcraft.api.block" pack
+6. add new API: io.github.squid233.squidcraft.api.item.ItemFood"
+6. add new API: io.github.squid233.squidcraft.api.block.BlockFood"
+7. fix translation
+8. add new entity: cube
+9. cube can spawn in plains
+10. change some blocks' hunger and saturation
+
+To-do List
+TODO cookie creeper can't spawn

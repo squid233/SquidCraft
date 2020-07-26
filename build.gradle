@@ -20,7 +20,9 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
 	// uncomment to import JetBrains annotation
-	compileOnly "org.jetbrains:annotations:18.0.0"
+	// compileOnly "org.jetbrains:annotations:18.0.0"
+
+	compileOnly "com.google.code.findbugs:jsr305:3.0.2"
 
 	// PSA: Some older mods, compiled on Loom 0.2.1, might have outdated Maven POMs.
 	// You may need to force-disable transitiveness on them.

@@ -1,11 +1,8 @@
 package io.github.squid233.squidcraft.world.biome;
 
 import com.google.common.collect.ImmutableList;
-import io.github.squid233.squidcraft.util.ModBiomes;
-import io.github.squid233.squidcraft.util.ModEntities;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.SpawnGroup;
 import net.minecraft.sound.BiomeMoodSound;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeEffects;
@@ -27,7 +24,7 @@ import static net.minecraft.world.gen.feature.StructureFeature.SHIPWRECK;
 
 public class ChaosSquidBiome extends Biome {
     public ChaosSquidBiome() {
-        super((new Biome.Settings()).configureSurfaceBuilder(SurfaceBuilder.DEFAULT, SurfaceBuilder.GRASS_CONFIG).precipitation(Biome.Precipitation.RAIN).category(Category.OCEAN).depth(0.125F).scale(0.05F).temperature(0.8F).downfall(0.4F).effects((new BiomeEffects.Builder()).waterColor(4159204).waterFogColor(329011).fogColor(12638463).moodSound(BiomeMoodSound.CAVE).build()).parent(ModBiomes.SQUID_BIOME.getName().asString()).noises(ImmutableList.of(new Biome.MixedNoisePoint(0.0F, 0.0F, 0.0F, 0.0F, 1.0F))));
+        super((new Biome.Settings()).configureSurfaceBuilder(SurfaceBuilder.DEFAULT, SurfaceBuilder.GRASS_CONFIG).precipitation(Biome.Precipitation.RAIN).category(Category.OCEAN).depth(0.125F).scale(0.05F).temperature(0.8F).downfall(0.4F).effects((new BiomeEffects.Builder()).waterColor(4159204).waterFogColor(329011).fogColor(12638463).moodSound(BiomeMoodSound.CAVE).build()).parent(null).noises(ImmutableList.of(new Biome.MixedNoisePoint(0.0F, 0.0F, 0.0F, 0.0F, 1.0F))));
         this.addStructureFeature(MINESHAFT.configure(new MineshaftFeatureConfig(0.004D, NORMAL)));
         this.addStructureFeature(SHIPWRECK.configure(new ShipwreckFeatureConfig(false)));
         adds(this);
@@ -35,7 +32,6 @@ public class ChaosSquidBiome extends Biome {
         spawn(SQUID, 96, 4, 6);
         spawn(COD, 10, 3, 6);
         spawn(DOLPHIN, 2, 1, 2);
-        this.addSpawn(SpawnGroup.CREATURE, new SpawnEntry(ModEntities.COOKIE_CREEPER, 1, 1, 2));
 
     }
 

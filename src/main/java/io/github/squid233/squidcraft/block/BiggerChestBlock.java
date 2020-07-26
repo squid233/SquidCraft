@@ -1,17 +1,15 @@
 package io.github.squid233.squidcraft.block;
 
 import io.github.squid233.squidcraft.block.tile.BiggerChestBlockEntity;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import io.github.squid233.squidcraft.util.registers.BlockRegister;
+import net.fabricmc.fabric.api.container.ContainerProviderRegistry;
 import net.minecraft.block.BlockRenderType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.BlockWithEntity;
-import net.minecraft.block.Material;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.inventory.Inventory;
 import net.minecraft.item.ItemStack;
-import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
@@ -22,15 +20,18 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 
 public class BiggerChestBlock extends BlockWithEntity {
-    public BiggerChestBlock() {
-        super(FabricBlockSettings.of(Material.METAL));
+
+    public BiggerChestBlock(Settings settings) {
+        super(settings);
     }
 
+    // A side effect of extending BlockWithEntity is it changes the render type to INVISIBLE, so we have to revert this
     @Override
     public BlockRenderType getRenderType(BlockState state) {
         return BlockRenderType.MODEL;
     }
 
+    // We will create the BlockEntity later.
     @Override
     public BlockEntity createBlockEntity(BlockView view) {
         return new BiggerChestBlockEntity();
@@ -46,28 +47,26 @@ public class BiggerChestBlock extends BlockWithEntity {
         }
     }
 
-
-
-    @SuppressWarnings("deprecation")
     @Override
+    @SuppressWarnings("deprecation")
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         if (!world.isClient) {
             BlockEntity blockEntity = world.getBlockEntity(pos);
             if (blockEntity instanceof BiggerChestBlockEntity) {
-                NamedScreenHandlerFactory factory = new BiggerChestBlockEntity();
-                player.openHandledScreen(factory);
+                ContainerProviderRegistry.INSTANCE.openContainer(BlockRegister.BIGGER_CHEST, player, buf -> buf.writeBlockPos(pos));
             }
         }
         return ActionResult.SUCCESS;
     }
 
-    @SuppressWarnings("deprecation")
+    // Scatter the items in the chest when it is removed.
     @Override
+    @SuppressWarnings("deprecation")
     public void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved) {
         if (state.getBlock() != newState.getBlock()) {
             BlockEntity blockEntity = world.getBlockEntity(pos);
             if (blockEntity instanceof BiggerChestBlockEntity) {
-                ItemScatterer.spawn(world, pos, (Inventory) blockEntity);
+                ItemScatterer.spawn(world, pos, (BiggerChestBlockEntity)blockEntity);
                 // update comparators
                 world.updateComparators(pos, this);
             }
@@ -75,15 +74,16 @@ public class BiggerChestBlock extends BlockWithEntity {
         }
     }
 
-    @SuppressWarnings("deprecation")
     @Override
+    @SuppressWarnings("deprecation")
     public boolean hasComparatorOutput(BlockState state) {
         return true;
     }
 
-    @SuppressWarnings("deprecation")
     @Override
+    @SuppressWarnings("deprecation")
     public int getComparatorOutput(BlockState state, World world, BlockPos pos) {
         return ScreenHandler.calculateComparatorOutput(world.getBlockEntity(pos));
     }
+
 }

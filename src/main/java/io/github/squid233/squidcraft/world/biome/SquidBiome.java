@@ -34,7 +34,6 @@ public class SquidBiome extends Biome {
         spawn(SQUID, 96, 4, 6);
         spawn(COD, 10, 3, 6);
         spawn(DOLPHIN, 2, 1, 2);
-        this.addSpawn(SpawnGroup.CREATURE, new SpawnEntry(ModEntities.COOKIE_CREEPER, 1, 1, 2));
 
     }
 

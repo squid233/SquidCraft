@@ -13,7 +13,8 @@
   "item.squidcraft.squid_shovel": "Squid Shovel",
   "item.squidcraft.squid_sword": "Squid Sword",
 
-  "item.squidcraft.cookie_creeper_spawn_egg":"Spawn Cookie Creeper",
+  "item.squidcraft.cookie_creeper_spawn_egg":"Cookie Creeper Spawn Egg",
+  "item.squidcraft.cube_spawn_egg":"Cube Spawn Egg",
 
   "item.squidcraft.your_item": "Your Item",
   "item.squidcraft.your_item_2": "Your Item 2",
@@ -51,12 +52,14 @@
 
   "block.squidcraft.shredded_squid_crop": "Shredded Squid Crop",
 
+  "container.squidcraft.bigger_chest": "Bigger Chest",
   "container.squidcraft.bigger_chest_block": "Bigger Chest",
 
   "biome.squidcraft.squid_biome": "Squid Biome",
   "biome.squidcraft.chaos_squid_biome": "Chaos Squid Biome",
 
-  "entity_type.squidcraft.cookie_creeper": "Cookie Creeper",
+  "entity.squidcraft.cookie_creeper": "Cookie Creeper",
+  "entity.squidcraft.cube": "Cube",
 
   "enchantment.squidcraft.frost": "Frost",
   "enchantment.squidcraft.fire_boom": "Fire Boom",
@@ -84,5 +87,8 @@
   "itemGroup.squidcraft.yummyfood": "YummyFood",
   "item.squidcraft.pineapple": "Pineapple",
   "item.squidcraft.tomato": "Tomato",
-  "item.squidcraft.tomato.tooltip": "Now date: era of %n, year of %n, month of %n, day of %n"
+
+  "item.food.hunger": "Hunger: %d",
+  "item.food.saturation": "Saturation: %f",
+  "item.food.isWolfFood": "Can feed the wolf: %s"
 }
