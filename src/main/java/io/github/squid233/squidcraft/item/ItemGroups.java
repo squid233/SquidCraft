@@ -49,6 +49,7 @@ public class ItemGroups {
                 stacks.add(new ItemStack(BIGGER_CHEST_BLOCK));
 
                 stacks.add(new ItemStack(COOKIE_CREEPER_SPAWN_EGG));
+                stacks.add(new ItemStack(CUBE_SPAWN_EGG));
                 stacks.add(new ItemStack(YOUR_ITEM));
                 stacks.add(new ItemStack(YOUR_ITEM_2));
 

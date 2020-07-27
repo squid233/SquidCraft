@@ -1,4 +1,4 @@
-2020-7-7 ~ 7-26 1.16-0.2.0
+2020-7-7 ~ 7-27 1.16-0.2.0
 
 1. delete 20 useless texture
 2. fix shredded squid crop texture
@@ -11,6 +11,6 @@
 8. add new entity: cube
 9. cube can spawn in plains
 10. change some blocks' hunger and saturation
-
-To-do List
-TODO cookie creeper can't spawn
+11. milk fluid can place now
+    1. use minecraft:milk_bucket to craft squidcraft:milk_bucket
+    2. place milk fluid
