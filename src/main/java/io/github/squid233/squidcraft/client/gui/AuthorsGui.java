@@ -1,9 +1,11 @@
 package io.github.squid233.squidcraft.client.gui;
 
 import net.minecraft.client.gui.screen.Screen;
+import net.minecraft.client.gui.screen.ScreenTexts;
 import net.minecraft.client.gui.widget.ButtonWidget;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.text.LiteralText;
+import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 
 public class AuthorsGui extends Screen {
@@ -25,12 +27,11 @@ public class AuthorsGui extends Screen {
 
     @Override
     public void init() {
-        super.init();
-        myButton(3 * this.width / 4, 8 * this.height / 9, "authors.squidcraft.back", (buttonWidget) -> this.screen.onClose());
+        myButton(3 * this.width / 4, 8 * this.height / 9, ScreenTexts.BACK, (buttonWidget) -> this.screen.onClose());
     }
 
-    private void myButton(int x, int y, String translationKey, ButtonWidget.PressAction button) {
-        this.addButton(new ButtonWidget(x, y, 100, 20, new TranslatableText(translationKey), button));
+    private void myButton(int x, int y, Text text, ButtonWidget.PressAction button) {
+        this.addButton(new ButtonWidget(x, y, 100, 20, text, button));
     }
 
     private void tooltip(String translationKey, int x, int y) {

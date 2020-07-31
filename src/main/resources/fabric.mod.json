@@ -10,12 +10,12 @@
     "baka4n"
   ],
   "contact": {
-    "homepage": "https://scope-tech.github.io",
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/squidcraft",
     "issues": "https://github.com/squid233/SquidCraft/issues",
     "sources": "https://github.com/squid233/SquidCraft"
   },
 
-  "license": "MIT License",
+  "license": "MIT",
   "icon": "assets/squidcraft/icon.png",
 
   "environment": "*",
@@ -26,7 +26,10 @@
     ],
     "client": [
       "io.github.squid233.squidcraft.client.SquidCraftClient",
-      "io.github.squid233.squidcraft.client.SquidCraftFluidRenderingClient"
+      "io.github.squid233.squidcraft.client.SquidCraftFluidRenderClient"
+    ],
+    "modmenu": [
+      "io.github.squid233.squidcraft.modmenu.SquidCraftModMenuApiImpl"
     ]
   },
   "mixins": [

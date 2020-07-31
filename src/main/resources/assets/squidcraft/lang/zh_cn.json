@@ -80,9 +80,10 @@
 
   "key.squidcraft.useless_key": "没用的按键",
 
-  "authors.squidcraft.back": "返回",
-  "squidcraft.button.text": "鱿鱼工艺",
+  "screen.config.squidcraft": "鱿鱼工艺配置",
+  "button.squidcraft.text": "鱿鱼工艺",
   "authors.squidcraft.info": "作者名单：",
+  "button.reset.text": "重置至默认值",
 
   "itemGroup.squidcraft.yummyfood": "美味的食物",
   "item.squidcraft.pineapple": "菠萝",

@@ -28,7 +28,7 @@ import java.util.function.Function;
 
 @SuppressWarnings("unused")
 @Environment(EnvType.CLIENT)
-public final class SquidCraftFluidRenderingClient implements ClientModInitializer {
+public final class SquidCraftFluidRenderClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {

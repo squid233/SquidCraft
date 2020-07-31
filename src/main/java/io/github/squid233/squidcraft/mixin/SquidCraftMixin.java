@@ -44,7 +44,7 @@ public abstract class SquidCraftMixin extends Screen {
     @Overwrite
     private void initWidgetsNormal(int y, int spacingY) {
         if ("false".equals(CreateConfig.PROPERTIES.getProperty("hideMainScreenButton"))) {
-            this.addButton(new ButtonWidget(this.width / 2, y + spacingY, 100, 20, new TranslatableText("squidcraft.button.text"), (action) -> {
+            this.addButton(new ButtonWidget(this.width / 2, y + spacingY, 100, 20, new TranslatableText("button.squidcraft.text"), (action) -> {
                 MinecraftClient.getInstance().openScreen(new AuthorsGui(this));
                 log("By Squid233 & baka4n");
             }));

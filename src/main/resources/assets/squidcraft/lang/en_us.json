@@ -80,9 +80,10 @@
 
   "key.squidcraft.useless_key": "Useless Key",
 
-  "authors.squidcraft.back": "back",
-  "squidcraft.button.text":"SquidCraft",
-  "authors.squidcraft.info": "authors:",
+  "screen.config.squidcraft": "SquidCraft Config",
+  "button.squidcraft.text":"SquidCraft",
+  "authors.squidcraft.info": "Authors:",
+  "button.reset.text": "Reset to default value",
 
   "itemGroup.squidcraft.yummyfood": "YummyFood",
   "item.squidcraft.pineapple": "Pineapple",

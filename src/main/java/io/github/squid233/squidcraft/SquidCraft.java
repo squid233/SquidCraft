@@ -1,7 +1,6 @@
 package io.github.squid233.squidcraft;
 
 import io.github.squid233.squidcraft.api.util.Loggers;
-import io.github.squid233.squidcraft.api.util.MinecraftMod;
 import io.github.squid233.squidcraft.config.CreateConfig;
 import io.github.squid233.squidcraft.util.ModEntities;
 import io.github.squid233.squidcraft.util.handle.LootTablesHandle;
@@ -11,7 +10,6 @@ import net.fabricmc.api.ModInitializer;
 /**
  * @author squid233 and baka4n → (logger4j test)!
  */
-@MinecraftMod(modid = SquidCraft.MODID)
 public final class SquidCraft implements ModInitializer {
 
 	public static final String MODID = "squidcraft";
@@ -37,7 +35,7 @@ public final class SquidCraft implements ModInitializer {
 	}
 
 	public static void logInfo(String info) {
-		Loggers.logInfo(SquidCraft.class, info);
+		Loggers.logInfo("SquidCraft", info);
 	}
 
 }

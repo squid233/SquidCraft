@@ -14,7 +14,6 @@ import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.fabricmc.fabric.api.client.rendereregistry.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.client.screen.ScreenProviderRegistry;
-import net.fabricmc.fabric.impl.client.keybinding.KeyBindingRegistryImpl;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.text.TranslatableText;
@@ -26,7 +25,6 @@ import static io.github.squid233.squidcraft.util.KeyBindings.KEY_BINDING_0;
 public final class SquidCraftClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
-        KeyBindingRegistryImpl.addCategory("SquidCraft");
         KeyBindingHelper.registerKeyBinding(KEY_BINDING_0);
         ClientTickEvents.END_CLIENT_TICK.register(e -> {
             if (KEY_BINDING_0.isPressed()) {
