@@ -51,6 +51,7 @@
   "fluid.squidcraft.flowing_milk": "Flowing Milk",
   "fluid.squidcraft.milk": "Milk",
 
+  "item.food.alwaysEdible": "Always Edible",
   "item.food.hunger": "Hunger: %d",
   "item.food.isWolfFood": "Can feed the wolf: %s",
   "item.food.saturation": "Saturation: %f",

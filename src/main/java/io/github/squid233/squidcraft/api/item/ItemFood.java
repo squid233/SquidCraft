@@ -100,6 +100,7 @@ public class ItemFood extends Item {
                 tooltip.add(new TranslatableText("item.food.hunger", hunger));
                 tooltip.add(new TranslatableText("item.food.saturation", saturationModifier));
                 tooltip.add(new TranslatableText("item.food.isWolfFood", true));
+                tooltip.add(new TranslatableText("item.food.alwaysEdible"));
             }
 
         }

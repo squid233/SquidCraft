@@ -51,6 +51,7 @@
   "fluid.squidcraft.flowing_milk": "流动的牛奶",
   "fluid.squidcraft.milk": "牛奶",
 
+  "item.food.alwaysEdible": "总能吃",
   "item.food.hunger": "饥饿值：%d",
   "item.food.isWolfFood": "能喂狼吗：%s",
   "item.food.saturation": "饱和度：%f",

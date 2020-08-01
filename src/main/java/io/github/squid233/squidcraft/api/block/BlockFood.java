@@ -11,7 +11,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.world.BlockView;
-import net.minecraft.world.World;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -41,12 +40,10 @@ public class BlockFood {
             tooltip.add(new TranslatableText("item.food.hunger", hunger));
             tooltip.add(new TranslatableText("item.food.saturation", saturationModifier));
             tooltip.add(new TranslatableText("item.food.isWolfFood", true));
+            tooltip.add(new TranslatableText("item.food.alwaysEdible"));
         }
 
         public static class ItemBlock extends BlockItem {
-
-            private final int hunger;
-            private final float saturationModifier;
 
             public ItemBlock(SquidCraftFood block) {
                 super(block,
@@ -57,23 +54,12 @@ public class BlockFood {
                                                 .hunger(block.hunger)
                                                 .saturationModifier(block.saturationModifier)
                                                 .meat().alwaysEdible().build()));
-                hunger = block.hunger;
-                saturationModifier = block.saturationModifier;
             }
 
             public ItemBlock(Block block) {
                 this((SquidCraftFood) block);
             }
 
-            @Override
-            public void appendTooltip(ItemStack stack,
-                                      @Nullable World world,
-                                      List<Text> tooltip,
-                                      TooltipContext context) {
-                tooltip.add(new TranslatableText("item.food.hunger", hunger));
-                tooltip.add(new TranslatableText("item.food.saturation", saturationModifier));
-                tooltip.add(new TranslatableText("item.food.isWolfFood", true));
-            }
         }
     }
 }
