@@ -2,7 +2,7 @@ package io.github.squid233.squidcraft.block.tile;
 
 import io.github.squid233.squidcraft.SquidCraft;
 import io.github.squid233.squidcraft.client.gui.BiggerChestScreenHandler;
-import io.github.squid233.squidcraft.util.registers.BlockRegister;
+import io.github.squid233.squidcraft.util.register.BlockRegister;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.LootableContainerBlockEntity;
 import net.minecraft.entity.player.PlayerInventory;

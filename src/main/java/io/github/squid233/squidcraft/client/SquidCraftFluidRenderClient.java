@@ -1,7 +1,7 @@
 package io.github.squid233.squidcraft.client;
 
 import io.github.squid233.squidcraft.SquidCraft;
-import io.github.squid233.squidcraft.util.registers.FluidRegister;
+import io.github.squid233.squidcraft.util.register.FluidRegister;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;

@@ -1,7 +1,7 @@
 package io.github.squid233.squidcraft.world.feature;
 
 import com.mojang.serialization.Codec;
-import io.github.squid233.squidcraft.util.registers.BlockRegister;
+import io.github.squid233.squidcraft.util.register.BlockRegister;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.Heightmap;

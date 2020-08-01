@@ -1,6 +1,10 @@
 package io.github.squid233.squidcraft.config;
 
+import org.intellij.lang.annotations.MagicConstant;
+
 import java.io.*;
+
+import static io.github.squid233.squidcraft.config.Configs.*;
 
 /**
  *@author baka4n
@@ -10,6 +14,13 @@ import java.io.*;
 public class CreateConfig {
     public static final String SEPARATOR = File.separator + File.separator;
 	public static final MyProperties PROPERTIES = new MyProperties();
+
+	public static final String[] configs = {
+	        "hideMainScreenButton", "squidBlockSpawnSize", "squidBlockPerChunkSpawnCount", "squidBlockSpawnMinYLevel",
+            "squidBlockSpawnMaxYLevel", "electricPowerMaxLevel", "yourItemMaxCount", "yourItemTwoMaxCount",
+            "enableRegisterLog"
+    };
+
     public static void create() {
         File configs = new File("config");
         File squidcraft = new File("config" + SEPARATOR + "squidcraft");
@@ -28,7 +39,9 @@ public class CreateConfig {
             putIn2("yourItemMaxCount", "64", "yourItemTwoMaxCount", "64");
             putIn("enableRegisterLog", "false");
             try {
-                PROPERTIES.store(new BufferedOutputStream(new FileOutputStream("config" + SEPARATOR + "squidcraft" + SEPARATOR + "config.properties")), "save Config File.");
+                PROPERTIES.store(new BufferedOutputStream(
+                        new FileOutputStream("config" + SEPARATOR + "squidcraft" + SEPARATOR + "config.properties")),
+                        "save Config File.");
             } catch (IOException f) {
                 f.printStackTrace();
             }
@@ -43,6 +56,34 @@ public class CreateConfig {
 
     public static void putIn2(String s1, String s2, String s3, String s4) {
         putIn(s1, s2);
-        PROPERTIES.put(s3, s4);
+        putIn(s3, s4);
+    }
+
+    public static String get(@MagicConstant(intValues = {
+            HIDE_MAIN_SCREEN_BUTTON, SQUID_BLOCK_SPAWN_SIZE, SQUID_BLOCK_PER_CHUNK_SPAWN_COUNT, SQUID_BLOCK_SPAWN_MIN_Y_LEVEL,
+            SQUID_BLOCK_SPAWN_MAX_Y_LEVEL, ELECTRIC_POWER_MAX_LEVEL, YOUR_ITEM_MAX_COUNT, YOUR_ITEM_2_MAX_VALUE,
+            ENABLE_REGISTER_LOG
+    }) int index) {
+        try {
+            return PROPERTIES.getProperty(configs[index]);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            return PROPERTIES.getProperty(configs[0]);
+        }
+    }
+
+    public static int getInt(@MagicConstant(intValues = {
+            HIDE_MAIN_SCREEN_BUTTON, SQUID_BLOCK_SPAWN_SIZE, SQUID_BLOCK_PER_CHUNK_SPAWN_COUNT, SQUID_BLOCK_SPAWN_MIN_Y_LEVEL,
+            SQUID_BLOCK_SPAWN_MAX_Y_LEVEL, ELECTRIC_POWER_MAX_LEVEL, YOUR_ITEM_MAX_COUNT, YOUR_ITEM_2_MAX_VALUE,
+            ENABLE_REGISTER_LOG
+    }) int index) {
+        return Integer.parseInt(get(index));
+    }
+
+    public static boolean getBoolean(@MagicConstant(intValues = {
+            HIDE_MAIN_SCREEN_BUTTON, SQUID_BLOCK_SPAWN_SIZE, SQUID_BLOCK_PER_CHUNK_SPAWN_COUNT, SQUID_BLOCK_SPAWN_MIN_Y_LEVEL,
+            SQUID_BLOCK_SPAWN_MAX_Y_LEVEL, ELECTRIC_POWER_MAX_LEVEL, YOUR_ITEM_MAX_COUNT, YOUR_ITEM_2_MAX_VALUE,
+            ENABLE_REGISTER_LOG
+    }) int index) {
+        return Boolean.parseBoolean(get(index));
     }
 }

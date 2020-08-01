@@ -22,7 +22,7 @@ dependencies {
 	modImplementation "io.github.prospector:modmenu:${project.modmenu_version}"
 
 	// uncomment to import JetBrains annotation
-	// compileOnly "org.jetbrains:annotations:18.0.0"
+	compileOnly "org.jetbrains:annotations:18.0.0"
 
 	compileOnly "com.google.code.findbugs:jsr305:3.0.2"
 

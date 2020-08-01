@@ -1,7 +1,7 @@
 package io.github.squid233.squidcraft.fluid;
 
-import io.github.squid233.squidcraft.util.registers.FluidRegister;
-import io.github.squid233.squidcraft.util.registers.ItemRegister;
+import io.github.squid233.squidcraft.util.register.FluidRegister;
+import io.github.squid233.squidcraft.util.register.ItemRegister;
 import net.minecraft.block.BlockState;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.FluidState;

@@ -1,5 +1,6 @@
 package io.github.squid233.squidcraft.enchantment;
 
+import io.github.squid233.squidcraft.config.Configs;
 import io.github.squid233.squidcraft.config.CreateConfig;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentTarget;
@@ -21,7 +22,7 @@ public class ElectricPowerEnchantment extends Enchantment {
 
     @Override
     public int getMaxLevel() {
-        return Integer.parseInt(CreateConfig.PROPERTIES.getProperty("electricPowerMaxLevel"));
+        return CreateConfig.getInt(Configs.ELECTRIC_POWER_MAX_LEVEL);
     }
 
     @Override

@@ -2,6 +2,7 @@ package io.github.squid233.squidcraft.mixin;
 
 import io.github.squid233.squidcraft.SquidCraft;
 import io.github.squid233.squidcraft.client.gui.AuthorsGui;
+import io.github.squid233.squidcraft.config.Configs;
 import io.github.squid233.squidcraft.config.CreateConfig;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.Screen;
@@ -43,7 +44,7 @@ public abstract class SquidCraftMixin extends Screen {
      */
     @Overwrite
     private void initWidgetsNormal(int y, int spacingY) {
-        if ("false".equals(CreateConfig.PROPERTIES.getProperty("hideMainScreenButton"))) {
+        if ("false".equals(CreateConfig.get(Configs.HIDE_MAIN_SCREEN_BUTTON))) {
             this.addButton(new ButtonWidget(this.width / 2, y + spacingY, 100, 20, new TranslatableText("button.squidcraft.text"), (action) -> {
                 MinecraftClient.getInstance().openScreen(new AuthorsGui(this));
                 log("By Squid233 & baka4n");

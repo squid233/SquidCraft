@@ -1,6 +1,6 @@
 package io.github.squid233.squidcraft.armor;
 
-import io.github.squid233.squidcraft.util.registers.ItemRegister;
+import io.github.squid233.squidcraft.util.register.ItemRegister;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.entity.EquipmentSlot;

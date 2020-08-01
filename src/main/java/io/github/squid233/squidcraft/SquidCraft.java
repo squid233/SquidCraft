@@ -4,7 +4,7 @@ import io.github.squid233.squidcraft.api.util.Loggers;
 import io.github.squid233.squidcraft.config.CreateConfig;
 import io.github.squid233.squidcraft.util.ModEntities;
 import io.github.squid233.squidcraft.util.handle.LootTablesHandle;
-import io.github.squid233.squidcraft.util.registers.*;
+import io.github.squid233.squidcraft.util.register.*;
 import net.fabricmc.api.ModInitializer;
 
 /**
@@ -31,6 +31,8 @@ public final class SquidCraft implements ModInitializer {
 		logInfo("loot table register success");
 		new ModEntities();
 		logInfo("entities register success");
+		new SoundsRegister();
+		logInfo("sounds register success");
 		logInfo("load on initialize success");
 	}
 

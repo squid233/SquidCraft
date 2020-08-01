@@ -1,4 +1,4 @@
-package io.github.squid233.squidcraft.util.registers;
+package io.github.squid233.squidcraft.util.register;
 
 import io.github.squid233.squidcraft.SquidCraft;
 import io.github.squid233.squidcraft.fluid.MilkFluid;

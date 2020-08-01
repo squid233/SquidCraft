@@ -1,6 +1,6 @@
 package io.github.squid233.squidcraft.util.handle;
 
-import io.github.squid233.squidcraft.util.registers.ItemRegister;
+import io.github.squid233.squidcraft.util.register.ItemRegister;
 import net.fabricmc.fabric.api.loot.v1.FabricLootPoolBuilder;
 import net.fabricmc.fabric.api.loot.v1.event.LootTableLoadingCallback;
 import net.minecraft.loot.ConstantLootTableRange;

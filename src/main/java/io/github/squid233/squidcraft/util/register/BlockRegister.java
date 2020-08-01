@@ -1,4 +1,4 @@
-package io.github.squid233.squidcraft.util.registers;
+package io.github.squid233.squidcraft.util.register;
 
 import io.github.squid233.squidcraft.SquidCraft;
 import io.github.squid233.squidcraft.api.BlockRegisters;
@@ -9,12 +9,15 @@ import io.github.squid233.squidcraft.api.util.Loggers;
 import io.github.squid233.squidcraft.block.BiggerChestBlock;
 import io.github.squid233.squidcraft.block.SquidSideBlock;
 import io.github.squid233.squidcraft.block.tile.BiggerChestBlockEntity;
+import io.github.squid233.squidcraft.client.gui.BiggerChestScreenHandler;
 import io.github.squid233.squidcraft.item.ItemGroups;
 import net.fabricmc.fabric.api.container.ContainerProviderRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.screenhandler.v1.ScreenHandlerRegistry;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.item.*;
+import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Util;
 import net.minecraft.util.math.BlockPos;
@@ -73,8 +76,7 @@ public class BlockRegister {
 
     public static final Identifier BIGGER_CHEST = new Identifier(SquidCraft.MODID, "bigger_chest_block");
     public static final String BIGGER_CHEST_TRANSLATION_KEY = Util.createTranslationKey("container", BIGGER_CHEST);
-    /*public static final ScreenHandlerType<BiggerChestScreenHandler> BIGGER_CHEST_SCREEN_HANDLER_TYPE =
-        ScreenHandlerRegistry.registerSimple(BIGGER_CHEST, BiggerChestScreenHandler::new); */
+    public static final ScreenHandlerType<BiggerChestScreenHandler> BIGGER_CHEST_SCREEN_HANDLER_TYPE = ScreenHandlerRegistry.registerSimple(BIGGER_CHEST, BiggerChestScreenHandler::new);
 
     public static BlockEntityType<BiggerChestBlockEntity> BIGGER_CHEST_ENTITY_TYPE;
 
@@ -102,8 +104,7 @@ public class BlockRegister {
         // Multi squid blocks end
 
         SQUID_SIDE_BLOCK = register("squid_side_block", new SquidSideBlock(FabricBlockSettings.of(Material.SOIL).hardness(0.5f)),
-                new Item.Settings().group(SQUID_CRAFT).food(
-                        new FoodComponent.Builder().hunger(700).saturationModifier(64).meat().alwaysEdible().build()));
+                new Item.Settings().group(SQUID_CRAFT).food(new FoodComponent.Builder().hunger(700).saturationModifier(64).meat().alwaysEdible().build()));
 
         BIGGER_CHEST_BLOCK = new BiggerChestBlock(FabricBlockSettings.of(Material.METAL));
 

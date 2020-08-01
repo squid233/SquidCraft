@@ -1,4 +1,4 @@
-package io.github.squid233.squidcraft.util.registers;
+package io.github.squid233.squidcraft.util.register;
 
 import io.github.squid233.squidcraft.util.ModBiomes;
 import io.github.squid233.squidcraft.world.Features;

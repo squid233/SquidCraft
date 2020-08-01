@@ -1,5 +1,7 @@
 package io.github.squid233.squidcraft.client.gui;
 
+import io.github.squid233.squidcraft.block.tile.BiggerChestBlockEntity;
+import io.github.squid233.squidcraft.util.register.BlockRegister;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventory;
@@ -12,7 +14,7 @@ public class BiggerChestScreenHandler extends ScreenHandler {
     private static final int INVENTORY_SIZE = 54; // 6 rows * 9 cols
 
     public BiggerChestScreenHandler(int syncId, PlayerInventory playerInventory, Inventory inventory) {
-        super(null, syncId); // Since we didn't create a ContainerType, we will place null here.
+        super(BlockRegister.BIGGER_CHEST_SCREEN_HANDLER_TYPE, syncId); // Since we didn't create a ContainerType, we will place null here.
         this.inventory = inventory;
         checkSize(inventory, INVENTORY_SIZE);
         inventory.onOpen(playerInventory.player);
@@ -40,6 +42,10 @@ public class BiggerChestScreenHandler extends ScreenHandler {
         for (j = 0; j < 9; j++) {
             this.addSlot(new Slot(playerInventory, j, 8 + j * 18, 18 + 161 + 18));
         }
+    }
+
+    public BiggerChestScreenHandler(int syncId, PlayerInventory playerInventory) {
+        this(syncId, playerInventory, new BiggerChestBlockEntity());
     }
 
     @Override

@@ -1,6 +1,7 @@
 package io.github.squid233.squidcraft.modmenu;
 
 import io.github.prospector.modmenu.api.ConfigScreenFactory;
+import io.github.squid233.squidcraft.config.Configs;
 import io.github.squid233.squidcraft.config.CreateConfig;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.screen.ScreenTexts;
@@ -15,21 +16,22 @@ public class SquidCraftConfigScreen extends Screen implements ConfigScreenFactor
     private ButtonWidget hideMainScreenButtonConfig;
 
     private int paneWidth;
+    private int textFieldWidth = paneWidth - 32 - 22;
 
     protected SquidCraftConfigScreen(Screen previous) {
         super(new TranslatableText("screen.config.squidcraft"));
 
         previousScreen = previous;
         paneWidth = width / 2 - 8;
-        int textFieldWidth = paneWidth - 32 - 22;
 
-        hideMainScreenButtonConfig = new ButtonWidget(20, 22, 100, 20,
-                new LiteralText(CreateConfig.PROPERTIES.getProperty("hideMainScreenButton")), button -> {
-            if ("false".equals(CreateConfig.PROPERTIES.getProperty("hideMainScreenButton"))) {
+        hideMainScreenButtonConfig = new ButtonWidget(120, 22, textFieldWidth, 20,
+                new LiteralText(CreateConfig.get(Configs.HIDE_MAIN_SCREEN_BUTTON)), button -> {
+            if ("false".equals(CreateConfig.get(Configs.HIDE_MAIN_SCREEN_BUTTON))) {
                 CreateConfig.PROPERTIES.setProperty("hideMainScreenButton", "true");
-                hideMainScreenButtonConfig.
+                hideMainScreenButtonConfig.setMessage(NormalTexts.TRUE);
             } else {
                 CreateConfig.PROPERTIES.setProperty("hideMainScreenButton", "false");
+                hideMainScreenButtonConfig.setMessage(NormalTexts.FALSE);
             }
         });
     }

@@ -51,5 +51,4 @@ public class SquidSideBlock extends HorizontalFacingBlock {
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         return this.getDefaultState().with(FACING, ctx.getPlayerFacing());
     }
-
 }

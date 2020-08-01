@@ -6,8 +6,8 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 
-import static io.github.squid233.squidcraft.util.registers.ItemRegister.*;
-import static io.github.squid233.squidcraft.util.registers.BlockRegister.*;
+import static io.github.squid233.squidcraft.util.register.ItemRegister.*;
+import static io.github.squid233.squidcraft.util.register.BlockRegister.*;
 
 public class ItemGroups {
     /**
@@ -55,6 +55,8 @@ public class ItemGroups {
 
                 stacks.add(new ItemStack(SOUL_JACK_O_LANTERN));
                 stacks.add(new ItemStack(MILK_BUCKET));
+
+                stacks.add(new ItemStack(MUSIC_RECORD));
             })
             .build();
 

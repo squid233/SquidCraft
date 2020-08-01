@@ -1,4 +1,4 @@
-package io.github.squid233.squidcraft.util.registers;
+package io.github.squid233.squidcraft.util.register;
 
 import io.github.squid233.squidcraft.api.ItemRegisters;
 import io.github.squid233.squidcraft.api.item.ItemFood;
@@ -9,9 +9,13 @@ import io.github.squid233.squidcraft.item.YourItem2;
 import io.github.squid233.squidcraft.util.ModEntities;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
+import net.minecraft.sound.SoundCategory;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
+import net.minecraft.util.Hand;
+import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 
 import java.util.List;
@@ -38,6 +42,7 @@ public class ItemRegister {
     public static final Item COOKIE_CREEPER_SPAWN_EGG;
     public static final Item CUBE_SPAWN_EGG;
     public static final Item MILK_BUCKET;
+    public static final Item MUSIC_RECORD;
     public static final io.github.squid233.squidcraft.api.item.Item
             YOUR_ITEM = new YourItem(),
             YOUR_ITEM_2 = new YourItem2();
@@ -52,56 +57,39 @@ public class ItemRegister {
         SQUID_COOKIE = register("squid_cookie",
                 new ItemFood.Meat.Big(SQUID_CRAFT, 162, 3.2f) {
                     @Override
-                    public void appendTooltip(ItemStack stack, World world,
-                                              List<Text> tooltip, TooltipContext context) {
+                    public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
                         super.appendTooltip(stack, world, tooltip, context);
-                        tooltip.add(new TranslatableText(
-                                "item.squidcraft.squid_cookie.tooltip"));
+                        tooltip.add(new TranslatableText("item.squidcraft.squid_cookie.tooltip"));
                     }
                 });
 
-        SQUID_HELMET = registerHelmet(new ArmorItem(ArmorMaterials.SQUID,
-                EquipmentSlot.HEAD,
-                new Item.Settings().group(SQUID_CRAFT_COMBAT_AND_TOOLS)));
-        SQUID_CHESTPLATE = registerChestplate(new ArmorItem(
-                ArmorMaterials.SQUID, EquipmentSlot.CHEST,
-                new Item.Settings().group(SQUID_CRAFT_COMBAT_AND_TOOLS)));
-        SQUID_LEGGINGS = registerLeggings(new ArmorItem(ArmorMaterials.SQUID,
-                EquipmentSlot.LEGS,
-                new Item.Settings().group(SQUID_CRAFT_COMBAT_AND_TOOLS)));
-        SQUID_BOOTS = registerBoots(new ArmorItem(ArmorMaterials.SQUID,
-                EquipmentSlot.FEET,
-                new Item.Settings().group(SQUID_CRAFT_COMBAT_AND_TOOLS)));
+        SQUID_HELMET = registerHelmet(new ArmorItem(ArmorMaterials.SQUID, EquipmentSlot.HEAD, new Item.Settings().group(SQUID_CRAFT_COMBAT_AND_TOOLS)));
+        SQUID_CHESTPLATE = registerChestplate(new ArmorItem(ArmorMaterials.SQUID, EquipmentSlot.CHEST, new Item.Settings().group(SQUID_CRAFT_COMBAT_AND_TOOLS)));
+        SQUID_LEGGINGS = registerLeggings(new ArmorItem(ArmorMaterials.SQUID, EquipmentSlot.LEGS, new Item.Settings().group(SQUID_CRAFT_COMBAT_AND_TOOLS)));
+        SQUID_BOOTS = registerBoots(new ArmorItem(ArmorMaterials.SQUID, EquipmentSlot.FEET, new Item.Settings().group(SQUID_CRAFT_COMBAT_AND_TOOLS)));
 
-        SQUID_AXE = registerAxe(new AxeItem(ModToolMaterial.SQUID,
-                -0, -2.2f,
-                new Item.Settings().group(SQUID_CRAFT_COMBAT_AND_TOOLS)) {
-        });
-        SQUID_HOE = registerHoe(new HoeItem(ModToolMaterial.SQUID,
-                -4, -2.4f,
-                new Item.Settings().group(SQUID_CRAFT_COMBAT_AND_TOOLS)) {
-        });
-        SQUID_PICKAXE = registerPickaxe(new PickaxeItem(ModToolMaterial.SQUID,
-                -1, -1,
-                new Item.Settings().group(SQUID_CRAFT_COMBAT_AND_TOOLS)) {
-        });
-        SQUID_SHOVEL = registerShovel(new ShovelItem(ModToolMaterial.SQUID, -2,
-                -2, new Item.Settings().group(SQUID_CRAFT_COMBAT_AND_TOOLS)));
-        SQUID_SWORD = registerSword(new SwordItem(ModToolMaterial.SQUID,
-                1, -0,
-                new Item.Settings().group(SQUID_CRAFT_COMBAT_AND_TOOLS)));
+        SQUID_AXE = registerAxe(new AxeItem(ModToolMaterial.SQUID, -0, -2.2f, new Item.Settings().group(SQUID_CRAFT_COMBAT_AND_TOOLS)) {});
+        SQUID_HOE = registerHoe(new HoeItem(ModToolMaterial.SQUID, -4, -2.4f, new Item.Settings().group(SQUID_CRAFT_COMBAT_AND_TOOLS)) {});
+        SQUID_PICKAXE = registerPickaxe(new PickaxeItem(ModToolMaterial.SQUID, -1, -1, new Item.Settings().group(SQUID_CRAFT_COMBAT_AND_TOOLS)) {});
+        SQUID_SHOVEL = registerShovel(new ShovelItem(ModToolMaterial.SQUID, -2, -2, new Item.Settings().group(SQUID_CRAFT_COMBAT_AND_TOOLS)));
+        SQUID_SWORD = registerSword(new SwordItem(ModToolMaterial.SQUID, 1, -0, new Item.Settings().group(SQUID_CRAFT_COMBAT_AND_TOOLS)));
 
         COOKIE_CREEPER_SPAWN_EGG = register("cookie_creeper_spawn_egg",
-                new SpawnEggItem(ModEntities.COOKIE_CREEPER, 0x0DA70B,
-                        0x73420E, new Item.Settings().group(SQUID_CRAFT)));
+                new SpawnEggItem(ModEntities.COOKIE_CREEPER, 0x0DA70B, 0x73420E, new Item.Settings().group(SQUID_CRAFT)));
         CUBE_SPAWN_EGG = register("cube_spawn_egg",
-                new SpawnEggItem(ModEntities.CUBE, 0xFFA7A4, 0x7BD4FF,
-                        new Item.Settings().group(SQUID_CRAFT)));
+                new SpawnEggItem(ModEntities.CUBE, 0xFFA7A4, 0x7BD4FF, new Item.Settings().group(SQUID_CRAFT)));
 
         MILK_BUCKET = register("milk_bucket",
-                new BucketItem(FluidRegister.STILL_MILK,
-                        new Item.Settings().group(SQUID_CRAFT)
-                                .recipeRemainder(Items.BUCKET).maxCount(1)));
+                new BucketItem(FluidRegister.STILL_MILK, new Item.Settings().group(SQUID_CRAFT).recipeRemainder(Items.BUCKET).maxCount(1)));
+        MUSIC_RECORD = register("music_record", new Item(new Item.Settings().group(SQUID_CRAFT)) {
+            @Override
+            public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
+                if (!world.isClient) {
+                    world.playSound(user, user.getBlockPos(), SoundsRegister.MUSIC_EVENT, SoundCategory.MUSIC, 0.5f, 0.5f);
+                }
+                return TypedActionResult.pass(user.getStackInHand(hand));
+            }
+        });
     }
 
     public ItemRegister() {

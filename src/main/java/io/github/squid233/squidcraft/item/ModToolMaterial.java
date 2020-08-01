@@ -1,6 +1,6 @@
 package io.github.squid233.squidcraft.item;
 
-import io.github.squid233.squidcraft.util.registers.ItemRegister;
+import io.github.squid233.squidcraft.util.register.ItemRegister;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.util.Lazy;

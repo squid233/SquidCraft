@@ -39,8 +39,7 @@ public class BlockFood {
                                  List<Text> tooltip,
                                  TooltipContext options) {
             tooltip.add(new TranslatableText("item.food.hunger", hunger));
-            tooltip.add(new TranslatableText(
-                    "item.food.saturation", saturationModifier));
+            tooltip.add(new TranslatableText("item.food.saturation", saturationModifier));
             tooltip.add(new TranslatableText("item.food.isWolfFood", true));
         }
 
@@ -72,8 +71,7 @@ public class BlockFood {
                                       List<Text> tooltip,
                                       TooltipContext context) {
                 tooltip.add(new TranslatableText("item.food.hunger", hunger));
-                tooltip.add(new TranslatableText(
-                        "item.food.saturation", saturationModifier));
+                tooltip.add(new TranslatableText("item.food.saturation", saturationModifier));
                 tooltip.add(new TranslatableText("item.food.isWolfFood", true));
             }
         }

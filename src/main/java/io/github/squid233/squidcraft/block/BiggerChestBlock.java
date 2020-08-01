@@ -1,8 +1,7 @@
 package io.github.squid233.squidcraft.block;
 
 import io.github.squid233.squidcraft.block.tile.BiggerChestBlockEntity;
-import io.github.squid233.squidcraft.util.registers.BlockRegister;
-import net.fabricmc.fabric.api.container.ContainerProviderRegistry;
+import io.github.squid233.squidcraft.client.gui.BiggerChestFactory;
 import net.minecraft.block.BlockRenderType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.BlockWithEntity;
@@ -11,6 +10,7 @@ import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
@@ -48,18 +48,20 @@ public class BiggerChestBlock extends BlockWithEntity {
         if (itemStack.hasCustomName()) {
             BlockEntity blockEntity = world.getBlockEntity(pos);
             if (blockEntity instanceof BiggerChestBlockEntity) {
-                ((BiggerChestBlockEntity)blockEntity).setCustomName(itemStack.getName());
+                ((BiggerChestBlockEntity) blockEntity).setCustomName(itemStack.getName());
             }
         }
     }
 
     @Override
-    @SuppressWarnings("deprecation")
+    //@SuppressWarnings("deprecation")
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         if (!world.isClient) {
             BlockEntity blockEntity = world.getBlockEntity(pos);
             if (blockEntity instanceof BiggerChestBlockEntity) {
-                ContainerProviderRegistry.INSTANCE.openContainer(BlockRegister.BIGGER_CHEST, player, buf -> buf.writeBlockPos(pos));
+                NamedScreenHandlerFactory factory = new BiggerChestFactory();
+                //ContainerProviderRegistry.INSTANCE.openContainer(BlockRegister.BIGGER_CHEST, player, buf -> buf.writeBlockPos(pos));
+                player.openHandledScreen(factory);
             }
         }
         return ActionResult.SUCCESS;
@@ -94,6 +96,6 @@ public class BiggerChestBlock extends BlockWithEntity {
 
     @Override
     public void buildTooltip(ItemStack stack, @Nullable BlockView world, List<Text> tooltip, TooltipContext options) {
-        tooltip.add(new LiteralText("Don't use this block!!! Your game will be throw java.lang.StackOverFlowError!"));
+        tooltip.add(new LiteralText("Don't use this block!!! Your game will be throw java.lang.NullPointerException!"));
     }
 }

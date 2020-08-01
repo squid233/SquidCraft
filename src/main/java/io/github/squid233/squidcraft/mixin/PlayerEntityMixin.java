@@ -1,6 +1,6 @@
 package io.github.squid233.squidcraft.mixin;
 
-import io.github.squid233.squidcraft.util.registers.ItemRegister;
+import io.github.squid233.squidcraft.util.register.ItemRegister;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
