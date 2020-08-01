@@ -5,9 +5,8 @@ import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.effect.StatusEffectInstance;
 
-import static net.minecraft.entity.effect.StatusEffects.*;
+import static io.github.squid233.squidcraft.enchantment.StatusEffectInstances.*;
 
 public class InsaneEnchantment extends Enchantment {
     public InsaneEnchantment(Rarity rarity, EnchantmentTarget type, EquipmentSlot[] slotTypes) {
@@ -21,21 +20,37 @@ public class InsaneEnchantment extends Enchantment {
 
     @Override
     public void onUserDamaged(LivingEntity user, Entity attacker, int level) {
-        user.addStatusEffect(new StatusEffectInstance(ABSORPTION));user.addStatusEffect(new StatusEffectInstance(BAD_OMEN));
-        user.addStatusEffect(new StatusEffectInstance(BLINDNESS));user.addStatusEffect(new StatusEffectInstance(CONDUIT_POWER));
-        user.addStatusEffect(new StatusEffectInstance(DOLPHINS_GRACE));user.addStatusEffect(new StatusEffectInstance(FIRE_RESISTANCE));
-        user.addStatusEffect(new StatusEffectInstance(GLOWING));user.addStatusEffect(new StatusEffectInstance(HASTE));
-        user.addStatusEffect(new StatusEffectInstance(HEALTH_BOOST));user.addStatusEffect(new StatusEffectInstance(HERO_OF_THE_VILLAGE));
-        user.addStatusEffect(new StatusEffectInstance(HUNGER));user.addStatusEffect(new StatusEffectInstance(INSTANT_DAMAGE));
-        user.addStatusEffect(new StatusEffectInstance(INSTANT_HEALTH));user.addStatusEffect(new StatusEffectInstance(INVISIBILITY));
-        user.addStatusEffect(new StatusEffectInstance(JUMP_BOOST));user.addStatusEffect(new StatusEffectInstance(LEVITATION));
-        user.addStatusEffect(new StatusEffectInstance(LUCK));user.addStatusEffect(new StatusEffectInstance(MINING_FATIGUE));
-        user.addStatusEffect(new StatusEffectInstance(NAUSEA));user.addStatusEffect(new StatusEffectInstance(NIGHT_VISION));
-        user.addStatusEffect(new StatusEffectInstance(POISON));user.addStatusEffect(new StatusEffectInstance(REGENERATION));
-        user.addStatusEffect(new StatusEffectInstance(RESISTANCE));user.addStatusEffect(new StatusEffectInstance(SATURATION));
-        user.addStatusEffect(new StatusEffectInstance(SLOW_FALLING));user.addStatusEffect(new StatusEffectInstance(SLOWNESS));
-        user.addStatusEffect(new StatusEffectInstance(SPEED));user.addStatusEffect(new StatusEffectInstance(STRENGTH));
-        user.addStatusEffect(new StatusEffectInstance(UNLUCK));user.addStatusEffect(new StatusEffectInstance(WATER_BREATHING));
-        user.addStatusEffect(new StatusEffectInstance(WEAKNESS));user.addStatusEffect(new StatusEffectInstance(WITHER));
+        user.addStatusEffect(ABSORPTION_INSTANCE);
+        user.addStatusEffect(BAD_OMEN_INSTANCE);
+        user.addStatusEffect(BLINDNESS_INSTANCE);
+        user.addStatusEffect(CONDUIT_POWER_INSTANCE);
+        user.addStatusEffect(DOLPHINS_GRACE_INSTANCE);
+        user.addStatusEffect(FIRE_RESISTANCE_INSTANCE);
+        user.addStatusEffect(GLOWING_INSTANCE);
+        user.addStatusEffect(HASTE_INSTANCE);
+        user.addStatusEffect(HEALTH_BOOST_INSTANCE);
+        user.addStatusEffect(HERO_OF_THE_VILLAGE_INSTANCE);
+        user.addStatusEffect(HUNGER_INSTANCE);
+        user.addStatusEffect(INSTANT_DAMAGE_INSTANCE);
+        user.addStatusEffect(INSTANT_HEALTH_INSTANCE);
+        user.addStatusEffect(INVISIBILITY_INSTANCE);
+        user.addStatusEffect(JUMP_BOOST_INSTANCE);
+        user.addStatusEffect(LEVITATION_INSTANCE);
+        user.addStatusEffect(LUCK_INSTANCE);
+        user.addStatusEffect(MINING_FATIGUE_INSTANCE);
+        user.addStatusEffect(NAUSEA_INSTANCE);
+        user.addStatusEffect(NIGHT_VISION_INSTANCE);
+        user.addStatusEffect(POISON_INSTANCE);
+        user.addStatusEffect(REGENERATION_INSTANCE);
+        user.addStatusEffect(RESISTANCE_INSTANCE);
+        user.addStatusEffect(SATURATION_INSTANCE);
+        user.addStatusEffect(SLOW_FALLING_INSTANCE);
+        user.addStatusEffect(SLOWNESS_INSTANCE);
+        user.addStatusEffect(SPEED_INSTANCE);
+        user.addStatusEffect(STRENGTH_INSTANCE);
+        user.addStatusEffect(UNLUCK_INSTANCE);
+        user.addStatusEffect(WATER_BREATHING_INSTANCE);
+        user.addStatusEffect(WEAKNESS_INSTANCE);
+        user.addStatusEffect(WITHER_INSTANCE);
     }
 }
