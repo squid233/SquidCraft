@@ -34,18 +34,12 @@ public class ElectricPowerEnchantment extends Enchantment {
                 ((LivingEntity) target).addStatusEffect(new StatusEffectInstance(StatusEffects.INSTANT_DAMAGE, 20 * 2 * level, level - 1));
             }
         }
-        super.onTargetDamaged(user, target, level);
     }
 
     @Override
     public void onUserDamaged(LivingEntity user, Entity attacker, int level) {
         if (attacker instanceof LivingEntity) {
-            if (level > 5) {
-                attacker.kill();
-            } else {
-                ((LivingEntity) attacker).addStatusEffect(new StatusEffectInstance(StatusEffects.INSTANT_DAMAGE, 20 * 2 * level, level - 1));
-            }
+            ((LivingEntity) attacker).addStatusEffect(new StatusEffectInstance(StatusEffects.INSTANT_DAMAGE, 20 * 2 * level, level - 1));
         }
-        super.onUserDamaged(user, attacker, level);
     }
 }
