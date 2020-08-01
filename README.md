@@ -42,7 +42,7 @@ squid233: ![followers](https://img.shields.io/github/followers/squid233?label=Fo
 
 ![commit](https://img.shields.io/github/commit-activity/y/squid233/SquidCraft)
 
-[![codebeat badge](https://codebeat.co/badges/2080a55d-c058-41a6-9441-6fa6dcccd183)](https://codebeat.co/projects/github-com-squid233-squidcraft-1-16-x)
+[![codebeat badge](https://codebeat.co/badges/73919031-7edc-4f76-bf1f-4787a13e34df)](https://codebeat.co/projects/github-com-squid233-squidcraft-1-16-x)
 
 [![Coverage Status](https://coveralls.io/repos/github/squid233/SquidCraft/badge.svg)](https://coveralls.io/github/squid233/SquidCraft)
 
