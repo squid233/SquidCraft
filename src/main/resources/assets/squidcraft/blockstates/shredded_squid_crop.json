@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "squidcraft:block/shredded_squid_crop_stage0"
+    },
+    "age=1": {
+      "model": "squidcraft:block/shredded_squid_crop_stage0"
+    },
+    "age=2": {
+      "model": "squidcraft:block/shredded_squid_crop_stage1"
+    },
+    "age=3": {
+      "model": "squidcraft:block/shredded_squid_crop_stage1"
+    },
+    "age=4": {
+      "model": "squidcraft:block/shredded_squid_crop_stage2"
+    },
+    "age=5": {
+      "model": "squidcraft:block/shredded_squid_crop_stage2"
+    },
+    "age=6": {
+      "model": "squidcraft:block/shredded_squid_crop_stage2"
+    },
+    "age=7": {
+      "model": "squidcraft:block/shredded_squid_crop_stage3"
+    }
+  }
+}

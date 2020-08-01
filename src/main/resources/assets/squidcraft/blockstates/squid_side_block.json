@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "squidcraft:block/squid_side_block_texture" },
+    "facing=east":  { "model": "squidcraft:block/squid_side_block_texture", "y":  90},
+    "facing=south": { "model": "squidcraft:block/squid_side_block_texture", "y": 180 },
+    "facing=west":  { "model": "squidcraft:block/squid_side_block_texture", "y": 270 }
+  }
+}
