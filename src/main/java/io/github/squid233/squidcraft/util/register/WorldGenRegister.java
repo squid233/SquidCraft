@@ -23,11 +23,7 @@ public class WorldGenRegister {
 
         Registry.BIOME.forEach(biome -> biome.addFeature(
                 GenerationStep.Feature.RAW_GENERATION,
-                Features.SQUID_SPIRAL.configure(
-                        FeatureConfig.DEFAULT
-                ).createDecoratedFeature(
-                        Decorator.CHANCE_HEIGHTMAP.configure(new ChanceDecoratorConfig(100))
-                )
+                Features.SQUID_SPIRAL.configure(FeatureConfig.DEFAULT).createDecoratedFeature(Decorator.CHANCE_HEIGHTMAP.configure(new ChanceDecoratorConfig(100)))
         ));
 
         Registry.BIOME.forEach(OreFeature::spawnSquidBlock);
