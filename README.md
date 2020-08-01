@@ -1,6 +1,6 @@
 # SquidCraft
 
-![https://travis-ci.org/squid233/SquidCraft.svg?branch=1.16.x](https://travis-ci.org/squid233/SquidCraft.svg)
+![https://travis-ci.org/squid233/SquidCraft.svg?branch=1.16.x](https://travis-ci.org/squid233/SquidCraft.svg?branch=1.16.x)
 
 ![available for 1.16](https://img.shields.io/badge/available%20for-1.15.2%201.16.1-brightgreen)
 
