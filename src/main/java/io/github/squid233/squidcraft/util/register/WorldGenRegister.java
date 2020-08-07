@@ -2,13 +2,16 @@ package io.github.squid233.squidcraft.util.register;
 
 import io.github.squid233.squidcraft.util.ModBiomes;
 import io.github.squid233.squidcraft.world.Features;
-import io.github.squid233.squidcraft.world.feature.*;
-import net.fabricmc.fabric.api.biomes.v1.*;
+import io.github.squid233.squidcraft.world.feature.OreFeature;
+import net.fabricmc.fabric.api.biomes.v1.FabricBiomes;
+import net.fabricmc.fabric.api.biomes.v1.OverworldBiomes;
+import net.fabricmc.fabric.api.biomes.v1.OverworldClimate;
 import net.fabricmc.fabric.api.event.registry.RegistryEntryAddedCallback;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.biome.Biomes;
 import net.minecraft.world.gen.GenerationStep;
-import net.minecraft.world.gen.decorator.*;
+import net.minecraft.world.gen.decorator.ChanceDecoratorConfig;
+import net.minecraft.world.gen.decorator.Decorator;
 import net.minecraft.world.gen.feature.FeatureConfig;
 
 public class WorldGenRegister {

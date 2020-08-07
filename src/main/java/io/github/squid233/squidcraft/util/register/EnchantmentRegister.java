@@ -1,10 +1,15 @@
 package io.github.squid233.squidcraft.util.register;
 
-import io.github.squid233.squidcraft.enchantment.*;
-import net.minecraft.enchantment.*;
+import io.github.squid233.squidcraft.enchantment.ElectricPowerEnchantment;
+import io.github.squid233.squidcraft.enchantment.FireBoomEnchantment;
+import io.github.squid233.squidcraft.enchantment.FrostEnchantment;
+import io.github.squid233.squidcraft.enchantment.InsaneEnchantment;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.util.*;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
+
 import static io.github.squid233.squidcraft.SquidCraft.MODID;
 import static io.github.squid233.squidcraft.util.ModEnchantments.*;
 

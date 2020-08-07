@@ -36,7 +36,6 @@ public class BiggerChestScreen extends HandledScreen<BiggerChestScreenHandler> i
         drawTexture(matrices, i, j + 6 * 18 + 17, 0, 126, this.backgroundWidth, 96);
     }
 
-
     @Override
     public BiggerChestScreen create(BiggerChestScreenHandler handler, PlayerInventory inventory, Text title) {
         return this;

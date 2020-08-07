@@ -1,7 +1,6 @@
-package io.github.squid233.squidcraft.block;
+package io.github.squid233.squidcraft.block.tile;
 
-import io.github.squid233.squidcraft.block.tile.BiggerChestBlockEntity;
-import io.github.squid233.squidcraft.client.gui.BiggerChestFactory;
+import io.github.squid233.squidcraft.util.register.BlockRegister;
 import net.minecraft.block.BlockRenderType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.BlockWithEntity;
@@ -10,8 +9,9 @@ import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.screen.ScreenHandler;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
@@ -40,7 +40,7 @@ public class BiggerChestBlock extends BlockWithEntity {
     // We will create the BlockEntity later.
     @Override
     public BlockEntity createBlockEntity(BlockView view) {
-        return new BiggerChestBlockEntity();
+        return BlockRegister.BIGGER_CHEST_BLOCK_ENTITY;
     }
 
     @Override
@@ -54,14 +54,14 @@ public class BiggerChestBlock extends BlockWithEntity {
     }
 
     @Override
-    //@SuppressWarnings("deprecation")
+    @SuppressWarnings("deprecation")
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         if (!world.isClient) {
             BlockEntity blockEntity = world.getBlockEntity(pos);
             if (blockEntity instanceof BiggerChestBlockEntity) {
-                NamedScreenHandlerFactory factory = new BiggerChestFactory();
                 //ContainerProviderRegistry.INSTANCE.openContainer(BlockRegister.BIGGER_CHEST, player, buf -> buf.writeBlockPos(pos));
-                player.openHandledScreen(factory);
+                world.playSound(player, player.getBlockPos(), SoundEvents.BLOCK_CHEST_OPEN, SoundCategory.BLOCKS, 0.5f, 0.5f);
+                player.openHandledScreen(createScreenHandlerFactory(state, world, pos));
             }
         }
         return ActionResult.SUCCESS;
@@ -74,7 +74,7 @@ public class BiggerChestBlock extends BlockWithEntity {
         if (state.getBlock() != newState.getBlock()) {
             BlockEntity blockEntity = world.getBlockEntity(pos);
             if (blockEntity instanceof BiggerChestBlockEntity) {
-                ItemScatterer.spawn(world, pos, (BiggerChestBlockEntity)blockEntity);
+                ItemScatterer.spawn(world, pos, (BiggerChestBlockEntity) blockEntity);
                 // update comparators
                 world.updateComparators(pos, this);
             }

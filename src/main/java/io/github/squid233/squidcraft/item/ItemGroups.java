@@ -6,8 +6,8 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 
-import static io.github.squid233.squidcraft.util.register.ItemRegister.*;
 import static io.github.squid233.squidcraft.util.register.BlockRegister.*;
+import static io.github.squid233.squidcraft.util.register.ItemRegister.*;
 
 public class ItemGroups {
     /**

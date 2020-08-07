@@ -1,12 +1,14 @@
 {
-  "advancements.squidcraft.a_pile.desc": "如果你製作一塊魷魚餅，你會發現更多驚喜的！",
-  "advancements.squidcraft.a_pile.title": "一堆熟魷魚絲",
-  "advancements.squidcraft.cookie.desc": "真香！你可以製作一個方塊，用於吃甚至是建築！",
-  "advancements.squidcraft.cookie.title": "魷魚餅",
-  "advancements.squidcraft.first_cooking.desc": "現在，我們可以製作“一堆熟魷魚絲”了！",
-  "advancements.squidcraft.first_cooking.title": "第一次烘烤",
-  "advancements.squidcraft.root.desc": "要想開始，烤它！",
   "advancements.squidcraft.root.title": "魷魚工藝",
+  "advancements.squidcraft.root.desc": "要想開始，烤它！",
+  "advancements.squidcraft.first_cooking.title": "第一次烘烤",
+  "advancements.squidcraft.first_cooking.desc": "現在，我們可以製作“一堆熟魷魚絲”了！",
+  "advancements.squidcraft.a_pile.title": "一堆熟魷魚絲",
+  "advancements.squidcraft.a_pile.desc": "如果你製作一塊魷魚餅，你會發現更多驚喜的！",
+  "advancements.squidcraft.cookie.title": "魷魚餅",
+  "advancements.squidcraft.cookie.desc": "真香！你可以製作一個方塊，用於吃甚至是建築！",
+  "advancements.squidcraft.block.title": "魷魚塊",
+  "advancements.squidcraft.block.desc": "這個方塊非常的full！",
 
   "authors.squidcraft.info": "作者名單：",
 

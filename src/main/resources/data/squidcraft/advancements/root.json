@@ -35,8 +35,8 @@
   "rewards": {
     "recipes": [
       "squidcraft:cooked_shredded_squid",
-      "squidcraft:cooked_shredded_squid_1",
-      "squidcraft:cooked_shredded_squid_2"
+      "squidcraft:cooked_shredded_squid_from_campfire",
+      "squidcraft:cooked_shredded_squid_from_smoking"
     ],
     "loot": [
       "minecraft:entities/squid"

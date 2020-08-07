@@ -3,6 +3,7 @@ package io.github.squid233.squidcraft.client;
 import io.github.squid233.squidcraft.client.gui.BiggerChestScreen;
 import io.github.squid233.squidcraft.entity.CookieCreeperRenderer;
 import io.github.squid233.squidcraft.entity.CubeEntityRenderer;
+import io.github.squid233.squidcraft.entity.LavaSquidRenderer;
 import io.github.squid233.squidcraft.util.ModEntities;
 import io.github.squid233.squidcraft.util.register.BlockRegister;
 import net.fabricmc.api.ClientModInitializer;
@@ -37,6 +38,8 @@ public final class SquidCraftClient implements ClientModInitializer {
         ScreenRegistry.register(null, BiggerChestScreen::new);
 
         EntityRendererRegistry.INSTANCE.register(ModEntities.COOKIE_CREEPER, (entityRenderDispatcher, context) -> new CookieCreeperRenderer(entityRenderDispatcher));
+
+        EntityRendererRegistry.INSTANCE.register(ModEntities.LAVA_SQUID, ((entityRenderDispatcher, context) -> new LavaSquidRenderer(entityRenderDispatcher)));
 
         /*
          * Registers our Cube Entity's renderer, which provides a model and texture for the entity.

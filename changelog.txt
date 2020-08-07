@@ -17,6 +17,7 @@
 
 2020-7-28 ~ 8-1 1.16-0.3.0
 
-1. add new item: music record - right click to play music
+//1. add new item: music record - right click to play music
+2. add new advancement!!!
 
 //TODO add hot dog, sausage

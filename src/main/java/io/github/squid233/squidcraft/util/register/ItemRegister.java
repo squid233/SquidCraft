@@ -87,7 +87,7 @@ public class ItemRegister {
                 if (!world.isClient) {
                     world.playSound(user, user.getBlockPos(), SoundsRegister.MUSIC_EVENT, SoundCategory.MUSIC, 0.5f, 0.5f);
                 }
-                return TypedActionResult.pass(user.getStackInHand(hand));
+                return TypedActionResult.success(user.getStackInHand(hand));
             }
         });
     }

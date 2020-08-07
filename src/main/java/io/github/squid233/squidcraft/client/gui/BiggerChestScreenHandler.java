@@ -1,15 +1,24 @@
 package io.github.squid233.squidcraft.client.gui;
 
-import io.github.squid233.squidcraft.block.tile.BiggerChestBlockEntity;
+import io.github.squid233.squidcraft.SquidCraft;
 import io.github.squid233.squidcraft.util.register.BlockRegister;
+import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.item.ItemStack;
+import net.minecraft.network.PacketByteBuf;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.slot.Slot;
+import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
+import net.minecraft.util.math.BlockPos;
+import org.jetbrains.annotations.Nullable;
 
-public class BiggerChestScreenHandler extends ScreenHandler {
+import java.util.Objects;
+
+public class BiggerChestScreenHandler extends ScreenHandler implements ExtendedScreenHandlerFactory {
     private final Inventory inventory; // Chest inventory
     private static final int INVENTORY_SIZE = 54; // 6 rows * 9 cols
 
@@ -45,7 +54,7 @@ public class BiggerChestScreenHandler extends ScreenHandler {
     }
 
     public BiggerChestScreenHandler(int syncId, PlayerInventory playerInventory) {
-        this(syncId, playerInventory, new BiggerChestBlockEntity());
+        this(syncId, playerInventory, BlockRegister.BIGGER_CHEST_BLOCK_ENTITY);
     }
 
     @Override
@@ -77,5 +86,22 @@ public class BiggerChestScreenHandler extends ScreenHandler {
         }
 
         return newStack;
+    }
+
+    @Override
+    public void writeScreenOpeningData(ServerPlayerEntity player, PacketByteBuf buf) {
+        final BlockPos pos = buf.readBlockPos();
+        Objects.requireNonNull(player.world.getBlockState(pos).createScreenHandlerFactory(player.world, pos)).createMenu(syncId, player.inventory, player);
+    }
+
+    @Override
+    public Text getDisplayName() {
+        return new TranslatableText("container" + SquidCraft.MODID + "bigger_chest");
+    }
+
+    @Nullable
+    @Override
+    public ScreenHandler createMenu(int syncId, PlayerInventory inv, PlayerEntity player) {
+        return this;
     }
 }

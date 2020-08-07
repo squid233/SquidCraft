@@ -6,12 +6,11 @@ import io.github.squid233.squidcraft.api.ItemRegisters;
 import io.github.squid233.squidcraft.api.block.BlockFood.SquidCraftFood;
 import io.github.squid233.squidcraft.api.block.BlockFood.SquidCraftFood.ItemBlock;
 import io.github.squid233.squidcraft.api.util.Loggers;
-import io.github.squid233.squidcraft.block.BiggerChestBlock;
 import io.github.squid233.squidcraft.block.SquidSideBlock;
+import io.github.squid233.squidcraft.block.tile.BiggerChestBlock;
 import io.github.squid233.squidcraft.block.tile.BiggerChestBlockEntity;
 import io.github.squid233.squidcraft.client.gui.BiggerChestScreenHandler;
 import io.github.squid233.squidcraft.item.ItemGroups;
-import net.fabricmc.fabric.api.container.ContainerProviderRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.screenhandler.v1.ScreenHandlerRegistry;
 import net.minecraft.block.*;
@@ -19,11 +18,7 @@ import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.item.*;
 import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.Util;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.registry.Registry;
-
-import java.util.Objects;
 
 import static io.github.squid233.squidcraft.item.ItemGroups.SQUID_CRAFT;
 
@@ -75,10 +70,11 @@ public class BlockRegister {
     public static final Block SHREDDED_SQUID_CROP;
 
     public static final Identifier BIGGER_CHEST = new Identifier(SquidCraft.MODID, "bigger_chest_block");
-    public static final String BIGGER_CHEST_TRANSLATION_KEY = Util.createTranslationKey("container", BIGGER_CHEST);
+    //public static final String BIGGER_CHEST_TRANSLATION_KEY = Util.createTranslationKey("container", BIGGER_CHEST);
     public static final ScreenHandlerType<BiggerChestScreenHandler> BIGGER_CHEST_SCREEN_HANDLER_TYPE = ScreenHandlerRegistry.registerSimple(BIGGER_CHEST, BiggerChestScreenHandler::new);
 
     public static BlockEntityType<BiggerChestBlockEntity> BIGGER_CHEST_ENTITY_TYPE;
+    public static final BiggerChestBlockEntity BIGGER_CHEST_BLOCK_ENTITY = new BiggerChestBlockEntity();
 
     static {
         // Squid blocks begin
@@ -124,11 +120,11 @@ public class BlockRegister {
         BIGGER_CHEST_ENTITY_TYPE = Registry.register(Registry.BLOCK_ENTITY_TYPE, BIGGER_CHEST,
                 BlockEntityType.Builder.create(BiggerChestBlockEntity::new, BIGGER_CHEST_BLOCK).build(null));
 
-        ContainerProviderRegistry.INSTANCE.registerFactory(BIGGER_CHEST, (syncId, identifier, player, buf) -> {
+        /*ContainerProviderRegistry.INSTANCE.registerFactory(BIGGER_CHEST, (syncId, identifier, player, buf) -> {
             final BlockPos pos = buf.readBlockPos();
             return Objects.requireNonNull(player.world.getBlockState(pos).createScreenHandlerFactory(player.world, pos))
                     .createMenu(syncId, player.inventory, player);
-        });
+        });*/
 
         register("squid_block", SQUID_BLOCK, new ItemBlock(SQUID_BLOCK));
         register("compress_squid_block", COMPRESS_SQUID_BLOCK, new ItemBlock(COMPRESS_SQUID_BLOCK));
