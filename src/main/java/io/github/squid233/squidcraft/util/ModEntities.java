@@ -14,6 +14,9 @@ import net.minecraft.util.registry.Registry;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.Biomes;
 
+import java.time.LocalDate;
+import java.time.Month;
+
 public class ModEntities {
 
     /*
@@ -42,9 +45,11 @@ public class ModEntities {
 
     public ModEntities() {
         add();
-        Biomes.PLAINS.getEntitySpawnList(SpawnGroup.MONSTER).add(new Biome.SpawnEntry(ModEntities.COOKIE_CREEPER, 30, 1, 2));
-        Biomes.PLAINS.getEntitySpawnList(SpawnGroup.CREATURE).add(new Biome.SpawnEntry(ModEntities.CUBE, 30, 1, 2));
-        Biomes.NETHER_WASTES.getEntitySpawnList(SpawnGroup.CREATURE).add(new Biome.SpawnEntry(ModEntities.LAVA_SQUID, 35, 2, 3));
+        if (LocalDate.now().getMonth().equals(Month.APRIL) && LocalDate.now().getDayOfMonth() == 1) {
+            Biomes.PLAINS.getEntitySpawnList(SpawnGroup.MONSTER).add(new Biome.SpawnEntry(ModEntities.COOKIE_CREEPER, 30, 1, 2));
+        }
+        Biomes.PLAINS.getEntitySpawnList(SpawnGroup.CREATURE).add(new Biome.SpawnEntry(ModEntities.CUBE, 20, 1, 3));
+        Biomes.NETHER_WASTES.getEntitySpawnList(SpawnGroup.CREATURE).add(new Biome.SpawnEntry(ModEntities.LAVA_SQUID, 15, 1, 2));
     }
 
     public void add() {
