@@ -6,6 +6,7 @@ import io.github.squid233.squidcraft.util.ModEntities;
 import io.github.squid233.squidcraft.util.handle.LootTablesHandle;
 import io.github.squid233.squidcraft.util.register.*;
 import net.fabricmc.api.ModInitializer;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * @author squid233 and baka4n → (logger4j test)!
@@ -38,6 +39,10 @@ public final class SquidCraft implements ModInitializer {
 
 	public static void logInfo(String info) {
 		Loggers.logInfo("SquidCraft", info);
+	}
+
+	public static void debug(String debug) {
+		LogManager.getLogger("SquidCraft").debug(debug);
 	}
 
 }

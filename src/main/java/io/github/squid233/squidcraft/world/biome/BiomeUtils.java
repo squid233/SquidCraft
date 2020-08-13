@@ -1,9 +1,13 @@
-package io.github.squid233.squidcraft.world.biome;
+/*package io.github.squid233.squidcraft.world.biome;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.world.biome.Biome;
+import net.minecraft.world.biome.GenerationSettings;
+import net.minecraft.world.biome.SpawnSettings;
+import net.minecraft.world.biome.source.BiomeAccess;
 import net.minecraft.world.gen.feature.MineshaftFeatureConfig;
+import net.minecraft.world.gen.feature.SeagrassFeature;
 import net.minecraft.world.gen.feature.SeagrassFeatureConfig;
 import net.minecraft.world.gen.feature.ShipwreckFeatureConfig;
 
@@ -19,8 +23,7 @@ import static net.minecraft.world.gen.feature.StructureFeature.MINESHAFT;
 import static net.minecraft.world.gen.feature.StructureFeature.SHIPWRECK;
 
 public class BiomeUtils extends Biome {
-    protected BiomeUtils(Settings settings) {
-        super(settings);
+    protected BiomeUtils(Biome.Builder builder) {
         init();
     }
 
@@ -37,7 +40,7 @@ public class BiomeUtils extends Biome {
     }
 
     protected void spawn(EntityType<? extends Entity> entityType, int w, int min, int max) {
-        this.addSpawn(WATER_CREATURE, new SpawnEntry(entityType, w, min, max));
+        this.feature(WATER_CREATURE, new SpawnSettings.SpawnEntry(entityType, w, min, max));
     }
 
     protected void init() {
@@ -50,3 +53,10 @@ public class BiomeUtils extends Biome {
         spawn(DOLPHIN, 2, 1, 2);
     }
 }
+
+
+
+
+
+fixme 2020/8/13
+*/

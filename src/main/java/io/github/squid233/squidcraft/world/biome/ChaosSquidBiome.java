@@ -1,4 +1,4 @@
-package io.github.squid233.squidcraft.world.biome;
+/*package io.github.squid233.squidcraft.world.biome;
 
 import net.minecraft.world.biome.BiomeEffects.Builder;
 
@@ -14,3 +14,10 @@ public class ChaosSquidBiome extends BiomeUtils {
         super(new Settings().configureSurfaceBuilder(SWAMP, GRASS_CONFIG).precipitation(RAIN).category(OCEAN).depth(0.125F).scale(0.05F).temperature(0.6F).downfall(0.4F).effects(new Builder().waterColor(4159204).waterFogColor(329011).fogColor(12638463).moodSound(CAVE).build()).parent(null).noises(of(new MixedNoisePoint(0.0F, 0.0F, 0.0F, 0.0F, 1.0F))));
     }
 }
+
+
+
+
+
+fixme 2020/8/13
+*/

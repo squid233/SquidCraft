@@ -33,7 +33,7 @@ public class BlockFood {
         }
 
         @Override
-        public void buildTooltip(ItemStack stack,
+        public void appendTooltip(ItemStack stack,
                                  @Nullable BlockView world,
                                  List<Text> tooltip,
                                  TooltipContext options) {

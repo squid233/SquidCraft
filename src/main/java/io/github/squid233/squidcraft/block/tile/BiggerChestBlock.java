@@ -94,8 +94,10 @@ public class BiggerChestBlock extends BlockWithEntity {
         return ScreenHandler.calculateComparatorOutput(world.getBlockEntity(pos));
     }
 
+
+
     @Override
-    public void buildTooltip(ItemStack stack, @Nullable BlockView world, List<Text> tooltip, TooltipContext options) {
+    public void appendTooltip(ItemStack stack, @Nullable BlockView world, List<Text> tooltip, TooltipContext options) {
         tooltip.add(new LiteralText("Don't use this block!!! Your game will be throw java.lang.NullPointerException!"));
     }
 }

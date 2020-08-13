@@ -23,7 +23,7 @@ public class ItemRegisters {
      */
     public static Item register(String modid, String name, Item item) {
         if (Loggers.enableRegisterLog) {
-            SquidCraft.logInfo("register " + modid + ":" + name + " success!");
+            SquidCraft.debug("register " + modid + ":" + name + " success!");
         }
         return Registry.register(Registry.ITEM, new Identifier(modid, name), item);
     }

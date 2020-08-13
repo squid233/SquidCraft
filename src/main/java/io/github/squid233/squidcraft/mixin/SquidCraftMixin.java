@@ -11,7 +11,7 @@ import net.minecraft.client.gui.screen.multiplayer.MultiplayerScreen;
 import net.minecraft.client.gui.screen.multiplayer.MultiplayerWarningScreen;
 import net.minecraft.client.gui.screen.world.SelectWorldScreen;
 import net.minecraft.client.gui.widget.ButtonWidget;
-import net.minecraft.realms.RealmsBridge;
+import net.minecraft.client.realms.gui.screen.RealmsBridgeScreen;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 import org.spongepowered.asm.mixin.Mixin;
@@ -58,7 +58,7 @@ public abstract class SquidCraftMixin extends Screen {
         boolean bl = this.client.isMultiplayerEnabled();
         ButtonWidget.TooltipSupplier tooltipSupplier = bl ? ButtonWidget.EMPTY : (buttonWidget, matrixStack, i, j) -> {
             if (!buttonWidget.active) {
-                this.renderTooltip(matrixStack, this.client.textRenderer.wrapLines(new TranslatableText("title.multiplayer.disabled"), Math.max(this.width / 2 - 43, 170)), i, j);
+                this.renderOrderedTooltip(matrixStack, this.client.textRenderer.wrapLines(new TranslatableText("title.multiplayer.disabled"), Math.max(this.width / 2 - 43, 170)), i, j);
             }
 
         };
@@ -74,7 +74,7 @@ public abstract class SquidCraftMixin extends Screen {
      * @author baka4n
      */
     private void switchToRealms() {
-        RealmsBridge realmsBridge = new RealmsBridge();
+        RealmsBridgeScreen realmsBridge = new RealmsBridgeScreen();
         realmsBridge.switchToRealms(this);
     }
 

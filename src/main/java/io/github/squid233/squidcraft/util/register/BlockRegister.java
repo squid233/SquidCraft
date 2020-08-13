@@ -42,10 +42,9 @@ public class BlockRegister {
     private void register(String name, Block block, ItemBlock itemBlock) {
         ItemRegisters.register(SquidCraft.MODID, name, itemBlock);
         if (Loggers.enableRegisterLog) {
-            SquidCraft.logInfo("register " + SquidCraft.MODID + ":" + name + " block success!");
+            SquidCraft.debug("register " + SquidCraft.MODID + ":" + name + " block success!");
         }
-        Registry.register(Registry.BLOCK, new Identifier(SquidCraft.MODID, name),
-                block);
+        Registry.register(Registry.BLOCK, new Identifier(SquidCraft.MODID, name), block);
     }
 
     public static final Block SQUID_BLOCK;

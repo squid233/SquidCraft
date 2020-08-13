@@ -26,14 +26,14 @@ public class BlockRegisters {
     public static Block register(String modid, String name, Block block, Item.Settings settings) {
         ItemRegisters.register(modid, name, new BlockItem(block, settings));
         if (Loggers.enableRegisterLog) {
-            SquidCraft.logInfo("register " + modid + ":" + name + " block success!");
+            SquidCraft.debug("register " + modid + ":" + name + " block success!");
         }
         return Registry.register(Registry.BLOCK, new Identifier(modid, name), block);
     }
 
     public static Block register(String modid, String name, Block block) {
         if (Loggers.enableRegisterLog) {
-            SquidCraft.logInfo("register " + modid + ":" + name + " block success!");
+            SquidCraft.debug("register " + modid + ":" + name + " block success!");
         }
         return Registry.register(Registry.BLOCK, new Identifier(modid, name), block);
     }
