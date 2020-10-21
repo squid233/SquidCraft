@@ -20,7 +20,10 @@
 //1. add new item: music record - right click to play music
 2. add new advancement!!!
 3. add sausage, cooked sausage and hot dog
-//fixme 4. cookie creeper only spawn in April Fools' Day now
+//4. cookie creeper only spawn in April Fools' Day now
 5. now support to 1.16.2
 6. removed biomes, because the changes are too large
-7. fixme removed some features, because the changes are too large!!!
+7. removed some features, because the changes are too large!!!
+
+2020-8-14 ~ 9-12 1.16-0.4.0
+1. squid biome & chaos squid biome can spawn squid block now.

@@ -4,6 +4,7 @@ pluginManagement {
         maven {
             name = 'Fabric'
             url = 'https://maven.modmuss50.me/'
+            artifactUrls 'https://lss233.littleservice.cn/repositories/minecraft/'
         }
         gradlePluginPortal()
     }

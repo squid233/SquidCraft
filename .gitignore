@@ -37,3 +37,6 @@ bin/
 # fabric
 
 run/
+
+# squidcraft
+logs/

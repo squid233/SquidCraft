@@ -1,48 +1,28 @@
 package io.github.squid233.squidcraft;
 
-import io.github.squid233.squidcraft.api.util.Loggers;
-import io.github.squid233.squidcraft.config.CreateConfig;
-import io.github.squid233.squidcraft.util.ModEntities;
-import io.github.squid233.squidcraft.util.handle.LootTablesHandle;
-import io.github.squid233.squidcraft.util.register.*;
+import io.github.squid233.squidcraft.block.Blocks;
+import io.github.squid233.squidcraft.item.Items;
 import net.fabricmc.api.ModInitializer;
+import net.minecraft.client.gui.screen.TitleScreen;
 import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
- * @author squid233 and baka4n → (logger4j test)!
+ * @author squid233
+ * @date 2020/9/20
  */
-public final class SquidCraft implements ModInitializer {
+public class SquidCraft implements ModInitializer {
+    public static final String MODID = "squidcraft";
+    public static Logger logger;
 
-	public static final String MODID = "squidcraft";
+    static {
+        logger = LogManager.getLogger(MODID);
+        new TitleScreen().addButton()
+    }
 
-	@Override
-	public void onInitialize() {
-		CreateConfig.create();
-		new ItemRegister();
-		logInfo("item register success");
-		new BlockRegister();
-		logInfo("block register success");
-		new FluidRegister();
-		logInfo("fluid register success");
-		new EnchantmentRegister();
-		logInfo("enchantment register success");
-		new WorldGenRegister();
-		logInfo("world generator register success");
-		new LootTablesHandle();
-		logInfo("loot table register success");
-		new ModEntities();
-		logInfo("entities register success");
-		new SoundsRegister();
-		logInfo("sounds register success");
-		logInfo("load on initialize success");
-	}
-
-	public static void logInfo(String info) {
-		Loggers.logInfo("SquidCraft", info);
-	}
-
-	public static void debug(String debug) {
-		LogManager.getLogger("SquidCraft").debug(debug);
-	}
-
+    @Override
+    public void onInitialize() {
+        Items.init();
+        Blocks.init();
+    }
 }

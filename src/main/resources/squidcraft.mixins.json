@@ -4,7 +4,11 @@
   "package": "io.github.squid233.squidcraft.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "PlayerEntityMixin"
+    "AttributeRegistryAccessor",
+    "BuiltinBiomesAccessor",
+    "DefaultBiomeFeaturesMixin",
+    "PlayerEntityMixin",
+    "VanillaLayeredBiomeSourceAccessor"
   ],
   "client": [
     "SquidCraftMixin"
